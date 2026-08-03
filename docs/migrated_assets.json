@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "migration_date": "2026-08-03",
+  "source_root": "/Users/zhangzc/fable-trading",
+  "target_root": "/Users/zhangzc/yolo-xx",
+  "cutoff_exclusive_utc": "2026-05-04T00:00:00Z",
+  "source_files_deleted": false,
+  "training_performed": false,
+  "holdout_read": false,
+  "active_modified": false,
+  "deployed": false,
+  "orders_placed": false,
+  "datasets": [
+    {
+      "name": "dense_owner_short_star_tip_v10",
+      "kind": "trainable_detection",
+      "content_sha256_excluding_data_yaml": "624dd884fd76b7c5a2bab5a36e1e48f3d1ca5a4d9da2ae35a07f43fad2c292a8",
+      "valid": true,
+      "train_images": 2207,
+      "train_boxes": 1006,
+      "train_background_images": 1201,
+      "val_images": 1098,
+      "val_boxes": 316,
+      "val_background_images": 782
+    },
+    {
+      "name": "dense_owner_side_short_tip_v3",
+      "kind": "trainable_detection",
+      "content_sha256_excluding_data_yaml": "1c0286cb2ff43d0991c0c57b1a27f352393537d2c4f5da8249712fed30f52d68",
+      "valid": true,
+      "train_images": 1320,
+      "train_boxes": 571,
+      "train_background_images": 749,
+      "val_images": 592,
+      "val_boxes": 194,
+      "val_background_images": 398
+    },
+    {
+      "name": "eth_3m_short_pilot_v1",
+      "kind": "trainable_detection_pilot",
+      "content_sha256_excluding_data_yaml": "c97c88d474b9141a14b0d6aaa7fdf61f5f1f825ed98e0c6fb23c6cf7bff8e969",
+      "valid": true,
+      "train_images": 135,
+      "train_boxes": 60,
+      "train_background_images": 75,
+      "val_images": 48,
+      "val_boxes": 16,
+      "val_background_images": 32
+    },
+    {
+      "name": "eth_short_tip_label2000",
+      "kind": "annotation_queue_not_trainable",
+      "content_sha256": "9473039b8fb964dde0f8a128b5770a1168b5bcb40b8ad57950e494d258edad4b",
+      "images": 2000,
+      "labels": 2000,
+      "empty_labels": 2000
+    }
+  ],
+  "weights": [
+    {
+      "path": "weights/bases/yolo11n.pt",
+      "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+    },
+    {
+      "path": "weights/bases/yolo11s.pt",
+      "sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5"
+    },
+    {
+      "path": "weights/baselines/owner_short_star_v10.pt",
+      "sha256": "86d969c830189b2d1048dca24e10bacc27341e75643cf4f7a912e5a8d5542ad9"
+    },
+    {
+      "path": "weights/baselines/owner_side_short_tip_v3.pt",
+      "sha256": "f1c65e70c94930b9e7c052c43ca61353528747f740687a7f821a42b74e275f61"
+    },
+    {
+      "path": "weights/baselines/eth3m_short_pilot_v1_mac_cold.pt",
+      "sha256": "7f1f3b2d6300952ac5c4adb3937c0b3b2e9d7879b73ed2855bcf08b55cbe202e"
+    }
+  ],
+  "imported_run": "runs/imported/eth3m_short_pilot_v1_mac_cold",
+  "imported_reports": [
+    "p2a_detection_report.md",
+    "p2a_e21b_hsv0_report.md",
+    "p_eth_3m_short_pilot_v1.md",
+    "p_v13_pad200_train.md",
+    "p_v15_dataset_confound.md",
+    "p_v16_tipuni_train.md",
+    "p_yolo_dense_hypotheses.md"
+  ],
+  "excluded": [
+    {
+      "asset": "dense_owner_v16_tipuni and owner_v16_tipuni_cold.pt",
+      "reason": "contains or derives from post-cutoff 2026-07 samples"
+    },
+    {
+      "asset": "label_live_tip_1000",
+      "reason": "metadata cannot prove every sample is strictly pre-cutoff"
+    },
+    {
+      "asset": "dense_owner_side_short_tip v1 and v2",
+      "reason": "superseded by balanced v3 and duplicates data"
+    },
+    {
+      "asset": "classification datasets and weights",
+      "reason": "standalone project currently implements object detection only"
+    },
+    {
+      "asset": "ACTIVE pointers, frozen judgment models, backtests, deployment and trading files",
+      "reason": "outside YOLO-only scope"
+    }
+  ],
+  "verification": {
+    "dataset_audits_passed": 3,
+    "dataset_audits_failed": 0,
+    "source_copy_content_hashes_matched": 4,
+    "train_dry_runs_passed": 4,
+    "tests_passed": 17,
+    "tests_failed": 0
+  }
+}
