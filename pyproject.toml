@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yolo-xx"
+version = "0.1.0"
+description = "Standalone offline YOLO training pipeline for dense MA chart patterns"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "numpy>=1.26",
+  "opencv-python>=4.9",
+  "pandas>=2.2",
+  "ultralytics>=8.3",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+yolo-xx-build = "yolo_xx.dataset:main"
+yolo-xx-audit = "yolo_xx.audit:main"
+yolo-xx-train = "yolo_xx.train:main"
+yolo-xx-eval = "yolo_xx.evaluate:main"
+yolo-xx-consistency = "yolo_xx.consistency:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
