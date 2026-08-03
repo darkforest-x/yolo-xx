@@ -11,7 +11,8 @@ YOLO 图像检测模型。
 - 渲染 K 线和六条均线；
 - 生成/校验单类别 `dense_cluster` YOLO 数据集；
 - 使用固定的语义安全增强配置训练 YOLO；
-- 离线验证并输出 JSON 指标。
+- 离线验证并输出 JSON 指标；
+- 对本地图片离线预测，导出 YOLO 标签、检查图和 JSON manifest。
 
 不包含：数据抓取、方向或收益判断、LightGBM、标签收益、回测、成本、交易所连接、实盘扫描、
 订单、通知、看板、ACTIVE、模型晋升和部署。项目不导入父仓库的 `src` 或其他业务包。
@@ -66,6 +67,32 @@ yolo-xx-eval \
   --data datasets/dense_15m/data.yaml \
   --out reports/dense_15m_cold_val.json
 ```
+
+## 离线预测检查
+
+先 dry-run 核对路径和参数；不会读取权重或图片：
+
+```bash
+yolo-xx-predict \
+  --weights runs/detect/dense_15m_cold/weights/best.pt \
+  --source /absolute/path/to/local/images \
+  --out reports/dense_15m_cold_predictions \
+  --dry-run
+```
+
+确认后执行离线预测：
+
+```bash
+yolo-xx-predict \
+  --weights runs/detect/dense_15m_cold/weights/best.pt \
+  --source /absolute/path/to/local/images \
+  --out reports/dense_15m_cold_predictions \
+  --save-overlays
+```
+
+输出包含 `labels/`、可选的 `overlays/` 和 `predictions.json`。源目录的相对层级和图片扩展名
+会被保留（例如 `sample.jpg.txt`），同 stem 不同格式的图片不会互相覆盖；非空输出目录会被
+拒绝。manifest 同时记录权重文件的 SHA-256。
 
 续训权重默认启用保守 AdamW 配方；`yolo11*.pt` 冷启动默认保留 Ultralytics 优化器选择。
 翻转、mosaic、mixup、HSV 和其他会改变时间/颜色语义的增强始终关闭。

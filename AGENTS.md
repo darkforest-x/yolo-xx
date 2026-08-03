@@ -9,7 +9,8 @@ Allowed responsibilities:
 - render candlestick images;
 - create and audit YOLO-format labels;
 - train a YOLO detector;
-- run offline validation and write model metrics.
+- run offline validation and write model metrics;
+- run offline image prediction and write YOLO labels, overlays, and manifests.
 
 Forbidden responsibilities:
 

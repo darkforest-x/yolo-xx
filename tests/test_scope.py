@@ -3,6 +3,15 @@ from __future__ import annotations
 import ast
 from pathlib import Path
 
+import yolo_xx
+
+
+def test_package_version_matches_project_metadata() -> None:
+    project = Path(__file__).resolve().parents[1]
+    pyproject = (project / "pyproject.toml").read_text(encoding="utf-8")
+    assert yolo_xx.__version__ == "0.2.0"
+    assert 'version = "0.2.0"' in pyproject
+
 
 def test_package_has_no_parent_or_non_yolo_business_imports() -> None:
     package = Path(__file__).resolve().parents[1] / "src" / "yolo_xx"
