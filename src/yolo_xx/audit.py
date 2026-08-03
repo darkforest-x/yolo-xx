@@ -48,6 +48,7 @@ def _timestamp(raw: object, *, field: str, errors: list[str]) -> pd.Timestamp | 
 
 def _label_rows(path: Path, *, errors: list[str]) -> list[tuple[int, list[float]]]:
     rows: list[tuple[int, list[float]]] = []
+    seen: set[tuple[int, tuple[float, ...]]] = set()
     try:
         lines = path.read_text(encoding="utf-8").splitlines()
     except OSError as error:
@@ -71,6 +72,10 @@ def _label_rows(path: Path, *, errors: list[str]) -> list[tuple[int, list[float]
             errors.append(f"{path}:{line_number}: values must be finite")
         elif not (0 <= xc <= 1 and 0 <= yc <= 1 and 0 < width <= 1 and 0 < height <= 1):
             errors.append(f"{path}:{line_number}: normalized box is outside [0, 1]")
+        identity = (class_id, tuple(values))
+        if identity in seen:
+            errors.append(f"{path}:{line_number}: duplicate YOLO label row")
+        seen.add(identity)
         rows.append((class_id, values))
     return rows
 

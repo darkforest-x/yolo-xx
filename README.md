@@ -198,6 +198,76 @@ yolo-xx-predict \
 位置或颜色语义的增强始终关闭。
 训练输出目录如果已经存在会直接拒绝，避免两次实验混到同一 run。
 
+### 200 / 96 根单变量 A/B
+
+当前 owner-short A/B 不再直接拿正样本集开训。它先用同一个 anchor ledger 给每个正图匹配一张
+相同 symbol、split、右侧上下文桶和邻近时间块的背景图；背景在 200/96 两个视图中都必须不与
+任何已知 owner 框重叠，并且不触发冻结 dense 规则。两臂 sample id、正负身份和窗口终点一致，
+只有窗口长度、真实渲染内容和相应框坐标不同：
+
+```bash
+yolo-xx-paired-ab build \
+  --snapshot-dir data/manual_short_preholdout_15m \
+  --out datasets/owner_short_paired_ab_fixture8 \
+  --split-at 2026-02-15T00:00:00Z \
+  --right-contexts 0,8,16,24 \
+  --seed 20260804 --max-positive-anchors 8
+
+# fixture 通过后执行冻结的 full build
+yolo-xx-paired-ab build \
+  --snapshot-dir data/manual_short_preholdout_15m \
+  --out datasets/owner_short_paired_ab_v2 \
+  --split-at 2026-02-15T00:00:00Z \
+  --right-contexts 0,8,16,24 \
+  --seed 20260804
+
+yolo-xx-paired-ab audit --pair-root datasets/owner_short_paired_ab_v2
+yolo-xx-paired-gallery \
+  --pair-root datasets/owner_short_paired_ab_v2 \
+  --out reports/owner_short_paired_ab_v2_sample24
+```
+
+训练默认显式锁定 `deterministic=true`、`amp=true`、`workers=4`、`cache=false`，适配 12GB
+RTX 3060 + 16GB 主机内存。`train.py` 会生成一个忽略 dataset/name/project 的 comparison contract；
+两臂 contract hash 不相同就不是单变量实验。
+
+Windows 只作为可清空的拟合 worker。Mac 先完成完整 source snapshot 审计，再生成逐图/逐标签
+SHA-256 的 portable receipt；远端必须拿命令行单独传入的 receipt hash 重验 payload，因而无需
+复制 287MB OHLCV 快照：
+
+```bash
+yolo-xx-portable create \
+  --data datasets/owner_short_paired_ab_v2/w200/data.yaml \
+  --out datasets/owner_short_paired_ab_v2/w200/portable_receipt.json
+
+YOLO_XX_3060_HOST=zzc@CURRENT_IP \
+  bash scripts/train_paired_ab_on_3060.sh --check
+YOLO_XX_3060_HOST=zzc@CURRENT_IP \
+  bash scripts/train_paired_ab_on_3060.sh
+```
+
+启动器使用 detached WMI 顺序训练 w200、w96，SSH 断开不会杀进程；它没有 holdout、ACTIVE、
+部署或交易入口。完整冻结协议见
+[docs/WINDOW_AB_PREREG_20260804.md](docs/WINDOW_AB_PREREG_20260804.md)。
+
+训练完成后，可把本地缓存裁成严格 pre-holdout 的 1m/2m/3m/5m immutable snapshot，生成
+两臂共用终点的离线扫描集，再以预注册的固定阈值批量推理：
+
+```bash
+yolo-xx-micro-snapshot \
+  --cache-dir /path/to/local/kline_cache \
+  --out data/micro_preholdout/5m --timeframe 5m
+yolo-xx-scan-set build \
+  --snapshot-dir data/micro_preholdout/5m \
+  --out datasets/micro_scan_preholdout_v1/5m --max-images 512
+
+YOLO_XX_3060_HOST=zzc@CURRENT_IP \
+  bash scripts/scan_micro_on_3060.sh
+```
+
+扫描固定使用 `conf=0.30`、`iou=0.70`，只输出检测数量、置信度、原始框位置和抽样叠框图；
+它没有收益标签、判断层、holdout、ACTIVE、部署或交易入口。
+
 ## 测试
 
 ```bash

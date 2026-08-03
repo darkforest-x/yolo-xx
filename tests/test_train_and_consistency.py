@@ -9,6 +9,7 @@ from yolo_xx.consistency import iou, match_greedy
 from yolo_xx.evaluate import main as evaluate_main
 from yolo_xx.train import (
     SAFE_AUG,
+    build_training_contract,
     build_train_kwargs,
     ensure_run_output_available,
     infer_finetune,
@@ -59,6 +60,9 @@ def test_train_plan_is_pure_and_finetune_is_inferred(tmp_path) -> None:
     assert kwargs["lr0"] == 1e-4
     assert kwargs["mosaic"] == 0.0
     assert kwargs["exist_ok"] is False
+    assert kwargs["deterministic"] is True
+    assert kwargs["amp"] is True
+    assert kwargs["close_mosaic"] == 0
     cold_kwargs = build_train_kwargs(
         data=tmp_path / "data.yaml",
         epochs=3,
@@ -75,9 +79,24 @@ def test_train_plan_is_pure_and_finetune_is_inferred(tmp_path) -> None:
         finetune=False,
         seed=42,
     )
-    assert "optimizer" not in cold_kwargs
+    assert cold_kwargs["optimizer"] == "auto"
     assert cold_kwargs["translate"] == 0.0
     assert cold_kwargs["scale"] == 0.0
+    counterpart = dict(cold_kwargs)
+    counterpart.update(
+        {
+            "data": str(tmp_path / "other.yaml"),
+            "project": str(tmp_path / "other-runs"),
+            "name": "other-name",
+        }
+    )
+    left = build_training_contract(
+        model="yolo11n.pt", train_kwargs=cold_kwargs, model_sha256="a" * 64
+    )
+    right = build_training_contract(
+        model="yolo11n.pt", train_kwargs=counterpart, model_sha256="a" * 64
+    )
+    assert left["contract_sha256"] == right["contract_sha256"]
 
 
 def test_consistency_matching_is_one_to_one() -> None:

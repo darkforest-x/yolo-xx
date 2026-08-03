@@ -34,7 +34,14 @@ import pandas as pd
 
 from .audit import audit_dataset
 from .data import add_mas, load_ohlcv_csv
-from .render import IMG_HEIGHT, IMG_WIDTH, MARGIN, ChartTransform, render_chart
+from .render import (
+    IMG_HEIGHT,
+    IMG_WIDTH,
+    MARGIN,
+    ChartTransform,
+    make_chart_transform,
+    render_chart,
+)
 from .source_manifest import (
     HOLDOUT_START,
     SnapshotFile,
@@ -491,7 +498,9 @@ def _remap_short_box(
     original = frame.iloc[original_start : original_start + ORIGINAL_WINDOW].reset_index(drop=True)
     if len(original) != ORIGINAL_WINDOW:
         raise ValueError(f"{box.box_id}: original 200-bar source window is incomplete")
-    _, original_transform = render_chart(original, ma_periods=(20, 60, 120))
+    # The remap needs only geometry.  Building a full throwaway raster here used
+    # to double chart drawing work during large paired builds.
+    original_transform = make_chart_transform(original, ma_periods=(20, 60, 120))
     _, yc, _, height = box.xywhn
     y1 = (yc - height / 2) * original_transform.height
     y2 = (yc + height / 2) * original_transform.height

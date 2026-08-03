@@ -26,6 +26,12 @@ yolo-xx-eval = "yolo_xx.evaluate:main"
 yolo-xx-predict = "yolo_xx.predict:main"
 yolo-xx-consistency = "yolo_xx.consistency:main"
 yolo-xx-manual-short = "yolo_xx.manual_short:main"
+yolo-xx-paired-ab = "yolo_xx.paired_ab:main"
+yolo-xx-portable = "yolo_xx.portable:main"
+yolo-xx-paired-gallery = "yolo_xx.paired_gallery:main"
+yolo-xx-micro-snapshot = "yolo_xx.micro_snapshot:main"
+yolo-xx-scan-set = "yolo_xx.scan_set:main"
+yolo-xx-scan-predict = "yolo_xx.scan_predict:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -149,8 +149,11 @@ def test_schema_v2_audit_detects_manifest_label_and_image_tampering(
     positive = next(sample for sample in payload["samples"] if sample["n_boxes"] > 0)
     label_path = output / positive["label"]
     original_label = label_path.read_bytes()
-    label_path.write_bytes(original_label + b"0 0.1 0.1 0.1 0.1\n")
-    assert audit_dataset(output)["valid"] is False
+    first_row = original_label.splitlines(keepends=True)[0]
+    label_path.write_bytes(original_label + first_row)
+    duplicate_audit = audit_dataset(output)
+    assert duplicate_audit["valid"] is False
+    assert any("duplicate YOLO label row" in error for error in duplicate_audit["errors"])
     label_path.write_bytes(original_label)
 
     image_path = output / payload["samples"][0]["image"]
