@@ -25,6 +25,7 @@ yolo-xx-train = "yolo_xx.train:main"
 yolo-xx-eval = "yolo_xx.evaluate:main"
 yolo-xx-predict = "yolo_xx.predict:main"
 yolo-xx-consistency = "yolo_xx.consistency:main"
+yolo-xx-manual-short = "yolo_xx.manual_short:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

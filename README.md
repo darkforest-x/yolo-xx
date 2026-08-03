@@ -208,3 +208,39 @@ yolo-xx-predict \
 部署和网络依赖进入本项目。
 
 迁移来源与改动见 [docs/EXTRACTION_MAP.md](docs/EXTRACTION_MAP.md)。
+
+## 恢复 owner 只做空原始框
+
+`manual-short` 流程用于恢复旧 `dense_owner_side_short`：只保留 owner 明确标为 short 的框，
+不使用盘口重裁框，也不读取 holdout。第一步把父项目当前 CSV 中截止线以前的连续 OHLCV 前缀
+复制成独立、带哈希的快照；循环只检查第一条边界时间，绝不解析或写出边界后的 OHLCV：
+
+```bash
+yolo-xx-manual-short snapshot \
+  --review-sheet /Users/zhangzc/fable-trading/analysis/output/owner_side_review/review_sheet.csv \
+  --source-dir /Users/zhangzc/fable-trading/data/kline_fetched \
+  --out data/manual_short_preholdout_15m \
+  --dry-run
+
+# 核对计划后去掉 --dry-run
+```
+
+随后分别恢复 200 根原图语义基线，以及 96 根短窗实验版：
+
+```bash
+yolo-xx-manual-short build \
+  --snapshot-dir data/manual_short_preholdout_15m \
+  --out datasets/owner_short_original_w200 \
+  --layout original --window 200 --dry-run
+
+yolo-xx-manual-short build \
+  --snapshot-dir data/manual_short_preholdout_15m \
+  --out datasets/owner_short_staggered_w96 \
+  --layout staggered_causal --window 96 \
+  --right-contexts 0,8,16,24 --dry-run
+```
+
+96 根不是把完整形态的结束时间凭空提前，而是把每根 K 线的横向像素提高约 2.1 倍。框右侧
+上下文按 `box_id` 确定性散列到 0/8/16/24 根，避免所有正框固定贴最右侧。manifest 仍把
+`available_at` 记为整张输入图最后一根 K 线的闭合时间，不能拿 `box_end_time` 冒充实时可用时间。
+恢复集只有正图；在加入经审计、位置匹配的负样本前，不得把它称为 precision 可用的训练集。

@@ -44,3 +44,16 @@ The full `eth3m_short_pilot_v1_mac_cold` run record was copied to `runs/imported
 - classification datasets and `yolo11n-cls.pt`: this repository currently implements object detection only.
 - `owner_best.json`, ACTIVE pointers, frozen LightGBM files, judgment/backtest outputs, deployment and trading
   files: outside this repository's YOLO-only scope.
+
+## 2026-08-04 owner short-box recovery
+
+The missing-image `dense_owner_side_short` wrapper was rebuilt from the surviving owner review coordinates and
+a newly materialized immutable pre-holdout OHLCV prefix. The recovery produced:
+
+- `data/manual_short_preholdout_15m`: 215 symbols / 5,900,085 rows / 1,361 short annotations;
+- `datasets/owner_short_original_w200`: original 200-bar positions;
+- `datasets/owner_short_staggered_w96`: 96-bar position-balanced short-window experiment.
+
+These assets remain gitignored. Their hashes, split counts, audits and safety declaration are recorded in
+[`MANUAL_SHORT_RECOVERY.md`](MANUAL_SHORT_RECOVERY.md) and
+[`manual_short_recovery_20260804.json`](manual_short_recovery_20260804.json).

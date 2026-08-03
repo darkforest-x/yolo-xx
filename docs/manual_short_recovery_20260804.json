@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "date": "2026-08-04",
+  "safety": {
+    "training_performed": false,
+    "holdout_ohlcv_read": false,
+    "post_cutoff_ohlcv_rows_materialized": 0,
+    "active_modified": false,
+    "deployed": false,
+    "orders_placed": false,
+    "network_used": false
+  },
+  "snapshot": {
+    "path": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m",
+    "symbols": 215,
+    "preholdout_rows": 5900085,
+    "annotation_boxes": 1361,
+    "annotation_stems": 1317,
+    "manifest_sha256": "9b186abc2905f97237b07a065c8fa377516c9af5488d8cf3294194834c80e32c",
+    "annotation_sha256": "23fd378ab384b9d2f73dc67aa409943373c347fbfe1f0f7647d8de54cdd5b705"
+  },
+  "datasets": [
+    {
+      "name": "owner_short_original_w200",
+      "path": "/Users/zhangzc/yolo-xx/datasets/owner_short_original_w200",
+      "window_bars": 200,
+      "pixels_per_bar": 6.311558,
+      "train_images": 1035,
+      "train_boxes": 1076,
+      "val_images": 277,
+      "val_boxes": 280,
+      "dropped_cross_split": 5,
+      "manifest_sha256": "6bc7d2442e101d6085e285d332bdd485195ab00666cd665aac0eb6e5b1b2c96a",
+      "audit_valid": true,
+      "audit_errors": []
+    },
+    {
+      "name": "owner_short_staggered_w96",
+      "path": "/Users/zhangzc/yolo-xx/datasets/owner_short_staggered_w96",
+      "window_bars": 96,
+      "pixels_per_bar": 13.221053,
+      "train_images": 1076,
+      "train_boxes": 1076,
+      "val_images": 280,
+      "val_boxes": 280,
+      "dropped_cross_split": 5,
+      "right_context_counts": {"0": 324, "8": 347, "16": 342, "24": 343},
+      "box_right_fraction": {
+        "min": 0.745312,
+        "p25": 0.745313,
+        "median": 0.828126,
+        "p75": 0.910938,
+        "max": 0.99375
+      },
+      "manifest_sha256": "2315450180c4a7139855e582554bbf2ed9fc3927d20b14f53a8f0eb00966bfb9",
+      "audit_valid": true,
+      "audit_errors": []
+    }
+  ],
+  "tests": {"passed": 40, "failed": 0},
+  "training_readiness": "blocked_on_position_matched_preholdout_negative_pool"
+}
