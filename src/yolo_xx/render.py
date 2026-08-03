@@ -4,12 +4,14 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Iterable
 
 import cv2
 import numpy as np
 import pandas as pd
 
-from .data import ALL_MA_COLS
+from .data import MA_PERIODS
+from .specs import ma_column_names
 
 CANDLE_GREEN = (129, 153, 8)
 CANDLE_RED = (69, 54, 242)
@@ -23,6 +25,8 @@ MA_COLORS = {
     "ema60": (60, 160, 250),
     "ema120": (150, 70, 200),
 }
+SMA_PALETTE = ((196, 114, 32), (176, 168, 92), (140, 110, 110))
+EMA_PALETTE = ((36, 96, 240), (60, 160, 250), (150, 70, 200))
 
 IMG_WIDTH = 1280
 IMG_HEIGHT = 742
@@ -55,9 +59,25 @@ class ChartTransform:
         return int(self.top + (self.price_max - float(price)) / span * self.plot_h)
 
 
-def _price_bounds(frame: pd.DataFrame, pad: float = 0.06) -> tuple[float, float]:
+def _ma_colors(periods: tuple[int, ...]) -> dict[str, tuple[int, int, int]]:
+    """Assign stable line colors by physical-horizon order, not period spelling."""
+    colors: dict[str, tuple[int, int, int]] = {}
+    for index, period in enumerate(periods):
+        colors[f"sma{period}"] = SMA_PALETTE[min(index, len(SMA_PALETTE) - 1)]
+        colors[f"ema{period}"] = EMA_PALETTE[min(index, len(EMA_PALETTE) - 1)]
+    return colors
+
+
+def _price_bounds(
+    frame: pd.DataFrame,
+    pad: float = 0.06,
+    *,
+    ma_periods: Iterable[int] = MA_PERIODS,
+) -> tuple[float, float]:
     series = [frame["low"], frame["high"]]
-    series.extend(frame[column] for column in ALL_MA_COLS if column in frame.columns)
+    series.extend(
+        frame[column] for column in ma_column_names(ma_periods) if column in frame.columns
+    )
     values = pd.concat(series).dropna()
     if values.empty:
         raise ValueError("cannot render a frame without finite price values")
@@ -73,6 +93,7 @@ def make_chart_transform(
     *,
     width: int = IMG_WIDTH,
     height: int = IMG_HEIGHT,
+    ma_periods: Iterable[int] = MA_PERIODS,
 ) -> ChartTransform:
     """Build the deterministic chart transform without drawing the image."""
     if frame.empty:
@@ -83,7 +104,7 @@ def make_chart_transform(
     plot_w, plot_h = width - 2 * MARGIN, height - 2 * MARGIN
     if plot_w <= 0 or plot_h <= 0:
         raise ValueError("image dimensions must be larger than twice the margin")
-    price_min, price_max = _price_bounds(frame)
+    price_min, price_max = _price_bounds(frame, ma_periods=ma_periods)
     candle_half_w = max(1, int(plot_w / count * 0.34))
     return ChartTransform(
         n_bars=count,
@@ -105,10 +126,17 @@ def render_chart(
     width: int = IMG_WIDTH,
     height: int = IMG_HEIGHT,
     out_path: str | Path | None = None,
+    ma_periods: Iterable[int] = MA_PERIODS,
 ) -> tuple[np.ndarray, ChartTransform]:
     """Render one OHLCV window whose moving-average columns already exist."""
     frame = frame.reset_index(drop=True)
-    transform = make_chart_transform(frame, width=width, height=height)
+    normalized_periods = tuple(int(period) for period in ma_periods)
+    transform = make_chart_transform(
+        frame,
+        width=width,
+        height=height,
+        ma_periods=normalized_periods,
+    )
     image = np.full((height, width, 3), BG, dtype=np.uint8)
 
     for index, row in frame.iterrows():
@@ -129,7 +157,8 @@ def render_chart(
             cv2.LINE_AA,
         )
 
-    for column in ALL_MA_COLS:
+    colors = _ma_colors(normalized_periods)
+    for column in ma_column_names(normalized_periods):
         if column not in frame.columns:
             continue
         points = [
@@ -142,7 +171,7 @@ def render_chart(
                 image,
                 [np.asarray(points, dtype=np.int32)],
                 False,
-                MA_COLORS[column],
+                colors[column],
                 1,
                 cv2.LINE_AA,
             )

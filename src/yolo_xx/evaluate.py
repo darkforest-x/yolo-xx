@@ -5,7 +5,9 @@ from __future__ import annotations
 import argparse
 import json
 from pathlib import Path
+from typing import Sequence
 
+from .audit import require_valid_dataset
 from .train import pick_device
 
 
@@ -19,7 +21,7 @@ def _metrics_summary(metrics: object) -> dict[str, float]:
     }
 
 
-def main() -> None:
+def main(argv: Sequence[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--weights", required=True, type=Path)
     parser.add_argument("--data", required=True, type=Path)
@@ -29,7 +31,7 @@ def main() -> None:
     parser.add_argument("--batch", type=int, default=8)
     parser.add_argument("--split", default="val", choices=("val", "test"))
     parser.add_argument("--dry-run", action="store_true")
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
 
     plan = {
         "weights": str(args.weights.resolve()),
@@ -45,6 +47,7 @@ def main() -> None:
         return
     if not args.weights.is_file() or not args.data.is_file():
         raise FileNotFoundError("weights and dataset YAML must both exist")
+    require_valid_dataset(args.data)
 
     from ultralytics import YOLO
 

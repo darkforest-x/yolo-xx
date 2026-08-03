@@ -12,7 +12,7 @@ dependencies = [
   "numpy>=1.26",
   "opencv-python>=4.9",
   "pandas>=2.2",
-  "ultralytics>=8.3",
+  "ultralytics==8.4.89",
 ]
 
 [project.optional-dependencies]

@@ -5,7 +5,9 @@ from __future__ import annotations
 import argparse
 import json
 from pathlib import Path
-from typing import Any
+from typing import Any, Sequence
+
+from .audit import require_valid_dataset
 
 SAFE_AUG: dict[str, Any] = {
     "fliplr": 0.0,
@@ -13,14 +15,19 @@ SAFE_AUG: dict[str, Any] = {
     "mosaic": 0.0,
     "mixup": 0.0,
     "copy_paste": 0.0,
+    "cutmix": 0.0,
     "hsv_h": 0.0,
     "hsv_s": 0.0,
     "hsv_v": 0.0,
-    "translate": 0.02,
-    "scale": 0.1,
+    "bgr": 0.0,
+    # Multi-position labels must come from real windows.  Synthetic shifts or
+    # scaling can change candle/MA geometry and recreate a positional shortcut.
+    "translate": 0.0,
+    "scale": 0.0,
     "degrees": 0.0,
     "shear": 0.0,
     "perspective": 0.0,
+    "multi_scale": False,
     "erasing": 0.0,
     "auto_augment": None,
 }
@@ -62,6 +69,18 @@ def infer_finetune(model: str | Path) -> bool:
     return not Path(model).name.lower().startswith("yolo")
 
 
+def ensure_run_output_available(
+    project: str | Path,
+    name: str,
+    *,
+    resume: bool,
+) -> None:
+    """Reject accidental reuse of a completed/new-run directory."""
+    run_dir = Path(project) / name
+    if run_dir.exists() and not resume:
+        raise FileExistsError(f"refusing to mix training runs; output exists: {run_dir}")
+
+
 def build_train_kwargs(
     *,
     data: str | Path,
@@ -91,7 +110,8 @@ def build_train_kwargs(
         "cache": cache,
         "project": str(project),
         "name": name,
-        "exist_ok": True,
+        # Never mix a new experiment into an existing run directory.
+        "exist_ok": False,
         "plots": plots,
         "rect": True,
         "resume": resume,
@@ -103,7 +123,7 @@ def build_train_kwargs(
     return kwargs
 
 
-def main() -> None:
+def main(argv: Sequence[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--data", required=True, type=Path)
     parser.add_argument("--model", default="yolo11n.pt")
@@ -121,7 +141,7 @@ def main() -> None:
     parser.add_argument("--finetune", action=argparse.BooleanOptionalAction, default=None)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--dry-run", action="store_true")
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
 
     finetune = infer_finetune(args.model) if args.finetune is None else args.finetune
     device = args.device or ("auto" if args.dry_run else pick_device())
@@ -147,6 +167,8 @@ def main() -> None:
         return
     if not args.data.is_file():
         raise FileNotFoundError(f"dataset YAML does not exist: {args.data}")
+    require_valid_dataset(args.data)
+    ensure_run_output_available(args.project, args.name, resume=args.resume)
 
     from ultralytics import YOLO
 

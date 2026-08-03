@@ -3,15 +3,25 @@
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import math
 from pathlib import Path
 from typing import Any, Iterable, Sequence
 
+from .audit import audit_dataset
+from .source_manifest import sha256_file
 from .train import pick_device
 
 IMAGE_SUFFIXES = frozenset({".bmp", ".jpeg", ".jpg", ".png", ".webp"})
+DATASET_CONTEXT_FIELDS = (
+    "symbol",
+    "source_file",
+    "source_sha256",
+    "window_start_time",
+    "window_end_close_time",
+    "available_at",
+    "image_sha256",
+)
 
 
 def discover_images(source: str | Path, *, recursive: bool = False) -> list[Path]:
@@ -43,15 +53,6 @@ def source_relative_path(image: Path, source: Path) -> Path:
 def artifact_relative_path(image_relative: Path, suffix: str) -> Path:
     """Append an artifact suffix without discarding the source image extension."""
     return image_relative.parent / f"{image_relative.name}{suffix}"
-
-
-def sha256_file(path: str | Path) -> str:
-    """Return the SHA-256 of one model artifact without loading it into memory."""
-    digest = hashlib.sha256()
-    with Path(path).open("rb") as handle:
-        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(chunk)
-    return digest.hexdigest()
 
 
 def normalize_detections(
@@ -118,6 +119,59 @@ def ensure_clean_output(output: str | Path) -> Path:
     return root
 
 
+def load_dataset_contexts(
+    manifest_path: str | Path,
+) -> tuple[str, dict[str, dict[str, Any]]]:
+    """Load schema-v2 sample timing keyed by its exact relative image path."""
+    path = Path(manifest_path)
+    if not path.is_file():
+        raise FileNotFoundError(f"dataset manifest does not exist: {path}")
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if payload.get("schema_version") != 2:
+        raise ValueError("dataset manifest must use schema_version 2")
+    detection_spec = payload.get("detection_spec")
+    if not isinstance(detection_spec, dict) or not detection_spec.get("timeframe"):
+        raise ValueError("dataset manifest is missing detection_spec.timeframe")
+    samples = payload.get("samples")
+    if not isinstance(samples, list):
+        raise ValueError("dataset manifest samples must be a list")
+    contexts: dict[str, dict[str, Any]] = {}
+    for sample in samples:
+        if not isinstance(sample, dict):
+            raise ValueError("dataset manifest sample must be an object")
+        relative_image = sample.get("image")
+        if not isinstance(relative_image, str) or not relative_image:
+            raise ValueError("dataset manifest sample is missing image")
+        normalized = Path(relative_image).as_posix()
+        if Path(normalized).is_absolute() or ".." in Path(normalized).parts:
+            raise ValueError(f"dataset manifest image must be relative: {relative_image}")
+        if normalized in contexts:
+            raise ValueError(f"duplicate dataset manifest image: {normalized}")
+        missing = [field for field in DATASET_CONTEXT_FIELDS if not sample.get(field)]
+        if not sample.get("id"):
+            missing.append("id")
+        if missing:
+            raise ValueError(
+                f"dataset manifest sample {normalized} is missing: {', '.join(missing)}"
+            )
+        if sample["available_at"] != sample["window_end_close_time"]:
+            raise ValueError(
+                f"dataset manifest sample {normalized} violates availability contract"
+            )
+        contexts[normalized] = {
+            "sample_id": sample["id"],
+            "symbol": sample["symbol"],
+            "source_file": sample["source_file"],
+            "source_sha256": sample["source_sha256"],
+            "detector_timeframe": detection_spec["timeframe"],
+            "window_start_time": sample["window_start_time"],
+            "window_end_close_time": sample["window_end_close_time"],
+            "available_at": sample["available_at"],
+            "image_sha256": sample["image_sha256"],
+        }
+    return str(detection_spec["timeframe"]), contexts
+
+
 def build_predict_plan(
     *,
     weights: str | Path,
@@ -130,14 +184,15 @@ def build_predict_plan(
     device: str,
     recursive: bool,
     save_overlays: bool,
+    dataset_manifest: str | Path | None = None,
 ) -> dict[str, Any]:
     """Build the complete machine-readable prediction plan without reading inputs."""
     if not 0 <= conf <= 1 or not 0 <= iou <= 1:
         raise ValueError("conf and iou must be between zero and one")
     if imgsz <= 0 or batch <= 0:
         raise ValueError("imgsz and batch must be positive")
-    return {
-        "schema_version": 1,
+    plan = {
+        "schema_version": 2 if dataset_manifest is not None else 1,
         "weights": str(Path(weights).resolve()),
         "source": str(Path(source).resolve()),
         "output": str(Path(output).resolve()),
@@ -149,6 +204,9 @@ def build_predict_plan(
         "recursive": recursive,
         "save_overlays": save_overlays,
     }
+    if dataset_manifest is not None:
+        plan["dataset_manifest"] = str(Path(dataset_manifest).resolve())
+    return plan
 
 
 def run_prediction(plan: dict[str, Any]) -> dict[str, Any]:
@@ -158,34 +216,86 @@ def run_prediction(plan: dict[str, Any]) -> dict[str, Any]:
     output = ensure_clean_output(plan["output"])
     if not weights.is_file():
         raise FileNotFoundError(f"weights do not exist: {weights}")
+    weights_sha256 = sha256_file(weights)
     images = discover_images(source, recursive=bool(plan["recursive"]))
+    image_inputs = [(image, source_relative_path(image, source)) for image in images]
+    dataset_contexts = None
+    detector_timeframe = None
+    dataset_manifest_path = plan.get("dataset_manifest")
+    dataset_manifest_sha256 = None
+    if dataset_manifest_path is not None:
+        dataset_manifest_path = Path(dataset_manifest_path).resolve()
+        dataset_manifest_sha256 = sha256_file(dataset_manifest_path)
+        dataset_root = dataset_manifest_path.parent
+        if source.resolve() != dataset_root:
+            raise ValueError(
+                "prediction source must equal the dataset manifest parent"
+            )
+        audit = audit_dataset(dataset_root)
+        if not audit["valid"]:
+            preview = "; ".join(str(item) for item in audit["errors"][:5])
+            raise ValueError(f"dataset manifest failed strong audit: {preview}")
+        detector_timeframe, dataset_contexts = load_dataset_contexts(dataset_manifest_path)
+        missing = [
+            relative.as_posix()
+            for _, relative in image_inputs
+            if relative.as_posix() not in dataset_contexts
+        ]
+        if missing:
+            raise ValueError(
+                "prediction images are missing from dataset manifest: "
+                + ", ".join(missing[:5])
+            )
+        for image, relative in image_inputs:
+            expected_hash = dataset_contexts[relative.as_posix()]["image_sha256"]
+            if sha256_file(image) != expected_hash:
+                raise ValueError(f"prediction image SHA-256 mismatch: {relative.as_posix()}")
     output.mkdir(parents=True, exist_ok=True)
 
     import ultralytics
     from ultralytics import YOLO
 
     model = YOLO(str(weights))
-    results = model.predict(
-        source=[str(image) for image in images],
-        conf=plan["conf"],
-        iou=plan["iou"],
-        imgsz=plan["imgsz"],
-        batch=plan["batch"],
-        device=plan["device"],
-        save=False,
-        save_txt=False,
-        verbose=False,
-        stream=True,
-    )
-
     items = []
     total_detections = 0
-    processed = 0
-    for index, result in enumerate(results):
-        if index >= len(images):
-            raise RuntimeError("model returned more results than input images")
-        image = images[index]
-        relative = source_relative_path(image, source)
+    for image, relative in image_inputs:
+        # Ultralytics 8.4.89 rewrites ``result.path`` to ``image0.jpg`` when a
+        # Python list of path strings is supplied.  Isolate each input instead:
+        # one call must yield exactly one result whose path is the requested
+        # file.  This keeps path identity auditable without trusting batch order.
+        results = iter(
+            model.predict(
+                source=str(image),
+                conf=plan["conf"],
+                iou=plan["iou"],
+                imgsz=plan["imgsz"],
+                batch=plan["batch"],
+                device=plan["device"],
+                save=False,
+                save_txt=False,
+                verbose=False,
+                stream=True,
+            )
+        )
+        try:
+            result = next(results)
+        except StopIteration as error:
+            raise RuntimeError(f"model omitted input result: {image}") from error
+        try:
+            extra_result = next(results)
+        except StopIteration:
+            extra_result = None
+        if extra_result is not None:
+            raise RuntimeError(f"model returned multiple results for one input: {image}")
+        raw_result_path = getattr(result, "path", None)
+        if raw_result_path is None:
+            raise RuntimeError("model result is missing its input path")
+        result_path = Path(raw_result_path).resolve()
+        if result_path != image.resolve():
+            raise RuntimeError(
+                f"model result path does not match isolated input: "
+                f"expected {image.resolve()}, got {result_path}"
+            )
         label_path = output / "labels" / artifact_relative_path(relative, ".txt")
         label_path.parent.mkdir(parents=True, exist_ok=True)
         boxes = result.boxes
@@ -193,6 +303,12 @@ def run_prediction(plan: dict[str, Any]) -> dict[str, Any]:
         class_ids = boxes.cls.cpu().numpy().tolist() if boxes is not None else []
         confidences = boxes.conf.cpu().numpy().tolist() if boxes is not None else []
         detections = normalize_detections(xywhn, class_ids, confidences, result.names)
+        context = dataset_contexts[relative.as_posix()] if dataset_contexts is not None else None
+        if context is not None:
+            detections = [
+                {**detection, "available_at": context["available_at"]}
+                for detection in detections
+            ]
         label_path.write_text(to_prediction_lines(detections), encoding="utf-8")
 
         overlay_path = None
@@ -205,27 +321,30 @@ def run_prediction(plan: dict[str, Any]) -> dict[str, Any]:
                 raise OSError(f"failed to write prediction overlay: {overlay_path}")
 
         total_detections += len(detections)
-        processed += 1
-        items.append(
-            {
-                "image": str(image),
-                "relative_image": relative.as_posix(),
-                "label": str(label_path.resolve()),
-                "overlay": str(overlay_path.resolve()) if overlay_path is not None else None,
-                "detections": detections,
-            }
-        )
-    if processed != len(images):
-        raise RuntimeError(f"model returned {processed} results for {len(images)} input images")
-
-    manifest = {
+        item = {
+            "image": str(image),
+            "relative_image": relative.as_posix(),
+            "weights_sha256": weights_sha256,
+            "label": str(label_path.resolve()),
+            "overlay": str(overlay_path.resolve()) if overlay_path is not None else None,
+            "detections": detections,
+        }
+        if context is not None:
+            item.update(context)
+            item["dataset_manifest_sha256"] = dataset_manifest_sha256
+        items.append(item)
+    items.sort(key=lambda item: str(item["relative_image"]))
+    manifest: dict[str, Any] = {
         **plan,
-        "weights_sha256": sha256_file(weights),
+        "weights_sha256": weights_sha256,
         "ultralytics_version": ultralytics.__version__,
         "image_count": len(images),
         "detection_count": total_detections,
         "items": items,
     }
+    if dataset_manifest_path is not None:
+        manifest["dataset_manifest_sha256"] = dataset_manifest_sha256
+        manifest["detector_timeframe"] = detector_timeframe
     manifest_path = output / "predictions.json"
     manifest_path.write_text(
         json.dumps(manifest, indent=2, sort_keys=True) + "\n",
@@ -246,6 +365,11 @@ def main() -> None:
     parser.add_argument("--device")
     parser.add_argument("--recursive", action="store_true")
     parser.add_argument("--save-overlays", action="store_true")
+    parser.add_argument(
+        "--dataset-manifest",
+        type=Path,
+        help="optional schema-v2 dataset manifest for non-backfilled sample timing",
+    )
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
@@ -261,6 +385,7 @@ def main() -> None:
         device=device,
         recursive=args.recursive,
         save_overlays=args.save_overlays,
+        dataset_manifest=args.dataset_manifest,
     )
     print(json.dumps(plan, indent=2, sort_keys=True))
     if args.dry_run:

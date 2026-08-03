@@ -3,12 +3,14 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from typing import Iterable
 
 import numpy as np
 import pandas as pd
 
-from .data import ALL_MA_COLS
+from .data import MA_PERIODS
 from .render import ChartTransform
+from .specs import ma_column_names
 
 FAST_SPREAD_MAX = 0.0028
 FULL_SPREAD_MAX = 0.0055
@@ -91,12 +93,13 @@ def segment_to_bbox(
     *,
     x_pad_px: int = X_PAD_PX,
     y_pad_frac: float = Y_PAD_FRAC,
+    ma_periods: Iterable[int] = MA_PERIODS,
 ) -> tuple[float, float, float, float] | None:
     """Map a dense segment to normalized YOLO `(xc, yc, width, height)`."""
     region = frame.iloc[segment.start : segment.end + 1]
     values = [
         float(value)
-        for column in ALL_MA_COLS
+        for column in ma_column_names(ma_periods)
         if column in region.columns
         for value in region[column]
         if pd.notna(value)
@@ -129,14 +132,61 @@ def segment_to_bbox(
 def label_window(
     frame: pd.DataFrame,
     transform: ChartTransform,
+    *,
+    ma_periods: Iterable[int] = MA_PERIODS,
+    fast_max: float = FAST_SPREAD_MAX,
+    full_max: float = FULL_SPREAD_MAX,
+    min_bars: int = MIN_DENSE_BARS,
+    merge_gap: int = MERGE_GAP_BARS,
+    max_bars: int = MAX_DENSE_BARS,
 ) -> list[tuple[float, float, float, float]]:
     """Return every rule-generated box for one rendered chart window."""
-    boxes = []
-    for segment in find_dense_segments(frame):
-        box = segment_to_bbox(frame, segment, transform)
+    return [
+        box
+        for _, box in label_segments(
+            frame,
+            transform,
+            ma_periods=ma_periods,
+            fast_max=fast_max,
+            full_max=full_max,
+            min_bars=min_bars,
+            merge_gap=merge_gap,
+            max_bars=max_bars,
+        )
+    ]
+
+
+def label_segments(
+    frame: pd.DataFrame,
+    transform: ChartTransform,
+    *,
+    ma_periods: Iterable[int] = MA_PERIODS,
+    fast_max: float = FAST_SPREAD_MAX,
+    full_max: float = FULL_SPREAD_MAX,
+    min_bars: int = MIN_DENSE_BARS,
+    merge_gap: int = MERGE_GAP_BARS,
+    max_bars: int = MAX_DENSE_BARS,
+) -> list[tuple[DenseSegment, tuple[float, float, float, float]]]:
+    """Return each real in-window dense segment together with its YOLO box."""
+    normalized_periods = tuple(int(period) for period in ma_periods)
+    labeled = []
+    for segment in find_dense_segments(
+        frame,
+        fast_max=fast_max,
+        full_max=full_max,
+        min_bars=min_bars,
+        merge_gap=merge_gap,
+        max_bars=max_bars,
+    ):
+        box = segment_to_bbox(
+            frame,
+            segment,
+            transform,
+            ma_periods=normalized_periods,
+        )
         if box is not None:
-            boxes.append(box)
-    return boxes
+            labeled.append((segment, box))
+    return labeled
 
 
 def to_yolo_lines(boxes: list[tuple[float, float, float, float]]) -> str:
