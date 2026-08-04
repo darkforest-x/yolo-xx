@@ -125,9 +125,16 @@ def _validate_prediction(
     hit_images = sum(bool(item.get("detections")) for item in items)
     if prediction.get("images_with_detections") != hit_images:
         errors.append(f"{arm}/{timeframe}: hit image count mismatch")
-    cutoff = HOLDOUT_START.to_pydatetime()
+    # The scan arm declares its own cutoff; the audit holds predictions to that
+    # boundary rather than to the pre-holdout constant, and the arm manifest has
+    # already been checked for stamp/cutoff agreement.
+    try:
+        cutoff = _parse_time(manifest.get("end_before"))
+    except ValueError:
+        cutoff = HOLDOUT_START.to_pydatetime()
+        errors.append(f"{arm}/{timeframe}: scan manifest end_before is unreadable")
     if any(_parse_time(item.get("available_at")) > cutoff for item in items):
-        errors.append(f"{arm}/{timeframe}: post-holdout availability")
+        errors.append(f"{arm}/{timeframe}: availability past the declared cutoff")
     label_ids = {path.stem for path in (result_dir / "labels").glob("*.txt")}
     if label_ids != set(sample_ids):
         errors.append(f"{arm}/{timeframe}: local label ledger mismatch")

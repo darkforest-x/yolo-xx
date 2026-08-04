@@ -1,0 +1,95 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>置信度是噪声：今日最终诊断</title><style>
+:root{--bg:#fff;--fg:#111827;--mut:#6b7280;--line:#e5e7eb;--win:#12805c;--loss:#c0334d;--warn:#b45309}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--fg:#e5e7eb;--mut:#9ca3af;--line:#252a33}}
+*{box-sizing:border-box}body{margin:0;padding:1.2rem;font:15px/1.65 -apple-system,system-ui,"PingFang SC",sans-serif;
+background:var(--bg);color:var(--fg);max-width:1000px;margin-inline:auto}
+h1{font-size:1.5rem;margin:0 0 .3rem}h2{font-size:1.15rem;margin:1.9rem 0 .6rem;padding-bottom:.3rem;border-bottom:2px solid var(--line)}
+p{margin:.45rem 0}.mut{color:var(--mut);font-size:.88rem}
+.callout{border-left:4px solid var(--warn);background:rgba(180,83,9,.08);padding:.75rem .95rem;border-radius:6px;margin:1rem 0}
+.callout.good{border-color:var(--win);background:rgba(18,128,92,.08)}
+.callout.bad{border-color:var(--loss);background:rgba(192,51,77,.08)}
+table{width:100%;border-collapse:collapse;font-size:.9rem;margin:.6rem 0}
+th,td{border-bottom:1px solid var(--line);padding:.42rem .5rem;text-align:right}
+th:first-child,td:first-child{text-align:left}thead th{color:var(--mut);font-weight:600}
+.scroll{overflow-x:auto}.neg{color:var(--loss)}.pos{color:var(--win)}
+code{background:var(--line);padding:.1rem .3rem;border-radius:3px;font-size:.85em}
+ol,ul{padding-left:1.3rem}li{margin:.4rem 0}
+</style></head><body>
+
+<h1>置信度是噪声</h1>
+<p class="mut">yolo-xx · 2026-08-04 · 报告 4/4 · 今日最终诊断</p>
+
+<div class="callout bad"><b>检测器的置信度完全不包含"这个框对不对"的信息。</b>
+在连续扫描上，旧模型的精度在 conf 0.02 / 0.10 / 0.30 三个阈值下<b>都是 5.5%</b>，一动不动。
+把分数排序取前 50 名，精度 6.0%，跟整体一样。今天试过的每一种过滤都失败，
+原因就在这里 —— 没有东西可以过滤。</div>
+
+<h2>一、连续扫描精度：加 hard negative 反而更差</h2>
+<div class="scroll"><table>
+<thead><tr><th>模型</th><th>阈值</th><th>框数</th><th>命中真框</th><th>精度</th><th>前50名精度</th></tr></thead>
+<tbody>
+<tr><td>旧 owner_short_ab_w96_v2</td><td>0.30</td><td>615</td><td>34</td><td>5.5%</td><td>6.0%</td></tr>
+<tr><td>旧 owner_short_ab_w96_v2</td><td>0.02</td><td>615</td><td>34</td><td>5.5%</td><td>—</td></tr>
+<tr><td>新 hardneg_w96_v1</td><td>0.10</td><td>609</td><td>24</td><td class="neg">3.9%</td><td class="neg">2.0%</td></tr>
+<tr><td>新 hardneg_w96_v1</td><td>0.02</td><td>4796</td><td>144</td><td class="neg">3.0%</td><td>—</td></tr>
+</tbody></table></div>
+<p>旧模型精度对阈值完全不敏感 —— 分数是噪声。
+新模型更糟：前 50 名精度（2.0%）比整体（3.0%）还低，<b>排序是反的</b>。
+新模型在 conf 0.30 下一个框都不出，说明加了 3146 张反面教材后它把所有分数都压低了，
+但并没有学会区分。</p>
+
+<h2>二、60 币 × 4 个月宽口径回测</h2>
+<p>之前"74% 利润集中在 4 个币"的问题，用 60 个币、8000 个扫描窗口重测：</p>
+<div class="scroll"><table>
+<thead><tr><th>进场</th><th>口径</th><th>笔数</th><th>胜率</th><th>PF</th><th>累计</th></tr></thead>
+<tbody>
+<tr><td>15m</td><td>全部</td><td>663</td><td>29%</td><td class="neg">0.90</td><td class="neg">−53.1%</td></tr>
+<tr><td>15m</td><td>conf≥0.6</td><td>86</td><td>30%</td><td>1.05</td><td>+4.2%</td></tr>
+<tr><td>30m</td><td>全部</td><td>637</td><td>27%</td><td class="neg">0.85</td><td class="neg">−114.9%</td></tr>
+<tr><td>30m</td><td>conf≥0.6</td><td>83</td><td>28%</td><td class="neg">0.85</td><td class="neg">−15.9%</td></tr>
+</tbody></table></div>
+<p>60 个币全部参与，集中度问题消失，结果是明确的不赚钱。之前那个"边缘"确认是噪声。</p>
+
+<h2>三、但形态本身是真的（这条没变）</h2>
+<div class="callout good">
+<b>owner 人工框：val 期 273 笔，胜率 79%，PF 8.98</b>（模型从未训练过的时段），同期随机进场 PF 1.22。<br>
+更强的一条：在<b>和 owner 标注完全相同的语境</b>里（价格在 120 均线下方 1–6.6%、
+前 48 根跌 1–8%、均线带宽 0.006–0.051）随机进场，5511 个样本里只有 32% 会赢；
+而 owner 在这个语境里挑出来的赢 79%。<b>owner 的判别力是真实且巨大的。</b>
+</div>
+
+<h2>四、今天做了什么修复尝试，结果如何</h2>
+<div class="scroll"><table>
+<thead><tr><th>尝试</th><th>依据</th><th>结果</th></tr></thead>
+<tbody>
+<tr><td>21 组 TP/SL/持仓组合</td><td>可能是出场规则不对</td><td class="neg">全部失败，信号−随机 差 −0.28~+0.05</td></tr>
+<tr><td>置信度过滤</td><td>高分信号应该更准</td><td class="neg">样本外归零；精度对阈值不敏感</td></tr>
+<tr><td>接入 v11 判断层（4 种挂载位置）</td><td>生产系统靠它筛选</td><td class="neg">样本内 Spearman +0.23，样本外 +0.07 不显著</td></tr>
+<tr><td>多变量过滤（LR / GBDT）</td><td>组合特征可能有用</td><td class="neg">测试 AUC 全部 &lt;0.5，比随机差</td></tr>
+<tr><td>学习率调度 sweep</td><td>训练不稳定</td><td class="neg">cosine+lr0 0.01 在 epoch 28 崩溃</td></tr>
+<tr><td>hard negative v1（3146 张）</td><td>基率错配</td><td class="neg">精度 5.5% → 3.9%，更差</td></tr>
+<tr><td>hard negative v2（3766 张，语境匹配）</td><td>v1 反例长得不像正样本</td><td>已建好，<b>未训练</b></td></tr>
+</tbody></table></div>
+
+<h2>五、结论与下一步</h2>
+<ol>
+<li><b>当前这套检测器不可用，且问题不在超参、出场规则或判断层。</b>
+它的置信度不携带正确性信息，所以任何基于它输出的下游筛选都注定失败。</li>
+<li><b>形态本身有巨大价值</b>（owner 框 PF 8.98），所以不该放弃这条路线。</li>
+<li><b>最可能的解释：owner 用来判别的信息，不在那 96 根 K 线的画面里。</b>
+可能是更长的历史、其他周期、或者盘口/成交量结构。这一条只有你能确认 ——
+你标注的时候实际在看什么？</li>
+<li>v2 语境匹配的反面教材数据集已就绪（3766 张，76% 与 v1 不同，语境指标与正样本对齐：
+距 120 均线 −2.41% vs 正样本 −2.99%，100% 在均线下方）。可以训，
+但基于 v1 的结果我预期改善有限。</li>
+<li>如果要继续，我建议的顺序是：先确认第 3 条（你在看什么），
+再决定是改输入（换窗口长度/加通道/加周期）还是改架构。
+盲目再训一版的期望收益很低。</li>
+</ol>
+
+<p class="mut">今日代码改动：holdout 双向闸门 + 测试、跨周期时间域对齐工具、无前视交易模拟器 + 测试、
+训练脚本 LR/调度参数、3060 sweep 启动器、扫描端点时间上下界、hard negative 支持（收益消歧）。
+全部 65 个测试通过。无实盘、无部署、无下单。</p>
+</body></html>

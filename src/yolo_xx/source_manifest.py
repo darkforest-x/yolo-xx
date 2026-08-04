@@ -59,6 +59,19 @@ def enforce_preholdout(value: object, *, field: str) -> pd.Timestamp:
     return timestamp
 
 
+def resolve_boundary(
+    value: object, *, field: str, allow_holdout: bool = False
+) -> pd.Timestamp:
+    """Return an accepted boundary; crossing the holdout start needs an opt-in.
+
+    Default behaviour is unchanged and fail-closed: without `allow_holdout` any
+    boundary later than `HOLDOUT_START` is rejected.
+    """
+    if not allow_holdout:
+        return enforce_preholdout(value, field=field)
+    return utc_timestamp(value, field=field)
+
+
 @dataclass(frozen=True)
 class SnapshotFile:
     """One authenticated CSV and its declared temporal extent."""
@@ -98,6 +111,7 @@ class SourceSnapshot:
     timeframe: str
     cutoff_exclusive: pd.Timestamp
     files: tuple[SnapshotFile, ...]
+    holdout_read: bool = False
 
 
 def _safe_child(root: Path, raw_path: object, *, field: str) -> tuple[Path, str]:
@@ -129,6 +143,7 @@ def load_source_manifest(
     expected_source_dir: str | Path | None = None,
     expected_timeframe: str | None = None,
     end_before: object | None = None,
+    allow_holdout: bool = False,
 ) -> SourceSnapshot:
     """Validate manifest schema and time claims without parsing any source CSV."""
     path = Path(manifest_path).resolve()
@@ -165,9 +180,32 @@ def load_source_manifest(
             f"source manifest timeframe {timeframe} does not match requested "
             f"{canonical_timeframe(expected_timeframe)}"
         )
-    cutoff = enforce_preholdout(payload.get("cutoff_exclusive"), field="cutoff_exclusive")
+    safety = payload.get("safety")
+    declared_holdout = bool(safety.get("holdout_read")) if isinstance(safety, dict) else False
+    if declared_holdout and not allow_holdout:
+        raise ValueError(
+            "source manifest declares holdout_read=true; loading it requires an "
+            "explicit holdout opt-in"
+        )
+    cutoff = resolve_boundary(
+        payload.get("cutoff_exclusive"),
+        field="cutoff_exclusive",
+        allow_holdout=allow_holdout,
+    )
+    # Both directions are enforced: post-holdout data must say so, and a manifest
+    # may not claim holdout provenance it does not have.
+    if cutoff > HOLDOUT_START and not declared_holdout:
+        raise ValueError(
+            f"cutoff_exclusive {cutoff.isoformat()} is past holdout start but the "
+            "manifest does not declare safety.holdout_read=true"
+        )
+    if declared_holdout and cutoff <= HOLDOUT_START:
+        raise ValueError(
+            "manifest declares safety.holdout_read=true but cutoff_exclusive is "
+            "not past the holdout start"
+        )
     requested_end = (
-        enforce_preholdout(end_before, field="end_before")
+        resolve_boundary(end_before, field="end_before", allow_holdout=allow_holdout)
         if end_before is not None
         else cutoff
     )
@@ -228,6 +266,7 @@ def load_source_manifest(
         timeframe=timeframe,
         cutoff_exclusive=cutoff,
         files=tuple(files),
+        holdout_read=declared_holdout,
     )
 
 

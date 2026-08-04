@@ -33,6 +33,8 @@ yolo-xx-micro-snapshot = "yolo_xx.micro_snapshot:main"
 yolo-xx-scan-set = "yolo_xx.scan_set:main"
 yolo-xx-scan-predict = "yolo_xx.scan_predict:main"
 yolo-xx-scan-report = "yolo_xx.scan_report:main"
+yolo-xx-cross-timeframe = "yolo_xx.cross_timeframe:main"
+yolo-xx-outcome = "yolo_xx.outcome:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

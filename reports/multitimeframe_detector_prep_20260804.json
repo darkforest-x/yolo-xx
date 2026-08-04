@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "report_type": "multitimeframe_detector_preparation_audit",
+  "as_of": "2026-08-04",
+  "decision": "prepared_but_training_blocked",
+  "blocker": {
+    "code": "missing_attested_physical_preholdout_small_timeframe_snapshot",
+    "holdout_start": "2026-05-04T00:00:00Z",
+    "mixed_csv_read_allowed": false
+  },
+  "timeframes": {
+    "5m": {"window_bars": 600, "ma_bars": [60, 180, 360], "dense_bars": [15, 36], "warmup_bars": 1080, "priority": 1},
+    "3m": {"window_bars": 1000, "ma_bars": [100, 300, 600], "dense_bars": [25, 60], "warmup_bars": 1800, "priority": 2},
+    "2m": {"window_bars": 1500, "ma_bars": [150, 450, 900], "dense_bars": [38, 90], "warmup_bars": 2700, "priority": 3},
+    "1m": {"window_bars": 3000, "ma_bars": [300, 900, 1800], "dense_bars": [75, 180], "warmup_bars": 5400, "priority": 4}
+  },
+  "historical_baselines": {
+    "dense_owner_short_star_tip_v10": {"images": 3305, "positive_samples": 1322, "negative_samples": 1983, "right_edge_shortcut": true},
+    "v16_tipuni": {"true_tip_hits": "3/9", "empty_false_fires": "17/33", "accepted": false},
+    "eth_3m_short_pilot_v1": {"oos_fire_rate": 0.9974, "excess_bp_vs_matched_random": -0.8, "accepted": false},
+    "owner_v11_chain_weight_available": false
+  },
+  "real_weight_smoke": {
+    "performance_evidence": false,
+    "image": "/Users/zhangzc/yolo-xx/datasets/eth_3m_short_pilot_v1/images/val/pos_eth3m_20260427T145400Z_t032.png",
+    "weight": "/Users/zhangzc/yolo-xx/weights/baselines/eth3m_short_pilot_v1_mac_cold.pt",
+    "weight_sha256": "7f1f3b2d6300952ac5c4adb3937c0b3b2e9d7879b73ed2855bcf08b55cbe202e",
+    "detections": 1,
+    "confidence": 0.90257198,
+    "xywhn": [0.98154277, 0.68235797, 0.03260221, 0.04087608]
+  },
+  "safety_gates": {
+    "immutable_source_manifest_required": true,
+    "pre_parse_checks": ["manifest_declaration", "file_stat", "sha256"],
+    "post_parse_checks": ["row_count", "first_open_time", "last_open_time"],
+    "global_utc_split_required": true,
+    "availability_equals_window_close": true,
+    "strong_audit_before_train_eval": true,
+    "semantic_augmentations_disabled": true,
+    "ultralytics_version": "8.4.89"
+  },
+  "tests": {
+    "status": "passed",
+    "pytest": "38 passed",
+    "py_compile": "passed",
+    "dry_run_timeframes": ["1m", "2m", "3m", "5m"],
+    "ultralytics_config": "8.4.89 accepted"
+  },
+  "prediction_smoke_artifact": {
+    "manifest": "/private/tmp/yoloxx-final-smoke.rVo0BO/predictions/predictions.json",
+    "manifest_sha256": "881c047269c22bd7a8cc71c293429303838df0784c616d096c2285d8275c3902",
+    "result_path_binding": "isolated_per_image_exact_match",
+    "prediction_schema_version": 1,
+    "schema_v2_to_l2_end_to_end": false
+  },
+  "commits": [
+    {
+      "repository": "/Users/zhangzc/yolo-xx",
+      "branch": "main",
+      "commit": "97ad14ee46000cf0cba03785e1316b3ef91d3865",
+      "pushed": false
+    }
+  ],
+  "prohibitions_observed": {
+    "holdout_read": false,
+    "training": false,
+    "threshold_tuning": false,
+    "active_modified": false,
+    "deployment": false,
+    "orders": false,
+    "push": false,
+    "evidence_scope": "execution_attestation_plus_visible_workspace_evidence_not_complete_host_audit"
+  }
+}

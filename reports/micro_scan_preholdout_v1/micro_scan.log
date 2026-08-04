@@ -1,0 +1,202 @@
+[launcher] start 2026-08-04  8:24:23.60
+{
+  "batch": 16,
+  "conf": 0.3,
+  "device": "0",
+  "holdout_read": false,
+  "imgsz": 960,
+  "iou": 0.7,
+  "output": "C:\\yolo-xx\\scan_results\\owner_short_ab_w200_v2\\1m",
+  "overlay_limit": 48,
+  "plan_type": "yolo_xx_batch_scan_prediction",
+  "portable_receipt": "C:\\yolo-xx\\scan_sets\\micro_scan_preholdout_v1\\1m\\w200\\portable_scan_receipt.json",
+  "portable_receipt_sha256": "b74f10aa066c496ceb50df71b79b1d5d5c904c8d99a1225ee2794da5e21e71fd",
+  "scan_arm": "C:\\yolo-xx\\scan_sets\\micro_scan_preholdout_v1\\1m\\w200",
+  "schema_version": 1,
+  "weights": "C:\\yolo-xx\\runs\\owner_short_ab_w200_v2\\weights\\best.pt"
+}
+{
+  "detection_count": 19,
+  "image_count": 512,
+  "images_with_detections": 18,
+  "output": "C:\\yolo-xx\\scan_results\\owner_short_ab_w200_v2\\1m",
+  "timeframe": "1m",
+  "window_bars": 200
+}
+[launcher] complete 1m/w200 2026-08-04  8:24:38.47
+{
+  "batch": 16,
+  "conf": 0.3,
+  "device": "0",
+  "holdout_read": false,
+  "imgsz": 960,
+  "iou": 0.7,
+  "output": "C:\\yolo-xx\\scan_results\\owner_short_ab_w96_v2\\1m",
+  "overlay_limit": 48,
+  "plan_type": "yolo_xx_batch_scan_prediction",
+  "portable_receipt": "C:\\yolo-xx\\scan_sets\\micro_scan_preholdout_v1\\1m\\w96\\portable_scan_receipt.json",
+  "portable_receipt_sha256": "6baef7fb3551e87d8649b0eabf3258bb97341fde2ea20ccb4ff733846f41381a",
+  "scan_arm": "C:\\yolo-xx\\scan_sets\\micro_scan_preholdout_v1\\1m\\w96",
+  "schema_version": 1,
+  "weights": "C:\\yolo-xx\\runs\\owner_short_ab_w96_v2\\weights\\best.pt"
+}
+{
+  "detection_count": 20,
+  "image_count": 512,
+  "images_with_detections": 20,
+  "output": "C:\\yolo-xx\\scan_results\\owner_short_ab_w96_v2\\1m",
+  "timeframe": "1m",
+  "window_bars": 96
+}
+[launcher] complete 1m/w96 2026-08-04  8:24:51.84
+{
+  "batch": 16,
+  "conf": 0.3,
+  "device": "0",
+  "holdout_read": false,
+  "imgsz": 960,
+  "iou": 0.7,
+  "output": "C:\\yolo-xx\\scan_results\\owner_short_ab_w200_v2\\2m",
+  "overlay_limit": 48,
+  "plan_type": "yolo_xx_batch_scan_prediction",
+  "portable_receipt": "C:\\yolo-xx\\scan_sets\\micro_scan_preholdout_v1\\2m\\w200\\portable_scan_receipt.json",
+  "portable_receipt_sha256": "8ec106ccead2e9ef2d76273b7a4257cc503a87262dad04d711ac341ff47ea036",
+  "scan_arm": "C:\\yolo-xx\\scan_sets\\micro_scan_preholdout_v1\\2m\\w200",
+  "schema_version": 1,
+  "weights": "C:\\yolo-xx\\runs\\owner_short_ab_w200_v2\\weights\\best.pt"
+}
+{
+  "detection_count": 66,
+  "image_count": 512,
+  "images_with_detections": 54,
+  "output": "C:\\yolo-xx\\scan_results\\owner_short_ab_w200_v2\\2m",
+  "timeframe": "2m",
+  "window_bars": 200
+}
+[launcher] complete 2m/w200 2026-08-04  8:25:05.58
+{
+  "batch": 16,
+  "conf": 0.3,
+  "device": "0",
+  "holdout_read": false,
+  "imgsz": 960,
+  "iou": 0.7,
+  "output": "C:\\yolo-xx\\scan_results\\owner_short_ab_w96_v2\\2m",
+  "overlay_limit": 48,
+  "plan_type": "yolo_xx_batch_scan_prediction",
+  "portable_receipt": "C:\\yolo-xx\\scan_sets\\micro_scan_preholdout_v1\\2m\\w96\\portable_scan_receipt.json",
+  "portable_receipt_sha256": "887be00434158a8915e8d93fa7bdb4a534762efffcc9c854b5ddeab949df8964",
+  "scan_arm": "C:\\yolo-xx\\scan_sets\\micro_scan_preholdout_v1\\2m\\w96",
+  "schema_version": 1,
+  "weights": "C:\\yolo-xx\\runs\\owner_short_ab_w96_v2\\weights\\best.pt"
+}
+{
+  "detection_count": 48,
+  "image_count": 512,
+  "images_with_detections": 40,
+  "output": "C:\\yolo-xx\\scan_results\\owner_short_ab_w96_v2\\2m",
+  "timeframe": "2m",
+  "window_bars": 96
+}
+[launcher] complete 2m/w96 2026-08-04  8:25:19.24
+{
+  "batch": 16,
+  "conf": 0.3,
+  "device": "0",
+  "holdout_read": false,
+  "imgsz": 960,
+  "iou": 0.7,
+  "output": "C:\\yolo-xx\\scan_results\\owner_short_ab_w200_v2\\3m",
+  "overlay_limit": 48,
+  "plan_type": "yolo_xx_batch_scan_prediction",
+  "portable_receipt": "C:\\yolo-xx\\scan_sets\\micro_scan_preholdout_v1\\3m\\w200\\portable_scan_receipt.json",
+  "portable_receipt_sha256": "727d3567df40a44a2638f6635ae36fcd0ff3fa18f56af83963fd533a0b957ea2",
+  "scan_arm": "C:\\yolo-xx\\scan_sets\\micro_scan_preholdout_v1\\3m\\w200",
+  "schema_version": 1,
+  "weights": "C:\\yolo-xx\\runs\\owner_short_ab_w200_v2\\weights\\best.pt"
+}
+{
+  "detection_count": 96,
+  "image_count": 512,
+  "images_with_detections": 72,
+  "output": "C:\\yolo-xx\\scan_results\\owner_short_ab_w200_v2\\3m",
+  "timeframe": "3m",
+  "window_bars": 200
+}
+[launcher] complete 3m/w200 2026-08-04  8:25:33.02
+{
+  "batch": 16,
+  "conf": 0.3,
+  "device": "0",
+  "holdout_read": false,
+  "imgsz": 960,
+  "iou": 0.7,
+  "output": "C:\\yolo-xx\\scan_results\\owner_short_ab_w96_v2\\3m",
+  "overlay_limit": 48,
+  "plan_type": "yolo_xx_batch_scan_prediction",
+  "portable_receipt": "C:\\yolo-xx\\scan_sets\\micro_scan_preholdout_v1\\3m\\w96\\portable_scan_receipt.json",
+  "portable_receipt_sha256": "fc584b2a5c57f62142c79c56075127522dcb38029b19019e8d32644d8f23ede2",
+  "scan_arm": "C:\\yolo-xx\\scan_sets\\micro_scan_preholdout_v1\\3m\\w96",
+  "schema_version": 1,
+  "weights": "C:\\yolo-xx\\runs\\owner_short_ab_w96_v2\\weights\\best.pt"
+}
+{
+  "detection_count": 46,
+  "image_count": 512,
+  "images_with_detections": 40,
+  "output": "C:\\yolo-xx\\scan_results\\owner_short_ab_w96_v2\\3m",
+  "timeframe": "3m",
+  "window_bars": 96
+}
+[launcher] complete 3m/w96 2026-08-04  8:25:46.66
+{
+  "batch": 16,
+  "conf": 0.3,
+  "device": "0",
+  "holdout_read": false,
+  "imgsz": 960,
+  "iou": 0.7,
+  "output": "C:\\yolo-xx\\scan_results\\owner_short_ab_w200_v2\\5m",
+  "overlay_limit": 48,
+  "plan_type": "yolo_xx_batch_scan_prediction",
+  "portable_receipt": "C:\\yolo-xx\\scan_sets\\micro_scan_preholdout_v1\\5m\\w200\\portable_scan_receipt.json",
+  "portable_receipt_sha256": "3424ed62b88bf266ba2ac25b482837e860dc8eee9e7c0c33cafadce7086bbc5e",
+  "scan_arm": "C:\\yolo-xx\\scan_sets\\micro_scan_preholdout_v1\\5m\\w200",
+  "schema_version": 1,
+  "weights": "C:\\yolo-xx\\runs\\owner_short_ab_w200_v2\\weights\\best.pt"
+}
+{
+  "detection_count": 124,
+  "image_count": 512,
+  "images_with_detections": 102,
+  "output": "C:\\yolo-xx\\scan_results\\owner_short_ab_w200_v2\\5m",
+  "timeframe": "5m",
+  "window_bars": 200
+}
+[launcher] complete 5m/w200 2026-08-04  8:26:00.53
+{
+  "batch": 16,
+  "conf": 0.3,
+  "device": "0",
+  "holdout_read": false,
+  "imgsz": 960,
+  "iou": 0.7,
+  "output": "C:\\yolo-xx\\scan_results\\owner_short_ab_w96_v2\\5m",
+  "overlay_limit": 48,
+  "plan_type": "yolo_xx_batch_scan_prediction",
+  "portable_receipt": "C:\\yolo-xx\\scan_sets\\micro_scan_preholdout_v1\\5m\\w96\\portable_scan_receipt.json",
+  "portable_receipt_sha256": "d0e0f22627717f03a75164e8841b68a38f455ec7a7195316c39e0175de3ddb03",
+  "scan_arm": "C:\\yolo-xx\\scan_sets\\micro_scan_preholdout_v1\\5m\\w96",
+  "schema_version": 1,
+  "weights": "C:\\yolo-xx\\runs\\owner_short_ab_w96_v2\\weights\\best.pt"
+}
+{
+  "detection_count": 53,
+  "image_count": 512,
+  "images_with_detections": 48,
+  "output": "C:\\yolo-xx\\scan_results\\owner_short_ab_w96_v2\\5m",
+  "timeframe": "5m",
+  "window_bars": 96
+}
+[launcher] complete 5m/w96 2026-08-04  8:26:14.15
+[launcher] all complete 2026-08-04  8:26:14.15

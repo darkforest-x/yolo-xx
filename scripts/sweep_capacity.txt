@@ -1,0 +1,10 @@
+# Model-capacity arm on the v2 context-matched dataset.
+#   name|base_weights|epochs|patience|batch|extra flags
+#
+# The parent project's v8 detector is yolo11s (19MB); everything trained in
+# yolo-xx so far is yolo11n (5.4MB). Same dataset, same recipe, same seed as
+# hardneg_w96_v2 - capacity is the only variable.
+#
+# batch 8 is kept so the gradient noise matches the yolo11n arms; yolo11s at
+# imgsz 960 fits in 12GB at that batch.
+hardneg_w96_v2_s|yolo11s.pt|60|25|8|

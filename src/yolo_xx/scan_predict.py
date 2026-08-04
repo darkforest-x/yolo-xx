@@ -48,6 +48,8 @@ def build_plan(
         "overlay_limit": overlay_limit,
         "portable_receipt": str(Path(receipt).resolve()) if receipt is not None else None,
         "portable_receipt_sha256": receipt_sha256,
+        # The plan is built before the arm manifest is read; `run` replaces this
+        # with the arm's own stamp so predictions inherit real provenance.
         "holdout_read": False,
     }
 
@@ -176,6 +178,8 @@ def run(plan: dict[str, object]) -> dict[str, object]:
         "timeframe": manifest["timeframe"],
         "window_bars": manifest["window_bars"],
         "ma_periods_bars": manifest["ma_periods_bars"],
+        "end_before": manifest["end_before"],
+        "holdout_read": manifest.get("holdout_read") is True,
         "ultralytics_version": ultralytics.__version__,
         "image_count": len(items),
         "images_with_detections": sum(bool(item["detections"]) for item in items),
