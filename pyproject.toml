@@ -32,6 +32,7 @@ yolo-xx-paired-gallery = "yolo_xx.paired_gallery:main"
 yolo-xx-micro-snapshot = "yolo_xx.micro_snapshot:main"
 yolo-xx-scan-set = "yolo_xx.scan_set:main"
 yolo-xx-scan-predict = "yolo_xx.scan_predict:main"
+yolo-xx-scan-report = "yolo_xx.scan_report:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

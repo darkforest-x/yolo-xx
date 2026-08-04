@@ -133,15 +133,17 @@ fetch_runs() {
   for name in "$NAME_W200" "$NAME_W96"; do
     [[ ! -e "$local_root/$name" ]] || die "local run already exists: $local_root/$name"
   done
-  local running
-  running="$(remote_ps <<'PS' | tr -d '\r\n'
-$items = @(Get-CimInstance Win32_Process | Where-Object {
-  $_.CommandLine -and $_.CommandLine -like '*launch_owner_short_ab.cmd*'
+  local process_probe
+  process_probe="
+\$items = @(Get-CimInstance Win32_Process | Where-Object {
+  \$_.CommandLine -and \$_.CommandLine -like '*launch_owner_short_ab.cmd*'
 })
-Write-Output $items.Count
-PS
-)"
-  [[ "$running" == "0" ]] || die "remote A/B launcher is still running"
+Write-Output \$items.Count
+"
+  local running
+  running="$(remote_ps <<<"$process_probe" | tr -d '\r\n')"
+  [[ "$running" == "0" ]] \
+    || die "remote A/B launcher probe was not zero: ${running:-missing}"
   mkdir -p "$local_root" "reports/training"
   for name in "$NAME_W200" "$NAME_W96"; do
     "${SCP[@]}" -r "$HOST:$REMOTE/runs/$name" "$local_root/$name" \
@@ -228,10 +230,7 @@ printf '  data archive: %s\n' "$(du -h "$TMP_DATA" | awk '{print $1}')"
 } >"$TMP_CMD"
 
 say "sync to $HOST:$REMOTE"
-remote_ps >/dev/null <<'PS'
-$ErrorActionPreference = 'Stop'
-New-Item -ItemType Directory -Force -Path 'C:/yolo-xx' | Out-Null
-PS
+remote_ps <<<"\$ErrorActionPreference = 'Stop'; New-Item -ItemType Directory -Force -Path 'C:/yolo-xx' | Out-Null" >/dev/null
 "${SCP[@]}" "$TMP_DATA" "$HOST:$REMOTE_DATA_ARCHIVE" || die "data upload failed"
 "${SCP[@]}" "$TMP_CODE" "$HOST:$REMOTE_CODE_ARCHIVE" || die "code upload failed"
 "${SCP[@]}" "$BASE" "$HOST:$REMOTE_BASE" || die "base upload failed"

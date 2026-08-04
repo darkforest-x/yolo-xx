@@ -263,6 +263,14 @@ yolo-xx-scan-set build \
 
 YOLO_XX_3060_HOST=zzc@CURRENT_IP \
   bash scripts/scan_micro_on_3060.sh
+
+# 拉回完成结果后生成机器审计、技术报告和原始预测框画廊
+yolo-xx-scan-report \
+  --scan-results reports/micro_scan_preholdout_v1 \
+  --scan-sets datasets/micro_scan_preholdout_v1 \
+  --runs-root runs/detect \
+  --training-contracts reports/training \
+  --out reports/micro_scan_preholdout_v1
 ```
 
 扫描固定使用 `conf=0.30`、`iou=0.70`，只输出检测数量、置信度、原始框位置和抽样叠框图；

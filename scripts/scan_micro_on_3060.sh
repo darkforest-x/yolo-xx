@@ -47,20 +47,22 @@ remote_ps() {
 }
 
 check_remote() {
-  local output
-  output="$(remote_ps <<'PS' | tr -d '\r'
-$ErrorActionPreference = 'Stop'
+  local probe
+  probe="
+\$ErrorActionPreference = 'Stop'
 & 'C:/fable/.venv/Scripts/python.exe' -c 'import torch,ultralytics;print(torch.cuda.is_available(),torch.cuda.get_device_name(0),ultralytics.__version__,sep=chr(124))'
-if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-PS
-)" || die "remote probe failed"
+if (\$LASTEXITCODE -ne 0) { exit \$LASTEXITCODE }
+"
+  local output
+  output="$(remote_ps <<<"$probe" | tr -d '\r')" || die "remote probe failed"
   printf '%s\n' "$output"
   grep -q '^True|NVIDIA GeForce RTX 3060|8.4.89$' <<<"$output" \
     || die "unexpected remote GPU/runtime"
 }
 
 show_status() {
-  remote_ps <<PS | tr -d '\r'
+  local status_probe
+  status_probe="
 \$ErrorActionPreference = 'Stop'
 Write-Output '=== scan process ==='
 \$items = @(Get-CimInstance Win32_Process | Where-Object {
@@ -77,19 +79,22 @@ if (Test-Path -LiteralPath '$REMOTE/scan_results') {
   Get-ChildItem -LiteralPath '$REMOTE/scan_results' -Filter predictions.json -Recurse |
     Select-Object FullName,Length,LastWriteTime | Format-Table -AutoSize | Out-String -Width 4096 | Write-Output
 }
-PS
+"
+  remote_ps <<<"$status_probe" | tr -d '\r'
 }
 
 fetch_results() {
-  local running
-  running="$(remote_ps <<'PS' | tr -d '\r\n'
-$items = @(Get-CimInstance Win32_Process | Where-Object {
-  $_.CommandLine -and ($_.CommandLine -like '*launch_micro_scan.cmd*' -or $_.CommandLine -like '*yolo_xx.scan_predict*')
+  local process_probe
+  process_probe="
+\$items = @(Get-CimInstance Win32_Process | Where-Object {
+  \$_.CommandLine -and (\$_.CommandLine -like '*launch_micro_scan.cmd*' -or \$_.CommandLine -like '*yolo_xx.scan_predict*')
 })
-Write-Output $items.Count
-PS
-)"
-  [[ "$running" == "0" ]] || die "remote micro scan is still running"
+Write-Output \$items.Count
+"
+  local running
+  running="$(remote_ps <<<"$process_probe" | tr -d '\r\n')"
+  [[ "$running" == "0" ]] \
+    || die "remote micro scan probe was not zero: ${running:-missing}"
   [[ ! -e reports/micro_scan_preholdout_v1 ]] || die "local scan results already exist"
   "${SCP[@]}" -r "$HOST:$REMOTE/scan_results" reports/micro_scan_preholdout_v1 \
     || die "failed to fetch scan results"
@@ -115,19 +120,18 @@ for tf in 1m 2m 3m 5m; do
   done
 done
 
-training_count="$(remote_ps <<'PS' | tr -d '\r\n'
-$items = @(Get-CimInstance Win32_Process | Where-Object {
-  $_.CommandLine -and ($_.CommandLine -like '*owner_short_ab_w200_v2*' -or $_.CommandLine -like '*owner_short_ab_w96_v2*' -or $_.CommandLine -like '*launch_owner_short_ab.cmd*')
+training_probe="
+\$items = @(Get-CimInstance Win32_Process | Where-Object {
+  \$_.CommandLine -and (\$_.CommandLine -like '*owner_short_ab_w200_v2*' -or \$_.CommandLine -like '*owner_short_ab_w96_v2*' -or \$_.CommandLine -like '*launch_owner_short_ab.cmd*')
 })
-Write-Output $items.Count
-PS
-)"
-[[ "$training_count" == "0" ]] || die "paired training is still running; scan starts only after both fits"
+Write-Output \$items.Count
+"
+training_count="$(remote_ps <<<"$training_probe" | tr -d '\r\n')"
+[[ "$training_count" == "0" ]] \
+  || die "paired training probe was not zero: ${training_count:-missing}"
 
 for name in "$NAME_W200" "$NAME_W96"; do
-  remote_ps >/dev/null <<PS
-if (-not (Test-Path -LiteralPath '$REMOTE/runs/$name/weights/best.pt')) { throw 'missing trained best.pt: $name' }
-PS
+  remote_ps <<<"if (-not (Test-Path -LiteralPath '$REMOTE/runs/$name/weights/best.pt')) { throw 'missing trained best.pt: $name' }" >/dev/null
 done
 
 TMP_DATA="$(mktemp -t yolo_xx_micro_scan_data)"
@@ -158,43 +162,55 @@ printf 'scan archive: %s\n' "$(du -h "$TMP_DATA" | awk '{print $1}')"
 
 REMOTE_DATA="$REMOTE/${SCAN_BASENAME}.tar"
 REMOTE_CODE="$REMOTE/yolo_xx_scan_code.tar"
-remote_ps >/dev/null <<'PS'
-New-Item -ItemType Directory -Force -Path 'C:/yolo-xx' | Out-Null
-PS
+remote_ps <<<"New-Item -ItemType Directory -Force -Path 'C:/yolo-xx' | Out-Null" >/dev/null
 "${SCP[@]}" "$TMP_DATA" "$HOST:$REMOTE_DATA" || die "scan upload failed"
 "${SCP[@]}" "$TMP_CODE" "$HOST:$REMOTE_CODE" || die "code upload failed"
 "${SCP[@]}" "$TMP_CMD" "$HOST:$REMOTE/launch_micro_scan.cmd" || die "launcher upload failed"
 
-remote_ps <<PS | tail -20 | tr -d '\r'
+prepare="
 \$ErrorActionPreference = 'Stop'
 \$env:PYTHONPATH = '$REMOTE/src'
 New-Item -ItemType Directory -Force -Path '$REMOTE/scan_sets','$REMOTE/logs' | Out-Null
 \$stage = '$REMOTE/.scan_stage'
+\$codeStage = '$REMOTE/.scan_code_stage'
 try {
   Remove-Item -LiteralPath \$stage -Recurse -Force -ErrorAction SilentlyContinue
+  Remove-Item -LiteralPath \$codeStage -Recurse -Force -ErrorAction SilentlyContinue
   New-Item -ItemType Directory -Force -Path \$stage | Out-Null
+  New-Item -ItemType Directory -Force -Path \$codeStage | Out-Null
   & tar.exe -xf '$REMOTE_DATA' -C \$stage
   if (\$LASTEXITCODE -ne 0) { throw 'scan archive extraction failed' }
   Remove-Item -LiteralPath '$REMOTE/scan_sets/$SCAN_BASENAME' -Recurse -Force -ErrorAction SilentlyContinue
   Move-Item -LiteralPath (Join-Path \$stage '$SCAN_BASENAME') -Destination '$REMOTE/scan_sets/$SCAN_BASENAME'
-  & tar.exe -xf '$REMOTE_CODE' -C '$REMOTE'
+  & tar.exe -xf '$REMOTE_CODE' -C \$codeStage
   if (\$LASTEXITCODE -ne 0) { throw 'code extraction failed' }
+  foreach (\$required in @('src/yolo_xx/__init__.py','src/yolo_xx/scan_set.py','src/yolo_xx/scan_predict.py','pyproject.toml')) {
+    if (-not (Test-Path -LiteralPath (Join-Path \$codeStage \$required))) {
+      throw ('code payload missing ' + \$required)
+    }
+  }
+  Remove-Item -LiteralPath '$REMOTE/src' -Recurse -Force -ErrorAction SilentlyContinue
+  Move-Item -LiteralPath (Join-Path \$codeStage 'src') -Destination '$REMOTE/src'
+  Copy-Item -LiteralPath (Join-Path \$codeStage 'pyproject.toml') -Destination '$REMOTE/pyproject.toml' -Force
 } finally {
   Remove-Item -LiteralPath '$REMOTE_DATA','$REMOTE_CODE' -Force -ErrorAction SilentlyContinue
   Remove-Item -LiteralPath \$stage -Recurse -Force -ErrorAction SilentlyContinue
+  Remove-Item -LiteralPath \$codeStage -Recurse -Force -ErrorAction SilentlyContinue
 }
 Write-Output prepared
-PS
+"
+remote_ps <<<"$prepare" | tail -20 | tr -d '\r'
 
 rm -f -- "$TMP_DATA" "$TMP_CODE" "$TMP_CMD"
 TMP_DATA=""; TMP_CODE=""; TMP_CMD=""
 
-remote_ps <<'PS' | tr -d '\r'
-$ErrorActionPreference = 'Stop'
-if (Test-Path -LiteralPath 'C:/yolo-xx/scan_results') { throw 'remote scan_results already exists' }
-$cmd = 'cmd.exe /d /c "C:\yolo-xx\launch_micro_scan.cmd"'
-$result = Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine=$cmd}
-if ($result.ReturnValue -ne 0) { throw ('WMI Create failed: ' + $result.ReturnValue) }
-Write-Output ('PID=' + $result.ProcessId)
-PS
+start="
+\$ErrorActionPreference = 'Stop'
+if (Test-Path -LiteralPath '$REMOTE/scan_results') { throw 'remote scan_results already exists' }
+\$cmd = 'cmd.exe /d /c \"C:\yolo-xx\launch_micro_scan.cmd\"'
+\$result = Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine=\$cmd}
+if (\$result.ReturnValue -ne 0) { throw ('WMI Create failed: ' + \$result.ReturnValue) }
+Write-Output ('PID=' + \$result.ProcessId)
+"
+remote_ps <<<"$start" | tr -d '\r'
 echo "Started fixed-threshold offline scans only."
