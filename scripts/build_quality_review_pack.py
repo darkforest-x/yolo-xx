@@ -195,12 +195,15 @@ def main() -> int:
         "n_items": len(items), "items": items,
     }, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
-    write_html(items, args.out_dir / "index.html")
+    write_html(items, args.out_dir / "index.html", args.out_dir.name)
     print(f"\npack: {len(items)} items -> {args.out_dir}", flush=True)
     return 0
 
 
-def write_html(items, out: Path) -> None:
+def write_html(items, out: Path, pack_id: str) -> None:
+    # localStorage must be namespaced per pack. Sharing one key made round 2 read
+    # round 1's 287 grades and report them as its own progress -- exports were
+    # unaffected (they iterate this pack's items) but the counter lied.
     data = json.dumps(items, ensure_ascii=False)
     out.write_text(f"""<!doctype html><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -230,8 +233,11 @@ button{{background:#21262d;color:#c9d1d9;border:1px solid #30363d;border-radius:
 <img id="img" alt="">
 <script>
 const IT={data};
-const K='pq_grades_v1';
+const K='pq_grades::{pack_id}';
 let g=JSON.parse(localStorage.getItem(K)||'{{}}'), i=0;
+// only count grades belonging to this pack, never whatever else is in storage
+const IDS=new Set(IT.map(x=>x.sample_id));
+const nDone=()=>Object.keys(g).filter(k=>IDS.has(k)).length;
 const $=s=>document.querySelector(s);
 function render(){{
   const it=IT[i]; if(!it) return;
@@ -240,7 +246,7 @@ function render(){{
   const badge=d?`<span class="b ${{d==='not_a_pattern'?'N':d}}">${{d}}</span>`:'<span class="b N">未评</span>';
   $('#pos').textContent=`${{i+1}} / ${{IT.length}}`;
   $('#tot').textContent=IT.length;
-  $('#done').textContent=Object.keys(g).length;
+  $('#done').textContent=nDone();
   $('#info').innerHTML=badge+` ${{it.symbol}} ${{it.signal_time.slice(0,16)}} · ${{it.source}}`
     +` · fast_spread=${{it.fast_spread}} · dense_run=${{it.dense_run_bars}}`
     +(it.confidence?` · conf=${{it.confidence}}`:'')
