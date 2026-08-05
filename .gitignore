@@ -1,14 +1,32 @@
 .venv/
 __pycache__/
+*.py[cod]
 .pytest_cache/
 *.egg-info/
 build/
+dist/
+.DS_Store
 
-# Local inputs and generated artifacts stay outside git.
-data/
-datasets/
-runs/
-reports/
-weights/
+# Bulk inputs and binary artefacts. Anchored with a leading slash on purpose: a
+# bare "data/" also matches any nested package named data/ and would silently
+# drop source from a fresh clone.
+/data/
+/datasets/
+/runs/
+/weights/
 *.pt
 *.onnx
+
+# Reports: keep the deliverables (HTML/Markdown write-ups, audit summaries,
+# training curves and contracts), drop the bulk intermediates. One scan writes
+# tens of thousands of overlay JPEGs plus a multi-MB predictions.json; those are
+# regenerable from the dataset and the frozen weights, and they are what pushed
+# reports/ to 157MB across 71k files.
+/reports/**/overlays/
+/reports/**/labels/
+/reports/**/predictions.json
+/reports/imported/
+
+# Scratch renders written next to whatever the detector thinks the project root
+# is; never source.
+_yolo_cand_tmp_*.png

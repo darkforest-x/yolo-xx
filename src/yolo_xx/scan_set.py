@@ -1,4 +1,8 @@
-"""Build paired unlabeled pre-holdout chart sets for offline micro-timeframe scans."""
+"""Build paired unlabeled chart sets for offline micro-timeframe scans.
+
+Endpoints stop at the source snapshot's own cutoff.  Scanning past the frozen
+holdout start requires an explicit opt-in and is stamped into every manifest.
+"""
 
 from __future__ import annotations
 
@@ -14,13 +18,14 @@ from typing import Any, Sequence
 import pandas as pd
 
 from .data import add_mas, cache_symbol, load_ohlcv_csv
-from .render import IMG_WIDTH, MARGIN, render_chart
+from .render import IMG_WIDTH, MARGIN, min_rel_span_for, render_chart
 from .source_manifest import (
     HOLDOUT_START,
     SnapshotFile,
     load_source_manifest,
     sha256_file,
     utc_iso,
+    utc_timestamp,
     verify_loaded_frame,
     verify_snapshot_file,
     verify_snapshot_identity,
@@ -75,6 +80,8 @@ def _select_anchors(
     *,
     timeframe: str,
     max_images: int,
+    since: pd.Timestamp | None = None,
+    until: pd.Timestamp | None = None,
 ) -> list[tuple[SnapshotFile, int, pd.Timestamp]]:
     if max_images <= 0:
         raise ValueError("max_images must be positive")
@@ -82,8 +89,21 @@ def _select_anchors(
     candidates: dict[str, list[tuple[SnapshotFile, int, pd.Timestamp]]] = defaultdict(list)
     for record in records:
         frame = _load_frame(record, timeframe)
+        # The widest window still needs its full left context, so `since` moves the
+        # earliest endpoint forward without ever shortening a rendered window.
         start_index = max(WINDOWS) - 1
-        indices = _even_indices(start_index, len(frame) - 1, per_symbol)
+        if since is not None:
+            opens = pd.to_datetime(frame["open_time"], utc=True)
+            eligible = opens >= since
+            start_index = max(
+                start_index, int(eligible.argmax()) if bool(eligible.any()) else len(frame)
+            )
+        end_index = len(frame) - 1
+        if until is not None:
+            opens = pd.to_datetime(frame["open_time"], utc=True)
+            eligible = opens <= until
+            end_index = int(eligible.to_numpy().nonzero()[0][-1]) if bool(eligible.any()) else -1
+        indices = _even_indices(start_index, end_index, per_symbol)
         symbol = _symbol(record, timeframe)
         candidates[symbol] = [
             (record, index, pd.Timestamp(frame.iloc[index]["open_time"])) for index in indices
@@ -146,6 +166,20 @@ def audit_scan_arm(arm_dir: str | Path) -> dict[str, object]:
     except (TypeError, ValueError) as error:
         errors.append(str(error))
         normalized = "15m"
+    # A scan arm carries its own provenance stamp.  The cutoff and the stamp must
+    # agree in both directions, so post-holdout images can never be audited as if
+    # they were pre-holdout evidence.
+    declared_holdout = manifest.get("holdout_read") is True
+    try:
+        arm_cutoff = utc_timestamp(manifest.get("end_before"), field="end_before")
+    except (TypeError, ValueError) as error:
+        errors.append(str(error))
+        arm_cutoff = HOLDOUT_START
+    if (arm_cutoff > HOLDOUT_START) != declared_holdout:
+        errors.append(
+            "scan manifest end_before and holdout_read disagree: "
+            f"end_before={manifest.get('end_before')} holdout_read={manifest.get('holdout_read')}"
+        )
     snapshot_info = manifest.get("source_snapshot")
     records: dict[str, SnapshotFile] = {}
     if not isinstance(snapshot_info, dict):
@@ -163,7 +197,8 @@ def audit_scan_arm(arm_dir: str | Path) -> dict[str, object]:
                     snapshot_path,
                     expected_source_dir=manifest.get("source_dir"),
                     expected_timeframe=normalized,
-                    end_before=HOLDOUT_START,
+                    end_before=arm_cutoff,
+                    allow_holdout=declared_holdout,
                 )
                 verify_snapshot_identity(snapshot)
                 records = {str(record.path): record for record in snapshot.files}
@@ -221,7 +256,7 @@ def audit_scan_arm(arm_dir: str | Path) -> dict[str, object]:
             end_open == start + (int(window) - 1) * cadence
             and end_close == end_open + cadence
             and available == end_close
-            and available <= HOLDOUT_START
+            and available <= arm_cutoff
         ):
             errors.append(f"{prefix} violates window/availability contract")
         start_index = sample.get("source_start_index")
@@ -298,7 +333,7 @@ def create_scan_receipt(*, arm_dir: str | Path, out: str | Path) -> dict[str, ob
         "schema_version": 1,
         "manifest_type": RECEIPT_TYPE,
         "full_source_audit_valid": True,
-        "holdout_read": False,
+        "holdout_read": manifest.get("holdout_read") is True,
         "arm_root_name": root.name,
         "timeframe": manifest["timeframe"],
         "window_bars": manifest["window_bars"],
@@ -320,7 +355,7 @@ def create_scan_receipt(*, arm_dir: str | Path, out: str | Path) -> dict[str, ob
         "sample_count": len(files),
         "file_count": len(files),
         "full_source_audit_valid": True,
-        "holdout_read": False,
+        "holdout_read": manifest.get("holdout_read") is True,
     }
 
 
@@ -337,12 +372,15 @@ def verify_scan_receipt(
         raise ValueError("portable scan receipt schema_version must be 1")
     if payload.get("manifest_type") != RECEIPT_TYPE:
         raise ValueError(f"portable scan receipt type must be {RECEIPT_TYPE}")
-    if payload.get("full_source_audit_valid") is not True or payload.get("holdout_read") is not False:
+    if payload.get("full_source_audit_valid") is not True:
         raise ValueError("portable scan receipt lacks a safe full-audit declaration")
+    receipt_holdout = payload.get("holdout_read") is True
     if payload.get("arm_root_name") != root.name:
         raise ValueError("portable scan receipt arm name mismatch")
-    if pd.Timestamp(payload.get("end_before")) > HOLDOUT_START:
-        raise ValueError("portable scan receipt declares post-holdout data")
+    if (pd.Timestamp(payload.get("end_before")) > HOLDOUT_START) != receipt_holdout:
+        raise ValueError(
+            "portable scan receipt end_before and holdout_read disagree"
+        )
     manifest_info = payload.get("scan_manifest")
     if not isinstance(manifest_info, dict) or manifest_info.get("path") != SCAN_MANIFEST:
         raise ValueError("portable scan receipt manifest identity is missing")
@@ -402,24 +440,45 @@ def build_scan_pair(
     snapshot_dir: str | Path,
     out_dir: str | Path,
     max_images: int = 512,
+    allow_holdout: bool = False,
+    since: object | None = None,
+    until: object | None = None,
 ) -> dict[str, object]:
-    """Render paired w200/w96 unlabeled images at identical pre-holdout endpoints."""
+    """Render paired w200/w96 unlabeled images at identical window endpoints.
+
+    Endpoints stop at the snapshot's own declared cutoff.  Scanning a holdout
+    snapshot requires `allow_holdout=True`, and every emitted manifest keeps the
+    `holdout_read` stamp so the audit can enforce it later.
+    """
     snapshot_root = Path(snapshot_dir).resolve()
     output = Path(out_dir).resolve()
     if output.exists():
         raise FileExistsError(f"refusing to overwrite scan set: {output}")
     snapshot_path = snapshot_root / "source_snapshot.json"
     snapshot = load_source_manifest(
-        snapshot_path, expected_source_dir=snapshot_root, end_before=HOLDOUT_START
+        snapshot_path,
+        expected_source_dir=snapshot_root,
+        allow_holdout=allow_holdout,
     )
-    if snapshot.timeframe not in {"1m", "2m", "3m", "5m"}:
-        raise ValueError("scan snapshot must be a micro timeframe")
+    if snapshot.timeframe not in {"1m", "2m", "3m", "5m", "15m", "30m"}:
+        raise ValueError("scan snapshot timeframe must be 1m, 2m, 3m, 5m, 15m, or 30m")
+    cutoff = snapshot.cutoff_exclusive
+    # A 15m-calibrated vertical floor squashes a 1m chart out of the detector's
+    # training domain, so the floor follows the timeframe being rendered.
+    span_floor = min_rel_span_for(snapshot.timeframe)
+    since_ts = utc_timestamp(since, field="since") if since is not None else None
+    until_ts = utc_timestamp(until, field="until") if until is not None else None
     verify_snapshot_identity(snapshot)
     anchors = _select_anchors(
-        snapshot.files, timeframe=snapshot.timeframe, max_images=max_images
+        snapshot.files,
+        timeframe=snapshot.timeframe,
+        max_images=max_images,
+        since=since_ts,
+        until=until_ts,
     )
     if not anchors:
         raise ValueError("scan snapshot produced no eligible 200-bar endpoints")
+    earliest = min(anchor[2] for anchor in anchors)
     output.parent.mkdir(parents=True, exist_ok=True)
     staging = Path(tempfile.mkdtemp(prefix=f".{output.name}.staging-", dir=output.parent))
     try:
@@ -441,7 +500,12 @@ def build_scan_pair(
                     start_index = end_index - window + 1
                     subframe = frame.iloc[start_index : end_index + 1].reset_index(drop=True)
                     image_path = arms[window] / "images" / f"{sample_id}.png"
-                    render_chart(subframe, out_path=image_path, ma_periods=(20, 60, 120))
+                    render_chart(
+                        subframe,
+                        out_path=image_path,
+                        ma_periods=(20, 60, 120),
+                        min_rel_span=span_floor,
+                    )
                     start_time = pd.Timestamp(frame.iloc[start_index]["open_time"])
                     end_close = end_open + pd.Timedelta(
                         minutes=timeframe_minutes(snapshot.timeframe)
@@ -476,7 +540,7 @@ def build_scan_pair(
                 "schema_version": 1,
                 "manifest_type": "yolo_xx_scan_set",
                 "unlabeled": True,
-                "holdout_read": False,
+                "holdout_read": snapshot.holdout_read,
                 "source_dir": str(snapshot_root),
                 "source_snapshot": {
                     "manifest": snapshot_copy.relative_to(arm).as_posix(),
@@ -484,9 +548,13 @@ def build_scan_pair(
                 },
                 "timeframe": snapshot.timeframe,
                 "ma_periods_bars": [20, 60, 120],
+                "min_rel_span": span_floor,
                 "window_bars": window,
                 "pixels_per_bar": round((IMG_WIDTH - 2 * MARGIN) / (window - 1), 6),
-                "end_before": utc_iso(HOLDOUT_START),
+                "end_before": utc_iso(cutoff),
+                "endpoints_since": utc_iso(since_ts) if since_ts is not None else None,
+                "endpoints_until": utc_iso(until_ts) if until_ts is not None else None,
+                "earliest_window_end_open_time": utc_iso(earliest),
                 "scan_contract_sha256": contract,
                 "samples": sorted(samples_by_window[window], key=lambda item: str(item["id"])),
             }
@@ -500,7 +568,7 @@ def build_scan_pair(
             "schema_version": 1,
             "manifest_type": "yolo_xx_scan_pair",
             "unlabeled": True,
-            "holdout_read": False,
+            "holdout_read": snapshot.holdout_read,
             "timeframe": snapshot.timeframe,
             "windows": list(WINDOWS),
             "ma_periods_bars": [20, 60, 120],
@@ -533,14 +601,22 @@ def build_scan_pair(
         "symbols": len({_symbol(item[0], snapshot.timeframe) for item in anchors}),
         "scan_contract_sha256": audit["scan_contract_sha256"],
         "source_snapshot_sha256": snapshot.manifest_sha256,
-        "holdout_read": False,
+        "holdout_read": snapshot.holdout_read,
         "audit_valid": True,
     }
     _write_json(output / "scan_pair_summary.json", summary)
     return summary
 
 
-def make_plan(*, snapshot_dir: Path, out_dir: Path, max_images: int) -> dict[str, object]:
+def make_plan(
+    *,
+    snapshot_dir: Path,
+    out_dir: Path,
+    max_images: int,
+    allow_holdout: bool = False,
+    since: object | None = None,
+    until: object | None = None,
+) -> dict[str, object]:
     """Return a no-read/no-write scan-set plan."""
     return {
         "dry_run": True,
@@ -549,8 +625,10 @@ def make_plan(*, snapshot_dir: Path, out_dir: Path, max_images: int) -> dict[str
         "windows": list(WINDOWS),
         "ma_periods_bars": [20, 60, 120],
         "max_images_per_arm": max_images,
+        "endpoints_since": str(since) if since is not None else None,
+        "endpoints_until": str(until) if until is not None else None,
         "unlabeled": True,
-        "holdout_read": False,
+        "holdout_read": allow_holdout,
         "training": False,
         "network": False,
     }
@@ -563,6 +641,19 @@ def main(argv: Sequence[str] | None = None) -> int:
     build.add_argument("--snapshot-dir", required=True, type=Path)
     build.add_argument("--out", required=True, type=Path)
     build.add_argument("--max-images", type=int, default=512)
+    build.add_argument(
+        "--allow-holdout",
+        action="store_true",
+        help="opt in to scanning a snapshot stamped holdout_read=true",
+    )
+    build.add_argument(
+        "--since",
+        help="only place window endpoints at or after this UTC timestamp",
+    )
+    build.add_argument(
+        "--until",
+        help="only place window endpoints at or before this UTC timestamp",
+    )
     build.add_argument("--dry-run", action="store_true")
     audit_parser = subparsers.add_parser("audit")
     audit_parser.add_argument("--pair-root", required=True, type=Path)
@@ -594,14 +685,15 @@ def main(argv: Sequence[str] | None = None) -> int:
         )
         print(json.dumps(payload, indent=2, sort_keys=True, ensure_ascii=False))
         return 0
-    if args.dry_run:
-        payload = make_plan(
-            snapshot_dir=args.snapshot_dir, out_dir=args.out, max_images=args.max_images
-        )
-    else:
-        payload = build_scan_pair(
-            snapshot_dir=args.snapshot_dir, out_dir=args.out, max_images=args.max_images
-        )
+    common = {
+        "snapshot_dir": args.snapshot_dir,
+        "out_dir": args.out,
+        "max_images": args.max_images,
+        "allow_holdout": args.allow_holdout,
+        "since": args.since,
+        "until": args.until,
+    }
+    payload = make_plan(**common) if args.dry_run else build_scan_pair(**common)
     print(json.dumps(payload, indent=2, sort_keys=True, ensure_ascii=False))
     return 0
 

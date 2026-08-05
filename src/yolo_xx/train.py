@@ -107,8 +107,20 @@ def build_train_kwargs(
     deterministic: bool = True,
     amp: bool = True,
     save_period: int = -1,
+    optimizer: str | None = None,
+    lr0: float | None = None,
+    lrf: float | None = None,
+    cos_lr: bool = False,
+    warmup_epochs: float | None = None,
 ) -> dict[str, Any]:
-    """Build the complete, inspectable Ultralytics `train` keyword mapping."""
+    """Build the complete, inspectable Ultralytics `train` keyword mapping.
+
+    The learning-rate schedule is exposed because the owner-short runs were
+    dominated by epoch-to-epoch validation swings rather than by convergence: a
+    flat high LR on a 2k-image set keeps knocking the model off its own optimum.
+    These knobs are part of the comparison contract, so two runs that differ in
+    schedule can never be presented as a single-variable A/B.
+    """
     kwargs: dict[str, Any] = {
         "data": str(Path(data).resolve()),
         "epochs": epochs,
@@ -140,6 +152,13 @@ def build_train_kwargs(
         kwargs.update(FINETUNE_OPT)
     else:
         kwargs["optimizer"] = "auto"
+    if optimizer is not None:
+        kwargs["optimizer"] = optimizer
+    if cos_lr:
+        kwargs["cos_lr"] = True
+    for key, value in (("lr0", lr0), ("lrf", lrf), ("warmup_epochs", warmup_epochs)):
+        if value is not None:
+            kwargs[key] = value
     return kwargs
 
 
@@ -215,6 +234,11 @@ def main(argv: Sequence[str] | None = None) -> None:
     parser.add_argument("--deterministic", action=argparse.BooleanOptionalAction, default=True)
     parser.add_argument("--amp", action=argparse.BooleanOptionalAction, default=True)
     parser.add_argument("--save-period", type=int, default=-1)
+    parser.add_argument("--optimizer", help="override the optimizer (default: auto)")
+    parser.add_argument("--lr0", type=float, help="initial learning rate")
+    parser.add_argument("--lrf", type=float, help="final LR as a fraction of lr0")
+    parser.add_argument("--cos-lr", action="store_true", help="cosine LR schedule")
+    parser.add_argument("--warmup-epochs", type=float)
     parser.add_argument("--portable-receipt", type=Path)
     parser.add_argument("--portable-receipt-sha256")
     parser.add_argument("--contract-out", type=Path)
@@ -241,6 +265,11 @@ def main(argv: Sequence[str] | None = None) -> None:
         deterministic=args.deterministic,
         amp=args.amp,
         save_period=args.save_period,
+        optimizer=args.optimizer,
+        lr0=args.lr0,
+        lrf=args.lrf,
+        cos_lr=args.cos_lr,
+        warmup_epochs=args.warmup_epochs,
     )
     dry_contract = build_training_contract(
         model=args.model, train_kwargs=kwargs, model_sha256=None

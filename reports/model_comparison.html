@@ -1,0 +1,78 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>五个检测器同尺对比</title><style>
+:root{--bg:#fff;--fg:#111827;--mut:#6b7280;--line:#e5e7eb;--win:#12805c;--loss:#c0334d;--warn:#b45309}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--fg:#e5e7eb;--mut:#9ca3af;--line:#252a33}}
+*{box-sizing:border-box}body{margin:0;padding:1.2rem;font:15px/1.65 -apple-system,system-ui,"PingFang SC",sans-serif;
+background:var(--bg);color:var(--fg);max-width:1000px;margin-inline:auto}
+h1{font-size:1.5rem;margin:0 0 .3rem}h2{font-size:1.15rem;margin:1.9rem 0 .6rem;padding-bottom:.3rem;border-bottom:2px solid var(--line)}
+p{margin:.45rem 0}.mut{color:var(--mut);font-size:.87rem}
+.callout{border-left:4px solid var(--win);background:rgba(18,128,92,.08);padding:.75rem .95rem;border-radius:6px;margin:1rem 0}
+.callout.warn{border-color:var(--warn);background:rgba(180,83,9,.08)}
+table{width:100%;border-collapse:collapse;font-size:.9rem;margin:.6rem 0}
+th,td{border-bottom:1px solid var(--line);padding:.42rem .5rem;text-align:right}
+th:first-child,td:first-child{text-align:left}thead th{color:var(--mut);font-weight:600}
+tr.hi{background:rgba(18,128,92,.10)}
+.scroll{overflow-x:auto}.neg{color:var(--loss)}.pos{color:var(--win)}
+code{background:var(--line);padding:.1rem .3rem;border-radius:3px;font-size:.85em}
+ol,ul{padding-left:1.3rem}li{margin:.35rem 0}
+</style></head><body>
+
+<h1>五个检测器，同一把尺子</h1>
+<p class="mut">yolo-xx · 2026-08-04 · 报告 6</p>
+
+<div class="callout"><b>yolo11s 的头部排序第一次带有真实信息。</b>
+连续扫描前 100 名精度 <b>10.0%</b>，是随机基准 2.5% 的 4 倍，也高于此前最好的 6.0%。
+而且精度随名次单调下降（10.0% → 10.0% → 7.5% → 整体 3.4%）—— 之前几个模型这条曲线是平的或反向的。
+这一版只训了 18 个 epoch，最好成绩在第 15 轮，仍在上升。</div>
+
+<h2>一、连续扫描精度（5824 个窗口，真框占 2.5%）</h2>
+<p>这是实盘的形状：每根 K 线都是候选，模型不停画框，看有多少落在 owner 标过的位置上。
+随机基准 = 2.5%。</p>
+<div class="scroll"><table>
+<thead><tr><th>模型</th><th>val mAP50</th><th>框数</th><th>命中</th><th>整体精度</th><th>前50</th><th>前100</th><th>前200</th></tr></thead>
+<tbody><tr><td>v8 (yolo11s, 父项目)</td><td>—</td><td>436</td><td>9</td><td>2.1%</td><td><b>2.0%</b></td><td><b>2.0%</b></td><td>2.5%</td></tr><tr><td>owner_short_ab_w96_v2 (n)</td><td>0.596</td><td>615</td><td>34</td><td>5.5%</td><td><b>6.0%</b></td><td><b>6.0%</b></td><td>6.0%</td></tr><tr><td>hardneg_w96_v1 (n)</td><td>0.481</td><td>4796</td><td>144</td><td>3.0%</td><td><b>2.0%</b></td><td><b>5.0%</b></td><td>4.5%</td></tr><tr><td>hardneg_w96_v2 (n)</td><td>0.380</td><td>2764</td><td>101</td><td>3.7%</td><td><b>6.0%</b></td><td><b>3.0%</b></td><td>4.5%</td></tr><tr class='hi'><td>hardneg_w96_v2_s (s,18ep)</td><td>0.390</td><td>3039</td><td>102</td><td>3.4%</td><td><b>10.0%</b></td><td><b>10.0%</b></td><td>7.5%</td></tr></tbody></table></div>
+<p class="mut">val mAP50 不可横向比较：各模型的 val 集难度不同（1:1 配对集 5 张里 2.5 张是正的，
+加了 hard 反例的 5 张里只有 1 张）。连续扫描精度才是同一把尺子。</p>
+
+<h2>二、五个模型分别是什么</h2>
+<ul>
+<li><b>v8（yolo11s）</b> —— 父项目的生产检测器。它 <code>owner_eval_frozen</code> 上的 P 0.67 是在
+464 张（221 有框 / 243 空）的平衡集上量的，和这里的连续扫描不是一回事。</li>
+<li><b>owner_short_ab_w96_v2（yolo11n）</b> —— 昨晚训的基线，1:1 配对数据集，96 根窗口臂。</li>
+<li><b>hardneg_w96_v1（yolo11n）</b> —— 加 3973 张反例（密集 + 无 owner 框 + 做空亏损），正负 1:4。
+反例语境没对上正样本（距 120 均线 −0.14% vs 正样本 −2.99%）。</li>
+<li><b>hardneg_w96_v2（yolo11n）</b> —— 反例改用正样本语境的 p10–p90 区间筛选
+（距 120 均线 −6.6%~−1.0%、前 48 根跌 8%~1.1%、均线带宽 0.006~0.051），已对齐到 −2.41%。</li>
+<li><b>hardneg_w96_v2_s（yolo11s）</b> —— 同一个 v2 数据集、同样配方，只把底座从 yolo11n 换成
+yolo11s（v8 用的那一档）。单变量。</li>
+</ul>
+
+<h2>三、yolo11s 的信号在 60 币上的表现</h2>
+<p>60 个币 × 4 个月（2026-04-06 ~ 08-04）、8000 个扫描窗口、3896 个信号。
+做空、止盈 −5ATR / 止损 +2ATR、maker 0.06% round-trip、同币种同时只持一仓。
+盈亏平衡胜率 28.6%。</p>
+<div class="scroll"><table>
+<thead><tr><th>进场</th><th>筛选</th><th>笔数</th><th>胜率</th><th>PF</th><th>累计</th></tr></thead>
+<tbody><tr><td>15m</td><td>全部</td><td>1968</td><td>27%</td><td class='neg'><b>0.82</b></td><td class='neg'>-295.6%</td></tr><tr><td>15m</td><td>置信度前 50 名</td><td>50</td><td>32%</td><td class='pos'><b>1.06</b></td><td class='pos'>+3.0%</td></tr><tr><td>15m</td><td>置信度前 100 名</td><td>100</td><td>27%</td><td class='neg'><b>0.98</b></td><td class='neg'>-1.8%</td></tr><tr><td>15m</td><td>置信度前 200 名</td><td>200</td><td>26%</td><td class='neg'><b>0.83</b></td><td class='neg'>-29.2%</td></tr><tr><td>15m</td><td>置信度前 400 名</td><td>400</td><td>26%</td><td class='neg'><b>0.79</b></td><td class='neg'>-71.2%</td></tr><tr><td>30m</td><td>全部</td><td>1805</td><td>28%</td><td class='neg'><b>0.88</b></td><td class='neg'>-267.9%</td></tr><tr><td>30m</td><td>置信度前 50 名</td><td>50</td><td>42%</td><td class='pos'><b>1.73</b></td><td class='pos'>+36.4%</td></tr><tr><td>30m</td><td>置信度前 100 名</td><td>100</td><td>30%</td><td class='pos'><b>1.11</b></td><td class='pos'>+11.5%</td></tr><tr><td>30m</td><td>置信度前 200 名</td><td>200</td><td>30%</td><td class='neg'><b>0.99</b></td><td class='neg'>-2.4%</td></tr><tr><td>30m</td><td>置信度前 400 名</td><td>400</td><td>28%</td><td class='neg'><b>0.87</b></td><td class='neg'>-59.3%</td></tr></tbody></table></div>
+<p><b>头部有信号，衰减很快。</b> 30m 进场取前 50 名 PF 1.73、胜率 42%；到前 200 名回到 1.0；全量 0.88。
+和连续扫描精度的形状一致 —— 排序在头部有效，尾部是噪声。</p>
+<p class="mut">样本量提醒：前 50 名就是 50 笔，PF 1.73 的不确定性大。前 100 名（PF 1.11，100 笔）更稳一些，
+但也只是刚过 1。</p>
+
+<h2>四、下一步与一个环境限制</h2>
+<div class="callout warn"><b>yolo11s 在 3060 上跑不满 60 epoch。</b>
+workers=4 死在 epoch 18，workers=2 死在 epoch 2，workers=0 死在 epoch 3，都是无报错静默退出。
+已确认的一个原因是页面文件耗尽（首次报 WinError 1455，当时有 12 个孤儿 DataLoader 进程占着 9.4GB）——
+孤儿回收已写进启动器。清干净后仍会死，说明还有第二个原因未查明。<br><br>
+<b>需要 owner 操作</b>：把那台 Windows 的页面文件从当前 22.6GB 调到 48–64GB
+（系统属性 → 高级 → 性能设置 → 高级 → 虚拟内存），需要管理员权限和重启。</div>
+<ol>
+<li>yolo11s 跑满 60 epoch，看头部精度和 PF 是否继续上升 —— 它在第 15 轮时仍在爬坡</li>
+<li>如果继续上升，把 yolo11s + v2 数据集这一组合接上判断层，测完整链路</li>
+<li>owner 的判别力仍是这条线路里最强的信号：val 期人工框 PF 8.98，
+同语境随机进场只赢 32% 而 owner 挑的赢 79%</li>
+</ol>
+
+<p class="mut">本页无实盘、无部署、无下单。所有 holdout 产物带 holdout_read 印章。</p>
+</body></html>

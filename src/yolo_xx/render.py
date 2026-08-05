@@ -31,7 +31,35 @@ EMA_PALETTE = ((36, 96, 240), (60, 160, 250), (150, 70, 200))
 IMG_WIDTH = 1280
 IMG_HEIGHT = 742
 MARGIN = 12
+# Floor on the rendered vertical span, as a fraction of mid price.  It stops a
+# quiet chart from zooming into pure noise.  0.06 was calibrated on 15m, where a
+# 96-bar window typically moves ~3.6%; a 1m window moves ~0.8%, so the same floor
+# squashes a 1m chart into a fifth of the frame and pushes it far out of the
+# detector's training domain.  Callers rendering another timeframe should pass
+# a floor scaled to that timeframe instead of inheriting this one.
 MIN_REL_SPAN = 0.06
+
+# Typical relative range of a 96-bar window, measured per timeframe on local
+# pre-holdout data.  A 1m window simply moves less than a 15m one, so a single
+# absolute floor is not scale-free: it binds almost never at 30m and almost
+# always at 1m.  Scaling the floor by these ratios keeps it binding equally often
+# everywhere, which keeps charts statistically comparable across timeframes.
+TYPICAL_96_BAR_RANGE = {
+    "1m": 0.0080,
+    "2m": 0.0112,
+    "3m": 0.0140,
+    "5m": 0.0211,
+    "15m": 0.0359,
+    "30m": 0.0508,
+}
+
+
+def min_rel_span_for(timeframe: str) -> float:
+    """Return the vertical-span floor for one timeframe, anchored on 15m."""
+    typical = TYPICAL_96_BAR_RANGE.get(timeframe)
+    if typical is None:
+        return MIN_REL_SPAN
+    return round(MIN_REL_SPAN * typical / TYPICAL_96_BAR_RANGE["15m"], 6)
 
 
 @dataclass(frozen=True)
@@ -73,6 +101,7 @@ def _price_bounds(
     pad: float = 0.06,
     *,
     ma_periods: Iterable[int] = MA_PERIODS,
+    min_rel_span: float = MIN_REL_SPAN,
 ) -> tuple[float, float]:
     series = [frame["low"], frame["high"]]
     series.extend(
@@ -83,7 +112,7 @@ def _price_bounds(
         raise ValueError("cannot render a frame without finite price values")
     low, high = float(values.min()), float(values.max())
     middle = (high + low) / 2
-    span = max(high - low, abs(middle) * MIN_REL_SPAN, 1e-9)
+    span = max(high - low, abs(middle) * min_rel_span, 1e-9)
     low, high = middle - span / 2, middle + span / 2
     return low - span * pad, high + span * pad
 
@@ -94,6 +123,7 @@ def make_chart_transform(
     width: int = IMG_WIDTH,
     height: int = IMG_HEIGHT,
     ma_periods: Iterable[int] = MA_PERIODS,
+    min_rel_span: float = MIN_REL_SPAN,
 ) -> ChartTransform:
     """Build the deterministic chart transform without drawing the image."""
     if frame.empty:
@@ -104,7 +134,9 @@ def make_chart_transform(
     plot_w, plot_h = width - 2 * MARGIN, height - 2 * MARGIN
     if plot_w <= 0 or plot_h <= 0:
         raise ValueError("image dimensions must be larger than twice the margin")
-    price_min, price_max = _price_bounds(frame, ma_periods=ma_periods)
+    price_min, price_max = _price_bounds(
+        frame, ma_periods=ma_periods, min_rel_span=min_rel_span
+    )
     candle_half_w = max(1, int(plot_w / count * 0.34))
     return ChartTransform(
         n_bars=count,
@@ -127,6 +159,7 @@ def render_chart(
     height: int = IMG_HEIGHT,
     out_path: str | Path | None = None,
     ma_periods: Iterable[int] = MA_PERIODS,
+    min_rel_span: float = MIN_REL_SPAN,
 ) -> tuple[np.ndarray, ChartTransform]:
     """Render one OHLCV window whose moving-average columns already exist."""
     frame = frame.reset_index(drop=True)
@@ -136,6 +169,7 @@ def render_chart(
         width=width,
         height=height,
         ma_periods=normalized_periods,
+        min_rel_span=min_rel_span,
     )
     image = np.full((height, width, 3), BG, dtype=np.uint8)
 

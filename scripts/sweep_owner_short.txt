@@ -1,0 +1,16 @@
+# Owner-short detector sweep, w96 arm. One run per line:
+#   name|base_weights|epochs|patience|batch|extra flags
+#
+# The frozen run (owner_short_ab_w96_v2) used a flat lr0 with epochs=30 and
+# patience=10; validation mAP50 swung 0.05-0.60 and it stopped at epoch 20 on a
+# mid-swing checkpoint. Every arm here keeps the semantic augmentation locks
+# (mosaic/flip/HSV/translate all zero) — only the schedule and capacity move.
+#
+# s1: same recipe, but long enough and patient enough to actually converge.
+# s2: half the learning rate, to test whether the swings are an LR artifact.
+# s3: more capacity at the settled schedule.
+# s4: bigger batch for a less noisy gradient on a 2k-image set.
+sweep_w96_s1_cos|C:/yolo-xx/yolo11n.pt|120|60|8|--cos-lr --lr0 0.01 --lrf 0.01 --warmup-epochs 5
+sweep_w96_s2_lowlr|C:/yolo-xx/yolo11n.pt|120|60|8|--cos-lr --lr0 0.003 --lrf 0.01 --warmup-epochs 5
+sweep_w96_s3_small|yolo11s.pt|120|60|8|--cos-lr --lr0 0.005 --lrf 0.01 --warmup-epochs 5
+sweep_w96_s4_batch16|C:/yolo-xx/yolo11n.pt|120|60|16|--cos-lr --lr0 0.005 --lrf 0.01 --warmup-epochs 5

@@ -1,0 +1,95 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>根因诊断：形态是真的，检测器没学会</title><style>
+:root{--bg:#fff;--fg:#111827;--mut:#6b7280;--line:#e5e7eb;--win:#12805c;--loss:#c0334d;--warn:#b45309}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--fg:#e5e7eb;--mut:#9ca3af;--line:#252a33}}
+*{box-sizing:border-box}body{margin:0;padding:1.2rem;font:15px/1.65 -apple-system,system-ui,"PingFang SC",sans-serif;
+background:var(--bg);color:var(--fg);max-width:1000px;margin-inline:auto}
+h1{font-size:1.5rem;margin:0 0 .3rem}h2{font-size:1.15rem;margin:1.9rem 0 .6rem;padding-bottom:.3rem;border-bottom:2px solid var(--line)}
+p{margin:.45rem 0}.mut{color:var(--mut);font-size:.88rem}
+.callout{border-left:4px solid var(--warn);background:rgba(180,83,9,.08);padding:.75rem .95rem;border-radius:6px;margin:1rem 0}
+.callout.good{border-color:var(--win);background:rgba(18,128,92,.08)}
+.callout.bad{border-color:var(--loss);background:rgba(192,51,77,.08)}
+table{width:100%;border-collapse:collapse;font-size:.9rem;margin:.6rem 0}
+th,td{border-bottom:1px solid var(--line);padding:.42rem .5rem;text-align:right}
+th:first-child,td:first-child{text-align:left}thead th{color:var(--mut);font-weight:600}
+.scroll{overflow-x:auto}.neg{color:var(--loss)}.pos{color:var(--win)}
+code{background:var(--line);padding:.1rem .3rem;border-radius:3px;font-size:.85em}
+ol,ul{padding-left:1.3rem}li{margin:.4rem 0}
+</style></head><body>
+
+<h1>根因诊断：形态是真的，检测器没学会</h1>
+<p class="mut">yolo-xx · 2026-08-04 · 报告 3/N</p>
+
+<div class="callout good"><b>好消息：owner 标注的形态确实有巨大边缘。</b>
+在模型从未训练过的 val 期（2026-02-15 之后），owner 人工框做空 PF <b>8.98</b>、胜率 79%；
+同期随机进场 PF 1.22。形态本身不是幻觉。</div>
+
+<div class="callout bad"><b>坏消息：检测器在连续扫描下等同随机。</b>
+同域（15m）、同期、同规则，检测器的 403 个预测 PF <b>1.06</b>，比随机的 1.22 还低。
+之前两份报告里所有"没有边缘"的结论，根源在这里。</div>
+
+<h2>一、把两者放在同一批图上对照</h2>
+<p>用检测器自己的 val split（554 张图：277 正 + 277 配对背景），全部在窗口终点做空：</p>
+<div class="scroll"><table>
+<thead><tr><th>分组</th><th>笔数</th><th>胜率</th><th>PF</th><th>累计</th></tr></thead>
+<tbody>
+<tr><td>正图（有 owner 框）</td><td>277</td><td>59%</td><td class="pos"><b>2.94</b></td><td class="pos">+330.5%</td></tr>
+<tr><td>负图（配对背景）</td><td>277</td><td>31%</td><td class="neg">0.92</td><td class="neg">−23.5%</td></tr>
+<tr><td>检测器开火</td><td>231</td><td>57%</td><td class="pos">2.53</td><td class="pos">+236.1%</td></tr>
+<tr><td>检测器沉默</td><td>323</td><td>36%</td><td>1.23</td><td>+70.9%</td></tr>
+<tr><td>正图 · 检测器<b>沉默</b>（漏掉的）</td><td>58</td><td>62%</td><td class="pos"><b>4.66</b></td><td class="pos">+100.5%</td></tr>
+<tr><td>负图 · 检测器开火（误报）</td><td>12</td><td>33%</td><td>1.55</td><td>+6.1%</td></tr>
+</tbody></table></div>
+<p>三点读法：</p>
+<ol>
+<li>正图 PF 2.94 vs 负图 0.92 —— <b>owner 的正负划分本身携带全部信息</b>。</li>
+<li>检测器"开火 vs 沉默" p&lt;0.0001 看起来很强，但它 231 次开火里 <b>219 次落在正图上</b>。
+它复现的是"这张是不是正图"，等于把标注背了一遍，没有新增信息。</li>
+<li><b>只在负图内部比较，开火 vs 沉默 p=0.39</b> —— 在没有人工标注的区域，检测器找不出机会。
+而且它漏掉的正图反而是最赚的（PF 4.66 &gt; 开火正图的 2.61）。</li>
+</ol>
+
+<h2>二、根因：训练用 1:1 正负配对，实盘是 1:100 以上</h2>
+<p>训练集是每个正样本配一张同 symbol、同时间块、同右侧上下文桶的背景图，正负恰好 1:1。
+这在预注册里是为了消除位置捷径，做得很干净——但它让检测器只需要学会
+<b>"在这两张精心配对的图里挑出正的那张"</b>。</p>
+<p>实盘连续扫描时，每一根 K 线都是候选，真正的 anchor 极其稀疏。检测器在
+4000 个扫描窗口上开火 364 次（9.1%），其中绝大多数落在没有 anchor 的窗口上——
+精度直接崩到随机水平。这是教科书式的<b>基率错配（base-rate mismatch）</b>。</p>
+
+<h2>三、这解释了之前所有的负面结果</h2>
+<div class="scroll"><table>
+<thead><tr><th>此前结论</th><th>真实原因</th></tr></thead>
+<tbody>
+<tr><td>小周期信号 PF 0.96，等同随机</td><td>连续扫描下检测器精度崩溃，不是形态无效</td></tr>
+<tr><td>置信度过滤样本外失败</td><td>置信度只区分"配对里的正负"，不区分"茫茫窗口里的真假"</td></tr>
+<tr><td>判断层样本外失败</td><td>判断层拿到的候选池本身已经被污染成随机</td></tr>
+<tr><td>21 组 TP/SL 都救不回来</td><td>执行层无法修复输入端的信噪比</td></tr>
+</tbody></table></div>
+
+<h2>四、该怎么修</h2>
+<ol>
+<li><b>用真实基率的负样本重建训练集（最高优先级）。</b>
+不再 1:1 配对，改为从连续扫描窗口里采负样本，正负比接近实盘（1:50~1:200），
+并做 hard negative mining：把当前检测器在连续扫描中误报的窗口作为负样本喂回去。
+这是直接针对根因的修法。</li>
+<li><b>评估口径要换。</b> 在 1:1 配对集上算 mAP 会系统性高估。
+应当在连续扫描集上报 precision@k 和每天误报数，那才是实盘会遇到的数字。</li>
+<li><b>训练稳定性是次要问题。</b> 当前 sweep（3060，4 配置 × 120 epoch）第一组
+已在 epoch 28 崩溃（mAP50 从 0.577 掉到 0.004），说明 lr0=0.01 + cosine 仍然过大；
+后续用 0.003。但要说清楚：<b>把 mAP 从 0.55 修到 0.70 也解决不了基率问题</b>，
+两件事要分开做。</li>
+<li><b>owner 标注的后视成分需要单独确认。</b> 正图 PF 2.94 是在 val 期取得的，
+模型没训练过，但 owner 画框时是看着完整历史的。要区分"形态可实时识别"和"事后才看得出"，
+需要 owner 在<b>不看未来</b>的条件下盲标一批新样本作为对照。这一步只有你能做。</li>
+</ol>
+
+<h2>五、当前进行中</h2>
+<ul>
+<li>检测器 sweep：3060，4 组配置 × 120 epoch，s1 已崩溃，等 s2/s3/s4</li>
+<li>扩币种：60 个币 × 120 天 5m 数据抓取中</li>
+</ul>
+
+<p class="mut">本页无实盘、无部署、无下单。所有 holdout 产物带 <code>holdout_read=true</code> 印章。</p>
+</body></html>

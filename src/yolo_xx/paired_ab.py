@@ -20,7 +20,7 @@ import tempfile
 from collections import Counter, defaultdict
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Iterable, Sequence
+from typing import Callable, Iterable, Sequence
 
 import pandas as pd
 
@@ -94,6 +94,12 @@ class MatchedPair:
     positive: PositiveAnchor
     negative_end_open: pd.Timestamp
     negative_search_day_offset: int
+    # Extra endpoints that look dense but carry no owner box.  The frozen 1:1
+    # recipe deliberately excluded these, because an unlabelled dense window may
+    # be a setup the owner simply never reviewed.  They are only admitted here
+    # when an outcome check says the short would have lost, which removes that
+    # ambiguity without ever forcing an unreviewed pattern to be a negative.
+    hard_negative_ends: tuple[pd.Timestamp, ...] = ()
 
 
 def _write_json(path: Path, payload: object) -> None:
@@ -289,6 +295,8 @@ def _match_symbol_negatives(
     frame: pd.DataFrame,
     split_at: pd.Timestamp,
     seed: int,
+    hard_negatives_per_anchor: int = 0,
+    hard_negative_filter: Callable[[str, pd.Timestamp], bool] | None = None,
 ) -> tuple[list[MatchedPair], int]:
     """Match one unique rule-clear background to every possible positive anchor."""
     time_to_index = {
@@ -319,12 +327,41 @@ def _match_symbol_negatives(
             continue
         negative_end, day_offset = matched
         used_endpoints.add(int(negative_end.value))
+        hard: list[pd.Timestamp] = []
+        if hard_negatives_per_anchor and hard_negative_filter is not None:
+            for extra_offset in _candidate_day_offsets(anchor.anchor_id + "#hard", seed):
+                if len(hard) >= hard_negatives_per_anchor:
+                    break
+                end = anchor.window_end_open + pd.Timedelta(days=extra_offset)
+                end_ns = int(end.value)
+                if end_ns in used_endpoints or end_ns not in time_to_index:
+                    continue
+                if _assign_split(end, split_at) != anchor.split:
+                    continue
+                wide_start = _window_start(end, WIDEST_WINDOW)
+                if any(_intersects(wide_start, end, item.start, item.end) for item in intervals):
+                    continue
+                end_index = time_to_index[end_ns]
+                # Inverting the rule-clear test also drops the left-history guard
+                # it implied, so the widest window still has to fit the snapshot.
+                if end_index < WIDEST_WINDOW - 1:
+                    continue
+                # The opposite of the matched-background test: we want windows the
+                # frozen rule *does* call dense, so the detector learns to reject
+                # look-alikes instead of only clean backgrounds.
+                if _is_rule_clear(frame, end_index):
+                    continue
+                if not hard_negative_filter(anchor.symbol, end):
+                    continue
+                used_endpoints.add(end_ns)
+                hard.append(end)
         pairs.append(
             MatchedPair(
                 pair_id=anchor.anchor_id,
                 positive=anchor,
                 negative_end_open=negative_end,
                 negative_search_day_offset=day_offset,
+                hard_negative_ends=tuple(hard),
             )
         )
     return pairs, unmatched
@@ -525,8 +562,15 @@ def _finalize_dataset(
     used_symbols = sorted({str(item["symbol"]) for item in ordered})
     positives = [item for item in ordered if item["sample_kind"] == "positive"]
     negatives = [item for item in ordered if item["sample_kind"] == "negative"]
-    if len(positives) != len(negatives):
-        raise AssertionError("paired dataset must keep a 1:1 positive/background ratio")
+    # The matched background per positive is the position-shortcut control and
+    # stays strictly 1:1.  Outcome-verified hard negatives sit on top of it and
+    # are counted separately, so the control is never diluted by accident.
+    matched = [item for item in negatives if str(item["id"]).startswith("neg__")]
+    hard = [item for item in negatives if str(item["id"]).startswith("hard")]
+    if len(matched) + len(hard) != len(negatives):
+        raise AssertionError("negative sample id does not declare its role")
+    if len(positives) != len(matched):
+        raise AssertionError("every positive must keep exactly one matched background")
     if any(int(item["n_boxes"]) != 0 for item in negatives):
         raise AssertionError("background sample unexpectedly contains a label")
 
@@ -534,6 +578,8 @@ def _finalize_dataset(
         "schema_version": 2,
         "manifest_type": "yolo_xx_dataset",
         "created_from": "owner_short_paired_window_ab_with_rule_clear_matched_backgrounds",
+        "matched_background_count": len(matched),
+        "hard_negative_count": len(hard),
         "source_dir": str(snapshot_root),
         "source_snapshot": {
             "manifest": snapshot_copy.relative_to(dataset).as_posix(),
@@ -673,8 +719,17 @@ def build_pair(
     right_contexts: Sequence[int] = DEFAULT_RIGHT_CONTEXTS,
     seed: int = DEFAULT_SEED,
     max_positive_anchors: int | None = None,
+    hard_negatives_per_anchor: int = 0,
+    hard_negative_filter: Callable[[str, pd.Timestamp], bool] | None = None,
 ) -> dict[str, object]:
-    """Build both immutable datasets from one shared positive/background ledger."""
+    """Build both immutable datasets from one shared positive/background ledger.
+
+    `hard_negatives_per_anchor` admits extra negatives that the frozen rule calls
+    dense but that carry no owner box.  They are the windows a continuous scan
+    actually confuses the detector with; the 1:1 recipe never showed it any.
+    `hard_negative_filter` must disambiguate them (an outcome check), so an
+    unreviewed pattern is never forced into the negative class on looks alone.
+    """
     snapshot_root = Path(snapshot_dir).resolve()
     output = Path(out_dir).resolve()
     _ensure_new_output(output)
@@ -721,6 +776,8 @@ def build_pair(
             frame=frame,
             split_at=split_timestamp,
             seed=seed,
+            hard_negatives_per_anchor=hard_negatives_per_anchor,
+            hard_negative_filter=hard_negative_filter,
         )
         pairs.extend(matched)
         unmatched += missing_count
@@ -789,6 +846,24 @@ def build_pair(
                     )
                     samples_by_window[window].extend((positive, negative))
                     fallbacks_by_window[window] += positive_fallbacks + negative_fallbacks
+                    for index, hard_end in enumerate(pair.hard_negative_ends):
+                        hard_sample, hard_fallbacks = _render_one(
+                            dataset=dataset,
+                            record=record,
+                            frame=frame,
+                            time_to_index=time_to_index,
+                            intervals=intervals,
+                            sample_id=f"hard{index}__{pair.pair_id}",
+                            match_id=pair.pair_id,
+                            sample_kind="negative",
+                            split=anchor.split,
+                            window=window,
+                            end_open=hard_end,
+                            right_context_bars=anchor.right_context_bars,
+                            core_box_ids=(),
+                        )
+                        samples_by_window[window].append(hard_sample)
+                        fallbacks_by_window[window] += hard_fallbacks
             verify_snapshot_file(record)
 
         contract_rows = _contract_rows(samples_by_window[WIDEST_WINDOW])

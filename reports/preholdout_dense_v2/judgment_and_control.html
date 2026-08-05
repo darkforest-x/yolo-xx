@@ -1,0 +1,115 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>判断层接入 + 随机对照实验</title><style>
+:root{--bg:#fff;--fg:#111827;--mut:#6b7280;--line:#e5e7eb;--win:#12805c;--loss:#c0334d;--warn:#b45309}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--fg:#e5e7eb;--mut:#9ca3af;--line:#252a33}}
+*{box-sizing:border-box}body{margin:0;padding:1.2rem;font:15px/1.65 -apple-system,system-ui,"PingFang SC",sans-serif;
+background:var(--bg);color:var(--fg);max-width:1000px;margin-inline:auto}
+h1{font-size:1.5rem;margin:0 0 .3rem}h2{font-size:1.15rem;margin:2rem 0 .6rem;padding-bottom:.3rem;border-bottom:2px solid var(--line)}
+p{margin:.45rem 0}.mut{color:var(--mut);font-size:.88rem}
+.callout{border-left:4px solid var(--warn);background:rgba(180,83,9,.08);padding:.75rem .95rem;border-radius:6px;margin:1rem 0}
+.callout.bad{border-color:var(--loss);background:rgba(192,51,77,.08)}
+.callout.good{border-color:var(--win);background:rgba(18,128,92,.08)}
+table{width:100%;border-collapse:collapse;font-size:.9rem;margin:.6rem 0}
+th,td{border-bottom:1px solid var(--line);padding:.42rem .5rem;text-align:right}
+th:first-child,td:first-child{text-align:left}thead th{color:var(--mut);font-weight:600}
+.scroll{overflow-x:auto}.neg{color:var(--loss)}.pos{color:var(--win)}
+code{background:var(--line);padding:.1rem .3rem;border-radius:3px;font-size:.85em}
+ol,ul{padding-left:1.3rem}li{margin:.3rem 0}
+</style></head><body>
+
+<h1>判断层接入 + 随机对照实验</h1>
+<p class="mut">yolo-xx · 2026-08-04 · 检测器 <code>owner_short_ab_w96_v2/best.pt</code></p>
+
+<div class="callout bad"><b>核心结论：信号相对随机进场没有优势。</b>
+在检测器训练所处的熊市里，随机做空的 PF 反而比按信号进场更高。判断层在样本内很强
+（Spearman +0.19~+0.23, p&lt;0.001），样本外归零（+0.07, p=0.24），且按分数取前 10% 比不筛选更差。</div>
+
+<h2>一、判断层该挂在哪（样本内）</h2>
+<p>v11 判断层是 LightGBM 回归，用 28 个手工均线密集度特征（EMA 8/13/21/34/55/144/200 体系，
+与检测器的 20/60/120 完全不同）预测 <code>realized_ret</code>，阈值 0.0202 = val q90。
+小周期出信号、大周期进场，特征可以在任一周期上算——测了四种：</p>
+<div class="scroll"><table>
+<thead><tr><th>进场</th><th>特征周期</th><th>口径</th><th>笔数</th><th>胜率</th><th>PF</th><th>累计</th><th>Spearman</th></tr></thead>
+<tbody>
+<tr><td>15m</td><td>—</td><td>基线</td><td>676</td><td>32%</td><td>0.96</td><td class="neg">−19.5%</td><td>—</td></tr>
+<tr><td>15m</td><td><b>15m</b></td><td>前10%</td><td>77</td><td>43%</td><td class="pos"><b>1.51</b></td><td class="pos">+20.7%</td><td>+0.185</td></tr>
+<tr><td>15m</td><td>30m</td><td>前10%</td><td>77</td><td>31%</td><td class="neg">0.81</td><td class="neg">−11.5%</td><td>+0.145</td></tr>
+<tr><td>15m</td><td>5m</td><td>前10%</td><td>67</td><td>45%</td><td class="pos">1.56</td><td class="pos">+22.9%</td><td>+0.211</td></tr>
+<tr><td>30m</td><td>—</td><td>基线</td><td>695</td><td>29%</td><td>0.91</td><td class="neg">−60.2%</td><td>—</td></tr>
+<tr><td>30m</td><td><b>15m</b></td><td>过阈值</td><td>24</td><td>50%</td><td class="pos"><b>2.05</b></td><td class="pos">+21.7%</td><td>+0.231</td></tr>
+<tr><td>30m</td><td>30m</td><td>前10%</td><td>79</td><td>37%</td><td>1.29</td><td class="pos">+22.9%</td><td>+0.213</td></tr>
+</tbody></table></div>
+<p><b>样本内的答案是：特征在 15m 上算</b>，不管信号来自哪个小周期、也不管在哪进场。用 30m 算比基线还差。
+判断层分数与收益的相关性 <b>+0.15~+0.23（p&lt;0.001）</b>，远强于检测器自己的置信度（+0.015, p=0.35）。</p>
+
+<h2>二、但这是样本内</h2>
+<p>v11 的训练+验证期是 <code>2025-06-05 → 2026-05-03</code>，而我这批 pre-holdout 信号是
+<code>2025-12-20 → 2026-05-03</code> —— <b>完全落在判断层见过的数据里</b>。
+拿 holdout（2026-07-30~08-04，判断层训练期之后近三个月）重测：</p>
+<div class="scroll"><table>
+<thead><tr><th>进场</th><th>口径</th><th>笔数</th><th>胜率</th><th>PF</th><th>累计</th><th>Spearman</th></tr></thead>
+<tbody>
+<tr><td>15m</td><td>全部</td><td>296</td><td>28%</td><td>0.84</td><td class="neg">−25.8%</td><td rowspan="2">+0.069 (p=0.24)</td></tr>
+<tr><td>15m</td><td>判断层前10%</td><td>29</td><td>17%</td><td class="neg"><b>0.39</b></td><td class="neg">−11.1%</td></tr>
+<tr><td>30m</td><td>全部</td><td>190</td><td>30%</td><td>0.95</td><td class="neg">−6.8%</td><td rowspan="2">+0.022 (p=0.77)</td></tr>
+<tr><td>30m</td><td>判断层前10%</td><td>19</td><td>11%</td><td class="neg"><b>0.24</b></td><td class="neg">−16.4%</td></tr>
+</tbody></table></div>
+<p>样本外相关性不显著，<b>按判断分数挑前 10% 比不挑还差一倍以上</b>。
+这和检测器置信度是同一个模式：样本内漂亮、样本外归零。</p>
+
+<h2>三、原因：训练期是单边熊市</h2>
+<div class="scroll"><table>
+<thead><tr><th>数据段</th><th>币种数</th><th>区间涨跌中位</th><th>上涨占比</th></tr></thead>
+<tbody>
+<tr><td>pre-holdout 4.5月（含 owner 标注期）</td><td>215</td><td class="neg"><b>−26.8%</b></td><td>17%</td></tr>
+<tr><td>holdout 12天</td><td>15</td><td>+0.03%</td><td>53%</td></tr>
+</tbody></table></div>
+<p>owner 的做空标注全部来自那个熊市。做空在那种行情里天然占便宜，
+任何碰巧多选了下跌段的过滤器都会显得有预测力。横盘一来，边缘就没了。</p>
+
+<h2>四、随机对照：信号到底比随机好多少</h2>
+<p>同样的币、同样的可用区间、同样的 TP/SL，只把进场时间随机打乱（5 次取中位）：</p>
+<div class="scroll"><table>
+<thead><tr><th>数据段</th><th>进场</th><th>信号 PF</th><th>随机 PF</th><th>信号 − 随机</th></tr></thead>
+<tbody>
+<tr><td>pre-holdout（熊市）</td><td>15m</td><td>0.96</td><td>1.03</td><td class="neg">−0.07</td></tr>
+<tr><td>pre-holdout（熊市）</td><td>30m</td><td>0.91</td><td>1.08</td><td class="neg">−0.17</td></tr>
+<tr><td>holdout（横盘）</td><td>15m</td><td>0.94</td><td>0.81</td><td class="pos">+0.13</td></tr>
+<tr><td>holdout（横盘）</td><td>30m</td><td>1.14</td><td>1.11</td><td>+0.04</td></tr>
+</tbody></table></div>
+<p><b>在检测器训练所处的熊市里，随机进场反而更好。</b></p>
+
+<h2>五、执行层：换出场规则救不回来</h2>
+<p>21 组 TP/SL/持仓上限组合，每组都配同样的随机对照。信号相对随机的差值全部落在
+<b>−0.28 ~ +0.05</b> 之间，中心约 −0.07：</p>
+<div class="scroll"><table>
+<thead><tr><th>TP(ATR)</th><th>SL(ATR)</th><th>maxbars</th><th>信号 PF</th><th>胜率</th><th>随机 PF</th><th>信号−随机</th></tr></thead>
+<tbody>
+<tr><td>5</td><td>2</td><td>48</td><td>0.99</td><td>37%</td><td>1.06</td><td class="neg">−0.07</td></tr>
+<tr><td>3</td><td>2</td><td>96</td><td>0.89</td><td>41%</td><td>1.01</td><td class="neg">−0.12</td></tr>
+<tr><td>2</td><td>1</td><td>96</td><td>0.88</td><td>35%</td><td>0.89</td><td class="neg">−0.01</td></tr>
+<tr><td>1.5</td><td>1</td><td>48</td><td>0.86</td><td>42%</td><td>0.80</td><td class="pos">+0.05</td></tr>
+<tr><td>3</td><td>1</td><td>96</td><td>0.84</td><td>25%</td><td>0.94</td><td class="neg">−0.10</td></tr>
+<tr><td>4</td><td>3</td><td>96</td><td>0.84</td><td>41%</td><td>1.12</td><td class="neg">−0.28</td></tr>
+<tr><td>2</td><td>2</td><td>96</td><td>0.93</td><td>52%</td><td>0.93</td><td>−0.00</td></tr>
+</tbody></table></div>
+<p>问题不在执行层参数。另外注意：币中位跌 27% 的熊市里，
+<b>随机做空的 PF 也只有 1.03–1.08</b> —— ATR 对称括号本身抓不住趋势漂移，这是独立于信号的一个问题。</p>
+
+<h2>六、下一步</h2>
+<ol>
+<li><b>检测器重训进行中</b>（3060，4 组配置 × 120 epoch）。原模型 30 epoch/patience 10，
+在验证 mAP 剧烈震荡中被掐停在 epoch 20。新配方加了 cosine 调度 + warmup + patience 60。
+但要说清楚：<b>把 mAP 从 0.55 提到 0.65 不会改变上面任何一条结论</b>，因为问题不是检测器找得准不准，
+是"均线密集"这个形态本身在这套进出场规则下不带方向信息。</li>
+<li><b>真正该验证的是标注前提</b>：owner 在熊市里标的"均线密集做空"，在横盘/上涨行情里是否还成立？
+现有数据无法回答——需要一段非熊市的标注或至少一段非熊市的前向验证。</li>
+<li><b>ATR 对称括号可能不是对的执行框架</b>。随机做空在 −27% 的行情里都只有 PF 1.03，
+说明这个出场方式把趋势收益给磨掉了。趋势跟随式出场（移动止损 / 时间退出）值得单独测。</li>
+</ol>
+
+<p class="mut">机器可读：<code>reports/preholdout_dense_v2/outcome/signal_outcome.json</code>、
+<code>reports/holdout_dense_20260804/outcome/signal_outcome.json</code>。
+本页无实盘、无部署、无下单。</p>
+</body></html>

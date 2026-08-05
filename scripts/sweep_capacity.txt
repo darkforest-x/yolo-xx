@@ -1,0 +1,8 @@
+# Model-capacity arm on the v2 context-matched dataset, full run.
+#   name|base_weights|epochs|patience|batch|extra flags
+#
+# The first attempt was cut short by an external interrupt at epoch 18 of 60
+# (no traceback, no OOM - 3.61G of 12G in use). Its best epoch was 15 and still
+# climbing, and its top-100 continuous-scan precision (10.0%) was the first
+# ordering with real signal, so it is worth the full schedule.
+hardneg_w96_v2_s2|yolo11s.pt|60|25|8|

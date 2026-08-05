@@ -1,0 +1,2259 @@
+{
+  "cluster_count": 38,
+  "clusters": [
+    {
+      "detection_count": 6,
+      "earliest_available_at": "2026-07-30T21:58:00Z",
+      "end_time": "2026-07-31T05:30:00Z",
+      "max_confidence": 0.592355,
+      "members": [
+        {
+          "available_at": "2026-07-31T05:15:00Z",
+          "box_end_time": "2026-07-31T03:20:34Z",
+          "box_start_time": "2026-07-31T00:42:34Z",
+          "confidence": 0.347145,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_OP_USDT_SWAP__20260731T050000Z.jpg",
+          "sample_id": "okx_OP_USDT_SWAP__20260731T050000Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-07-30T21:58:00Z",
+          "box_end_time": "2026-07-30T21:50:17Z",
+          "box_start_time": "2026-07-30T21:35:49Z",
+          "confidence": 0.323924,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/1m/overlays/okx_OP_USDT_SWAP__20260730T215700Z.jpg",
+          "sample_id": "okx_OP_USDT_SWAP__20260730T215700Z",
+          "timeframe": "1m"
+        },
+        {
+          "available_at": "2026-07-31T13:00:00Z",
+          "box_end_time": "2026-07-31T05:08:14Z",
+          "box_start_time": "2026-07-30T21:41:42Z",
+          "confidence": 0.488041,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_OP_USDT_SWAP__20260731T123000Z.jpg",
+          "sample_id": "okx_OP_USDT_SWAP__20260731T123000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T16:30:00Z",
+          "box_end_time": "2026-07-31T04:37:58Z",
+          "box_start_time": "2026-07-30T22:10:24Z",
+          "confidence": 0.364631,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_OP_USDT_SWAP__20260731T160000Z.jpg",
+          "sample_id": "okx_OP_USDT_SWAP__20260731T160000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T05:30:00Z",
+          "box_end_time": "2026-07-31T05:30:00Z",
+          "box_start_time": "2026-07-31T00:15:15Z",
+          "confidence": 0.592355,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_OP_USDT_SWAP__20260731T050000Z.jpg",
+          "sample_id": "okx_OP_USDT_SWAP__20260731T050000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T05:12:00Z",
+          "box_end_time": "2026-07-31T04:24:57Z",
+          "box_start_time": "2026-07-31T03:53:37Z",
+          "confidence": 0.318146,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_OP_USDT_SWAP__20260731T050900Z.jpg",
+          "sample_id": "okx_OP_USDT_SWAP__20260731T050900Z",
+          "timeframe": "3m"
+        }
+      ],
+      "start_time": "2026-07-30T21:35:49Z",
+      "symbol": "okx_OP_USDT_SWAP",
+      "timeframe_count": 4,
+      "timeframes": [
+        "15m",
+        "1m",
+        "30m",
+        "3m"
+      ]
+    },
+    {
+      "detection_count": 7,
+      "earliest_available_at": "2026-08-01T17:39:00Z",
+      "end_time": "2026-08-01T21:30:00Z",
+      "max_confidence": 0.728035,
+      "members": [
+        {
+          "available_at": "2026-08-02T01:00:00Z",
+          "box_end_time": "2026-08-01T19:04:28Z",
+          "box_start_time": "2026-08-01T16:50:52Z",
+          "confidence": 0.728035,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_DOGE_USDT_SWAP__20260802T004500Z.jpg",
+          "sample_id": "okx_DOGE_USDT_SWAP__20260802T004500Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-01T21:30:00Z",
+          "box_end_time": "2026-08-01T19:35:17Z",
+          "box_start_time": "2026-08-01T17:03:24Z",
+          "confidence": 0.68897,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_DOGE_USDT_SWAP__20260801T211500Z.jpg",
+          "sample_id": "okx_DOGE_USDT_SWAP__20260801T211500Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-02T01:00:00Z",
+          "box_end_time": "2026-08-01T21:07:26Z",
+          "box_start_time": "2026-08-01T13:49:49Z",
+          "confidence": 0.313969,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_DOGE_USDT_SWAP__20260802T003000Z.jpg",
+          "sample_id": "okx_DOGE_USDT_SWAP__20260802T003000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-08-02T01:00:00Z",
+          "box_end_time": "2026-08-01T21:09:40Z",
+          "box_start_time": "2026-08-01T15:04:52Z",
+          "confidence": 0.433776,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_DOGE_USDT_SWAP__20260802T003000Z.jpg",
+          "sample_id": "okx_DOGE_USDT_SWAP__20260802T003000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-08-02T08:30:00Z",
+          "box_end_time": "2026-08-01T20:38:02Z",
+          "box_start_time": "2026-08-01T15:36:48Z",
+          "confidence": 0.395801,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_DOGE_USDT_SWAP__20260802T080000Z.jpg",
+          "sample_id": "okx_DOGE_USDT_SWAP__20260802T080000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-08-01T21:30:00Z",
+          "box_end_time": "2026-08-01T21:30:00Z",
+          "box_start_time": "2026-08-01T15:46:29Z",
+          "confidence": 0.354632,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_DOGE_USDT_SWAP__20260801T210000Z.jpg",
+          "sample_id": "okx_DOGE_USDT_SWAP__20260801T210000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-08-01T17:39:00Z",
+          "box_end_time": "2026-08-01T17:39:00Z",
+          "box_start_time": "2026-08-01T16:57:23Z",
+          "confidence": 0.348417,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_DOGE_USDT_SWAP__20260801T173600Z.jpg",
+          "sample_id": "okx_DOGE_USDT_SWAP__20260801T173600Z",
+          "timeframe": "3m"
+        }
+      ],
+      "start_time": "2026-08-01T13:49:49Z",
+      "symbol": "okx_DOGE_USDT_SWAP",
+      "timeframe_count": 3,
+      "timeframes": [
+        "15m",
+        "30m",
+        "3m"
+      ]
+    },
+    {
+      "detection_count": 9,
+      "earliest_available_at": "2026-08-01T10:25:00Z",
+      "end_time": "2026-08-01T14:11:11Z",
+      "max_confidence": 0.65525,
+      "members": [
+        {
+          "available_at": "2026-08-01T14:00:00Z",
+          "box_end_time": "2026-08-01T10:06:31Z",
+          "box_start_time": "2026-08-01T07:50:47Z",
+          "confidence": 0.65525,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_BNB_USDT_SWAP__20260801T134500Z.jpg",
+          "sample_id": "okx_BNB_USDT_SWAP__20260801T134500Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-01T10:30:00Z",
+          "box_end_time": "2026-08-01T10:30:00Z",
+          "box_start_time": "2026-08-01T08:00:09Z",
+          "confidence": 0.620541,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_BNB_USDT_SWAP__20260801T101500Z.jpg",
+          "sample_id": "okx_BNB_USDT_SWAP__20260801T101500Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-02T04:45:00Z",
+          "box_end_time": "2026-08-01T10:19:55Z",
+          "box_start_time": "2026-08-01T08:00:34Z",
+          "confidence": 0.507616,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_BNB_USDT_SWAP__20260802T043000Z.jpg",
+          "sample_id": "okx_BNB_USDT_SWAP__20260802T043000Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-01T14:00:00Z",
+          "box_end_time": "2026-08-01T10:34:56Z",
+          "box_start_time": "2026-08-01T08:02:41Z",
+          "confidence": 0.341024,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_BNB_USDT_SWAP__20260801T134500Z.jpg",
+          "sample_id": "okx_BNB_USDT_SWAP__20260801T134500Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-02T01:00:00Z",
+          "box_end_time": "2026-08-01T13:07:28Z",
+          "box_start_time": "2026-08-01T07:43:42Z",
+          "confidence": 0.63622,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_BNB_USDT_SWAP__20260802T003000Z.jpg",
+          "sample_id": "okx_BNB_USDT_SWAP__20260802T003000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-08-01T14:00:00Z",
+          "box_end_time": "2026-08-01T14:00:00Z",
+          "box_start_time": "2026-08-01T08:10:47Z",
+          "confidence": 0.548905,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_BNB_USDT_SWAP__20260801T133000Z.jpg",
+          "sample_id": "okx_BNB_USDT_SWAP__20260801T133000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-08-01T21:30:00Z",
+          "box_end_time": "2026-08-01T13:40:01Z",
+          "box_start_time": "2026-08-01T08:11:10Z",
+          "confidence": 0.587093,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_BNB_USDT_SWAP__20260801T210000Z.jpg",
+          "sample_id": "okx_BNB_USDT_SWAP__20260801T210000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-08-01T18:00:00Z",
+          "box_end_time": "2026-08-01T14:11:11Z",
+          "box_start_time": "2026-08-01T08:19:32Z",
+          "confidence": 0.624846,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_BNB_USDT_SWAP__20260801T173000Z.jpg",
+          "sample_id": "okx_BNB_USDT_SWAP__20260801T173000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-08-01T10:25:00Z",
+          "box_end_time": "2026-08-01T09:06:25Z",
+          "box_start_time": "2026-08-01T08:02:42Z",
+          "confidence": 0.369047,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/5m/overlays/okx_BNB_USDT_SWAP__20260801T102000Z.jpg",
+          "sample_id": "okx_BNB_USDT_SWAP__20260801T102000Z",
+          "timeframe": "5m"
+        }
+      ],
+      "start_time": "2026-08-01T07:43:42Z",
+      "symbol": "okx_BNB_USDT_SWAP",
+      "timeframe_count": 3,
+      "timeframes": [
+        "15m",
+        "30m",
+        "5m"
+      ]
+    },
+    {
+      "detection_count": 6,
+      "earliest_available_at": "2026-08-03T02:25:00Z",
+      "end_time": "2026-08-03T09:38:37Z",
+      "max_confidence": 0.627538,
+      "members": [
+        {
+          "available_at": "2026-08-03T06:15:00Z",
+          "box_end_time": "2026-08-03T04:19:46Z",
+          "box_start_time": "2026-08-03T00:40:37Z",
+          "confidence": 0.627538,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_LTC_USDT_SWAP__20260803T060000Z.jpg",
+          "sample_id": "okx_LTC_USDT_SWAP__20260803T060000Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-03T13:30:00Z",
+          "box_end_time": "2026-08-03T07:33:58Z",
+          "box_start_time": "2026-08-03T03:49:04Z",
+          "confidence": 0.336573,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_LTC_USDT_SWAP__20260803T131500Z.jpg",
+          "sample_id": "okx_LTC_USDT_SWAP__20260803T131500Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-03T09:45:00Z",
+          "box_end_time": "2026-08-03T07:49:16Z",
+          "box_start_time": "2026-08-03T04:02:26Z",
+          "confidence": 0.344009,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_LTC_USDT_SWAP__20260803T093000Z.jpg",
+          "sample_id": "okx_LTC_USDT_SWAP__20260803T093000Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-03T02:25:00Z",
+          "box_end_time": "2026-08-03T02:17:21Z",
+          "box_start_time": "2026-08-03T02:02:46Z",
+          "confidence": 0.317868,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/1m/overlays/okx_LTC_USDT_SWAP__20260803T022400Z.jpg",
+          "sample_id": "okx_LTC_USDT_SWAP__20260803T022400Z",
+          "timeframe": "1m"
+        },
+        {
+          "available_at": "2026-08-03T06:00:00Z",
+          "box_end_time": "2026-08-03T06:00:00Z",
+          "box_start_time": "2026-08-03T01:39:12Z",
+          "confidence": 0.428801,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_LTC_USDT_SWAP__20260803T053000Z.jpg",
+          "sample_id": "okx_LTC_USDT_SWAP__20260803T053000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-08-03T13:30:00Z",
+          "box_end_time": "2026-08-03T09:38:37Z",
+          "box_start_time": "2026-08-03T02:16:29Z",
+          "confidence": 0.500181,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_LTC_USDT_SWAP__20260803T130000Z.jpg",
+          "sample_id": "okx_LTC_USDT_SWAP__20260803T130000Z",
+          "timeframe": "30m"
+        }
+      ],
+      "start_time": "2026-08-03T00:40:37Z",
+      "symbol": "okx_LTC_USDT_SWAP",
+      "timeframe_count": 3,
+      "timeframes": [
+        "15m",
+        "1m",
+        "30m"
+      ]
+    },
+    {
+      "detection_count": 8,
+      "earliest_available_at": "2026-07-31T12:45:00Z",
+      "end_time": "2026-07-31T15:37:12Z",
+      "max_confidence": 0.625483,
+      "members": [
+        {
+          "available_at": "2026-07-31T12:45:00Z",
+          "box_end_time": "2026-07-31T10:49:42Z",
+          "box_start_time": "2026-07-31T07:02:46Z",
+          "confidence": 0.429664,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_XRP_USDT_SWAP__20260731T123000Z.jpg",
+          "sample_id": "okx_XRP_USDT_SWAP__20260731T123000Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-07-31T20:00:00Z",
+          "box_end_time": "2026-07-31T12:07:57Z",
+          "box_start_time": "2026-07-31T05:04:56Z",
+          "confidence": 0.625483,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_XRP_USDT_SWAP__20260731T193000Z.jpg",
+          "sample_id": "okx_XRP_USDT_SWAP__20260731T193000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T23:30:00Z",
+          "box_end_time": "2026-07-31T11:37:20Z",
+          "box_start_time": "2026-07-31T05:05:59Z",
+          "confidence": 0.439487,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_XRP_USDT_SWAP__20260731T230000Z.jpg",
+          "sample_id": "okx_XRP_USDT_SWAP__20260731T230000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T16:30:00Z",
+          "box_end_time": "2026-07-31T12:38:59Z",
+          "box_start_time": "2026-07-31T05:44:24Z",
+          "confidence": 0.604588,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_XRP_USDT_SWAP__20260731T160000Z.jpg",
+          "sample_id": "okx_XRP_USDT_SWAP__20260731T160000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T13:00:00Z",
+          "box_end_time": "2026-07-31T13:00:00Z",
+          "box_start_time": "2026-07-31T06:19:37Z",
+          "confidence": 0.438037,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_XRP_USDT_SWAP__20260731T123000Z.jpg",
+          "sample_id": "okx_XRP_USDT_SWAP__20260731T123000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T23:30:00Z",
+          "box_end_time": "2026-07-31T11:35:56Z",
+          "box_start_time": "2026-07-31T06:34:09Z",
+          "confidence": 0.40424,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_XRP_USDT_SWAP__20260731T230000Z.jpg",
+          "sample_id": "okx_XRP_USDT_SWAP__20260731T230000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-08-01T03:30:00Z",
+          "box_end_time": "2026-07-31T15:37:12Z",
+          "box_start_time": "2026-07-31T08:15:22Z",
+          "confidence": 0.43106,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_XRP_USDT_SWAP__20260801T030000Z.jpg",
+          "sample_id": "okx_XRP_USDT_SWAP__20260801T030000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T16:10:00Z",
+          "box_end_time": "2026-07-31T14:10:51Z",
+          "box_start_time": "2026-07-31T12:58:03Z",
+          "confidence": 0.368891,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/5m/overlays/okx_XRP_USDT_SWAP__20260731T160500Z.jpg",
+          "sample_id": "okx_XRP_USDT_SWAP__20260731T160500Z",
+          "timeframe": "5m"
+        }
+      ],
+      "start_time": "2026-07-31T05:04:56Z",
+      "symbol": "okx_XRP_USDT_SWAP",
+      "timeframe_count": 3,
+      "timeframes": [
+        "15m",
+        "30m",
+        "5m"
+      ]
+    },
+    {
+      "detection_count": 7,
+      "earliest_available_at": "2026-07-31T16:09:00Z",
+      "end_time": "2026-07-31T19:38:13Z",
+      "max_confidence": 0.62192,
+      "members": [
+        {
+          "available_at": "2026-07-31T23:30:00Z",
+          "box_end_time": "2026-07-31T19:38:13Z",
+          "box_start_time": "2026-07-31T12:47:26Z",
+          "confidence": 0.355855,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_SUI_USDT_SWAP__20260731T230000Z.jpg",
+          "sample_id": "okx_SUI_USDT_SWAP__20260731T230000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T16:09:00Z",
+          "box_end_time": "2026-07-31T15:22:16Z",
+          "box_start_time": "2026-07-31T14:39:13Z",
+          "confidence": 0.455737,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_SUI_USDT_SWAP__20260731T160600Z.jpg",
+          "sample_id": "okx_SUI_USDT_SWAP__20260731T160600Z",
+          "timeframe": "3m"
+        },
+        {
+          "available_at": "2026-07-31T16:09:00Z",
+          "box_end_time": "2026-07-31T15:22:04Z",
+          "box_start_time": "2026-07-31T14:47:02Z",
+          "confidence": 0.311483,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_SUI_USDT_SWAP__20260731T160600Z.jpg",
+          "sample_id": "okx_SUI_USDT_SWAP__20260731T160600Z",
+          "timeframe": "3m"
+        },
+        {
+          "available_at": "2026-07-31T19:48:00Z",
+          "box_end_time": "2026-07-31T19:24:56Z",
+          "box_start_time": "2026-07-31T18:41:24Z",
+          "confidence": 0.3172,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_SUI_USDT_SWAP__20260731T194500Z.jpg",
+          "sample_id": "okx_SUI_USDT_SWAP__20260731T194500Z",
+          "timeframe": "3m"
+        },
+        {
+          "available_at": "2026-07-31T16:10:00Z",
+          "box_end_time": "2026-07-31T14:11:09Z",
+          "box_start_time": "2026-07-31T13:23:17Z",
+          "confidence": 0.310693,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/5m/overlays/okx_SUI_USDT_SWAP__20260731T160500Z.jpg",
+          "sample_id": "okx_SUI_USDT_SWAP__20260731T160500Z",
+          "timeframe": "5m"
+        },
+        {
+          "available_at": "2026-07-31T16:10:00Z",
+          "box_end_time": "2026-07-31T15:31:23Z",
+          "box_start_time": "2026-07-31T14:18:35Z",
+          "confidence": 0.550396,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/5m/overlays/okx_SUI_USDT_SWAP__20260731T160500Z.jpg",
+          "sample_id": "okx_SUI_USDT_SWAP__20260731T160500Z",
+          "timeframe": "5m"
+        },
+        {
+          "available_at": "2026-07-31T19:50:00Z",
+          "box_end_time": "2026-07-31T19:11:27Z",
+          "box_start_time": "2026-07-31T17:58:33Z",
+          "confidence": 0.62192,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/5m/overlays/okx_SUI_USDT_SWAP__20260731T194500Z.jpg",
+          "sample_id": "okx_SUI_USDT_SWAP__20260731T194500Z",
+          "timeframe": "5m"
+        }
+      ],
+      "start_time": "2026-07-31T12:47:26Z",
+      "symbol": "okx_SUI_USDT_SWAP",
+      "timeframe_count": 3,
+      "timeframes": [
+        "30m",
+        "3m",
+        "5m"
+      ]
+    },
+    {
+      "detection_count": 4,
+      "earliest_available_at": "2026-07-31T12:30:00Z",
+      "end_time": "2026-07-31T12:35:00Z",
+      "max_confidence": 0.606182,
+      "members": [
+        {
+          "available_at": "2026-07-31T12:32:00Z",
+          "box_end_time": "2026-07-31T12:16:39Z",
+          "box_start_time": "2026-07-31T11:47:23Z",
+          "confidence": 0.606182,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/2m/overlays/okx_ADA_USDT_SWAP__20260731T123000Z.jpg",
+          "sample_id": "okx_ADA_USDT_SWAP__20260731T123000Z",
+          "timeframe": "2m"
+        },
+        {
+          "available_at": "2026-07-31T12:30:00Z",
+          "box_end_time": "2026-07-31T12:30:00Z",
+          "box_start_time": "2026-07-31T11:49:53Z",
+          "confidence": 0.303133,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_ADA_USDT_SWAP__20260731T122700Z.jpg",
+          "sample_id": "okx_ADA_USDT_SWAP__20260731T122700Z",
+          "timeframe": "3m"
+        },
+        {
+          "available_at": "2026-07-31T12:30:00Z",
+          "box_end_time": "2026-07-31T12:30:00Z",
+          "box_start_time": "2026-07-31T12:01:10Z",
+          "confidence": 0.434759,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_ADA_USDT_SWAP__20260731T122700Z.jpg",
+          "sample_id": "okx_ADA_USDT_SWAP__20260731T122700Z",
+          "timeframe": "3m"
+        },
+        {
+          "available_at": "2026-07-31T12:35:00Z",
+          "box_end_time": "2026-07-31T12:35:00Z",
+          "box_start_time": "2026-07-31T11:23:41Z",
+          "confidence": 0.488429,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/5m/overlays/okx_ADA_USDT_SWAP__20260731T123000Z.jpg",
+          "sample_id": "okx_ADA_USDT_SWAP__20260731T123000Z",
+          "timeframe": "5m"
+        }
+      ],
+      "start_time": "2026-07-31T11:23:41Z",
+      "symbol": "okx_ADA_USDT_SWAP",
+      "timeframe_count": 3,
+      "timeframes": [
+        "2m",
+        "3m",
+        "5m"
+      ]
+    },
+    {
+      "detection_count": 4,
+      "earliest_available_at": "2026-07-31T23:30:00Z",
+      "end_time": "2026-07-31T23:38:22Z",
+      "max_confidence": 0.57201,
+      "members": [
+        {
+          "available_at": "2026-07-31T23:30:00Z",
+          "box_end_time": "2026-07-31T21:34:49Z",
+          "box_start_time": "2026-07-31T17:58:42Z",
+          "confidence": 0.57201,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_AVAX_USDT_SWAP__20260731T231500Z.jpg",
+          "sample_id": "okx_AVAX_USDT_SWAP__20260731T231500Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-01T03:30:00Z",
+          "box_end_time": "2026-07-31T23:38:22Z",
+          "box_start_time": "2026-07-31T16:42:14Z",
+          "confidence": 0.507899,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_AVAX_USDT_SWAP__20260801T030000Z.jpg",
+          "sample_id": "okx_AVAX_USDT_SWAP__20260801T030000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T23:30:00Z",
+          "box_end_time": "2026-07-31T23:30:00Z",
+          "box_start_time": "2026-07-31T16:58:49Z",
+          "confidence": 0.425758,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_AVAX_USDT_SWAP__20260731T230000Z.jpg",
+          "sample_id": "okx_AVAX_USDT_SWAP__20260731T230000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T23:30:00Z",
+          "box_end_time": "2026-07-31T21:31:29Z",
+          "box_start_time": "2026-07-31T20:21:19Z",
+          "confidence": 0.358707,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/5m/overlays/okx_AVAX_USDT_SWAP__20260731T232500Z.jpg",
+          "sample_id": "okx_AVAX_USDT_SWAP__20260731T232500Z",
+          "timeframe": "5m"
+        }
+      ],
+      "start_time": "2026-07-31T16:42:14Z",
+      "symbol": "okx_AVAX_USDT_SWAP",
+      "timeframe_count": 3,
+      "timeframes": [
+        "15m",
+        "30m",
+        "5m"
+      ]
+    },
+    {
+      "detection_count": 8,
+      "earliest_available_at": "2026-08-01T06:48:00Z",
+      "end_time": "2026-08-01T10:30:00Z",
+      "max_confidence": 0.522165,
+      "members": [
+        {
+          "available_at": "2026-08-01T10:30:00Z",
+          "box_end_time": "2026-08-01T08:34:29Z",
+          "box_start_time": "2026-08-01T04:59:23Z",
+          "confidence": 0.401104,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_AVAX_USDT_SWAP__20260801T101500Z.jpg",
+          "sample_id": "okx_AVAX_USDT_SWAP__20260801T101500Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-01T14:00:00Z",
+          "box_end_time": "2026-08-01T08:04:12Z",
+          "box_start_time": "2026-08-01T05:46:19Z",
+          "confidence": 0.522165,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_AVAX_USDT_SWAP__20260801T134500Z.jpg",
+          "sample_id": "okx_AVAX_USDT_SWAP__20260801T134500Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-01T06:48:00Z",
+          "box_end_time": "2026-08-01T06:16:32Z",
+          "box_start_time": "2026-08-01T05:48:08Z",
+          "confidence": 0.35476,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/2m/overlays/okx_AVAX_USDT_SWAP__20260801T064600Z.jpg",
+          "sample_id": "okx_AVAX_USDT_SWAP__20260801T064600Z",
+          "timeframe": "2m"
+        },
+        {
+          "available_at": "2026-08-01T14:00:00Z",
+          "box_end_time": "2026-08-01T10:08:28Z",
+          "box_start_time": "2026-08-01T02:55:06Z",
+          "confidence": 0.488328,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_AVAX_USDT_SWAP__20260801T133000Z.jpg",
+          "sample_id": "okx_AVAX_USDT_SWAP__20260801T133000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-08-01T10:30:00Z",
+          "box_end_time": "2026-08-01T10:30:00Z",
+          "box_start_time": "2026-08-01T03:41:50Z",
+          "confidence": 0.317341,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_AVAX_USDT_SWAP__20260801T100000Z.jpg",
+          "sample_id": "okx_AVAX_USDT_SWAP__20260801T100000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-08-01T21:30:00Z",
+          "box_end_time": "2026-08-01T09:37:20Z",
+          "box_start_time": "2026-08-01T03:43:20Z",
+          "confidence": 0.333034,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_AVAX_USDT_SWAP__20260801T210000Z.jpg",
+          "sample_id": "okx_AVAX_USDT_SWAP__20260801T210000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-08-01T18:00:00Z",
+          "box_end_time": "2026-08-01T10:09:36Z",
+          "box_start_time": "2026-08-01T05:04:41Z",
+          "confidence": 0.449567,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_AVAX_USDT_SWAP__20260801T173000Z.jpg",
+          "sample_id": "okx_AVAX_USDT_SWAP__20260801T173000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-08-01T10:30:00Z",
+          "box_end_time": "2026-08-01T10:30:00Z",
+          "box_start_time": "2026-08-01T05:11:39Z",
+          "confidence": 0.372189,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_AVAX_USDT_SWAP__20260801T100000Z.jpg",
+          "sample_id": "okx_AVAX_USDT_SWAP__20260801T100000Z",
+          "timeframe": "30m"
+        }
+      ],
+      "start_time": "2026-08-01T02:55:06Z",
+      "symbol": "okx_AVAX_USDT_SWAP",
+      "timeframe_count": 3,
+      "timeframes": [
+        "15m",
+        "2m",
+        "30m"
+      ]
+    },
+    {
+      "detection_count": 3,
+      "earliest_available_at": "2026-08-01T06:42:00Z",
+      "end_time": "2026-08-01T06:45:00Z",
+      "max_confidence": 0.518403,
+      "members": [
+        {
+          "available_at": "2026-08-01T06:48:00Z",
+          "box_end_time": "2026-08-01T06:16:29Z",
+          "box_start_time": "2026-08-01T05:47:18Z",
+          "confidence": 0.425766,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/2m/overlays/okx_LINK_USDT_SWAP__20260801T064600Z.jpg",
+          "sample_id": "okx_LINK_USDT_SWAP__20260801T064600Z",
+          "timeframe": "2m"
+        },
+        {
+          "available_at": "2026-08-01T06:42:00Z",
+          "box_end_time": "2026-08-01T06:18:50Z",
+          "box_start_time": "2026-08-01T05:35:36Z",
+          "confidence": 0.46496,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_LINK_USDT_SWAP__20260801T063900Z.jpg",
+          "sample_id": "okx_LINK_USDT_SWAP__20260801T063900Z",
+          "timeframe": "3m"
+        },
+        {
+          "available_at": "2026-08-01T06:45:00Z",
+          "box_end_time": "2026-08-01T06:45:00Z",
+          "box_start_time": "2026-08-01T05:34:50Z",
+          "confidence": 0.518403,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/5m/overlays/okx_LINK_USDT_SWAP__20260801T064000Z.jpg",
+          "sample_id": "okx_LINK_USDT_SWAP__20260801T064000Z",
+          "timeframe": "5m"
+        }
+      ],
+      "start_time": "2026-08-01T05:34:50Z",
+      "symbol": "okx_LINK_USDT_SWAP",
+      "timeframe_count": 3,
+      "timeframes": [
+        "2m",
+        "3m",
+        "5m"
+      ]
+    },
+    {
+      "detection_count": 5,
+      "earliest_available_at": "2026-07-31T05:12:00Z",
+      "end_time": "2026-07-31T04:36:51Z",
+      "max_confidence": 0.504135,
+      "members": [
+        {
+          "available_at": "2026-07-31T05:14:00Z",
+          "box_end_time": "2026-07-31T04:26:28Z",
+          "box_start_time": "2026-07-31T03:58:06Z",
+          "confidence": 0.504135,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/2m/overlays/okx_ADA_USDT_SWAP__20260731T051200Z.jpg",
+          "sample_id": "okx_ADA_USDT_SWAP__20260731T051200Z",
+          "timeframe": "2m"
+        },
+        {
+          "available_at": "2026-07-31T05:12:00Z",
+          "box_end_time": "2026-07-31T04:25:21Z",
+          "box_start_time": "2026-07-31T03:42:24Z",
+          "confidence": 0.386297,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_ADA_USDT_SWAP__20260731T050900Z.jpg",
+          "sample_id": "okx_ADA_USDT_SWAP__20260731T050900Z",
+          "timeframe": "3m"
+        },
+        {
+          "available_at": "2026-07-31T05:12:00Z",
+          "box_end_time": "2026-07-31T04:25:12Z",
+          "box_start_time": "2026-07-31T03:57:24Z",
+          "confidence": 0.313362,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_ADA_USDT_SWAP__20260731T050900Z.jpg",
+          "sample_id": "okx_ADA_USDT_SWAP__20260731T050900Z",
+          "timeframe": "3m"
+        },
+        {
+          "available_at": "2026-07-31T05:15:00Z",
+          "box_end_time": "2026-07-31T04:36:27Z",
+          "box_start_time": "2026-07-31T03:23:32Z",
+          "confidence": 0.323473,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/5m/overlays/okx_ADA_USDT_SWAP__20260731T051000Z.jpg",
+          "sample_id": "okx_ADA_USDT_SWAP__20260731T051000Z",
+          "timeframe": "5m"
+        },
+        {
+          "available_at": "2026-07-31T05:15:00Z",
+          "box_end_time": "2026-07-31T04:36:51Z",
+          "box_start_time": "2026-07-31T03:45:49Z",
+          "confidence": 0.310556,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/5m/overlays/okx_ADA_USDT_SWAP__20260731T051000Z.jpg",
+          "sample_id": "okx_ADA_USDT_SWAP__20260731T051000Z",
+          "timeframe": "5m"
+        }
+      ],
+      "start_time": "2026-07-31T03:23:32Z",
+      "symbol": "okx_ADA_USDT_SWAP",
+      "timeframe_count": 3,
+      "timeframes": [
+        "2m",
+        "3m",
+        "5m"
+      ]
+    },
+    {
+      "detection_count": 3,
+      "earliest_available_at": "2026-08-02T19:09:00Z",
+      "end_time": "2026-08-02T19:16:00Z",
+      "max_confidence": 0.417478,
+      "members": [
+        {
+          "available_at": "2026-08-02T19:23:00Z",
+          "box_end_time": "2026-08-02T19:15:29Z",
+          "box_start_time": "2026-08-02T19:01:09Z",
+          "confidence": 0.3749,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/1m/overlays/okx_ADA_USDT_SWAP__20260802T192200Z.jpg",
+          "sample_id": "okx_ADA_USDT_SWAP__20260802T192200Z",
+          "timeframe": "1m"
+        },
+        {
+          "available_at": "2026-08-02T19:16:00Z",
+          "box_end_time": "2026-08-02T19:16:00Z",
+          "box_start_time": "2026-08-02T18:48:10Z",
+          "confidence": 0.383821,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/2m/overlays/okx_ADA_USDT_SWAP__20260802T191400Z.jpg",
+          "sample_id": "okx_ADA_USDT_SWAP__20260802T191400Z",
+          "timeframe": "2m"
+        },
+        {
+          "available_at": "2026-08-02T19:09:00Z",
+          "box_end_time": "2026-08-02T19:09:00Z",
+          "box_start_time": "2026-08-02T18:27:04Z",
+          "confidence": 0.417478,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_ADA_USDT_SWAP__20260802T190600Z.jpg",
+          "sample_id": "okx_ADA_USDT_SWAP__20260802T190600Z",
+          "timeframe": "3m"
+        }
+      ],
+      "start_time": "2026-08-02T18:27:04Z",
+      "symbol": "okx_ADA_USDT_SWAP",
+      "timeframe_count": 3,
+      "timeframes": [
+        "1m",
+        "2m",
+        "3m"
+      ]
+    },
+    {
+      "detection_count": 4,
+      "earliest_available_at": "2026-08-01T17:39:00Z",
+      "end_time": "2026-08-01T19:03:22Z",
+      "max_confidence": 0.400044,
+      "members": [
+        {
+          "available_at": "2026-08-02T01:00:00Z",
+          "box_end_time": "2026-08-01T19:03:22Z",
+          "box_start_time": "2026-08-01T15:34:49Z",
+          "confidence": 0.301992,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_AVAX_USDT_SWAP__20260802T004500Z.jpg",
+          "sample_id": "okx_AVAX_USDT_SWAP__20260802T004500Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-01T17:39:00Z",
+          "box_end_time": "2026-08-01T17:39:00Z",
+          "box_start_time": "2026-08-01T16:59:49Z",
+          "confidence": 0.400044,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_AVAX_USDT_SWAP__20260801T173600Z.jpg",
+          "sample_id": "okx_AVAX_USDT_SWAP__20260801T173600Z",
+          "timeframe": "3m"
+        },
+        {
+          "available_at": "2026-08-01T17:45:00Z",
+          "box_end_time": "2026-08-01T17:45:00Z",
+          "box_start_time": "2026-08-01T16:32:26Z",
+          "confidence": 0.3561,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/5m/overlays/okx_AVAX_USDT_SWAP__20260801T174000Z.jpg",
+          "sample_id": "okx_AVAX_USDT_SWAP__20260801T174000Z",
+          "timeframe": "5m"
+        },
+        {
+          "available_at": "2026-08-01T17:45:00Z",
+          "box_end_time": "2026-08-01T17:45:00Z",
+          "box_start_time": "2026-08-01T16:48:32Z",
+          "confidence": 0.369376,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/5m/overlays/okx_AVAX_USDT_SWAP__20260801T174000Z.jpg",
+          "sample_id": "okx_AVAX_USDT_SWAP__20260801T174000Z",
+          "timeframe": "5m"
+        }
+      ],
+      "start_time": "2026-08-01T15:34:49Z",
+      "symbol": "okx_AVAX_USDT_SWAP",
+      "timeframe_count": 3,
+      "timeframes": [
+        "15m",
+        "3m",
+        "5m"
+      ]
+    },
+    {
+      "detection_count": 9,
+      "earliest_available_at": "2026-07-31T01:35:00Z",
+      "end_time": "2026-07-31T11:34:30Z",
+      "max_confidence": 0.756104,
+      "members": [
+        {
+          "available_at": "2026-07-31T20:00:00Z",
+          "box_end_time": "2026-07-31T08:06:36Z",
+          "box_start_time": "2026-07-31T00:53:40Z",
+          "confidence": 0.423415,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_ETH_USDT_SWAP__20260731T193000Z.jpg",
+          "sample_id": "okx_ETH_USDT_SWAP__20260731T193000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T13:00:00Z",
+          "box_end_time": "2026-07-31T09:08:54Z",
+          "box_start_time": "2026-07-31T01:57:29Z",
+          "confidence": 0.690446,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_ETH_USDT_SWAP__20260731T123000Z.jpg",
+          "sample_id": "okx_ETH_USDT_SWAP__20260731T123000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T09:00:00Z",
+          "box_end_time": "2026-07-31T09:00:00Z",
+          "box_start_time": "2026-07-31T01:57:55Z",
+          "confidence": 0.621043,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_ETH_USDT_SWAP__20260731T083000Z.jpg",
+          "sample_id": "okx_ETH_USDT_SWAP__20260731T083000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T16:30:00Z",
+          "box_end_time": "2026-07-31T08:40:45Z",
+          "box_start_time": "2026-07-31T02:51:43Z",
+          "confidence": 0.526697,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_ETH_USDT_SWAP__20260731T160000Z.jpg",
+          "sample_id": "okx_ETH_USDT_SWAP__20260731T160000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T20:00:00Z",
+          "box_end_time": "2026-07-31T08:07:23Z",
+          "box_start_time": "2026-07-31T03:27:10Z",
+          "confidence": 0.756104,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_ETH_USDT_SWAP__20260731T193000Z.jpg",
+          "sample_id": "okx_ETH_USDT_SWAP__20260731T193000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T16:30:00Z",
+          "box_end_time": "2026-07-31T08:39:31Z",
+          "box_start_time": "2026-07-31T03:36:06Z",
+          "confidence": 0.579335,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_ETH_USDT_SWAP__20260731T160000Z.jpg",
+          "sample_id": "okx_ETH_USDT_SWAP__20260731T160000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T09:00:00Z",
+          "box_end_time": "2026-07-31T09:00:00Z",
+          "box_start_time": "2026-07-31T03:53:53Z",
+          "confidence": 0.330812,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_ETH_USDT_SWAP__20260731T083000Z.jpg",
+          "sample_id": "okx_ETH_USDT_SWAP__20260731T083000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T23:30:00Z",
+          "box_end_time": "2026-07-31T11:34:30Z",
+          "box_start_time": "2026-07-31T04:19:53Z",
+          "confidence": 0.362675,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_ETH_USDT_SWAP__20260731T230000Z.jpg",
+          "sample_id": "okx_ETH_USDT_SWAP__20260731T230000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T01:35:00Z",
+          "box_end_time": "2026-07-31T00:56:38Z",
+          "box_start_time": "2026-07-30T23:46:26Z",
+          "confidence": 0.304326,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/5m/overlays/okx_ETH_USDT_SWAP__20260731T013000Z.jpg",
+          "sample_id": "okx_ETH_USDT_SWAP__20260731T013000Z",
+          "timeframe": "5m"
+        }
+      ],
+      "start_time": "2026-07-30T23:46:26Z",
+      "symbol": "okx_ETH_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "30m",
+        "5m"
+      ]
+    },
+    {
+      "detection_count": 5,
+      "earliest_available_at": "2026-07-31T09:00:00Z",
+      "end_time": "2026-07-31T12:38:36Z",
+      "max_confidence": 0.655679,
+      "members": [
+        {
+          "available_at": "2026-07-31T09:00:00Z",
+          "box_end_time": "2026-07-31T09:00:00Z",
+          "box_start_time": "2026-07-31T05:42:30Z",
+          "confidence": 0.319429,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_BTC_USDT_SWAP__20260731T084500Z.jpg",
+          "sample_id": "okx_BTC_USDT_SWAP__20260731T084500Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-07-31T13:00:00Z",
+          "box_end_time": "2026-07-31T09:11:05Z",
+          "box_start_time": "2026-07-31T04:49:07Z",
+          "confidence": 0.384637,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_BTC_USDT_SWAP__20260731T123000Z.jpg",
+          "sample_id": "okx_BTC_USDT_SWAP__20260731T123000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T16:30:00Z",
+          "box_end_time": "2026-07-31T12:38:36Z",
+          "box_start_time": "2026-07-31T05:29:34Z",
+          "confidence": 0.36886,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_BTC_USDT_SWAP__20260731T160000Z.jpg",
+          "sample_id": "okx_BTC_USDT_SWAP__20260731T160000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T23:30:00Z",
+          "box_end_time": "2026-07-31T11:35:54Z",
+          "box_start_time": "2026-07-31T05:34:49Z",
+          "confidence": 0.655679,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_BTC_USDT_SWAP__20260731T230000Z.jpg",
+          "sample_id": "okx_BTC_USDT_SWAP__20260731T230000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T20:00:00Z",
+          "box_end_time": "2026-07-31T12:09:52Z",
+          "box_start_time": "2026-07-31T05:55:08Z",
+          "confidence": 0.429531,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_BTC_USDT_SWAP__20260731T193000Z.jpg",
+          "sample_id": "okx_BTC_USDT_SWAP__20260731T193000Z",
+          "timeframe": "30m"
+        }
+      ],
+      "start_time": "2026-07-31T04:49:07Z",
+      "symbol": "okx_BTC_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "15m",
+        "30m"
+      ]
+    },
+    {
+      "detection_count": 6,
+      "earliest_available_at": "2026-07-31T05:15:00Z",
+      "end_time": "2026-07-31T09:08:51Z",
+      "max_confidence": 0.644613,
+      "members": [
+        {
+          "available_at": "2026-07-31T05:15:00Z",
+          "box_end_time": "2026-07-31T03:21:11Z",
+          "box_start_time": "2026-07-31T01:10:39Z",
+          "confidence": 0.338411,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_DOGE_USDT_SWAP__20260731T050000Z.jpg",
+          "sample_id": "okx_DOGE_USDT_SWAP__20260731T050000Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-07-31T20:00:00Z",
+          "box_end_time": "2026-07-31T08:06:20Z",
+          "box_start_time": "2026-07-31T01:02:41Z",
+          "confidence": 0.515787,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_DOGE_USDT_SWAP__20260731T193000Z.jpg",
+          "sample_id": "okx_DOGE_USDT_SWAP__20260731T193000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T16:30:00Z",
+          "box_end_time": "2026-07-31T08:37:09Z",
+          "box_start_time": "2026-07-31T01:26:27Z",
+          "confidence": 0.644613,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_DOGE_USDT_SWAP__20260731T160000Z.jpg",
+          "sample_id": "okx_DOGE_USDT_SWAP__20260731T160000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T13:00:00Z",
+          "box_end_time": "2026-07-31T09:08:51Z",
+          "box_start_time": "2026-07-31T01:49:41Z",
+          "confidence": 0.458138,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_DOGE_USDT_SWAP__20260731T123000Z.jpg",
+          "sample_id": "okx_DOGE_USDT_SWAP__20260731T123000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T09:00:00Z",
+          "box_end_time": "2026-07-31T09:00:00Z",
+          "box_start_time": "2026-07-31T01:50:47Z",
+          "confidence": 0.486974,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_DOGE_USDT_SWAP__20260731T083000Z.jpg",
+          "sample_id": "okx_DOGE_USDT_SWAP__20260731T083000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T20:00:00Z",
+          "box_end_time": "2026-07-31T08:06:13Z",
+          "box_start_time": "2026-07-31T02:33:13Z",
+          "confidence": 0.376107,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_DOGE_USDT_SWAP__20260731T193000Z.jpg",
+          "sample_id": "okx_DOGE_USDT_SWAP__20260731T193000Z",
+          "timeframe": "30m"
+        }
+      ],
+      "start_time": "2026-07-31T01:02:41Z",
+      "symbol": "okx_DOGE_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "15m",
+        "30m"
+      ]
+    },
+    {
+      "detection_count": 2,
+      "earliest_available_at": "2026-07-31T12:30:00Z",
+      "end_time": "2026-07-31T12:30:00Z",
+      "max_confidence": 0.61514,
+      "members": [
+        {
+          "available_at": "2026-07-31T12:32:00Z",
+          "box_end_time": "2026-07-31T12:16:42Z",
+          "box_start_time": "2026-07-31T11:47:25Z",
+          "confidence": 0.456375,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/2m/overlays/okx_AVAX_USDT_SWAP__20260731T123000Z.jpg",
+          "sample_id": "okx_AVAX_USDT_SWAP__20260731T123000Z",
+          "timeframe": "2m"
+        },
+        {
+          "available_at": "2026-07-31T12:30:00Z",
+          "box_end_time": "2026-07-31T12:30:00Z",
+          "box_start_time": "2026-07-31T12:01:21Z",
+          "confidence": 0.61514,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_AVAX_USDT_SWAP__20260731T122700Z.jpg",
+          "sample_id": "okx_AVAX_USDT_SWAP__20260731T122700Z",
+          "timeframe": "3m"
+        }
+      ],
+      "start_time": "2026-07-31T11:47:25Z",
+      "symbol": "okx_AVAX_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "2m",
+        "3m"
+      ]
+    },
+    {
+      "detection_count": 6,
+      "earliest_available_at": "2026-08-03T06:15:00Z",
+      "end_time": "2026-08-03T09:38:02Z",
+      "max_confidence": 0.609498,
+      "members": [
+        {
+          "available_at": "2026-08-03T09:45:00Z",
+          "box_end_time": "2026-08-03T05:50:01Z",
+          "box_start_time": "2026-08-03T02:33:08Z",
+          "confidence": 0.487417,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_ETH_USDT_SWAP__20260803T093000Z.jpg",
+          "sample_id": "okx_ETH_USDT_SWAP__20260803T093000Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-03T06:15:00Z",
+          "box_end_time": "2026-08-03T06:15:00Z",
+          "box_start_time": "2026-08-03T02:35:34Z",
+          "confidence": 0.609498,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_ETH_USDT_SWAP__20260803T060000Z.jpg",
+          "sample_id": "okx_ETH_USDT_SWAP__20260803T060000Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-03T13:30:00Z",
+          "box_end_time": "2026-08-03T07:33:55Z",
+          "box_start_time": "2026-08-03T03:40:53Z",
+          "confidence": 0.44875,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_ETH_USDT_SWAP__20260803T131500Z.jpg",
+          "sample_id": "okx_ETH_USDT_SWAP__20260803T131500Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-03T13:30:00Z",
+          "box_end_time": "2026-08-03T09:38:02Z",
+          "box_start_time": "2026-08-03T01:58:37Z",
+          "confidence": 0.404308,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_ETH_USDT_SWAP__20260803T130000Z.jpg",
+          "sample_id": "okx_ETH_USDT_SWAP__20260803T130000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-08-03T20:30:00Z",
+          "box_end_time": "2026-08-03T08:40:56Z",
+          "box_start_time": "2026-08-03T02:49:36Z",
+          "confidence": 0.553703,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_ETH_USDT_SWAP__20260803T200000Z.jpg",
+          "sample_id": "okx_ETH_USDT_SWAP__20260803T200000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-08-03T20:30:00Z",
+          "box_end_time": "2026-08-03T08:36:17Z",
+          "box_start_time": "2026-08-03T03:22:37Z",
+          "confidence": 0.459276,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_ETH_USDT_SWAP__20260803T200000Z.jpg",
+          "sample_id": "okx_ETH_USDT_SWAP__20260803T200000Z",
+          "timeframe": "30m"
+        }
+      ],
+      "start_time": "2026-08-03T01:58:37Z",
+      "symbol": "okx_ETH_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "15m",
+        "30m"
+      ]
+    },
+    {
+      "detection_count": 4,
+      "earliest_available_at": "2026-08-03T09:45:00Z",
+      "end_time": "2026-08-03T10:00:00Z",
+      "max_confidence": 0.599954,
+      "members": [
+        {
+          "available_at": "2026-08-03T09:45:00Z",
+          "box_end_time": "2026-08-03T05:49:01Z",
+          "box_start_time": "2026-08-03T02:15:14Z",
+          "confidence": 0.363623,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_DOGE_USDT_SWAP__20260803T093000Z.jpg",
+          "sample_id": "okx_DOGE_USDT_SWAP__20260803T093000Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-03T09:45:00Z",
+          "box_end_time": "2026-08-03T07:49:09Z",
+          "box_start_time": "2026-08-03T03:29:35Z",
+          "confidence": 0.31259,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_DOGE_USDT_SWAP__20260803T093000Z.jpg",
+          "sample_id": "okx_DOGE_USDT_SWAP__20260803T093000Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-03T13:30:00Z",
+          "box_end_time": "2026-08-03T09:43:54Z",
+          "box_start_time": "2026-08-03T03:40:04Z",
+          "confidence": 0.599954,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_DOGE_USDT_SWAP__20260803T130000Z.jpg",
+          "sample_id": "okx_DOGE_USDT_SWAP__20260803T130000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-08-03T10:00:00Z",
+          "box_end_time": "2026-08-03T10:00:00Z",
+          "box_start_time": "2026-08-03T03:42:22Z",
+          "confidence": 0.322266,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_DOGE_USDT_SWAP__20260803T093000Z.jpg",
+          "sample_id": "okx_DOGE_USDT_SWAP__20260803T093000Z",
+          "timeframe": "30m"
+        }
+      ],
+      "start_time": "2026-08-03T02:15:14Z",
+      "symbol": "okx_DOGE_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "15m",
+        "30m"
+      ]
+    },
+    {
+      "detection_count": 4,
+      "earliest_available_at": "2026-08-03T06:15:00Z",
+      "end_time": "2026-08-03T06:09:00Z",
+      "max_confidence": 0.573688,
+      "members": [
+        {
+          "available_at": "2026-08-03T06:15:00Z",
+          "box_end_time": "2026-08-03T04:19:25Z",
+          "box_start_time": "2026-08-03T00:40:45Z",
+          "confidence": 0.573688,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_BTC_USDT_SWAP__20260803T060000Z.jpg",
+          "sample_id": "okx_BTC_USDT_SWAP__20260803T060000Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-03T06:15:00Z",
+          "box_end_time": "2026-08-03T04:20:34Z",
+          "box_start_time": "2026-08-03T01:59:45Z",
+          "confidence": 0.343072,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_BTC_USDT_SWAP__20260803T060000Z.jpg",
+          "sample_id": "okx_BTC_USDT_SWAP__20260803T060000Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-03T09:45:00Z",
+          "box_end_time": "2026-08-03T05:49:02Z",
+          "box_start_time": "2026-08-03T02:19:13Z",
+          "confidence": 0.543746,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_BTC_USDT_SWAP__20260803T093000Z.jpg",
+          "sample_id": "okx_BTC_USDT_SWAP__20260803T093000Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-03T10:00:00Z",
+          "box_end_time": "2026-08-03T06:09:00Z",
+          "box_start_time": "2026-08-02T22:58:54Z",
+          "confidence": 0.544329,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_BTC_USDT_SWAP__20260803T093000Z.jpg",
+          "sample_id": "okx_BTC_USDT_SWAP__20260803T093000Z",
+          "timeframe": "30m"
+        }
+      ],
+      "start_time": "2026-08-02T22:58:54Z",
+      "symbol": "okx_BTC_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "15m",
+        "30m"
+      ]
+    },
+    {
+      "detection_count": 2,
+      "earliest_available_at": "2026-08-01T06:45:00Z",
+      "end_time": "2026-08-01T06:45:00Z",
+      "max_confidence": 0.564459,
+      "members": [
+        {
+          "available_at": "2026-08-01T06:45:00Z",
+          "box_end_time": "2026-08-01T06:21:58Z",
+          "box_start_time": "2026-08-01T05:38:29Z",
+          "confidence": 0.564459,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_NEAR_USDT_SWAP__20260801T064200Z.jpg",
+          "sample_id": "okx_NEAR_USDT_SWAP__20260801T064200Z",
+          "timeframe": "3m"
+        },
+        {
+          "available_at": "2026-08-01T06:45:00Z",
+          "box_end_time": "2026-08-01T06:45:00Z",
+          "box_start_time": "2026-08-01T05:34:43Z",
+          "confidence": 0.551558,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/5m/overlays/okx_NEAR_USDT_SWAP__20260801T064000Z.jpg",
+          "sample_id": "okx_NEAR_USDT_SWAP__20260801T064000Z",
+          "timeframe": "5m"
+        }
+      ],
+      "start_time": "2026-08-01T05:34:43Z",
+      "symbol": "okx_NEAR_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "3m",
+        "5m"
+      ]
+    },
+    {
+      "detection_count": 3,
+      "earliest_available_at": "2026-08-01T17:42:00Z",
+      "end_time": "2026-08-01T17:33:09Z",
+      "max_confidence": 0.553006,
+      "members": [
+        {
+          "available_at": "2026-08-01T17:45:00Z",
+          "box_end_time": "2026-08-01T15:49:39Z",
+          "box_start_time": "2026-08-01T12:11:36Z",
+          "confidence": 0.325623,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_SOL_USDT_SWAP__20260801T173000Z.jpg",
+          "sample_id": "okx_SOL_USDT_SWAP__20260801T173000Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-01T21:30:00Z",
+          "box_end_time": "2026-08-01T17:33:09Z",
+          "box_start_time": "2026-08-01T13:54:30Z",
+          "confidence": 0.553006,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_SOL_USDT_SWAP__20260801T211500Z.jpg",
+          "sample_id": "okx_SOL_USDT_SWAP__20260801T211500Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-01T17:42:00Z",
+          "box_end_time": "2026-08-01T17:26:32Z",
+          "box_start_time": "2026-08-01T16:57:33Z",
+          "confidence": 0.417021,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/2m/overlays/okx_SOL_USDT_SWAP__20260801T174000Z.jpg",
+          "sample_id": "okx_SOL_USDT_SWAP__20260801T174000Z",
+          "timeframe": "2m"
+        }
+      ],
+      "start_time": "2026-08-01T12:11:36Z",
+      "symbol": "okx_SOL_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "15m",
+        "2m"
+      ]
+    },
+    {
+      "detection_count": 3,
+      "earliest_available_at": "2026-08-03T02:27:00Z",
+      "end_time": "2026-08-03T01:16:56Z",
+      "max_confidence": 0.526403,
+      "members": [
+        {
+          "available_at": "2026-08-03T02:27:00Z",
+          "box_end_time": "2026-08-03T01:15:37Z",
+          "box_start_time": "2026-08-03T00:32:09Z",
+          "confidence": 0.526403,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_ADA_USDT_SWAP__20260803T022400Z.jpg",
+          "sample_id": "okx_ADA_USDT_SWAP__20260803T022400Z",
+          "timeframe": "3m"
+        },
+        {
+          "available_at": "2026-08-03T02:35:00Z",
+          "box_end_time": "2026-08-03T01:16:16Z",
+          "box_start_time": "2026-08-03T00:03:01Z",
+          "confidence": 0.443364,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/5m/overlays/okx_ADA_USDT_SWAP__20260803T023000Z.jpg",
+          "sample_id": "okx_ADA_USDT_SWAP__20260803T023000Z",
+          "timeframe": "5m"
+        },
+        {
+          "available_at": "2026-08-03T02:35:00Z",
+          "box_end_time": "2026-08-03T01:16:56Z",
+          "box_start_time": "2026-08-03T00:28:34Z",
+          "confidence": 0.36926,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/5m/overlays/okx_ADA_USDT_SWAP__20260803T023000Z.jpg",
+          "sample_id": "okx_ADA_USDT_SWAP__20260803T023000Z",
+          "timeframe": "5m"
+        }
+      ],
+      "start_time": "2026-08-03T00:03:01Z",
+      "symbol": "okx_ADA_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "3m",
+        "5m"
+      ]
+    },
+    {
+      "detection_count": 2,
+      "earliest_available_at": "2026-08-01T06:45:00Z",
+      "end_time": "2026-08-01T06:00:32Z",
+      "max_confidence": 0.521304,
+      "members": [
+        {
+          "available_at": "2026-08-01T06:48:00Z",
+          "box_end_time": "2026-08-01T06:00:32Z",
+          "box_start_time": "2026-08-01T05:32:56Z",
+          "confidence": 0.521304,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/2m/overlays/okx_ARB_USDT_SWAP__20260801T064600Z.jpg",
+          "sample_id": "okx_ARB_USDT_SWAP__20260801T064600Z",
+          "timeframe": "2m"
+        },
+        {
+          "available_at": "2026-08-01T06:45:00Z",
+          "box_end_time": "2026-08-01T05:58:10Z",
+          "box_start_time": "2026-08-01T05:22:33Z",
+          "confidence": 0.338597,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_ARB_USDT_SWAP__20260801T064200Z.jpg",
+          "sample_id": "okx_ARB_USDT_SWAP__20260801T064200Z",
+          "timeframe": "3m"
+        }
+      ],
+      "start_time": "2026-08-01T05:22:33Z",
+      "symbol": "okx_ARB_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "2m",
+        "3m"
+      ]
+    },
+    {
+      "detection_count": 2,
+      "earliest_available_at": "2026-08-03T02:35:00Z",
+      "end_time": "2026-08-03T02:35:00Z",
+      "max_confidence": 0.513851,
+      "members": [
+        {
+          "available_at": "2026-08-03T02:48:00Z",
+          "box_end_time": "2026-08-03T02:32:16Z",
+          "box_start_time": "2026-08-03T02:18:13Z",
+          "confidence": 0.309394,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/1m/overlays/okx_OP_USDT_SWAP__20260803T024700Z.jpg",
+          "sample_id": "okx_OP_USDT_SWAP__20260803T024700Z",
+          "timeframe": "1m"
+        },
+        {
+          "available_at": "2026-08-03T02:35:00Z",
+          "box_end_time": "2026-08-03T02:35:00Z",
+          "box_start_time": "2026-08-03T01:22:19Z",
+          "confidence": 0.513851,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/5m/overlays/okx_OP_USDT_SWAP__20260803T023000Z.jpg",
+          "sample_id": "okx_OP_USDT_SWAP__20260803T023000Z",
+          "timeframe": "5m"
+        }
+      ],
+      "start_time": "2026-08-03T01:22:19Z",
+      "symbol": "okx_OP_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "1m",
+        "5m"
+      ]
+    },
+    {
+      "detection_count": 3,
+      "earliest_available_at": "2026-07-31T12:45:00Z",
+      "end_time": "2026-07-31T13:00:00Z",
+      "max_confidence": 0.495081,
+      "members": [
+        {
+          "available_at": "2026-07-31T12:45:00Z",
+          "box_end_time": "2026-07-31T10:49:07Z",
+          "box_start_time": "2026-07-31T07:19:37Z",
+          "confidence": 0.464061,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_DOT_USDT_SWAP__20260731T123000Z.jpg",
+          "sample_id": "okx_DOT_USDT_SWAP__20260731T123000Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-07-31T16:30:00Z",
+          "box_end_time": "2026-07-31T12:40:15Z",
+          "box_start_time": "2026-07-31T05:34:43Z",
+          "confidence": 0.495081,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_DOT_USDT_SWAP__20260731T160000Z.jpg",
+          "sample_id": "okx_DOT_USDT_SWAP__20260731T160000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T13:00:00Z",
+          "box_end_time": "2026-07-31T13:00:00Z",
+          "box_start_time": "2026-07-31T07:27:46Z",
+          "confidence": 0.400412,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_DOT_USDT_SWAP__20260731T123000Z.jpg",
+          "sample_id": "okx_DOT_USDT_SWAP__20260731T123000Z",
+          "timeframe": "30m"
+        }
+      ],
+      "start_time": "2026-07-31T05:34:43Z",
+      "symbol": "okx_DOT_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "15m",
+        "30m"
+      ]
+    },
+    {
+      "detection_count": 6,
+      "earliest_available_at": "2026-07-31T09:00:00Z",
+      "end_time": "2026-07-31T13:00:00Z",
+      "max_confidence": 0.492949,
+      "members": [
+        {
+          "available_at": "2026-07-31T09:00:00Z",
+          "box_end_time": "2026-07-31T07:04:39Z",
+          "box_start_time": "2026-07-31T03:35:14Z",
+          "confidence": 0.405734,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_LTC_USDT_SWAP__20260731T084500Z.jpg",
+          "sample_id": "okx_LTC_USDT_SWAP__20260731T084500Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-07-31T09:00:00Z",
+          "box_end_time": "2026-07-31T07:05:13Z",
+          "box_start_time": "2026-07-31T04:23:12Z",
+          "confidence": 0.345014,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_LTC_USDT_SWAP__20260731T084500Z.jpg",
+          "sample_id": "okx_LTC_USDT_SWAP__20260731T084500Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-07-31T12:45:00Z",
+          "box_end_time": "2026-07-31T10:48:56Z",
+          "box_start_time": "2026-07-31T07:10:35Z",
+          "confidence": 0.444206,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_LTC_USDT_SWAP__20260731T123000Z.jpg",
+          "sample_id": "okx_LTC_USDT_SWAP__20260731T123000Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-07-31T16:30:00Z",
+          "box_end_time": "2026-07-31T12:38:56Z",
+          "box_start_time": "2026-07-31T05:34:38Z",
+          "confidence": 0.444224,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_LTC_USDT_SWAP__20260731T160000Z.jpg",
+          "sample_id": "okx_LTC_USDT_SWAP__20260731T160000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T13:00:00Z",
+          "box_end_time": "2026-07-31T13:00:00Z",
+          "box_start_time": "2026-07-31T06:14:58Z",
+          "confidence": 0.311342,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_LTC_USDT_SWAP__20260731T123000Z.jpg",
+          "sample_id": "okx_LTC_USDT_SWAP__20260731T123000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-07-31T23:30:00Z",
+          "box_end_time": "2026-07-31T11:37:30Z",
+          "box_start_time": "2026-07-31T06:16:47Z",
+          "confidence": 0.492949,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_LTC_USDT_SWAP__20260731T230000Z.jpg",
+          "sample_id": "okx_LTC_USDT_SWAP__20260731T230000Z",
+          "timeframe": "30m"
+        }
+      ],
+      "start_time": "2026-07-31T03:35:14Z",
+      "symbol": "okx_LTC_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "15m",
+        "30m"
+      ]
+    },
+    {
+      "detection_count": 3,
+      "earliest_available_at": "2026-08-03T06:15:00Z",
+      "end_time": "2026-08-03T09:39:58Z",
+      "max_confidence": 0.486037,
+      "members": [
+        {
+          "available_at": "2026-08-03T06:15:00Z",
+          "box_end_time": "2026-08-03T06:15:00Z",
+          "box_start_time": "2026-08-03T02:38:09Z",
+          "confidence": 0.486037,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_SOL_USDT_SWAP__20260803T060000Z.jpg",
+          "sample_id": "okx_SOL_USDT_SWAP__20260803T060000Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-08-03T13:30:00Z",
+          "box_end_time": "2026-08-03T09:38:40Z",
+          "box_start_time": "2026-08-03T02:14:19Z",
+          "confidence": 0.341768,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_SOL_USDT_SWAP__20260803T130000Z.jpg",
+          "sample_id": "okx_SOL_USDT_SWAP__20260803T130000Z",
+          "timeframe": "30m"
+        },
+        {
+          "available_at": "2026-08-03T13:30:00Z",
+          "box_end_time": "2026-08-03T09:39:58Z",
+          "box_start_time": "2026-08-03T03:36:26Z",
+          "confidence": 0.372983,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_SOL_USDT_SWAP__20260803T130000Z.jpg",
+          "sample_id": "okx_SOL_USDT_SWAP__20260803T130000Z",
+          "timeframe": "30m"
+        }
+      ],
+      "start_time": "2026-08-03T02:14:19Z",
+      "symbol": "okx_SOL_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "15m",
+        "30m"
+      ]
+    },
+    {
+      "detection_count": 2,
+      "earliest_available_at": "2026-08-03T02:30:00Z",
+      "end_time": "2026-08-03T01:56:28Z",
+      "max_confidence": 0.456854,
+      "members": [
+        {
+          "available_at": "2026-08-03T02:30:00Z",
+          "box_end_time": "2026-08-03T01:42:56Z",
+          "box_start_time": "2026-08-03T00:59:39Z",
+          "confidence": 0.448614,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_DOT_USDT_SWAP__20260803T022700Z.jpg",
+          "sample_id": "okx_DOT_USDT_SWAP__20260803T022700Z",
+          "timeframe": "3m"
+        },
+        {
+          "available_at": "2026-08-03T02:35:00Z",
+          "box_end_time": "2026-08-03T01:56:28Z",
+          "box_start_time": "2026-08-03T00:42:53Z",
+          "confidence": 0.456854,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/5m/overlays/okx_DOT_USDT_SWAP__20260803T023000Z.jpg",
+          "sample_id": "okx_DOT_USDT_SWAP__20260803T023000Z",
+          "timeframe": "5m"
+        }
+      ],
+      "start_time": "2026-08-03T00:42:53Z",
+      "symbol": "okx_DOT_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "3m",
+        "5m"
+      ]
+    },
+    {
+      "detection_count": 2,
+      "earliest_available_at": "2026-07-31T01:35:00Z",
+      "end_time": "2026-07-31T01:45:00Z",
+      "max_confidence": 0.434744,
+      "members": [
+        {
+          "available_at": "2026-07-31T01:45:00Z",
+          "box_end_time": "2026-07-31T01:45:00Z",
+          "box_start_time": "2026-07-30T22:12:02Z",
+          "confidence": 0.434744,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_AVAX_USDT_SWAP__20260731T013000Z.jpg",
+          "sample_id": "okx_AVAX_USDT_SWAP__20260731T013000Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-07-31T01:35:00Z",
+          "box_end_time": "2026-07-31T00:16:59Z",
+          "box_start_time": "2026-07-30T23:05:21Z",
+          "confidence": 0.347645,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/5m/overlays/okx_AVAX_USDT_SWAP__20260731T013000Z.jpg",
+          "sample_id": "okx_AVAX_USDT_SWAP__20260731T013000Z",
+          "timeframe": "5m"
+        }
+      ],
+      "start_time": "2026-07-30T22:12:02Z",
+      "symbol": "okx_AVAX_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "15m",
+        "5m"
+      ]
+    },
+    {
+      "detection_count": 2,
+      "earliest_available_at": "2026-08-03T02:27:00Z",
+      "end_time": "2026-08-03T02:35:00Z",
+      "max_confidence": 0.429503,
+      "members": [
+        {
+          "available_at": "2026-08-03T02:27:00Z",
+          "box_end_time": "2026-08-03T02:04:02Z",
+          "box_start_time": "2026-08-03T01:23:18Z",
+          "confidence": 0.32946,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_LINK_USDT_SWAP__20260803T022400Z.jpg",
+          "sample_id": "okx_LINK_USDT_SWAP__20260803T022400Z",
+          "timeframe": "3m"
+        },
+        {
+          "available_at": "2026-08-03T02:35:00Z",
+          "box_end_time": "2026-08-03T02:35:00Z",
+          "box_start_time": "2026-08-03T01:23:49Z",
+          "confidence": 0.429503,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/5m/overlays/okx_LINK_USDT_SWAP__20260803T023000Z.jpg",
+          "sample_id": "okx_LINK_USDT_SWAP__20260803T023000Z",
+          "timeframe": "5m"
+        }
+      ],
+      "start_time": "2026-08-03T01:23:18Z",
+      "symbol": "okx_LINK_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "3m",
+        "5m"
+      ]
+    },
+    {
+      "detection_count": 2,
+      "earliest_available_at": "2026-07-31T16:09:00Z",
+      "end_time": "2026-07-31T15:49:17Z",
+      "max_confidence": 0.42366,
+      "members": [
+        {
+          "available_at": "2026-07-31T16:13:00Z",
+          "box_end_time": "2026-07-31T15:49:17Z",
+          "box_start_time": "2026-07-31T15:34:53Z",
+          "confidence": 0.324502,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/1m/overlays/okx_DOGE_USDT_SWAP__20260731T161200Z.jpg",
+          "sample_id": "okx_DOGE_USDT_SWAP__20260731T161200Z",
+          "timeframe": "1m"
+        },
+        {
+          "available_at": "2026-07-31T16:09:00Z",
+          "box_end_time": "2026-07-31T15:45:55Z",
+          "box_start_time": "2026-07-31T15:02:19Z",
+          "confidence": 0.42366,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_DOGE_USDT_SWAP__20260731T160600Z.jpg",
+          "sample_id": "okx_DOGE_USDT_SWAP__20260731T160600Z",
+          "timeframe": "3m"
+        }
+      ],
+      "start_time": "2026-07-31T15:02:19Z",
+      "symbol": "okx_DOGE_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "1m",
+        "3m"
+      ]
+    },
+    {
+      "detection_count": 3,
+      "earliest_available_at": "2026-08-03T02:30:00Z",
+      "end_time": "2026-08-03T01:56:48Z",
+      "max_confidence": 0.412496,
+      "members": [
+        {
+          "available_at": "2026-08-03T02:30:00Z",
+          "box_end_time": "2026-08-03T01:18:47Z",
+          "box_start_time": "2026-08-03T00:39:06Z",
+          "confidence": 0.412496,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_ARB_USDT_SWAP__20260803T022700Z.jpg",
+          "sample_id": "okx_ARB_USDT_SWAP__20260803T022700Z",
+          "timeframe": "3m"
+        },
+        {
+          "available_at": "2026-08-03T02:30:00Z",
+          "box_end_time": "2026-08-03T01:18:44Z",
+          "box_start_time": "2026-08-03T00:46:41Z",
+          "confidence": 0.380891,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_ARB_USDT_SWAP__20260803T022700Z.jpg",
+          "sample_id": "okx_ARB_USDT_SWAP__20260803T022700Z",
+          "timeframe": "3m"
+        },
+        {
+          "available_at": "2026-08-03T02:35:00Z",
+          "box_end_time": "2026-08-03T01:56:48Z",
+          "box_start_time": "2026-08-03T00:49:40Z",
+          "confidence": 0.366077,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/5m/overlays/okx_ARB_USDT_SWAP__20260803T023000Z.jpg",
+          "sample_id": "okx_ARB_USDT_SWAP__20260803T023000Z",
+          "timeframe": "5m"
+        }
+      ],
+      "start_time": "2026-08-03T00:39:06Z",
+      "symbol": "okx_ARB_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "3m",
+        "5m"
+      ]
+    },
+    {
+      "detection_count": 2,
+      "earliest_available_at": "2026-07-31T09:00:00Z",
+      "end_time": "2026-07-31T09:00:00Z",
+      "max_confidence": 0.384683,
+      "members": [
+        {
+          "available_at": "2026-07-31T09:00:00Z",
+          "box_end_time": "2026-07-31T07:06:43Z",
+          "box_start_time": "2026-07-31T03:32:00Z",
+          "confidence": 0.379009,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/15m/overlays/okx_AVAX_USDT_SWAP__20260731T084500Z.jpg",
+          "sample_id": "okx_AVAX_USDT_SWAP__20260731T084500Z",
+          "timeframe": "15m"
+        },
+        {
+          "available_at": "2026-07-31T09:00:00Z",
+          "box_end_time": "2026-07-31T09:00:00Z",
+          "box_start_time": "2026-07-31T01:57:59Z",
+          "confidence": 0.384683,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/30m/overlays/okx_AVAX_USDT_SWAP__20260731T083000Z.jpg",
+          "sample_id": "okx_AVAX_USDT_SWAP__20260731T083000Z",
+          "timeframe": "30m"
+        }
+      ],
+      "start_time": "2026-07-31T01:57:59Z",
+      "symbol": "okx_AVAX_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "15m",
+        "30m"
+      ]
+    },
+    {
+      "detection_count": 2,
+      "earliest_available_at": "2026-08-02T15:33:00Z",
+      "end_time": "2026-08-02T15:40:00Z",
+      "max_confidence": 0.374373,
+      "members": [
+        {
+          "available_at": "2026-08-02T15:40:00Z",
+          "box_end_time": "2026-08-02T15:40:00Z",
+          "box_start_time": "2026-08-02T15:11:57Z",
+          "confidence": 0.303779,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/2m/overlays/okx_DOT_USDT_SWAP__20260802T153800Z.jpg",
+          "sample_id": "okx_DOT_USDT_SWAP__20260802T153800Z",
+          "timeframe": "2m"
+        },
+        {
+          "available_at": "2026-08-02T15:33:00Z",
+          "box_end_time": "2026-08-02T15:33:00Z",
+          "box_start_time": "2026-08-02T14:50:20Z",
+          "confidence": 0.374373,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_DOT_USDT_SWAP__20260802T153000Z.jpg",
+          "sample_id": "okx_DOT_USDT_SWAP__20260802T153000Z",
+          "timeframe": "3m"
+        }
+      ],
+      "start_time": "2026-08-02T14:50:20Z",
+      "symbol": "okx_DOT_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "2m",
+        "3m"
+      ]
+    },
+    {
+      "detection_count": 3,
+      "earliest_available_at": "2026-08-04T00:28:00Z",
+      "end_time": "2026-08-04T00:30:21Z",
+      "max_confidence": 0.373703,
+      "members": [
+        {
+          "available_at": "2026-08-04T00:38:00Z",
+          "box_end_time": "2026-08-04T00:30:21Z",
+          "box_start_time": "2026-08-04T00:15:46Z",
+          "confidence": 0.359577,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/1m/overlays/okx_ADA_USDT_SWAP__20260804T003700Z.jpg",
+          "sample_id": "okx_ADA_USDT_SWAP__20260804T003700Z",
+          "timeframe": "1m"
+        },
+        {
+          "available_at": "2026-08-04T00:28:00Z",
+          "box_end_time": "2026-08-04T00:28:00Z",
+          "box_start_time": "2026-08-03T23:59:07Z",
+          "confidence": 0.373703,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/2m/overlays/okx_ADA_USDT_SWAP__20260804T002600Z.jpg",
+          "sample_id": "okx_ADA_USDT_SWAP__20260804T002600Z",
+          "timeframe": "2m"
+        },
+        {
+          "available_at": "2026-08-04T00:28:00Z",
+          "box_end_time": "2026-08-04T00:28:00Z",
+          "box_start_time": "2026-08-04T00:07:22Z",
+          "confidence": 0.342304,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/2m/overlays/okx_ADA_USDT_SWAP__20260804T002600Z.jpg",
+          "sample_id": "okx_ADA_USDT_SWAP__20260804T002600Z",
+          "timeframe": "2m"
+        }
+      ],
+      "start_time": "2026-08-03T23:59:07Z",
+      "symbol": "okx_ADA_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "1m",
+        "2m"
+      ]
+    },
+    {
+      "detection_count": 2,
+      "earliest_available_at": "2026-07-31T12:30:00Z",
+      "end_time": "2026-07-31T12:30:00Z",
+      "max_confidence": 0.35114,
+      "members": [
+        {
+          "available_at": "2026-07-31T12:34:00Z",
+          "box_end_time": "2026-07-31T12:18:34Z",
+          "box_start_time": "2026-07-31T11:49:36Z",
+          "confidence": 0.331531,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/2m/overlays/okx_SUI_USDT_SWAP__20260731T123200Z.jpg",
+          "sample_id": "okx_SUI_USDT_SWAP__20260731T123200Z",
+          "timeframe": "2m"
+        },
+        {
+          "available_at": "2026-07-31T12:30:00Z",
+          "box_end_time": "2026-07-31T12:30:00Z",
+          "box_start_time": "2026-07-31T11:49:08Z",
+          "confidence": 0.35114,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_SUI_USDT_SWAP__20260731T122700Z.jpg",
+          "sample_id": "okx_SUI_USDT_SWAP__20260731T122700Z",
+          "timeframe": "3m"
+        }
+      ],
+      "start_time": "2026-07-31T11:49:08Z",
+      "symbol": "okx_SUI_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "2m",
+        "3m"
+      ]
+    },
+    {
+      "detection_count": 3,
+      "earliest_available_at": "2026-07-30T11:00:00Z",
+      "end_time": "2026-07-30T11:00:00Z",
+      "max_confidence": 0.326823,
+      "members": [
+        {
+          "available_at": "2026-07-30T11:00:00Z",
+          "box_end_time": "2026-07-30T11:00:00Z",
+          "box_start_time": "2026-07-30T10:31:28Z",
+          "confidence": 0.313558,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/2m/overlays/okx_ARB_USDT_SWAP__20260730T105800Z.jpg",
+          "sample_id": "okx_ARB_USDT_SWAP__20260730T105800Z",
+          "timeframe": "2m"
+        },
+        {
+          "available_at": "2026-07-30T11:00:00Z",
+          "box_end_time": "2026-07-30T11:00:00Z",
+          "box_start_time": "2026-07-30T10:40:37Z",
+          "confidence": 0.321253,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/2m/overlays/okx_ARB_USDT_SWAP__20260730T105800Z.jpg",
+          "sample_id": "okx_ARB_USDT_SWAP__20260730T105800Z",
+          "timeframe": "2m"
+        },
+        {
+          "available_at": "2026-07-30T11:00:00Z",
+          "box_end_time": "2026-07-30T11:00:00Z",
+          "box_start_time": "2026-07-30T10:32:01Z",
+          "confidence": 0.326823,
+          "overlay": "/Users/zhangzc/yolo-xx/reports/holdout_scan_20260804/w96/3m/overlays/okx_ARB_USDT_SWAP__20260730T105700Z.jpg",
+          "sample_id": "okx_ARB_USDT_SWAP__20260730T105700Z",
+          "timeframe": "3m"
+        }
+      ],
+      "start_time": "2026-07-30T10:31:28Z",
+      "symbol": "okx_ARB_USDT_SWAP",
+      "timeframe_count": 2,
+      "timeframes": [
+        "2m",
+        "3m"
+      ]
+    }
+  ],
+  "conf": 0.3,
+  "cooccurrence": [
+    {
+      "comparable_detections": 65,
+      "echo_rate": 0.753846,
+      "echoed_detections": 49,
+      "source_detections": 65,
+      "source_timeframe": "30m",
+      "target_timeframe": "15m"
+    },
+    {
+      "comparable_detections": 65,
+      "echo_rate": 0.153846,
+      "echoed_detections": 10,
+      "source_detections": 65,
+      "source_timeframe": "30m",
+      "target_timeframe": "5m"
+    },
+    {
+      "comparable_detections": 65,
+      "echo_rate": 0.123077,
+      "echoed_detections": 8,
+      "source_detections": 65,
+      "source_timeframe": "30m",
+      "target_timeframe": "3m"
+    },
+    {
+      "comparable_detections": 65,
+      "echo_rate": 0.076923,
+      "echoed_detections": 5,
+      "source_detections": 65,
+      "source_timeframe": "30m",
+      "target_timeframe": "2m"
+    },
+    {
+      "comparable_detections": 62,
+      "echo_rate": 0.048387,
+      "echoed_detections": 3,
+      "source_detections": 65,
+      "source_timeframe": "30m",
+      "target_timeframe": "1m"
+    },
+    {
+      "comparable_detections": 45,
+      "echo_rate": 0.666667,
+      "echoed_detections": 30,
+      "source_detections": 45,
+      "source_timeframe": "15m",
+      "target_timeframe": "30m"
+    },
+    {
+      "comparable_detections": 45,
+      "echo_rate": 0.155556,
+      "echoed_detections": 7,
+      "source_detections": 45,
+      "source_timeframe": "15m",
+      "target_timeframe": "5m"
+    },
+    {
+      "comparable_detections": 45,
+      "echo_rate": 0.066667,
+      "echoed_detections": 3,
+      "source_detections": 45,
+      "source_timeframe": "15m",
+      "target_timeframe": "3m"
+    },
+    {
+      "comparable_detections": 45,
+      "echo_rate": 0.066667,
+      "echoed_detections": 3,
+      "source_detections": 45,
+      "source_timeframe": "15m",
+      "target_timeframe": "2m"
+    },
+    {
+      "comparable_detections": 41,
+      "echo_rate": 0.02439,
+      "echoed_detections": 1,
+      "source_detections": 45,
+      "source_timeframe": "15m",
+      "target_timeframe": "1m"
+    },
+    {
+      "comparable_detections": 32,
+      "echo_rate": 0.21875,
+      "echoed_detections": 7,
+      "source_detections": 32,
+      "source_timeframe": "5m",
+      "target_timeframe": "30m"
+    },
+    {
+      "comparable_detections": 32,
+      "echo_rate": 0.15625,
+      "echoed_detections": 5,
+      "source_detections": 32,
+      "source_timeframe": "5m",
+      "target_timeframe": "15m"
+    },
+    {
+      "comparable_detections": 32,
+      "echo_rate": 0.4375,
+      "echoed_detections": 14,
+      "source_detections": 32,
+      "source_timeframe": "5m",
+      "target_timeframe": "3m"
+    },
+    {
+      "comparable_detections": 32,
+      "echo_rate": 0.125,
+      "echoed_detections": 4,
+      "source_detections": 32,
+      "source_timeframe": "5m",
+      "target_timeframe": "2m"
+    },
+    {
+      "comparable_detections": 25,
+      "echo_rate": 0.04,
+      "echoed_detections": 1,
+      "source_detections": 32,
+      "source_timeframe": "5m",
+      "target_timeframe": "1m"
+    },
+    {
+      "comparable_detections": 38,
+      "echo_rate": 0.131579,
+      "echoed_detections": 5,
+      "source_detections": 38,
+      "source_timeframe": "3m",
+      "target_timeframe": "30m"
+    },
+    {
+      "comparable_detections": 38,
+      "echo_rate": 0.052632,
+      "echoed_detections": 2,
+      "source_detections": 38,
+      "source_timeframe": "3m",
+      "target_timeframe": "15m"
+    },
+    {
+      "comparable_detections": 38,
+      "echo_rate": 0.394737,
+      "echoed_detections": 15,
+      "source_detections": 38,
+      "source_timeframe": "3m",
+      "target_timeframe": "5m"
+    },
+    {
+      "comparable_detections": 37,
+      "echo_rate": 0.297297,
+      "echoed_detections": 11,
+      "source_detections": 38,
+      "source_timeframe": "3m",
+      "target_timeframe": "2m"
+    },
+    {
+      "comparable_detections": 36,
+      "echo_rate": 0.055556,
+      "echoed_detections": 2,
+      "source_detections": 38,
+      "source_timeframe": "3m",
+      "target_timeframe": "1m"
+    },
+    {
+      "comparable_detections": 30,
+      "echo_rate": 0.033333,
+      "echoed_detections": 1,
+      "source_detections": 30,
+      "source_timeframe": "2m",
+      "target_timeframe": "30m"
+    },
+    {
+      "comparable_detections": 30,
+      "echo_rate": 0.066667,
+      "echoed_detections": 2,
+      "source_detections": 30,
+      "source_timeframe": "2m",
+      "target_timeframe": "15m"
+    },
+    {
+      "comparable_detections": 30,
+      "echo_rate": 0.1,
+      "echoed_detections": 3,
+      "source_detections": 30,
+      "source_timeframe": "2m",
+      "target_timeframe": "5m"
+    },
+    {
+      "comparable_detections": 30,
+      "echo_rate": 0.333333,
+      "echoed_detections": 10,
+      "source_detections": 30,
+      "source_timeframe": "2m",
+      "target_timeframe": "3m"
+    },
+    {
+      "comparable_detections": 30,
+      "echo_rate": 0.1,
+      "echoed_detections": 3,
+      "source_detections": 30,
+      "source_timeframe": "2m",
+      "target_timeframe": "1m"
+    },
+    {
+      "comparable_detections": 13,
+      "echo_rate": 0.153846,
+      "echoed_detections": 2,
+      "source_detections": 13,
+      "source_timeframe": "1m",
+      "target_timeframe": "30m"
+    },
+    {
+      "comparable_detections": 13,
+      "echo_rate": 0.076923,
+      "echoed_detections": 1,
+      "source_detections": 13,
+      "source_timeframe": "1m",
+      "target_timeframe": "15m"
+    },
+    {
+      "comparable_detections": 13,
+      "echo_rate": 0.076923,
+      "echoed_detections": 1,
+      "source_detections": 13,
+      "source_timeframe": "1m",
+      "target_timeframe": "5m"
+    },
+    {
+      "comparable_detections": 13,
+      "echo_rate": 0.153846,
+      "echoed_detections": 2,
+      "source_detections": 13,
+      "source_timeframe": "1m",
+      "target_timeframe": "3m"
+    },
+    {
+      "comparable_detections": 13,
+      "echo_rate": 0.153846,
+      "echoed_detections": 2,
+      "source_detections": 13,
+      "source_timeframe": "1m",
+      "target_timeframe": "2m"
+    }
+  ],
+  "holdout_read": true,
+  "iou": 0.7,
+  "report_type": "yolo_xx_cross_timeframe",
+  "schema_version": 1,
+  "threshold_tuned": false,
+  "timeframes": [
+    "30m",
+    "15m",
+    "5m",
+    "3m",
+    "2m",
+    "1m"
+  ],
+  "weights_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba"
+}
