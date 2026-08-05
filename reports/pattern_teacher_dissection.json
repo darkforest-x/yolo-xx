@@ -1,0 +1,7312 @@
+{
+  "prereg": "reports/prereg_pattern_teacher_dissection.json",
+  "weights": "/Users/zhangzc/fable-trading/models/owner_v10_chain.pt",
+  "conf": 0.3,
+  "iou": 0.7,
+  "window": 200,
+  "match_tolerance_bars": 2,
+  "dense_rule": {
+    "FAST_MAX": 0.0028,
+    "FULL_MAX": 0.0055,
+    "MIN_DENSE_BARS": 5
+  },
+  "launch_rule": {
+    "SPREAD_CHG8_THR": 0.00383,
+    "LOOKAHEAD_BARS": 20
+  },
+  "class_C_threshold_abs_fwd20_ret": 0.016475,
+  "n_symbols_used": 93,
+  "summary": {
+    "full": {
+      "A": {
+        "n": 150,
+        "hits": 0,
+        "hit_rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.025
+        ],
+        "mean_conf_hits": null,
+        "mean_boxes_per_image": 0.407
+      },
+      "B": {
+        "n": 150,
+        "hits": 9,
+        "hit_rate": 0.06,
+        "wilson95": [
+          0.0319,
+          0.1101
+        ],
+        "mean_conf_hits": 0.5446,
+        "mean_boxes_per_image": 0.693
+      },
+      "C": {
+        "n": 150,
+        "hits": 2,
+        "hit_rate": 0.0133,
+        "wilson95": [
+          0.0037,
+          0.0473
+        ],
+        "mean_conf_hits": 0.4527,
+        "mean_boxes_per_image": 0.387
+      },
+      "A_vs_B": {
+        "risk_difference": -0.06,
+        "risk_ratio": null,
+        "z": -3.046,
+        "p_value": 0.002319
+      }
+    },
+    "tip": {
+      "A": {
+        "n": 150,
+        "hits": 0,
+        "hit_rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.025
+        ],
+        "mean_conf_hits": null,
+        "mean_boxes_per_image": 0.173
+      },
+      "B": {
+        "n": 150,
+        "hits": 1,
+        "hit_rate": 0.0067,
+        "wilson95": [
+          0.0012,
+          0.0368
+        ],
+        "mean_conf_hits": 0.3176,
+        "mean_boxes_per_image": 0.173
+      },
+      "C": {
+        "n": 150,
+        "hits": 0,
+        "hit_rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.025
+        ],
+        "mean_conf_hits": null,
+        "mean_boxes_per_image": 0.227
+      },
+      "A_vs_B": {
+        "risk_difference": -0.0067,
+        "risk_ratio": null,
+        "z": -1.0017,
+        "p_value": 0.316503
+      }
+    }
+  },
+  "per_sample": {
+    "A": [
+      {
+        "symbol": "0G_USDT_SWAP",
+        "signal_i": 21816,
+        "signal_time": "2026-05-07 16:30:00+00:00",
+        "fwd20_ret": 0.008337864781584381,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "0G_USDT_SWAP",
+        "signal_i": 22034,
+        "signal_time": "2026-05-09 23:00:00+00:00",
+        "fwd20_ret": -0.012580814258256079,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "0G_USDT_SWAP",
+        "signal_i": 22213,
+        "signal_time": "2026-05-11 19:45:00+00:00",
+        "fwd20_ret": -0.0057965923063412195,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "0G_USDT_SWAP",
+        "signal_i": 22355,
+        "signal_time": "2026-05-13 07:15:00+00:00",
+        "fwd20_ret": -0.007732422226218505,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "1INCH_USDT_SWAP",
+        "signal_i": 32533,
+        "signal_time": "2026-05-08 10:30:00+00:00",
+        "fwd20_ret": 0.006678310901058193,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "1INCH_USDT_SWAP",
+        "signal_i": 32821,
+        "signal_time": "2026-05-11 10:30:00+00:00",
+        "fwd20_ret": -0.0023219814241485226,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "1INCH_USDT_SWAP",
+        "signal_i": 32858,
+        "signal_time": "2026-05-11 19:45:00+00:00",
+        "fwd20_ret": -0.002511591962905735,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "1INCH_USDT_SWAP",
+        "signal_i": 33397,
+        "signal_time": "2026-05-17 10:30:00+00:00",
+        "fwd20_ret": -0.006189307437840075,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "2Z_USDT_SWAP",
+        "signal_i": 21298,
+        "signal_time": "2026-05-12 09:30:00+00:00",
+        "fwd20_ret": -0.0008679718391360058,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "2Z_USDT_SWAP",
+        "signal_i": 21368,
+        "signal_time": "2026-05-13 03:00:00+00:00",
+        "fwd20_ret": 0.009061987853079989,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "2Z_USDT_SWAP",
+        "signal_i": 22022,
+        "signal_time": "2026-05-19 22:30:00+00:00",
+        "fwd20_ret": 0.0064080944350759506,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "2Z_USDT_SWAP",
+        "signal_i": 25712,
+        "signal_time": "2026-06-27 09:00:00+00:00",
+        "fwd20_ret": -0.004282655246252487,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AAVE_USDT_SWAP",
+        "signal_i": 32545,
+        "signal_time": "2026-05-07 15:00:00+00:00",
+        "fwd20_ret": 0.005638078716252881,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AAVE_USDT_SWAP",
+        "signal_i": 32599,
+        "signal_time": "2026-05-08 04:30:00+00:00",
+        "fwd20_ret": -0.0004319187992658513,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AAVE_USDT_SWAP",
+        "signal_i": 32763,
+        "signal_time": "2026-05-09 21:30:00+00:00",
+        "fwd20_ret": -0.002399082090330684,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AAVE_USDT_SWAP",
+        "signal_i": 33517,
+        "signal_time": "2026-05-17 18:00:00+00:00",
+        "fwd20_ret": -0.0038789759503492505,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACH_USDT_SWAP",
+        "signal_i": 32727,
+        "signal_time": "2026-05-10 11:00:00+00:00",
+        "fwd20_ret": -0.007719298245614015,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACH_USDT_SWAP",
+        "signal_i": 33579,
+        "signal_time": "2026-05-19 08:00:00+00:00",
+        "fwd20_ret": -0.004004576659038972,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACH_USDT_SWAP",
+        "signal_i": 33700,
+        "signal_time": "2026-05-20 14:15:00+00:00",
+        "fwd20_ret": 0.0011517420097897357,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACH_USDT_SWAP",
+        "signal_i": 33721,
+        "signal_time": "2026-05-20 19:30:00+00:00",
+        "fwd20_ret": 0.006031882809134137,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACT_USDT_SWAP",
+        "signal_i": 33672,
+        "signal_time": "2026-05-20 07:15:00+00:00",
+        "fwd20_ret": -0.011398176291793294,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACT_USDT_SWAP",
+        "signal_i": 33847,
+        "signal_time": "2026-05-22 03:00:00+00:00",
+        "fwd20_ret": 0.009687034277198192,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACT_USDT_SWAP",
+        "signal_i": 34719,
+        "signal_time": "2026-05-31 05:00:00+00:00",
+        "fwd20_ret": -0.009803921568627305,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACT_USDT_SWAP",
+        "signal_i": 35901,
+        "signal_time": "2026-06-12 12:30:00+00:00",
+        "fwd20_ret": 0.004087736789631036,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACU_USDT_SWAP",
+        "signal_i": 11404,
+        "signal_time": "2026-05-22 02:00:00+00:00",
+        "fwd20_ret": 0.00923894214112475,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACU_USDT_SWAP",
+        "signal_i": 11749,
+        "signal_time": "2026-05-25 16:15:00+00:00",
+        "fwd20_ret": -0.01223277909738718,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACU_USDT_SWAP",
+        "signal_i": 12266,
+        "signal_time": "2026-05-31 01:30:00+00:00",
+        "fwd20_ret": -0.002418087292951343,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACU_USDT_SWAP",
+        "signal_i": 14971,
+        "signal_time": "2026-06-28 05:45:00+00:00",
+        "fwd20_ret": -0.003534817956875158,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ADA_USDT_SWAP",
+        "signal_i": 32815,
+        "signal_time": "2026-05-10 10:30:00+00:00",
+        "fwd20_ret": 0.01688073394495415,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ADA_USDT_SWAP",
+        "signal_i": 33482,
+        "signal_time": "2026-05-17 09:15:00+00:00",
+        "fwd20_ret": -0.005857087075361145,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ADA_USDT_SWAP",
+        "signal_i": 33509,
+        "signal_time": "2026-05-17 16:00:00+00:00",
+        "fwd20_ret": -0.0011769321302472768,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ADA_USDT_SWAP",
+        "signal_i": 33761,
+        "signal_time": "2026-05-20 07:00:00+00:00",
+        "fwd20_ret": -0.002405773857257487,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AERO_USDT_SWAP",
+        "signal_i": 31353,
+        "signal_time": "2026-05-25 20:30:00+00:00",
+        "fwd20_ret": -0.019274896741624636,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AERO_USDT_SWAP",
+        "signal_i": 31765,
+        "signal_time": "2026-05-30 03:30:00+00:00",
+        "fwd20_ret": 0.0002418379685611427,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AERO_USDT_SWAP",
+        "signal_i": 31792,
+        "signal_time": "2026-05-30 10:15:00+00:00",
+        "fwd20_ret": 0.013715110683349296,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AERO_USDT_SWAP",
+        "signal_i": 31885,
+        "signal_time": "2026-05-31 09:30:00+00:00",
+        "fwd20_ret": -0.0204178537511871,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AEVO_USDT_SWAP",
+        "signal_i": 32820,
+        "signal_time": "2026-05-11 10:30:00+00:00",
+        "fwd20_ret": -0.007094485649790316,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AEVO_USDT_SWAP",
+        "signal_i": 36059,
+        "signal_time": "2026-06-14 04:15:00+00:00",
+        "fwd20_ret": -0.001006036217303774,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AEVO_USDT_SWAP",
+        "signal_i": 36322,
+        "signal_time": "2026-06-16 22:00:00+00:00",
+        "fwd20_ret": 0.003514056224899642,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AEVO_USDT_SWAP",
+        "signal_i": 37333,
+        "signal_time": "2026-06-27 10:45:00+00:00",
+        "fwd20_ret": -0.0034582132564842105,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AGLD_USDT_SWAP",
+        "signal_i": 32820,
+        "signal_time": "2026-05-11 10:30:00+00:00",
+        "fwd20_ret": -0.008136094674556116,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AGLD_USDT_SWAP",
+        "signal_i": 32851,
+        "signal_time": "2026-05-11 18:15:00+00:00",
+        "fwd20_ret": 0.011860637509266247,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AGLD_USDT_SWAP",
+        "signal_i": 32993,
+        "signal_time": "2026-05-13 05:45:00+00:00",
+        "fwd20_ret": 0.0055167340934167974,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AGLD_USDT_SWAP",
+        "signal_i": 34181,
+        "signal_time": "2026-05-25 14:45:00+00:00",
+        "fwd20_ret": -0.000843525938422629,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AIXBT_USDT_SWAP",
+        "signal_i": 34726,
+        "signal_time": "2026-05-31 07:00:00+00:00",
+        "fwd20_ret": -0.0014129282938890597,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AIXBT_USDT_SWAP",
+        "signal_i": 36706,
+        "signal_time": "2026-06-20 22:00:00+00:00",
+        "fwd20_ret": -0.004886717014660147,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AIXBT_USDT_SWAP",
+        "signal_i": 39209,
+        "signal_time": "2026-07-16 23:45:00+00:00",
+        "fwd20_ret": 0.005356186395286455,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AIXBT_USDT_SWAP",
+        "signal_i": 39304,
+        "signal_time": "2026-07-17 23:30:00+00:00",
+        "fwd20_ret": -0.003236245954692629,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AI_USDT_SWAP",
+        "signal_i": 7135,
+        "signal_time": "2026-07-12 19:45:00+00:00",
+        "fwd20_ret": -0.011760242792109299,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ALGO_USDT_SWAP",
+        "signal_i": 32661,
+        "signal_time": "2026-05-09 18:45:00+00:00",
+        "fwd20_ret": -0.015395220588235392,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ALGO_USDT_SWAP",
+        "signal_i": 35879,
+        "signal_time": "2026-06-12 07:15:00+00:00",
+        "fwd20_ret": 0.008219178082191858,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ALGO_USDT_SWAP",
+        "signal_i": 38493,
+        "signal_time": "2026-07-09 12:45:00+00:00",
+        "fwd20_ret": 0.010242524134683295,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ALGO_USDT_SWAP",
+        "signal_i": 38511,
+        "signal_time": "2026-07-09 17:15:00+00:00",
+        "fwd20_ret": -0.0018799201033956603,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ALLO_USDT_SWAP",
+        "signal_i": 17170,
+        "signal_time": "2026-05-09 13:15:00+00:00",
+        "fwd20_ret": 0.028080827245991813,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ALLO_USDT_SWAP",
+        "signal_i": 18205,
+        "signal_time": "2026-05-20 08:00:00+00:00",
+        "fwd20_ret": 0.012733547542544299,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ANIME_USDT_SWAP",
+        "signal_i": 32405,
+        "signal_time": "2026-05-08 04:00:00+00:00",
+        "fwd20_ret": 0.011548772942874708,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ANIME_USDT_SWAP",
+        "signal_i": 32571,
+        "signal_time": "2026-05-09 21:30:00+00:00",
+        "fwd20_ret": 0.0012016823552973843,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ANIME_USDT_SWAP",
+        "signal_i": 32717,
+        "signal_time": "2026-05-11 10:00:00+00:00",
+        "fwd20_ret": -0.008700696055684576,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ANIME_USDT_SWAP",
+        "signal_i": 32747,
+        "signal_time": "2026-05-11 17:30:00+00:00",
+        "fwd20_ret": -0.00214550419348547,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ANTHROPIC_USDT_SWAP",
+        "signal_i": 826,
+        "signal_time": "2026-05-16 00:00:00+00:00",
+        "fwd20_ret": -0.0002608071982787008,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ANTHROPIC_USDT_SWAP",
+        "signal_i": 957,
+        "signal_time": "2026-05-17 08:45:00+00:00",
+        "fwd20_ret": 0.010009099181073733,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ANTHROPIC_USDT_SWAP",
+        "signal_i": 1171,
+        "signal_time": "2026-05-19 14:15:00+00:00",
+        "fwd20_ret": 0.00569782731200319,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ANTHROPIC_USDT_SWAP",
+        "signal_i": 1914,
+        "signal_time": "2026-05-27 08:00:00+00:00",
+        "fwd20_ret": -0.007482721197235476,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APE_USDT_SWAP",
+        "signal_i": 32981,
+        "signal_time": "2026-05-12 04:00:00+00:00",
+        "fwd20_ret": 0.037723577235772465,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APE_USDT_SWAP",
+        "signal_i": 34432,
+        "signal_time": "2026-05-27 06:45:00+00:00",
+        "fwd20_ret": -0.019979657076431234,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APE_USDT_SWAP",
+        "signal_i": 34472,
+        "signal_time": "2026-05-27 16:45:00+00:00",
+        "fwd20_ret": -0.039482342618995525,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APE_USDT_SWAP",
+        "signal_i": 36121,
+        "signal_time": "2026-06-13 21:00:00+00:00",
+        "fwd20_ret": -0.0009361104610344784,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "API3_USDT_SWAP",
+        "signal_i": 33622,
+        "signal_time": "2026-05-19 19:15:00+00:00",
+        "fwd20_ret": -0.011983223487118,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "API3_USDT_SWAP",
+        "signal_i": 33667,
+        "signal_time": "2026-05-20 06:30:00+00:00",
+        "fwd20_ret": -0.005984440454817497,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "API3_USDT_SWAP",
+        "signal_i": 33840,
+        "signal_time": "2026-05-22 01:45:00+00:00",
+        "fwd20_ret": -0.002624671916010346,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "API3_USDT_SWAP",
+        "signal_i": 34322,
+        "signal_time": "2026-05-27 02:15:00+00:00",
+        "fwd20_ret": 0.0024752475247524774,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APR_USDT_SWAP",
+        "signal_i": 21225,
+        "signal_time": "2026-06-02 08:15:00+00:00",
+        "fwd20_ret": -0.0039999999999998925,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APR_USDT_SWAP",
+        "signal_i": 23355,
+        "signal_time": "2026-06-24 12:45:00+00:00",
+        "fwd20_ret": -0.0050709939148071426,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APR_USDT_SWAP",
+        "signal_i": 24773,
+        "signal_time": "2026-07-09 07:15:00+00:00",
+        "fwd20_ret": -0.007518796992481258,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APR_USDT_SWAP",
+        "signal_i": 24842,
+        "signal_time": "2026-07-10 00:30:00+00:00",
+        "fwd20_ret": 0.010505252626313188,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APT_USDT_SWAP",
+        "signal_i": 32572,
+        "signal_time": "2026-05-07 21:45:00+00:00",
+        "fwd20_ret": 0.013326800587947218,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APT_USDT_SWAP",
+        "signal_i": 34769,
+        "signal_time": "2026-05-30 19:00:00+00:00",
+        "fwd20_ret": -0.007620660457239636,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APT_USDT_SWAP",
+        "signal_i": 34826,
+        "signal_time": "2026-05-31 09:15:00+00:00",
+        "fwd20_ret": -0.02354688162918961,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APT_USDT_SWAP",
+        "signal_i": 35565,
+        "signal_time": "2026-06-08 02:00:00+00:00",
+        "fwd20_ret": -0.0033057851239669533,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARB_USDT_SWAP",
+        "signal_i": 32916,
+        "signal_time": "2026-05-11 11:45:00+00:00",
+        "fwd20_ret": -0.00674820750738081,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARB_USDT_SWAP",
+        "signal_i": 32945,
+        "signal_time": "2026-05-11 19:00:00+00:00",
+        "fwd20_ret": -0.005293619424054263,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARB_USDT_SWAP",
+        "signal_i": 34421,
+        "signal_time": "2026-05-27 04:00:00+00:00",
+        "fwd20_ret": 0.004444444444444473,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARB_USDT_SWAP",
+        "signal_i": 34454,
+        "signal_time": "2026-05-27 12:15:00+00:00",
+        "fwd20_ret": -0.011432719353960619,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARKM_USDT_SWAP",
+        "signal_i": 32851,
+        "signal_time": "2026-05-11 18:30:00+00:00",
+        "fwd20_ret": 0.005900533857825296,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARKM_USDT_SWAP",
+        "signal_i": 36682,
+        "signal_time": "2026-06-20 16:15:00+00:00",
+        "fwd20_ret": -0.0029145574474611635,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARKM_USDT_SWAP",
+        "signal_i": 37301,
+        "signal_time": "2026-06-27 03:00:00+00:00",
+        "fwd20_ret": 0.01546783872876345,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARKM_USDT_SWAP",
+        "signal_i": 38056,
+        "signal_time": "2026-07-04 23:45:00+00:00",
+        "fwd20_ret": -0.004820703653585889,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARM_USDT_SWAP",
+        "signal_i": 1019,
+        "signal_time": "2026-05-09 21:00:00+00:00",
+        "fwd20_ret": 0.0,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARM_USDT_SWAP",
+        "signal_i": 1078,
+        "signal_time": "2026-05-10 11:45:00+00:00",
+        "fwd20_ret": 0.0009394081728510972,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARM_USDT_SWAP",
+        "signal_i": 1732,
+        "signal_time": "2026-05-17 07:15:00+00:00",
+        "fwd20_ret": 0.007722007722007929,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARM_USDT_SWAP",
+        "signal_i": 1776,
+        "signal_time": "2026-05-17 18:15:00+00:00",
+        "fwd20_ret": -0.0024026910139356428,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARX_USDT_SWAP",
+        "signal_i": 1746,
+        "signal_time": "2026-07-10 17:00:00+00:00",
+        "fwd20_ret": 0.006165919282511201,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AR_USDT_SWAP",
+        "signal_i": 33845,
+        "signal_time": "2026-05-22 03:00:00+00:00",
+        "fwd20_ret": 0.006369426751592355,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AR_USDT_SWAP",
+        "signal_i": 36677,
+        "signal_time": "2026-06-20 15:00:00+00:00",
+        "fwd20_ret": -0.001997004493260124,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AR_USDT_SWAP",
+        "signal_i": 36890,
+        "signal_time": "2026-06-22 20:15:00+00:00",
+        "fwd20_ret": 0.03314917127071815,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AR_USDT_SWAP",
+        "signal_i": 37331,
+        "signal_time": "2026-06-27 10:30:00+00:00",
+        "fwd20_ret": -0.0010746910263299547,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ASTER_USDT_SWAP",
+        "signal_i": 21914,
+        "signal_time": "2026-05-08 11:30:00+00:00",
+        "fwd20_ret": 0.008757360712668083,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ASTER_USDT_SWAP",
+        "signal_i": 22285,
+        "signal_time": "2026-05-12 08:15:00+00:00",
+        "fwd20_ret": -0.009802487198244392,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ASTER_USDT_SWAP",
+        "signal_i": 22433,
+        "signal_time": "2026-05-13 21:15:00+00:00",
+        "fwd20_ret": -0.0008928571428572507,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ASTER_USDT_SWAP",
+        "signal_i": 22703,
+        "signal_time": "2026-05-16 16:45:00+00:00",
+        "fwd20_ret": -0.002839635331041701,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ASTS_USDT_SWAP",
+        "signal_i": 1203,
+        "signal_time": "2026-06-15 00:00:00+00:00",
+        "fwd20_ret": 0.013704994192799136,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ASTS_USDT_SWAP",
+        "signal_i": 1307,
+        "signal_time": "2026-06-16 02:00:00+00:00",
+        "fwd20_ret": 0.021734130634774695,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ASTS_USDT_SWAP",
+        "signal_i": 1516,
+        "signal_time": "2026-06-18 06:15:00+00:00",
+        "fwd20_ret": 0.00046419867703373363,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ASTS_USDT_SWAP",
+        "signal_i": 1732,
+        "signal_time": "2026-06-20 12:15:00+00:00",
+        "fwd20_ret": -0.004619802721937849,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ATH_USDT_SWAP",
+        "signal_i": 33633,
+        "signal_time": "2026-05-19 22:00:00+00:00",
+        "fwd20_ret": -0.005491676677535584,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ATH_USDT_SWAP",
+        "signal_i": 33668,
+        "signal_time": "2026-05-20 06:45:00+00:00",
+        "fwd20_ret": 0.0003407735559721736,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ATH_USDT_SWAP",
+        "signal_i": 34628,
+        "signal_time": "2026-05-30 06:45:00+00:00",
+        "fwd20_ret": -0.000839771582129667,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ATH_USDT_SWAP",
+        "signal_i": 34693,
+        "signal_time": "2026-05-30 23:00:00+00:00",
+        "fwd20_ret": 0.013914814186322788,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ATOM_USDT_SWAP",
+        "signal_i": 33567,
+        "signal_time": "2026-05-18 06:30:00+00:00",
+        "fwd20_ret": -0.011175898931000794,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ATOM_USDT_SWAP",
+        "signal_i": 34715,
+        "signal_time": "2026-05-30 05:30:00+00:00",
+        "fwd20_ret": 0.007916872835230127,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ATOM_USDT_SWAP",
+        "signal_i": 36791,
+        "signal_time": "2026-06-20 20:30:00+00:00",
+        "fwd20_ret": -0.0050000000000001155,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ATOM_USDT_SWAP",
+        "signal_i": 36821,
+        "signal_time": "2026-06-21 04:00:00+00:00",
+        "fwd20_ret": 0.0011235955056179137,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AT_USDT_SWAP",
+        "signal_i": 18188,
+        "signal_time": "2026-05-07 21:00:00+00:00",
+        "fwd20_ret": 0.0,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AT_USDT_SWAP",
+        "signal_i": 18226,
+        "signal_time": "2026-05-08 06:30:00+00:00",
+        "fwd20_ret": 0.0018181818181817189,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AT_USDT_SWAP",
+        "signal_i": 18737,
+        "signal_time": "2026-05-13 14:15:00+00:00",
+        "fwd20_ret": -0.005586592178770888,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AT_USDT_SWAP",
+        "signal_i": 18871,
+        "signal_time": "2026-05-14 23:45:00+00:00",
+        "fwd20_ret": 0.013190954773869334,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AUCTION_USDT_SWAP",
+        "signal_i": 33328,
+        "signal_time": "2026-05-16 18:00:00+00:00",
+        "fwd20_ret": -0.00020889910173393922,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AUCTION_USDT_SWAP",
+        "signal_i": 33381,
+        "signal_time": "2026-05-17 07:15:00+00:00",
+        "fwd20_ret": -0.0025120368432071105,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AUCTION_USDT_SWAP",
+        "signal_i": 33697,
+        "signal_time": "2026-05-20 14:15:00+00:00",
+        "fwd20_ret": 0.0071428571428571175,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AUCTION_USDT_SWAP",
+        "signal_i": 33862,
+        "signal_time": "2026-05-22 07:30:00+00:00",
+        "fwd20_ret": -0.00020999580008385088,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 3,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AVAX_USDT_SWAP",
+        "signal_i": 32597,
+        "signal_time": "2026-05-08 04:00:00+00:00",
+        "fwd20_ret": 0.006942253076680505,
+        "full": {
+          "hit": false,
+          "n_boxes": 3,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AVAX_USDT_SWAP",
+        "signal_i": 32783,
+        "signal_time": "2026-05-10 02:30:00+00:00",
+        "fwd20_ret": 0.00878610381741085,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AVAX_USDT_SWAP",
+        "signal_i": 32915,
+        "signal_time": "2026-05-11 11:30:00+00:00",
+        "fwd20_ret": 0.0037571682815897844,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AVAX_USDT_SWAP",
+        "signal_i": 33511,
+        "signal_time": "2026-05-17 16:30:00+00:00",
+        "fwd20_ret": 0.0020432304548876346,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AVNT_USDT_SWAP",
+        "signal_i": 22196,
+        "signal_time": "2026-05-11 20:30:00+00:00",
+        "fwd20_ret": -0.01768292682926842,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AVNT_USDT_SWAP",
+        "signal_i": 22968,
+        "signal_time": "2026-05-19 21:30:00+00:00",
+        "fwd20_ret": -0.006651884700665245,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AVNT_USDT_SWAP",
+        "signal_i": 24986,
+        "signal_time": "2026-06-09 22:00:00+00:00",
+        "fwd20_ret": -0.009832841691248762,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AVNT_USDT_SWAP",
+        "signal_i": 26055,
+        "signal_time": "2026-06-21 01:15:00+00:00",
+        "fwd20_ret": -0.0063405797101449,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AXS_USDT_SWAP",
+        "signal_i": 32479,
+        "signal_time": "2026-05-07 21:45:00+00:00",
+        "fwd20_ret": -0.006682161533991926,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AXS_USDT_SWAP",
+        "signal_i": 32843,
+        "signal_time": "2026-05-11 16:45:00+00:00",
+        "fwd20_ret": 0.0042918454935623185,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AXS_USDT_SWAP",
+        "signal_i": 33622,
+        "signal_time": "2026-05-19 19:30:00+00:00",
+        "fwd20_ret": -0.00775391956373539,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AXS_USDT_SWAP",
+        "signal_i": 33640,
+        "signal_time": "2026-05-20 00:00:00+00:00",
+        "fwd20_ret": 0.014712208552008832,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AXTI_USDT_SWAP",
+        "signal_i": 1140,
+        "signal_time": "2026-06-28 06:30:00+00:00",
+        "fwd20_ret": -0.0030756326017055136,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AXTI_USDT_SWAP",
+        "signal_i": 1722,
+        "signal_time": "2026-07-04 08:00:00+00:00",
+        "fwd20_ret": 0.002822982397874485,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AXTI_USDT_SWAP",
+        "signal_i": 1759,
+        "signal_time": "2026-07-04 17:15:00+00:00",
+        "fwd20_ret": 0.001332001332001287,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AXTI_USDT_SWAP",
+        "signal_i": 1786,
+        "signal_time": "2026-07-05 00:00:00+00:00",
+        "fwd20_ret": 0.006309148264984188,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AZTEC_USDT_SWAP",
+        "signal_i": 12050,
+        "signal_time": "2026-06-16 23:00:00+00:00",
+        "fwd20_ret": -0.0005980861244019309,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AZTEC_USDT_SWAP",
+        "signal_i": 13080,
+        "signal_time": "2026-06-27 16:30:00+00:00",
+        "fwd20_ret": -0.02633559066967639,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AZTEC_USDT_SWAP",
+        "signal_i": 15160,
+        "signal_time": "2026-07-19 08:30:00+00:00",
+        "fwd20_ret": -0.0022848438690021844,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AZTEC_USDT_SWAP",
+        "signal_i": 15516,
+        "signal_time": "2026-07-23 01:30:00+00:00",
+        "fwd20_ret": -0.004282655246252598,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "A_USDT_SWAP",
+        "signal_i": 32490,
+        "signal_time": "2026-05-07 23:45:00+00:00",
+        "fwd20_ret": 0.0070106254792419165,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "A_USDT_SWAP",
+        "signal_i": 32832,
+        "signal_time": "2026-05-11 13:15:00+00:00",
+        "fwd20_ret": 0.005270773046713417,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "A_USDT_SWAP",
+        "signal_i": 33634,
+        "signal_time": "2026-05-19 21:45:00+00:00",
+        "fwd20_ret": -0.0004988775255674316,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "A_USDT_SWAP",
+        "signal_i": 33667,
+        "signal_time": "2026-05-20 06:00:00+00:00",
+        "fwd20_ret": -0.003962357602773636,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BABY_USDT_SWAP",
+        "signal_i": 33423,
+        "signal_time": "2026-05-17 18:00:00+00:00",
+        "fwd20_ret": -0.022257551669316422,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BABY_USDT_SWAP",
+        "signal_i": 38471,
+        "signal_time": "2026-07-09 08:00:00+00:00",
+        "fwd20_ret": 0.0030007501875468634,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BABY_USDT_SWAP",
+        "signal_i": 38504,
+        "signal_time": "2026-07-09 16:15:00+00:00",
+        "fwd20_ret": -0.0007547169811320531,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BABY_USDT_SWAP",
+        "signal_i": 38523,
+        "signal_time": "2026-07-09 21:00:00+00:00",
+        "fwd20_ret": 0.015837104072398134,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BAND_USDT_SWAP",
+        "signal_i": 32997,
+        "signal_time": "2026-05-13 07:30:00+00:00",
+        "fwd20_ret": -0.02962962962962956,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BAND_USDT_SWAP",
+        "signal_i": 33690,
+        "signal_time": "2026-05-20 12:45:00+00:00",
+        "fwd20_ret": 0.012333497779970504,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      }
+    ],
+    "B": [
+      {
+        "symbol": "0G_USDT_SWAP",
+        "signal_i": 21847,
+        "signal_time": "2026-05-08 00:15:00+00:00",
+        "fwd20_ret": 0.00828381055285421,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "0G_USDT_SWAP",
+        "signal_i": 21904,
+        "signal_time": "2026-05-08 14:30:00+00:00",
+        "fwd20_ret": 0.009989297181591139,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "0G_USDT_SWAP",
+        "signal_i": 22948,
+        "signal_time": "2026-05-19 11:30:00+00:00",
+        "fwd20_ret": -0.0016528925619834212,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "0G_USDT_SWAP",
+        "signal_i": 25260,
+        "signal_time": "2026-06-12 13:30:00+00:00",
+        "fwd20_ret": 0.01041666666666674,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "1INCH_USDT_SWAP",
+        "signal_i": 32704,
+        "signal_time": "2026-05-10 05:15:00+00:00",
+        "fwd20_ret": 0.0035238841033673474,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "1INCH_USDT_SWAP",
+        "signal_i": 34559,
+        "signal_time": "2026-05-29 13:00:00+00:00",
+        "fwd20_ret": 0.024686983227025783,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "1INCH_USDT_SWAP",
+        "signal_i": 36929,
+        "signal_time": "2026-06-23 05:30:00+00:00",
+        "fwd20_ret": -0.03681151397730431,
+        "full": {
+          "hit": true,
+          "n_boxes": 1,
+          "conf": 0.5959622859954834
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "1INCH_USDT_SWAP",
+        "signal_i": 37493,
+        "signal_time": "2026-06-29 02:30:00+00:00",
+        "fwd20_ret": 0.00014573010784024731,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "2Z_USDT_SWAP",
+        "signal_i": 21081,
+        "signal_time": "2026-05-10 03:15:00+00:00",
+        "fwd20_ret": 0.018527741806952935,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "2Z_USDT_SWAP",
+        "signal_i": 21921,
+        "signal_time": "2026-05-18 21:15:00+00:00",
+        "fwd20_ret": 0.013036637446617094,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": true,
+          "n_boxes": 1,
+          "conf": 0.317638099193573
+        }
+      },
+      {
+        "symbol": "2Z_USDT_SWAP",
+        "signal_i": 24043,
+        "signal_time": "2026-06-09 23:45:00+00:00",
+        "fwd20_ret": -0.01898910918737784,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "2Z_USDT_SWAP",
+        "signal_i": 24198,
+        "signal_time": "2026-06-11 14:30:00+00:00",
+        "fwd20_ret": 0.024197032982860467,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AAVE_USDT_SWAP",
+        "signal_i": 33197,
+        "signal_time": "2026-05-14 10:00:00+00:00",
+        "fwd20_ret": 0.024870466321243567,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AAVE_USDT_SWAP",
+        "signal_i": 33674,
+        "signal_time": "2026-05-19 09:15:00+00:00",
+        "fwd20_ret": -0.00576662143826312,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AAVE_USDT_SWAP",
+        "signal_i": 33970,
+        "signal_time": "2026-05-22 11:15:00+00:00",
+        "fwd20_ret": -0.0024937655860348684,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AAVE_USDT_SWAP",
+        "signal_i": 33995,
+        "signal_time": "2026-05-22 17:30:00+00:00",
+        "fwd20_ret": -0.02275815217391297,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACH_USDT_SWAP",
+        "signal_i": 32517,
+        "signal_time": "2026-05-08 06:30:00+00:00",
+        "fwd20_ret": 0.05310173697270493,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACH_USDT_SWAP",
+        "signal_i": 32792,
+        "signal_time": "2026-05-11 03:15:00+00:00",
+        "fwd20_ret": -0.007253269916765781,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACH_USDT_SWAP",
+        "signal_i": 32882,
+        "signal_time": "2026-05-12 01:45:00+00:00",
+        "fwd20_ret": 0.007048984468339237,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACH_USDT_SWAP",
+        "signal_i": 32913,
+        "signal_time": "2026-05-12 09:30:00+00:00",
+        "fwd20_ret": -0.03294873319852498,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACT_USDT_SWAP",
+        "signal_i": 33722,
+        "signal_time": "2026-05-20 19:45:00+00:00",
+        "fwd20_ret": 0.0060606060606061,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACT_USDT_SWAP",
+        "signal_i": 33893,
+        "signal_time": "2026-05-22 14:30:00+00:00",
+        "fwd20_ret": -0.03609022556390973,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACT_USDT_SWAP",
+        "signal_i": 35975,
+        "signal_time": "2026-06-13 07:00:00+00:00",
+        "fwd20_ret": 0.01843547583457883,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACT_USDT_SWAP",
+        "signal_i": 38516,
+        "signal_time": "2026-07-09 18:15:00+00:00",
+        "fwd20_ret": 0.017027514659449627,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACU_USDT_SWAP",
+        "signal_i": 11144,
+        "signal_time": "2026-05-19 09:00:00+00:00",
+        "fwd20_ret": -0.026327838827838734,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACU_USDT_SWAP",
+        "signal_i": 13768,
+        "signal_time": "2026-06-15 17:00:00+00:00",
+        "fwd20_ret": -0.013800025090954793,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACU_USDT_SWAP",
+        "signal_i": 14920,
+        "signal_time": "2026-06-27 17:00:00+00:00",
+        "fwd20_ret": -0.002722215646822068,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACU_USDT_SWAP",
+        "signal_i": 16372,
+        "signal_time": "2026-07-12 20:00:00+00:00",
+        "fwd20_ret": -0.006582482536270917,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ADA_USDT_SWAP",
+        "signal_i": 32919,
+        "signal_time": "2026-05-11 12:30:00+00:00",
+        "fwd20_ret": 0.01075268817204278,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ADA_USDT_SWAP",
+        "signal_i": 32963,
+        "signal_time": "2026-05-11 23:30:00+00:00",
+        "fwd20_ret": -0.010691375623663624,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ADA_USDT_SWAP",
+        "signal_i": 33678,
+        "signal_time": "2026-05-19 10:15:00+00:00",
+        "fwd20_ret": -0.0064102564102563875,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ADA_USDT_SWAP",
+        "signal_i": 33989,
+        "signal_time": "2026-05-22 16:00:00+00:00",
+        "fwd20_ret": -0.01284624648735444,
+        "full": {
+          "hit": true,
+          "n_boxes": 2,
+          "conf": 0.787237823009491
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AERO_USDT_SWAP",
+        "signal_i": 33231,
+        "signal_time": "2026-06-14 10:00:00+00:00",
+        "fwd20_ret": -0.00974930362116988,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AERO_USDT_SWAP",
+        "signal_i": 35336,
+        "signal_time": "2026-07-06 08:15:00+00:00",
+        "fwd20_ret": -0.04385499557913364,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AERO_USDT_SWAP",
+        "signal_i": 37266,
+        "signal_time": "2026-07-26 10:45:00+00:00",
+        "fwd20_ret": 0.01625030317729803,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AERO_USDT_SWAP",
+        "signal_i": 37304,
+        "signal_time": "2026-07-26 20:15:00+00:00",
+        "fwd20_ret": 0.032406287787182686,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AEVO_USDT_SWAP",
+        "signal_i": 33734,
+        "signal_time": "2026-05-20 23:00:00+00:00",
+        "fwd20_ret": 0.015984405458089768,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AEVO_USDT_SWAP",
+        "signal_i": 33868,
+        "signal_time": "2026-05-22 08:30:00+00:00",
+        "fwd20_ret": 0.016475095785440708,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AEVO_USDT_SWAP",
+        "signal_i": 34922,
+        "signal_time": "2026-06-02 08:00:00+00:00",
+        "fwd20_ret": -0.01362510322047883,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AEVO_USDT_SWAP",
+        "signal_i": 35940,
+        "signal_time": "2026-06-12 22:30:00+00:00",
+        "fwd20_ret": 0.009783728115345003,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AGLD_USDT_SWAP",
+        "signal_i": 32542,
+        "signal_time": "2026-05-08 13:00:00+00:00",
+        "fwd20_ret": 0.03947368421052633,
+        "full": {
+          "hit": false,
+          "n_boxes": 3,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AGLD_USDT_SWAP",
+        "signal_i": 33896,
+        "signal_time": "2026-05-22 15:30:00+00:00",
+        "fwd20_ret": -0.02209492635024557,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AGLD_USDT_SWAP",
+        "signal_i": 34743,
+        "signal_time": "2026-05-31 11:15:00+00:00",
+        "fwd20_ret": -0.014938886373924931,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AGLD_USDT_SWAP",
+        "signal_i": 35552,
+        "signal_time": "2026-06-08 21:30:00+00:00",
+        "fwd20_ret": -0.06071428571428572,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AIXBT_USDT_SWAP",
+        "signal_i": 32575,
+        "signal_time": "2026-05-08 21:15:00+00:00",
+        "fwd20_ret": 0.037730330505995946,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AIXBT_USDT_SWAP",
+        "signal_i": 34688,
+        "signal_time": "2026-05-30 21:30:00+00:00",
+        "fwd20_ret": -0.010150507525376384,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AIXBT_USDT_SWAP",
+        "signal_i": 35670,
+        "signal_time": "2026-06-10 03:00:00+00:00",
+        "fwd20_ret": -0.007918025151373964,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AIXBT_USDT_SWAP",
+        "signal_i": 36373,
+        "signal_time": "2026-06-17 10:45:00+00:00",
+        "fwd20_ret": 0.03791469194312791,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AI_USDT_SWAP",
+        "signal_i": 5721,
+        "signal_time": "2026-06-28 02:15:00+00:00",
+        "fwd20_ret": 0.0095628415300546,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AI_USDT_SWAP",
+        "signal_i": 7112,
+        "signal_time": "2026-07-12 14:00:00+00:00",
+        "fwd20_ret": 0.009531071292413262,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AI_USDT_SWAP",
+        "signal_i": 7149,
+        "signal_time": "2026-07-12 23:15:00+00:00",
+        "fwd20_ret": -0.06595905989385908,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AI_USDT_SWAP",
+        "signal_i": 7808,
+        "signal_time": "2026-07-19 20:00:00+00:00",
+        "fwd20_ret": -0.0012668918918918859,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ALGO_USDT_SWAP",
+        "signal_i": 32776,
+        "signal_time": "2026-05-10 23:30:00+00:00",
+        "fwd20_ret": -0.044615978386723265,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ALGO_USDT_SWAP",
+        "signal_i": 33011,
+        "signal_time": "2026-05-13 10:15:00+00:00",
+        "fwd20_ret": -0.04504724666014981,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ALGO_USDT_SWAP",
+        "signal_i": 33571,
+        "signal_time": "2026-05-19 06:15:00+00:00",
+        "fwd20_ret": 0.012516105282532664,
+        "full": {
+          "hit": true,
+          "n_boxes": 1,
+          "conf": 0.5877291560173035
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ALGO_USDT_SWAP",
+        "signal_i": 35513,
+        "signal_time": "2026-06-08 11:45:00+00:00",
+        "fwd20_ret": -0.01186189366659618,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ALLO_USDT_SWAP",
+        "signal_i": 17281,
+        "signal_time": "2026-05-10 17:00:00+00:00",
+        "fwd20_ret": -0.06698332687088016,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ALLO_USDT_SWAP",
+        "signal_i": 17724,
+        "signal_time": "2026-05-15 07:45:00+00:00",
+        "fwd20_ret": -0.04705355142280987,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ALLO_USDT_SWAP",
+        "signal_i": 17967,
+        "signal_time": "2026-05-17 20:30:00+00:00",
+        "fwd20_ret": -0.034234652431240464,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ALLO_USDT_SWAP",
+        "signal_i": 18112,
+        "signal_time": "2026-05-19 08:45:00+00:00",
+        "fwd20_ret": 0.035805007862586224,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ANIME_USDT_SWAP",
+        "signal_i": 32904,
+        "signal_time": "2026-05-13 08:45:00+00:00",
+        "fwd20_ret": -0.032453134448700016,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ANIME_USDT_SWAP",
+        "signal_i": 33319,
+        "signal_time": "2026-05-17 16:30:00+00:00",
+        "fwd20_ret": -0.0006744604316545333,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ANIME_USDT_SWAP",
+        "signal_i": 33481,
+        "signal_time": "2026-05-19 09:00:00+00:00",
+        "fwd20_ret": -0.005769674590353047,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ANIME_USDT_SWAP",
+        "signal_i": 33708,
+        "signal_time": "2026-05-21 17:45:00+00:00",
+        "fwd20_ret": 0.0004550625711035039,
+        "full": {
+          "hit": true,
+          "n_boxes": 1,
+          "conf": 0.4414108991622925
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ANTHROPIC_USDT_SWAP",
+        "signal_i": 870,
+        "signal_time": "2026-05-16 11:00:00+00:00",
+        "fwd20_ret": 0.018246753246753178,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ANTHROPIC_USDT_SWAP",
+        "signal_i": 1018,
+        "signal_time": "2026-05-18 00:00:00+00:00",
+        "fwd20_ret": 0.026302217637957703,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ANTHROPIC_USDT_SWAP",
+        "signal_i": 2250,
+        "signal_time": "2026-05-30 20:00:00+00:00",
+        "fwd20_ret": 0.01820353831275945,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ANTHROPIC_USDT_SWAP",
+        "signal_i": 2391,
+        "signal_time": "2026-06-01 07:15:00+00:00",
+        "fwd20_ret": 0.010197368421052566,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APE_USDT_SWAP",
+        "signal_i": 33074,
+        "signal_time": "2026-05-13 03:15:00+00:00",
+        "fwd20_ret": 0.018142327839529626,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APE_USDT_SWAP",
+        "signal_i": 33745,
+        "signal_time": "2026-05-20 03:00:00+00:00",
+        "fwd20_ret": 0.020169252468265064,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APE_USDT_SWAP",
+        "signal_i": 34485,
+        "signal_time": "2026-05-27 20:00:00+00:00",
+        "fwd20_ret": -0.03487946068733061,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APE_USDT_SWAP",
+        "signal_i": 34835,
+        "signal_time": "2026-05-31 11:30:00+00:00",
+        "fwd20_ret": -0.03264604810996574,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "API3_USDT_SWAP",
+        "signal_i": 32818,
+        "signal_time": "2026-05-11 10:15:00+00:00",
+        "fwd20_ret": 0.009142242538316747,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "API3_USDT_SWAP",
+        "signal_i": 33166,
+        "signal_time": "2026-05-15 01:15:00+00:00",
+        "fwd20_ret": -0.02289452166802952,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "API3_USDT_SWAP",
+        "signal_i": 33444,
+        "signal_time": "2026-05-17 22:45:00+00:00",
+        "fwd20_ret": -0.017925359976491362,
+        "full": {
+          "hit": true,
+          "n_boxes": 1,
+          "conf": 0.631353497505188
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "API3_USDT_SWAP",
+        "signal_i": 33694,
+        "signal_time": "2026-05-20 13:15:00+00:00",
+        "fwd20_ret": 0.014449127031908482,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APR_USDT_SWAP",
+        "signal_i": 20058,
+        "signal_time": "2026-05-21 04:30:00+00:00",
+        "fwd20_ret": 0.050405561993047465,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APR_USDT_SWAP",
+        "signal_i": 22472,
+        "signal_time": "2026-06-15 08:00:00+00:00",
+        "fwd20_ret": 0.015292190060076427,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APR_USDT_SWAP",
+        "signal_i": 23374,
+        "signal_time": "2026-06-24 17:30:00+00:00",
+        "fwd20_ret": 0.03450025367833587,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APR_USDT_SWAP",
+        "signal_i": 23550,
+        "signal_time": "2026-06-26 13:30:00+00:00",
+        "fwd20_ret": -0.0359397765905779,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APT_USDT_SWAP",
+        "signal_i": 34491,
+        "signal_time": "2026-05-27 21:30:00+00:00",
+        "fwd20_ret": -0.006190326303640692,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APT_USDT_SWAP",
+        "signal_i": 34998,
+        "signal_time": "2026-06-02 04:15:00+00:00",
+        "fwd20_ret": -0.03668449197860979,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APT_USDT_SWAP",
+        "signal_i": 36527,
+        "signal_time": "2026-06-18 02:30:00+00:00",
+        "fwd20_ret": -0.02641002685765448,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APT_USDT_SWAP",
+        "signal_i": 36716,
+        "signal_time": "2026-06-20 01:45:00+00:00",
+        "fwd20_ret": 0.011142948105698824,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARB_USDT_SWAP",
+        "signal_i": 33667,
+        "signal_time": "2026-05-19 07:30:00+00:00",
+        "fwd20_ret": -0.018578489858530722,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARB_USDT_SWAP",
+        "signal_i": 34480,
+        "signal_time": "2026-05-27 18:45:00+00:00",
+        "fwd20_ret": -0.02066569129480611,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARB_USDT_SWAP",
+        "signal_i": 34773,
+        "signal_time": "2026-05-30 20:00:00+00:00",
+        "fwd20_ret": -0.006875477463712754,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARB_USDT_SWAP",
+        "signal_i": 34812,
+        "signal_time": "2026-05-31 05:45:00+00:00",
+        "fwd20_ret": -0.019339396840593714,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARKM_USDT_SWAP",
+        "signal_i": 38571,
+        "signal_time": "2026-07-10 08:30:00+00:00",
+        "fwd20_ret": 0.02293333333333325,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARKM_USDT_SWAP",
+        "signal_i": 38705,
+        "signal_time": "2026-07-11 18:00:00+00:00",
+        "fwd20_ret": -0.013660245183887865,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARKM_USDT_SWAP",
+        "signal_i": 39607,
+        "signal_time": "2026-07-21 03:30:00+00:00",
+        "fwd20_ret": 0.03952909647779479,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARKM_USDT_SWAP",
+        "signal_i": 40593,
+        "signal_time": "2026-07-31 10:00:00+00:00",
+        "fwd20_ret": 0.035277866326639096,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARM_USDT_SWAP",
+        "signal_i": 2477,
+        "signal_time": "2026-05-25 01:30:00+00:00",
+        "fwd20_ret": 0.006109324758842405,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARM_USDT_SWAP",
+        "signal_i": 5203,
+        "signal_time": "2026-06-22 11:00:00+00:00",
+        "fwd20_ret": -0.05817174515235457,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARM_USDT_SWAP",
+        "signal_i": 6553,
+        "signal_time": "2026-07-06 12:30:00+00:00",
+        "fwd20_ret": -0.008865030674846563,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARM_USDT_SWAP",
+        "signal_i": 6586,
+        "signal_time": "2026-07-06 20:45:00+00:00",
+        "fwd20_ret": -0.027005239822652127,
+        "full": {
+          "hit": true,
+          "n_boxes": 1,
+          "conf": 0.6131144165992737
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARX_USDT_SWAP",
+        "signal_i": 1187,
+        "signal_time": "2026-07-04 21:15:00+00:00",
+        "fwd20_ret": -0.007078810759792331,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARX_USDT_SWAP",
+        "signal_i": 2839,
+        "signal_time": "2026-07-22 02:15:00+00:00",
+        "fwd20_ret": 0.02645161290322573,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AR_USDT_SWAP",
+        "signal_i": 32784,
+        "signal_time": "2026-05-11 01:45:00+00:00",
+        "fwd20_ret": -0.026167471819645738,
+        "full": {
+          "hit": true,
+          "n_boxes": 1,
+          "conf": 0.44345730543136597
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AR_USDT_SWAP",
+        "signal_i": 35913,
+        "signal_time": "2026-06-12 16:00:00+00:00",
+        "fwd20_ret": 0.006937033084311484,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AR_USDT_SWAP",
+        "signal_i": 36587,
+        "signal_time": "2026-06-19 16:30:00+00:00",
+        "fwd20_ret": -0.008487269096355554,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AR_USDT_SWAP",
+        "signal_i": 36709,
+        "signal_time": "2026-06-20 23:00:00+00:00",
+        "fwd20_ret": 0.0,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ASTER_USDT_SWAP",
+        "signal_i": 22396,
+        "signal_time": "2026-05-13 12:00:00+00:00",
+        "fwd20_ret": -0.0005955039452135713,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ASTER_USDT_SWAP",
+        "signal_i": 22662,
+        "signal_time": "2026-05-16 06:30:00+00:00",
+        "fwd20_ret": -0.008704787633198263,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ASTER_USDT_SWAP",
+        "signal_i": 22822,
+        "signal_time": "2026-05-17 22:30:00+00:00",
+        "fwd20_ret": -0.017978546608249046,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ASTER_USDT_SWAP",
+        "signal_i": 24605,
+        "signal_time": "2026-06-05 12:15:00+00:00",
+        "fwd20_ret": -0.06185722928009685,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ASTS_USDT_SWAP",
+        "signal_i": 1529,
+        "signal_time": "2026-06-18 09:30:00+00:00",
+        "fwd20_ret": -0.09143185738930426,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ASTS_USDT_SWAP",
+        "signal_i": 1917,
+        "signal_time": "2026-06-22 10:30:00+00:00",
+        "fwd20_ret": -0.041997729852440546,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ASTS_USDT_SWAP",
+        "signal_i": 3027,
+        "signal_time": "2026-07-04 00:00:00+00:00",
+        "fwd20_ret": 0.010649380715360701,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ASTS_USDT_SWAP",
+        "signal_i": 3940,
+        "signal_time": "2026-07-13 12:15:00+00:00",
+        "fwd20_ret": -0.06629603891591374,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ATH_USDT_SWAP",
+        "signal_i": 33444,
+        "signal_time": "2026-05-17 22:45:00+00:00",
+        "fwd20_ret": -0.02126573664511744,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ATH_USDT_SWAP",
+        "signal_i": 34600,
+        "signal_time": "2026-05-29 23:45:00+00:00",
+        "fwd20_ret": -0.0038746630727763964,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ATH_USDT_SWAP",
+        "signal_i": 34719,
+        "signal_time": "2026-05-31 05:30:00+00:00",
+        "fwd20_ret": -0.02425966203781149,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ATH_USDT_SWAP",
+        "signal_i": 35901,
+        "signal_time": "2026-06-12 13:00:00+00:00",
+        "fwd20_ret": -0.011304544426859575,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ATOM_USDT_SWAP",
+        "signal_i": 33717,
+        "signal_time": "2026-05-19 20:00:00+00:00",
+        "fwd20_ret": -0.01895043731778412,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ATOM_USDT_SWAP",
+        "signal_i": 34772,
+        "signal_time": "2026-05-30 19:45:00+00:00",
+        "fwd20_ret": -0.008862629246676579,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ATOM_USDT_SWAP",
+        "signal_i": 36306,
+        "signal_time": "2026-06-15 19:15:00+00:00",
+        "fwd20_ret": -0.0015329586101175963,
+        "full": {
+          "hit": true,
+          "n_boxes": 1,
+          "conf": 0.3959895670413971
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ATOM_USDT_SWAP",
+        "signal_i": 36487,
+        "signal_time": "2026-06-17 16:30:00+00:00",
+        "fwd20_ret": -0.05408112168252388,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AT_USDT_SWAP",
+        "signal_i": 18349,
+        "signal_time": "2026-05-09 13:15:00+00:00",
+        "fwd20_ret": -0.003013863773357439,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AT_USDT_SWAP",
+        "signal_i": 18455,
+        "signal_time": "2026-05-10 15:45:00+00:00",
+        "fwd20_ret": -0.02058111380145289,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AT_USDT_SWAP",
+        "signal_i": 19098,
+        "signal_time": "2026-05-17 08:30:00+00:00",
+        "fwd20_ret": -0.012158054711246202,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AT_USDT_SWAP",
+        "signal_i": 23301,
+        "signal_time": "2026-06-30 03:15:00+00:00",
+        "fwd20_ret": -0.020194986072423537,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AUCTION_USDT_SWAP",
+        "signal_i": 32509,
+        "signal_time": "2026-05-08 05:15:00+00:00",
+        "fwd20_ret": -0.004029820672980189,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AUCTION_USDT_SWAP",
+        "signal_i": 32550,
+        "signal_time": "2026-05-08 15:30:00+00:00",
+        "fwd20_ret": 0.01853717509570818,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AUCTION_USDT_SWAP",
+        "signal_i": 32788,
+        "signal_time": "2026-05-11 03:00:00+00:00",
+        "fwd20_ret": -0.009197164207702668,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AUCTION_USDT_SWAP",
+        "signal_i": 33014,
+        "signal_time": "2026-05-13 11:30:00+00:00",
+        "fwd20_ret": -0.024140012070006045,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AVAX_USDT_SWAP",
+        "signal_i": 32540,
+        "signal_time": "2026-05-07 13:45:00+00:00",
+        "fwd20_ret": -0.003148945103390255,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AVAX_USDT_SWAP",
+        "signal_i": 32964,
+        "signal_time": "2026-05-11 23:45:00+00:00",
+        "fwd20_ret": -0.01036525172754199,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AVAX_USDT_SWAP",
+        "signal_i": 34643,
+        "signal_time": "2026-05-29 11:30:00+00:00",
+        "fwd20_ret": 0.008676056338028149,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AVAX_USDT_SWAP",
+        "signal_i": 34993,
+        "signal_time": "2026-06-02 03:00:00+00:00",
+        "fwd20_ret": -0.011775362318840688,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AVNT_USDT_SWAP",
+        "signal_i": 22758,
+        "signal_time": "2026-05-17 17:00:00+00:00",
+        "fwd20_ret": 0.0014409221902018654,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AVNT_USDT_SWAP",
+        "signal_i": 25001,
+        "signal_time": "2026-06-10 01:45:00+00:00",
+        "fwd20_ret": 0.06299212598425208,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AVNT_USDT_SWAP",
+        "signal_i": 25760,
+        "signal_time": "2026-06-17 23:30:00+00:00",
+        "fwd20_ret": -0.02530541012216403,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AVNT_USDT_SWAP",
+        "signal_i": 26781,
+        "signal_time": "2026-06-28 14:45:00+00:00",
+        "fwd20_ret": -0.02645502645502651,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AXS_USDT_SWAP",
+        "signal_i": 32776,
+        "signal_time": "2026-05-11 00:00:00+00:00",
+        "fwd20_ret": -0.015935141179759693,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AXS_USDT_SWAP",
+        "signal_i": 32871,
+        "signal_time": "2026-05-11 23:45:00+00:00",
+        "fwd20_ret": -0.022763885970441988,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AXS_USDT_SWAP",
+        "signal_i": 33664,
+        "signal_time": "2026-05-20 06:00:00+00:00",
+        "fwd20_ret": 0.006511627906976569,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AXS_USDT_SWAP",
+        "signal_i": 34888,
+        "signal_time": "2026-06-02 00:00:00+00:00",
+        "fwd20_ret": -0.002984565532531791,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AXTI_USDT_SWAP",
+        "signal_i": 1160,
+        "signal_time": "2026-06-28 11:30:00+00:00",
+        "fwd20_ret": -0.02131538353667084,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AZTEC_USDT_SWAP",
+        "signal_i": 11246,
+        "signal_time": "2026-06-08 14:00:00+00:00",
+        "fwd20_ret": 0.010712035286704502,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AZTEC_USDT_SWAP",
+        "signal_i": 12518,
+        "signal_time": "2026-06-21 20:00:00+00:00",
+        "fwd20_ret": -0.007817589576547213,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AZTEC_USDT_SWAP",
+        "signal_i": 13225,
+        "signal_time": "2026-06-29 04:45:00+00:00",
+        "fwd20_ret": -0.0007680491551459445,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AZTEC_USDT_SWAP",
+        "signal_i": 13401,
+        "signal_time": "2026-07-01 00:45:00+00:00",
+        "fwd20_ret": 0.02036021926389986,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "A_USDT_SWAP",
+        "signal_i": 33778,
+        "signal_time": "2026-05-21 09:45:00+00:00",
+        "fwd20_ret": -0.0020995430406324234,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "A_USDT_SWAP",
+        "signal_i": 34262,
+        "signal_time": "2026-05-26 10:45:00+00:00",
+        "fwd20_ret": -0.007002625984744326,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "A_USDT_SWAP",
+        "signal_i": 34910,
+        "signal_time": "2026-06-02 04:45:00+00:00",
+        "fwd20_ret": -0.01707930623593279,
+        "full": {
+          "hit": true,
+          "n_boxes": 1,
+          "conf": 0.40515634417533875
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "A_USDT_SWAP",
+        "signal_i": 36323,
+        "signal_time": "2026-06-16 22:00:00+00:00",
+        "fwd20_ret": 0.007482993197279075,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BABY_USDT_SWAP",
+        "signal_i": 33016,
+        "signal_time": "2026-05-13 12:15:00+00:00",
+        "fwd20_ret": -0.0379603399433428,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BABY_USDT_SWAP",
+        "signal_i": 33438,
+        "signal_time": "2026-05-17 21:45:00+00:00",
+        "fwd20_ret": -0.10005293806246685,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BABY_USDT_SWAP",
+        "signal_i": 37725,
+        "signal_time": "2026-07-01 13:30:00+00:00",
+        "fwd20_ret": 0.012167300380228063,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      }
+    ],
+    "C": [
+      {
+        "symbol": "2Z_USDT_SWAP",
+        "signal_i": 20830,
+        "signal_time": "2026-05-07 12:30:00+00:00",
+        "fwd20_ret": -0.019427839453458606,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "2Z_USDT_SWAP",
+        "signal_i": 20884,
+        "signal_time": "2026-05-08 02:00:00+00:00",
+        "fwd20_ret": 0.020079458821002927,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AAVE_USDT_SWAP",
+        "signal_i": 32535,
+        "signal_time": "2026-05-07 12:30:00+00:00",
+        "fwd20_ret": -0.019949066213921895,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACH_USDT_SWAP",
+        "signal_i": 32463,
+        "signal_time": "2026-05-07 17:00:00+00:00",
+        "fwd20_ret": -0.01739778799552627,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACT_USDT_SWAP",
+        "signal_i": 32455,
+        "signal_time": "2026-05-07 15:00:00+00:00",
+        "fwd20_ret": 0.04372623574144474,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACU_USDT_SWAP",
+        "signal_i": 10006,
+        "signal_time": "2026-05-07 12:30:00+00:00",
+        "fwd20_ret": -0.07321578505457593,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ACU_USDT_SWAP",
+        "signal_i": 10060,
+        "signal_time": "2026-05-08 02:00:00+00:00",
+        "fwd20_ret": -0.061702515493984644,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ADA_USDT_SWAP",
+        "signal_i": 32535,
+        "signal_time": "2026-05-07 12:30:00+00:00",
+        "fwd20_ret": -0.029684601113172615,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AERO_USDT_SWAP",
+        "signal_i": 29593,
+        "signal_time": "2026-05-07 12:30:00+00:00",
+        "fwd20_ret": -0.021862702229995534,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AEVO_USDT_SWAP",
+        "signal_i": 32444,
+        "signal_time": "2026-05-07 12:30:00+00:00",
+        "fwd20_ret": -0.019012675116744537,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AGLD_USDT_SWAP",
+        "signal_i": 32462,
+        "signal_time": "2026-05-07 17:00:00+00:00",
+        "fwd20_ret": 0.01671200932763317,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AIXBT_USDT_SWAP",
+        "signal_i": 32444,
+        "signal_time": "2026-05-07 12:30:00+00:00",
+        "fwd20_ret": -0.03652173913043488,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AIXBT_USDT_SWAP",
+        "signal_i": 32462,
+        "signal_time": "2026-05-07 17:00:00+00:00",
+        "fwd20_ret": 0.02727000299670368,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AI_USDT_SWAP",
+        "signal_i": 770,
+        "signal_time": "2026-05-07 12:30:00+00:00",
+        "fwd20_ret": -0.038719068413391455,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AI_USDT_SWAP",
+        "signal_i": 806,
+        "signal_time": "2026-05-07 21:30:00+00:00",
+        "fwd20_ret": 0.06656626506024077,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AI_USDT_SWAP",
+        "signal_i": 824,
+        "signal_time": "2026-05-08 02:00:00+00:00",
+        "fwd20_ret": -0.03914390312588012,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ALGO_USDT_SWAP",
+        "signal_i": 32498,
+        "signal_time": "2026-05-08 02:00:00+00:00",
+        "fwd20_ret": 0.01752429504540376,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ALLO_USDT_SWAP",
+        "signal_i": 16975,
+        "signal_time": "2026-05-07 12:30:00+00:00",
+        "fwd20_ret": -0.018332725282743545,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ANTHROPIC_USDT_SWAP",
+        "signal_i": 199,
+        "signal_time": "2026-05-09 11:15:00+00:00",
+        "fwd20_ret": -0.13509325681492113,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ANTHROPIC_USDT_SWAP",
+        "signal_i": 217,
+        "signal_time": "2026-05-09 15:45:00+00:00",
+        "fwd20_ret": 0.053952407002188174,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ANTHROPIC_USDT_SWAP",
+        "signal_i": 235,
+        "signal_time": "2026-05-09 20:15:00+00:00",
+        "fwd20_ret": 0.0267141009055627,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APE_USDT_SWAP",
+        "signal_i": 32571,
+        "signal_time": "2026-05-07 21:30:00+00:00",
+        "fwd20_ret": 0.02362890187787592,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APR_USDT_SWAP",
+        "signal_i": 18746,
+        "signal_time": "2026-05-07 12:30:00+00:00",
+        "fwd20_ret": -0.03679525222551938,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APR_USDT_SWAP",
+        "signal_i": 18764,
+        "signal_time": "2026-05-07 17:00:00+00:00",
+        "fwd20_ret": -0.0798035604665438,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APR_USDT_SWAP",
+        "signal_i": 18800,
+        "signal_time": "2026-05-08 02:00:00+00:00",
+        "fwd20_ret": 0.07032819825853998,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "APT_USDT_SWAP",
+        "signal_i": 32535,
+        "signal_time": "2026-05-07 12:30:00+00:00",
+        "fwd20_ret": -0.01673599690432437,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARB_USDT_SWAP",
+        "signal_i": 32535,
+        "signal_time": "2026-05-07 12:30:00+00:00",
+        "fwd20_ret": -0.027183566298555784,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARKM_USDT_SWAP",
+        "signal_i": 32443,
+        "signal_time": "2026-05-07 12:30:00+00:00",
+        "fwd20_ret": -0.030978748877581563,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARKM_USDT_SWAP",
+        "signal_i": 32479,
+        "signal_time": "2026-05-07 21:30:00+00:00",
+        "fwd20_ret": 0.020898962735305338,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARKM_USDT_SWAP",
+        "signal_i": 32497,
+        "signal_time": "2026-05-08 02:00:00+00:00",
+        "fwd20_ret": 0.040500791914925616,
+        "full": {
+          "hit": true,
+          "n_boxes": 1,
+          "conf": 0.35205188393592834
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARM_USDT_SWAP",
+        "signal_i": 793,
+        "signal_time": "2026-05-07 12:30:00+00:00",
+        "fwd20_ret": -0.028740875912408703,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARM_USDT_SWAP",
+        "signal_i": 829,
+        "signal_time": "2026-05-07 21:30:00+00:00",
+        "fwd20_ret": 0.020398481973434412,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARX_USDT_SWAP",
+        "signal_i": 199,
+        "signal_time": "2026-06-24 14:15:00+00:00",
+        "fwd20_ret": -0.016904583020285524,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARX_USDT_SWAP",
+        "signal_i": 217,
+        "signal_time": "2026-06-24 18:45:00+00:00",
+        "fwd20_ret": 0.0454025181228539,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ARX_USDT_SWAP",
+        "signal_i": 235,
+        "signal_time": "2026-06-24 23:15:00+00:00",
+        "fwd20_ret": -0.0861244019138756,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AR_USDT_SWAP",
+        "signal_i": 32443,
+        "signal_time": "2026-05-07 12:30:00+00:00",
+        "fwd20_ret": -0.0509604076832616,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AR_USDT_SWAP",
+        "signal_i": 32479,
+        "signal_time": "2026-05-07 21:30:00+00:00",
+        "fwd20_ret": 0.04676409185803765,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ASTER_USDT_SWAP",
+        "signal_i": 21822,
+        "signal_time": "2026-05-07 12:30:00+00:00",
+        "fwd20_ret": -0.02587609049238493,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ASTS_USDT_SWAP",
+        "signal_i": 199,
+        "signal_time": "2026-06-04 13:00:00+00:00",
+        "fwd20_ret": 0.07080504364694473,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ASTS_USDT_SWAP",
+        "signal_i": 217,
+        "signal_time": "2026-06-04 17:30:00+00:00",
+        "fwd20_ret": -0.039675383228133465,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ATH_USDT_SWAP",
+        "signal_i": 32497,
+        "signal_time": "2026-05-08 02:00:00+00:00",
+        "fwd20_ret": 0.019080528846153966,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ATOM_USDT_SWAP",
+        "signal_i": 32536,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.02025974025974031,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AVNT_USDT_SWAP",
+        "signal_i": 21781,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": 0.02825947334617851,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AVNT_USDT_SWAP",
+        "signal_i": 21835,
+        "signal_time": "2026-05-08 02:15:00+00:00",
+        "fwd20_ret": -0.026266416510318802,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AXTI_USDT_SWAP",
+        "signal_i": 199,
+        "signal_time": "2026-06-18 11:15:00+00:00",
+        "fwd20_ret": -0.1393272425249168,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "AZTEC_USDT_SWAP",
+        "signal_i": 8187,
+        "signal_time": "2026-05-07 17:15:00+00:00",
+        "fwd20_ret": 0.08747044917257685,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "A_USDT_SWAP",
+        "signal_i": 32446,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.017997629054854913,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BABY_USDT_SWAP",
+        "signal_i": 32478,
+        "signal_time": "2026-05-07 21:45:00+00:00",
+        "fwd20_ret": -0.027856736782262748,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BABY_USDT_SWAP",
+        "signal_i": 32496,
+        "signal_time": "2026-05-08 02:15:00+00:00",
+        "fwd20_ret": -0.016870273414776205,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BASED_USDT_SWAP",
+        "signal_i": 3657,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.033397766323023936,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BASED_USDT_SWAP",
+        "signal_i": 3675,
+        "signal_time": "2026-05-07 17:15:00+00:00",
+        "fwd20_ret": 0.018008948545861214,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BASED_USDT_SWAP",
+        "signal_i": 3693,
+        "signal_time": "2026-05-07 21:45:00+00:00",
+        "fwd20_ret": 0.05234855136084282,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BASED_USDT_SWAP",
+        "signal_i": 3711,
+        "signal_time": "2026-05-08 02:15:00+00:00",
+        "fwd20_ret": -0.017629050987015615,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BAT_USDT_SWAP",
+        "signal_i": 32442,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.020366598778004175,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BB_USDT_SWAP",
+        "signal_i": 199,
+        "signal_time": "2026-06-03 10:45:00+00:00",
+        "fwd20_ret": -0.08854400287072761,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BB_USDT_SWAP",
+        "signal_i": 217,
+        "signal_time": "2026-06-03 15:15:00+00:00",
+        "fwd20_ret": -0.06950757575757571,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BB_USDT_SWAP",
+        "signal_i": 235,
+        "signal_time": "2026-06-03 19:45:00+00:00",
+        "fwd20_ret": -0.07570422535211274,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BCH_USDT_SWAP",
+        "signal_i": 32436,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.018047401609045388,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BEAT_USDT_SWAP",
+        "signal_i": 16882,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.017737936296013723,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BEAT_USDT_SWAP",
+        "signal_i": 16900,
+        "signal_time": "2026-05-07 17:15:00+00:00",
+        "fwd20_ret": -0.018805093046033172,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BE_USDT_SWAP",
+        "signal_i": 199,
+        "signal_time": "2026-05-29 12:45:00+00:00",
+        "fwd20_ret": -0.034178999295278345,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BE_USDT_SWAP",
+        "signal_i": 217,
+        "signal_time": "2026-05-29 17:15:00+00:00",
+        "fwd20_ret": 0.025408348457350183,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BICO_USDT_SWAP",
+        "signal_i": 32460,
+        "signal_time": "2026-05-07 17:15:00+00:00",
+        "fwd20_ret": 0.020630595562475706,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BIGTIME_USDT_SWAP",
+        "signal_i": 32441,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.017735334242837686,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BILL_USDT_SWAP",
+        "signal_i": 199,
+        "signal_time": "2026-05-08 09:45:00+00:00",
+        "fwd20_ret": -0.04527784129887935,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BILL_USDT_SWAP",
+        "signal_i": 217,
+        "signal_time": "2026-05-08 14:15:00+00:00",
+        "fwd20_ret": 0.029888068587758942,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BILL_USDT_SWAP",
+        "signal_i": 235,
+        "signal_time": "2026-05-08 18:45:00+00:00",
+        "fwd20_ret": 0.11038961038961048,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BILL_USDT_SWAP",
+        "signal_i": 253,
+        "signal_time": "2026-05-08 23:15:00+00:00",
+        "fwd20_ret": -0.08692506459948324,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BIO_USDT_SWAP",
+        "signal_i": 32441,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.0313222619297876,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BIO_USDT_SWAP",
+        "signal_i": 32459,
+        "signal_time": "2026-05-07 17:15:00+00:00",
+        "fwd20_ret": -0.017884405670665293,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BIO_USDT_SWAP",
+        "signal_i": 32495,
+        "signal_time": "2026-05-08 02:15:00+00:00",
+        "fwd20_ret": 0.02481335090030745,
+        "full": {
+          "hit": false,
+          "n_boxes": 3,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BLEND_USDT_SWAP",
+        "signal_i": 833,
+        "signal_time": "2026-05-08 02:15:00+00:00",
+        "fwd20_ret": 0.03445229681978801,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BLUR_USDT_SWAP",
+        "signal_i": 32441,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.017384731670446074,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BLUR_USDT_SWAP",
+        "signal_i": 32477,
+        "signal_time": "2026-05-07 21:45:00+00:00",
+        "fwd20_ret": 0.019118220834959176,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BOME_USDT_SWAP",
+        "signal_i": 32441,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.02839425587467359,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BOME_USDT_SWAP",
+        "signal_i": 32459,
+        "signal_time": "2026-05-07 17:15:00+00:00",
+        "fwd20_ret": 0.016590485864228954,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BONK_USDT_SWAP",
+        "signal_i": 32441,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.026704953338119175,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BRETT_USDT_SWAP",
+        "signal_i": 32441,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.026351813826146486,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BRETT_USDT_SWAP",
+        "signal_i": 32459,
+        "signal_time": "2026-05-07 17:15:00+00:00",
+        "fwd20_ret": 0.026297252876262167,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BSB_USDT_SWAP",
+        "signal_i": 3371,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.020342612419700257,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BSB_USDT_SWAP",
+        "signal_i": 3389,
+        "signal_time": "2026-05-07 17:15:00+00:00",
+        "fwd20_ret": 0.06622662266226609,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BSB_USDT_SWAP",
+        "signal_i": 3407,
+        "signal_time": "2026-05-07 21:45:00+00:00",
+        "fwd20_ret": 0.11076668733209338,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BSB_USDT_SWAP",
+        "signal_i": 3425,
+        "signal_time": "2026-05-08 02:15:00+00:00",
+        "fwd20_ret": 0.07863279790810607,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BSP_USDT_SWAP",
+        "signal_i": 199,
+        "signal_time": "2026-07-08 10:45:00+00:00",
+        "fwd20_ret": -0.054731733620922096,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BSP_USDT_SWAP",
+        "signal_i": 235,
+        "signal_time": "2026-07-08 19:45:00+00:00",
+        "fwd20_ret": -0.020705745115193963,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BSP_USDT_SWAP",
+        "signal_i": 253,
+        "signal_time": "2026-07-09 00:15:00+00:00",
+        "fwd20_ret": 0.03007518796992481,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BZ_USDT_SWAP",
+        "signal_i": 4235,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": 0.03704853565145405,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "BZ_USDT_SWAP",
+        "signal_i": 4271,
+        "signal_time": "2026-05-07 21:45:00+00:00",
+        "fwd20_ret": -0.02268964845651955,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "CAP_USDT_SWAP",
+        "signal_i": 199,
+        "signal_time": "2026-06-28 14:15:00+00:00",
+        "fwd20_ret": -0.03861566484517298,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "CAP_USDT_SWAP",
+        "signal_i": 217,
+        "signal_time": "2026-06-28 18:45:00+00:00",
+        "fwd20_ret": -0.07031250000000011,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "CAP_USDT_SWAP",
+        "signal_i": 235,
+        "signal_time": "2026-06-28 23:15:00+00:00",
+        "fwd20_ret": -0.03307785397337626,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "CAP_USDT_SWAP",
+        "signal_i": 253,
+        "signal_time": "2026-06-29 03:45:00+00:00",
+        "fwd20_ret": -0.026108578532946458,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "CELO_USDT_SWAP",
+        "signal_i": 32440,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.016758010118043898,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "CELO_USDT_SWAP",
+        "signal_i": 32543,
+        "signal_time": "2026-05-08 14:30:00+00:00",
+        "fwd20_ret": 0.024209747330584674,
+        "full": {
+          "hit": true,
+          "n_boxes": 1,
+          "conf": 0.5533096194267273
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "CHIP_USDT_SWAP",
+        "signal_i": 1567,
+        "signal_time": "2026-05-07 21:45:00+00:00",
+        "fwd20_ret": 0.06076950737144893,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "CHIP_USDT_SWAP",
+        "signal_i": 1585,
+        "signal_time": "2026-05-08 02:15:00+00:00",
+        "fwd20_ret": 0.1444966092853417,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "CHZ_USDT_SWAP",
+        "signal_i": 32589,
+        "signal_time": "2026-05-08 02:15:00+00:00",
+        "fwd20_ret": 0.04459181340041152,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "COAI_USDT_SWAP",
+        "signal_i": 19577,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": 0.019602352282273916,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "COAI_USDT_SWAP",
+        "signal_i": 19613,
+        "signal_time": "2026-05-07 21:45:00+00:00",
+        "fwd20_ret": 0.023690078037904128,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "COHR_USDT_SWAP",
+        "signal_i": 217,
+        "signal_time": "2026-05-15 16:15:00+00:00",
+        "fwd20_ret": -0.016875479417028938,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "COMP_USDT_SWAP",
+        "signal_i": 32480,
+        "signal_time": "2026-05-07 22:45:00+00:00",
+        "fwd20_ret": -0.02209705372616977,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "COMP_USDT_SWAP",
+        "signal_i": 32516,
+        "signal_time": "2026-05-08 07:45:00+00:00",
+        "fwd20_ret": -0.05159597726278964,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "CRV_USDT_SWAP",
+        "signal_i": 32595,
+        "signal_time": "2026-05-08 03:45:00+00:00",
+        "fwd20_ret": 0.01744186046511631,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "CRWV_USDT_SWAP",
+        "signal_i": 2595,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.0458465393970664,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "CRWV_USDT_SWAP",
+        "signal_i": 2613,
+        "signal_time": "2026-05-07 17:15:00+00:00",
+        "fwd20_ret": -0.0792133510930032,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "DASH_USDT_SWAP",
+        "signal_i": 17511,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.037134778510838795,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "DASH_USDT_SWAP",
+        "signal_i": 17529,
+        "signal_time": "2026-05-07 17:15:00+00:00",
+        "fwd20_ret": -0.02014866979655705,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "DASH_USDT_SWAP",
+        "signal_i": 17565,
+        "signal_time": "2026-05-08 02:15:00+00:00",
+        "fwd20_ret": -0.021910777733912368,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "DATA_USDT_SWAP",
+        "signal_i": 217,
+        "signal_time": "2026-07-04 18:45:00+00:00",
+        "fwd20_ret": 0.021710526315789513,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "DELL_USDT_SWAP",
+        "signal_i": 235,
+        "signal_time": "2026-05-30 20:00:00+00:00",
+        "fwd20_ret": 0.020173586676049737,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "DOGE_USDT_SWAP",
+        "signal_i": 32535,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.03148829281421006,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "DOOD_USDT_SWAP",
+        "signal_i": 32439,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.0176382660687594,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "DOT_USDT_SWAP",
+        "signal_i": 32535,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.018031555221637907,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "DRAM_USDT_SWAP",
+        "signal_i": 235,
+        "signal_time": "2026-05-10 19:45:00+00:00",
+        "fwd20_ret": -0.01950448075909328,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "DYDX_USDT_SWAP",
+        "signal_i": 32439,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": 0.0872819460373031,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "DYDX_USDT_SWAP",
+        "signal_i": 32457,
+        "signal_time": "2026-05-07 17:15:00+00:00",
+        "fwd20_ret": 0.08227217362418338,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "DYDX_USDT_SWAP",
+        "signal_i": 32475,
+        "signal_time": "2026-05-07 21:45:00+00:00",
+        "fwd20_ret": -0.07424219498663442,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "DYDX_USDT_SWAP",
+        "signal_i": 32493,
+        "signal_time": "2026-05-08 02:15:00+00:00",
+        "fwd20_ret": -0.08672585534863586,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 3,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "EDEN_USDT_SWAP",
+        "signal_i": 21029,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": 0.037637219027705004,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "EDEN_USDT_SWAP",
+        "signal_i": 21047,
+        "signal_time": "2026-05-07 17:15:00+00:00",
+        "fwd20_ret": 0.03797468354430378,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "EDEN_USDT_SWAP",
+        "signal_i": 21065,
+        "signal_time": "2026-05-07 21:45:00+00:00",
+        "fwd20_ret": -0.02087939081306811,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "EDEN_USDT_SWAP",
+        "signal_i": 21083,
+        "signal_time": "2026-05-08 02:15:00+00:00",
+        "fwd20_ret": -0.020649710400402976,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "EDGE_USDT_SWAP",
+        "signal_i": 3453,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.016723650958822667,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "EGLD_USDT_SWAP",
+        "signal_i": 32438,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.016659059790050113,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "EIGEN_USDT_SWAP",
+        "signal_i": 32535,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.034889434889434856,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "EIGEN_USDT_SWAP",
+        "signal_i": 32571,
+        "signal_time": "2026-05-07 21:45:00+00:00",
+        "fwd20_ret": 0.017019082001031416,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "EIGEN_USDT_SWAP",
+        "signal_i": 32589,
+        "signal_time": "2026-05-08 02:15:00+00:00",
+        "fwd20_ret": 0.023385866802236865,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ENA_USDT_SWAP",
+        "signal_i": 22293,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.04076545790785557,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ENJ_USDT_SWAP",
+        "signal_i": 32456,
+        "signal_time": "2026-05-07 17:15:00+00:00",
+        "fwd20_ret": -0.021437078205637228,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ENJ_USDT_SWAP",
+        "signal_i": 32474,
+        "signal_time": "2026-05-07 21:45:00+00:00",
+        "fwd20_ret": 0.028322880841594067,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ENS_USDT_SWAP",
+        "signal_i": 32438,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.03162470023980801,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "ETHFI_USDT_SWAP",
+        "signal_i": 32534,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.018073667353008416,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "EWT_USDT_SWAP",
+        "signal_i": 199,
+        "signal_time": "2026-06-05 11:45:00+00:00",
+        "fwd20_ret": -0.027263875365141188,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "EWT_USDT_SWAP",
+        "signal_i": 217,
+        "signal_time": "2026-06-05 16:15:00+00:00",
+        "fwd20_ret": -0.021021021021021102,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "FARTCOIN_USDT_SWAP",
+        "signal_i": 32437,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.03878975950349106,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "FARTCOIN_USDT_SWAP",
+        "signal_i": 32473,
+        "signal_time": "2026-05-07 21:45:00+00:00",
+        "fwd20_ret": 0.02237878159966855,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "FIL_USDT_SWAP",
+        "signal_i": 32534,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.03330610763227171,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "FIL_USDT_SWAP",
+        "signal_i": 32570,
+        "signal_time": "2026-05-07 21:45:00+00:00",
+        "fwd20_ret": 0.021795585234650305,
+        "full": {
+          "hit": false,
+          "n_boxes": 2,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "FLOKI_USDT_SWAP",
+        "signal_i": 32437,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.031215161649944312,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "FLOW_USDT_SWAP",
+        "signal_i": 32457,
+        "signal_time": "2026-05-07 17:45:00+00:00",
+        "fwd20_ret": 0.035053073315231,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "FOGO_USDT_SWAP",
+        "signal_i": 11238,
+        "signal_time": "2026-05-07 17:15:00+00:00",
+        "fwd20_ret": 0.018471010774756325,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "FOGO_USDT_SWAP",
+        "signal_i": 11256,
+        "signal_time": "2026-05-07 21:45:00+00:00",
+        "fwd20_ret": -0.030515257628814352,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "GALA_USDT_SWAP",
+        "signal_i": 32534,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.030598786599841832,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "GALA_USDT_SWAP",
+        "signal_i": 32552,
+        "signal_time": "2026-05-07 17:15:00+00:00",
+        "fwd20_ret": 0.02082191780821918,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "GIGGLE_USDT_SWAP",
+        "signal_i": 18689,
+        "signal_time": "2026-05-07 23:15:00+00:00",
+        "fwd20_ret": 0.02055555555555566,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "GIGGLE_USDT_SWAP",
+        "signal_i": 18707,
+        "signal_time": "2026-05-08 03:45:00+00:00",
+        "fwd20_ret": 0.037452159650082084,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "GMX_USDT_SWAP",
+        "signal_i": 32436,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.031785176051513986,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "GMX_USDT_SWAP",
+        "signal_i": 32454,
+        "signal_time": "2026-05-07 17:15:00+00:00",
+        "fwd20_ret": 0.017745599091425257,
+        "full": {
+          "hit": false,
+          "n_boxes": 1,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "GPS_USDT_SWAP",
+        "signal_i": 32436,
+        "signal_time": "2026-05-07 12:45:00+00:00",
+        "fwd20_ret": -0.037593984962405846,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      },
+      {
+        "symbol": "GPS_USDT_SWAP",
+        "signal_i": 32472,
+        "signal_time": "2026-05-07 21:45:00+00:00",
+        "fwd20_ret": -0.026599113362887783,
+        "full": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        },
+        "tip": {
+          "hit": false,
+          "n_boxes": 0,
+          "conf": null
+        }
+      }
+    ]
+  },
+  "no_verdict": "Hit rates and intervals only; classification of the teacher is the owner's call per prereg."
+}

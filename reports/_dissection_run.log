@@ -1,0 +1,35 @@
+device=mps weights=/Users/zhangzc/fable-trading/models/owner_v10_chain.pt conf=0.3 iou=0.7
+symbols=344
+[scan 25/344] A=92 B=98 nondense=100 21s
+[scan 50/344] A=150 B=150 nondense=200 43s
+[scan 75/344] A=150 B=150 nondense=300 62s
+[scan 100/344] A=150 B=150 nondense=400 83s
+[scan 125/344] A=150 B=150 nondense=500 105s
+[scan 150/344] A=150 B=150 nondense=600 123s
+[scan 175/344] A=150 B=150 nondense=700 145s
+[scan 200/344] A=150 B=150 nondense=800 164s
+[scan 225/344] A=150 B=150 nondense=900 182s
+
+samples: A=150 B=150 C=150 (B median |fwd20 ret| = 0.0165, nondense pool=900)
+[detect 50/450] 29s
+[detect 100/450] 49s
+[detect 150/450] 71s
+[detect 200/450] 90s
+[detect 250/450] 109s
+[detect 300/450] 125s
+[detect 350/450] 140s
+[detect 400/450] 158s
+[detect 450/450] 176s
+
+=== FULL view (teacher's training geometry) ===
+  A: 0/150 = 0.0  95%CI[0.000,0.025]  boxes/img=0.407
+  B: 9/150 = 0.06  95%CI[0.032,0.110]  boxes/img=0.693
+  C: 2/150 = 0.0133  95%CI[0.004,0.047]  boxes/img=0.387
+  A vs B: diff=-0.06 ratio=None p=0.002319
+
+=== TIP view (control) ===
+  A: 0/150 = 0.0
+  B: 1/150 = 0.0067
+  C: 0/150 = 0.0
+
+DONE -> /Users/zhangzc/yolo-xx/reports/pattern_teacher_dissection.json
