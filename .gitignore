@@ -1,3 +1,7 @@
+# 只排除两类东西：环境/构建产物，以及大到 push 不上去的渲染图。
+# 其余一律提交——尤其是标注、manifest、快照 CSV 和权重，这些丢了重做不出来。
+
+# ---- 环境与构建产物 ----
 .venv/
 __pycache__/
 *.py[cod]
@@ -7,26 +11,17 @@ build/
 dist/
 .DS_Store
 
-# Bulk inputs and binary artefacts. Anchored with a leading slash on purpose: a
-# bare "data/" also matches any nested package named data/ and would silently
-# drop source from a fresh clone.
-/data/
-/datasets/
-/runs/
-/weights/
-*.pt
-*.onnx
+# ---- 渲染图：唯一真正提交不了的部分 ----
+# datasets/ 共 17.6G，其中 16.9G 是 132706 张 PNG、497M 是 183 个 .npy 图像数组，
+# GitHub 单次 push 上限 2G，这部分只能留在本机。它们能从 data/ 的 CSV 快照重新渲染。
+# 同目录下的标注 txt（624K，手标的框）和 manifest json（134M）不可再生，照常提交——
+# 所以这里按扩展名排除，而不是排除整个 datasets/。
+datasets/**/*.png
+datasets/**/*.npy
+datasets/**/*.jpg
 
-# Reports: keep the deliverables (HTML/Markdown write-ups, audit summaries,
-# training curves and contracts), drop the bulk intermediates. One scan writes
-# tens of thousands of overlay JPEGs plus a multi-MB predictions.json; those are
-# regenerable from the dataset and the frozen weights, and they are what pushed
-# reports/ to 157MB across 71k files.
-/reports/**/overlays/
-/reports/**/labels/
-/reports/**/predictions.json
-/reports/imported/
+# ultralytics 扫标注时写的缓存，删掉会自动重建
+*.cache
 
-# Scratch renders written next to whatever the detector thinks the project root
-# is; never source.
+# 探测器写在项目根目录的临时渲染，不是源码
 _yolo_cand_tmp_*.png
