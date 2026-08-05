@@ -1,0 +1,77 @@
+{
+  "prereg_id": "phase1_task3_teacher_dissection",
+  "created_at": "2026-08-05T23:47:00+08:00",
+  "status": "LOCKED_BEFORE_DATA",
+  "question": "owner_v10_chain 的检出主要由 pattern structure 驱动，还是由 launch confirmation 驱动？",
+
+  "owner_decision_2026_08_05": {
+    "no_verdict_thresholds": true,
+    "rationale": "yolo-xx 汇报口径为『给数字，不下判决，结论由 owner 来下』。曾拟定 A≥B*70% / A<B*40% 的裁决门槛，无历史依据，owner 决定不预设。本预注册只锁样本构造与统计口径，裁决留给 owner。"
+  },
+
+  "sample_construction": {
+    "note": "三类样本全部由机械规则构造，独立于 owner_v10_chain。用模型判定形态再问模型能否检出，会构成循环论证。",
+    "universe": "OKX USDT-SWAP 15m，排除 is_stockish，按 symbol 字母序扫描",
+    "indicators": "src/judgment/candidates_v206.py::add_indicators（fast_spread / full_spread / cluster_min / cluster_max）",
+    "dense_rule": {
+      "source": "scripts/launch_entry_base_rate.py 同值，不重新调参",
+      "FAST_MAX": 0.0028,
+      "FULL_MAX": 0.0055,
+      "MIN_DENSE_BARS": 5,
+      "definition": "连续满足 fast_spread<=FAST_MAX 且 full_spread<=FULL_MAX 的第 MIN_DENSE_BARS 根，其下标记为 signal_i"
+    },
+    "launch_rule": {
+      "source": "scripts/launch_entry_base_rate.py 的 spread_expand_chg8 变体（该报告中因果启动定义里 PF 最高的一个，1.065）",
+      "SPREAD_CHG8_THR": 0.00383,
+      "LOOKAHEAD_BARS": 20,
+      "definition": "存在 j ∈ (signal_i, signal_i+20]，使 fast_spread[j] - fast_spread[j-8] >= SPREAD_CHG8_THR"
+    },
+    "classes": {
+      "A": "dense_rule 成立 且 launch_rule 在后 20 bar 内不成立 —— 形态完整但未启动",
+      "B": "dense_rule 成立 且 launch_rule 在后 20 bar 内成立 —— 形态完整且已启动",
+      "C": "dense_run == 0（signal_i 处完全不满足密集）且 后 20 bar 的 |收益| >= B 类后 20 bar |收益| 的中位数 —— 无经典密集，仅后续走势显著"
+    },
+    "dedup": "同 symbol 内相邻样本间隔 >= MIN_GAP_BARS(18)",
+    "per_symbol_cap": 4,
+    "target_n_per_class": 150,
+    "time_window": "最近 90 天，且要求 signal_i 两侧各留够 200 bar 以支持两种渲染视角"
+  },
+
+  "detection_protocol": {
+    "weights": "models/owner_v10_chain.pt",
+    "sha256": "b9a84b5f5ebf0032dfa8ddf1ed1f12c19b7cc2d410a57480bd196d76cbc7d953",
+    "conf": 0.30,
+    "iou": 0.70,
+    "window_bars": 200,
+    "render": "src/detection/render.py::render_chart（与训练同一函数，不另写）",
+    "ma": "add_mas，在完整序列上计算一次后再切片",
+    "primary_view": "FULL — 信号居中（右侧 99 根），即 teacher 的训练视角。主口径选它是因为 tip 视角下 v10 的复现率已实测仅 10%，无法区分三类",
+    "secondary_view": "TIP — 窗口止于 signal_i（右侧 0 根），作对照",
+    "match_rule": "框右缘映射回 bar 下标，落在 signal_i ± 2 内计为命中该信号；图中其他位置的框计入 n_boxes 但不计命中"
+  },
+
+  "statistics": {
+    "reported": [
+      "A/B/C 三类的命中率与 Wilson 95% 置信区间",
+      "A vs B 的双比例 z 检验 p 值",
+      "风险差 (A−B) 与风险比 A/B，含 95% CI",
+      "每类的平均 n_boxes/图（整图开火强度，与命中率分开看）",
+      "FULL 与 TIP 两个视角各报一次"
+    ],
+    "no_verdict_rule": "本实验不输出 A/B/C 主导的判定。报告只给数字与不确定度。"
+  },
+
+  "forbidden": [
+    "训练或微调任何模型",
+    "调整 conf / iou / 任何规则阈值",
+    "看到结果后修改样本构造规则",
+    "使用盈亏标签",
+    "消耗 holdout"
+  ],
+
+  "known_limitations_declared_upfront": [
+    "机械密集规则不等于 owner 的眼睛——07-23 报告 owner-eye-is-anticorrelated-with-the-mechanical-dense-definition 已记录两者不一致。本实验测的是 teacher 与机械规则的关系，不是与 owner 意图的关系。",
+    "C 类的构造依赖 B 类收益中位数，故 C 的样本量与分布受 B 影响。",
+    "命中率不等于检测正确率：无人工金标，只能判定 teacher 是否在该位置开火。"
+  ]
+}

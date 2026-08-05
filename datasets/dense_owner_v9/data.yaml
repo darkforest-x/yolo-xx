@@ -1,0 +1,5 @@
+path: C:/fable/datasets/dense_owner_v9
+train: images/train
+val: images/val
+names:
+  0: dense_cluster
