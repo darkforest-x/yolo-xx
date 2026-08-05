@@ -1,0 +1,200 @@
+{
+ "prereg": "reports/prereg_pattern_quality_v2_temporal.json",
+ "n_rows": 287,
+ "n_symbols": 176,
+ "temporal_nan": {},
+ "tasks": {
+  "T1_is_pattern": {
+   "geom_only": {
+    "feature_set": "geom_only",
+    "n_features": 10,
+    "n": 287,
+    "n_pos": 225,
+    "logreg": {
+     "cv_auc": 0.7313,
+     "kappa@0.5": 0.0409
+    },
+    "lightgbm": {
+     "cv_auc": 0.7049,
+     "kappa@0.5": 0.2918
+    },
+    "best_single_feature_auc": 0.7309,
+    "best_single_feature": "full_spread",
+    "model_over_best_single": 0.0004,
+    "single_feature_auc_top6": {
+     "full_spread": 0.7309,
+     "fast_spread": 0.7281,
+     "ma_spread_pct": 0.7281,
+     "atr_pct": 0.7218,
+     "dense_run_bars": 0.6602,
+     "order_score": 0.6368
+    },
+    "permutation": {
+     "model": "logreg",
+     "null_mean": 0.471,
+     "null_p95": 0.5654,
+     "empirical_p": 0.005
+    }
+   },
+   "temporal_only": {
+    "feature_set": "temporal_only",
+    "n_features": 14,
+    "n": 287,
+    "n_pos": 225,
+    "logreg": {
+     "cv_auc": 0.7045,
+     "kappa@0.5": 0.0434
+    },
+    "lightgbm": {
+     "cv_auc": 0.7203,
+     "kappa@0.5": 0.1883
+    },
+    "best_single_feature_auc": 0.6794,
+    "best_single_feature": "drawdown24",
+    "model_over_best_single": 0.0409,
+    "single_feature_auc_top6": {
+     "drawdown24": 0.6794,
+     "fast_spread_chg8": 0.6719,
+     "dense_bars_in24": 0.6666,
+     "fast_spread_chg24": 0.6497,
+     "ret_24": 0.6254,
+     "ret_96": 0.6209
+    },
+    "permutation": {
+     "model": "lightgbm",
+     "null_mean": 0.4931,
+     "null_p95": 0.585,
+     "empirical_p": 0.005
+    }
+   },
+   "geom_plus_temporal": {
+    "feature_set": "geom_plus_temporal",
+    "n_features": 24,
+    "n": 287,
+    "n_pos": 225,
+    "logreg": {
+     "cv_auc": 0.7282,
+     "kappa@0.5": 0.1663
+    },
+    "lightgbm": {
+     "cv_auc": 0.7455,
+     "kappa@0.5": 0.2582
+    },
+    "best_single_feature_auc": 0.7309,
+    "best_single_feature": "full_spread",
+    "model_over_best_single": 0.0146,
+    "single_feature_auc_top6": {
+     "full_spread": 0.7309,
+     "fast_spread": 0.7281,
+     "ma_spread_pct": 0.7281,
+     "atr_pct": 0.7218,
+     "drawdown24": 0.6794,
+     "fast_spread_chg8": 0.6719
+    },
+    "permutation": {
+     "model": "lightgbm",
+     "null_mean": 0.4924,
+     "null_p95": 0.5852,
+     "empirical_p": 0.005
+    }
+   },
+   "temporal_gain_over_geom": 0.0142
+  },
+  "T2_is_grade_A": {
+   "geom_only": {
+    "feature_set": "geom_only",
+    "n_features": 10,
+    "n": 225,
+    "n_pos": 121,
+    "logreg": {
+     "cv_auc": 0.5888,
+     "kappa@0.5": 0.2049
+    },
+    "lightgbm": {
+     "cv_auc": 0.5546,
+     "kappa@0.5": 0.0665
+    },
+    "best_single_feature_auc": 0.6439,
+    "best_single_feature": "slow_slope_12",
+    "model_over_best_single": -0.0551,
+    "single_feature_auc_top6": {
+     "slow_slope_12": 0.6439,
+     "order_score": 0.6342,
+     "down_order_score": 0.6342,
+     "trend_order_score": 0.5558,
+     "cluster_width_atr": 0.5473,
+     "full_spread": 0.529
+    },
+    "permutation": {
+     "model": "logreg",
+     "null_mean": 0.4728,
+     "null_p95": 0.5695,
+     "empirical_p": 0.0299
+    }
+   },
+   "temporal_only": {
+    "feature_set": "temporal_only",
+    "n_features": 14,
+    "n": 225,
+    "n_pos": 121,
+    "logreg": {
+     "cv_auc": 0.5682,
+     "kappa@0.5": 0.0928
+    },
+    "lightgbm": {
+     "cv_auc": 0.6139,
+     "kappa@0.5": 0.1334
+    },
+    "best_single_feature_auc": 0.6415,
+    "best_single_feature": "slope_chg12",
+    "model_over_best_single": -0.0276,
+    "single_feature_auc_top6": {
+     "slope_chg12": 0.6415,
+     "range_pos24": 0.6392,
+     "order_chg12": 0.6289,
+     "ret_24": 0.6283,
+     "drawdown24": 0.6134,
+     "ret_96": 0.6127
+    },
+    "permutation": {
+     "model": "lightgbm",
+     "null_mean": 0.4938,
+     "null_p95": 0.5774,
+     "empirical_p": 0.0199
+    }
+   },
+   "geom_plus_temporal": {
+    "feature_set": "geom_plus_temporal",
+    "n_features": 24,
+    "n": 225,
+    "n_pos": 121,
+    "logreg": {
+     "cv_auc": 0.5749,
+     "kappa@0.5": 0.1191
+    },
+    "lightgbm": {
+     "cv_auc": 0.5778,
+     "kappa@0.5": 0.112
+    },
+    "best_single_feature_auc": 0.6439,
+    "best_single_feature": "slow_slope_12",
+    "model_over_best_single": -0.0661,
+    "single_feature_auc_top6": {
+     "slow_slope_12": 0.6439,
+     "slope_chg12": 0.6415,
+     "range_pos24": 0.6392,
+     "order_score": 0.6342,
+     "down_order_score": 0.6342,
+     "order_chg12": 0.6289
+    },
+    "permutation": {
+     "model": "lightgbm",
+     "null_mean": 0.4918,
+     "null_p95": 0.5673,
+     "empirical_p": 0.0348
+    }
+   },
+   "temporal_gain_over_geom": -0.011
+  }
+ }
+}

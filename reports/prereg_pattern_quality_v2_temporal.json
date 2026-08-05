@@ -1,0 +1,87 @@
+{
+  "prereg_id": "phase2_pattern_quality_v2_temporal_features",
+  "created_at": "2026-08-06T01:55:00+08:00",
+  "status": "LOCKED_BEFORE_ANY_FIT",
+  "owner_decision": "推进选项 2/3/4（2026-08-06）；本预注册对应选项 3",
+
+  "single_variable": {
+    "changed": "特征集：在 v1 的 10 个瞬时截面几何量之外，增加时间演化族",
+    "unchanged": "标签、样本、切分(GroupKFold by symbol)、模型与超参、seed、评估指标、基线口径，全部与 v1 相同",
+    "rationale": "CLAUDE.md 铁律 4：一次实验只改一个变量。v1 的所有对照量保持不动，故 v2 与 v1 的差值可直接归因于特征族。"
+  },
+
+  "why_temporal": {
+    "v1_finding": "v1 的 10 个特征全部取自信号 bar 的瞬时截面。T1 模型相对最强单特征增量 +0.0004，T2 为 -0.0551 —— 多特征组合没有带来任何超越单阈值的信息。",
+    "hypothesis": "owner 判断形态时依赖的是『它怎么形成的』（收敛过程、前期趋势、量能路径），而截面特征在结构上无法表达这些。",
+    "falsifiable": "若加入时间演化族后 T1/T2 的 CV AUC 与相对单特征增量均无实质变化，则该假设在当前标签与样本量下不成立。"
+  },
+
+  "new_features_temporal": {
+    "note": "全部只使用信号 bar 及之前的数据（因果）。窗口长度取自项目既有量级，不做搜索。",
+    "convergence": [
+      "fast_spread_chg8  : fast_spread[i] - fast_spread[i-8]（收敛/扩张速率，与 launch 规则同窗）",
+      "fast_spread_chg24 : fast_spread[i] - fast_spread[i-24]",
+      "spread_min_ratio24: fast_spread[i] / min(fast_spread[i-24..i])（离本段最紧处多远）",
+      "dense_bars_in24   : 过去 24 根中满足机械密集条件的根数"
+    ],
+    "prior_trend": [
+      "ret_24  : close[i]/close[i-24] - 1",
+      "ret_96  : close[i]/close[i-96] - 1",
+      "range_pos24 : (close[i]-min(low[i-24..i]))/(max(high[i-24..i])-min(low[i-24..i]))",
+      "drawdown24  : close[i]/max(high[i-24..i]) - 1"
+    ],
+    "volume_path": [
+      "vol_ratio8  : volume[i] / mean(volume[i-8..i-1])",
+      "vol_trend24 : mean(volume[i-8..i]) / mean(volume[i-24..i-9])"
+    ],
+    "volatility_path": [
+      "atr_ratio24 : atr14[i] / mean(atr14[i-24..i])",
+      "atr_chg24   : atr_pct[i] - atr_pct[i-24]"
+    ],
+    "arrangement_path": [
+      "order_chg12 : order_score[i] - order_score[i-12]",
+      "slope_chg12 : slow_slope_12[i] - slow_slope_12[i-12]"
+    ]
+  },
+
+  "feature_sets_to_compare": [
+    {"id": "geom_only", "desc": "v1 的 10 个瞬时截面量（复现 v1 作为同轮基线）"},
+    {"id": "temporal_only", "desc": "本轮 14 个时间演化量"},
+    {"id": "geom_plus_temporal", "desc": "两族合并，共 24 个"}
+  ],
+
+  "tasks_identical_to_v1": ["T1_is_pattern", "T2_is_grade_A"],
+
+  "protocol_identical_to_v1": {
+    "split": "GroupKFold(5) by symbol",
+    "models": ["LogisticRegression(StandardScaler+L2)", "LightGBM(num_leaves=7, min_child_samples=15, n_estimators=200, lr=0.05)"],
+    "seed": 0,
+    "no_hyperparameter_search": true,
+    "no_threshold_search": true
+  },
+
+  "baselines_mandatory": [
+    "多数类",
+    "每个单特征各自 ROC AUC（含新特征）",
+    "置换检验 200 次，经验 p 值",
+    "v1 的 geom_only 结果作为同轮复现对照"
+  ],
+
+  "primary_readout": "geom_plus_temporal 相对 geom_only 的 CV AUC 增量，以及模型相对最强单特征的增量是否由负转正",
+
+  "no_verdict_rule": "只报数字与不确定度；是否采纳时间特征族由 owner 决定。",
+
+  "failure_exit": "若 temporal_only 与 geom_plus_temporal 的 CV AUC 均未超过 geom_only，且模型相对最强单特征仍无正增量，则记录为负结果并停止加特征——不得继续堆特征族重试（该行为会把 287 个样本消耗成过拟合搜索空间）。",
+
+  "forbidden": [
+    "使用盈亏标签", "做收益回测", "调整 conf/iou", "训练或修改 YOLO 权重",
+    "消耗 holdout", "看到结果后更改特征定义或窗口长度", "超参搜索",
+    "修改 fable-trading 或 darkforest-one 的产物"
+  ],
+
+  "declared_limitations": [
+    "n 与 v1 相同（287 / 225），新增 14 个特征使特征数升至 24，样本-特征比降至约 12:1，过拟合风险上升——这也是模型容量保持受限的原因",
+    "所有窗口长度（8/12/24/96）取自项目既有量级，未做敏感性分析",
+    "单人评分，无评分者间一致性"
+  ]
+}
