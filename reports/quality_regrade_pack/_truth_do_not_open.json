@@ -1,0 +1,362 @@
+{
+ "dense_02293": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02310": {
+  "kind": "anchor_r2",
+  "previous_decision": "C"
+ },
+ "dense_02307": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_01484": {
+  "kind": "anchor_r2",
+  "previous_decision": "B"
+ },
+ "dense_02289": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02359": {
+  "kind": "anchor_r2",
+  "previous_decision": "B"
+ },
+ "dense_01851": {
+  "kind": "regrade_r1",
+  "previous_decision": "C"
+ },
+ "dense_02250": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_01894": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02272": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02344": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_00253": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_01656": {
+  "kind": "anchor_r2",
+  "previous_decision": "C"
+ },
+ "dense_00137": {
+  "kind": "anchor_r2",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02256": {
+  "kind": "anchor_r2",
+  "previous_decision": "A"
+ },
+ "dense_02003": {
+  "kind": "anchor_r2",
+  "previous_decision": "A"
+ },
+ "dense_01553": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_00488": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02300": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02279": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02298": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02363": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02341": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02354": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_00495": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_01105": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_01640": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02262": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_01133": {
+  "kind": "regrade_r1",
+  "previous_decision": "C"
+ },
+ "dense_02340": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_01796": {
+  "kind": "anchor_r2",
+  "previous_decision": "B"
+ },
+ "dense_00953": {
+  "kind": "anchor_r2",
+  "previous_decision": "B"
+ },
+ "dense_01467": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02281": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_01140": {
+  "kind": "anchor_r2",
+  "previous_decision": "A"
+ },
+ "dense_00519": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_01839": {
+  "kind": "regrade_r1",
+  "previous_decision": "C"
+ },
+ "dense_02303": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02048": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02321": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02072": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_00757": {
+  "kind": "anchor_r2",
+  "previous_decision": "A"
+ },
+ "dense_00499": {
+  "kind": "regrade_r1",
+  "previous_decision": "C"
+ },
+ "dense_01285": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02280": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02267": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02336": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_00277": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02350": {
+  "kind": "anchor_r2",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02327": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02324": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02331": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02242": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_00411": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02362": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_00405": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02342": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02322": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_00664": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_01734": {
+  "kind": "regrade_r1",
+  "previous_decision": "C"
+ },
+ "dense_02258": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02276": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02286": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02240": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_01678": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_00116": {
+  "kind": "anchor_r2",
+  "previous_decision": "A"
+ },
+ "dense_02261": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_01807": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02287": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02239": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02323": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02357": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02264": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02292": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_01557": {
+  "kind": "anchor_r2",
+  "previous_decision": "B"
+ },
+ "dense_00904": {
+  "kind": "regrade_r1",
+  "previous_decision": "C"
+ },
+ "dense_02338": {
+  "kind": "anchor_r2",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02249": {
+  "kind": "anchor_r2",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_00316": {
+  "kind": "regrade_r1",
+  "previous_decision": "C"
+ },
+ "dense_01055": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02253": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02278": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_01520": {
+  "kind": "anchor_r2",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_00479": {
+  "kind": "regrade_r1",
+  "previous_decision": "C"
+ },
+ "dense_01295": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02296": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_02361": {
+  "kind": "anchor_r2",
+  "previous_decision": "C"
+ },
+ "dense_02263": {
+  "kind": "anchor_r2",
+  "previous_decision": "C"
+ },
+ "dense_02315": {
+  "kind": "regrade_r1",
+  "previous_decision": "not_a_pattern"
+ },
+ "dense_00141": {
+  "kind": "anchor_r2",
+  "previous_decision": "C"
+ }
+}
