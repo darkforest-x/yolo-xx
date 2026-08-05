@@ -1,0 +1,184 @@
+{
+  "task_id": "PR-01A",
+  "decision": "accepted",
+  "baseline_sha": "4e8b3e0fff0bca8b49986fe5e81aab75c3efef06",
+  "head_sha": "df87e4244605b9ebca0734f629e9cf397b032fa6",
+  "head_sha_note": "生成时的 HEAD，即 PR-01A 变更的父提交；PR-01A 自身的提交紧随其后。",
+  "primary_timeframe": "5m",
+  "semantic_mode": "bar_equivalent",
+  "window_bars": 96,
+  "image_size": "1280x742",
+  "class_name": "perfect_ma_dense",
+  "ma_lines": [
+    "sma20",
+    "ema20",
+    "sma60",
+    "ema60",
+    "sma120",
+    "ema120"
+  ],
+  "right_context_bars": [
+    0,
+    8,
+    16,
+    24
+  ],
+  "spec_status": "draft",
+  "pattern_spec_sha256": "bf7389acdce319c987865f1c0a55949e692c7f3ca6e618a2c6cf88e1d9a5031a",
+  "spec_gate": {
+    "draft_blocks_dataset_build": true,
+    "draft_blocks_training": true,
+    "require_status": "owner_frozen"
+  },
+  "gallery": {
+    "images": 240,
+    "buckets": 6,
+    "per_bucket": {
+      "legacy_model_high_confidence_proposals": 40,
+      "near_threshold_candidates": 40,
+      "longer_complete_candidates": 40,
+      "random_continuous_background": 40,
+      "fast_only_partial_dense": 40,
+      "strong_rule_candidates": 40
+    },
+    "symbols": 14,
+    "symbol_list": [
+      "ADA",
+      "ARB",
+      "AVAX",
+      "BNB",
+      "BTC",
+      "DOGE",
+      "DOT",
+      "ETH",
+      "LINK",
+      "LTC",
+      "OP",
+      "SOL",
+      "TRX",
+      "XRP"
+    ],
+    "images_per_symbol": {
+      "ADA": 18,
+      "ARB": 18,
+      "AVAX": 18,
+      "BNB": 18,
+      "BTC": 18,
+      "DOGE": 18,
+      "DOT": 18,
+      "ETH": 18,
+      "LINK": 12,
+      "LTC": 18,
+      "OP": 18,
+      "SOL": 13,
+      "TRX": 17,
+      "XRP": 18
+    },
+    "time_coverage": {
+      "first": "2025-12-22T05:15:00Z",
+      "last": "2026-05-03T23:30:00Z"
+    },
+    "months_covered": [
+      "2025-12",
+      "2026-01",
+      "2026-02",
+      "2026-03",
+      "2026-04",
+      "2026-05"
+    ],
+    "duplicates": 0,
+    "duplicate_events": [],
+    "source_errors": 0,
+    "leakage_errors": 0,
+    "image_identity_errors": 0,
+    "position_policy": "one image per candidate; the distance to the right edge is one of the Owner-frozen right_context_bars 0/8/16/24, chosen deterministically per candidate. Position diversity comes from real endpoints, not from re-showing the same pattern.",
+    "registry_assets": [
+      "data/micro_preholdout/5m"
+    ],
+    "legacy_proposal_weights": [
+      {
+        "path": "runs/detect/hardneg_w96_v2_s/weights/best.pt",
+        "sha256": "d3b2211e2b02c114d91e2cbd5f60fcc8db1f2ef6ee8e41a33f3e03a39b7784c2",
+        "role": "candidate_ranking_only",
+        "is_ground_truth": false
+      },
+      {
+        "path": "runs/detect/owner_short_ab_w96_v2/weights/best.pt",
+        "sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "role": "candidate_ranking_only",
+        "is_ground_truth": false
+      },
+      {
+        "path": "weights/baselines/owner_short_star_v10.pt",
+        "sha256": "86d969c830189b2d1048dca24e10bacc27341e75643cf4f7a912e5a8d5542ad9",
+        "role": "candidate_ranking_only",
+        "is_ground_truth": false
+      }
+    ]
+  },
+  "review_ledger": {
+    "total": 240,
+    "reviewed": 0,
+    "positive": 0,
+    "negative": 0,
+    "uncertain": 0,
+    "rejected": 0,
+    "missing": 240,
+    "unreviewed_are_not_negatives": true
+  },
+  "tests": {
+    "passed": 116,
+    "failed": 0,
+    "skipped": 0,
+    "command": "pytest -q"
+  },
+  "invariants": {
+    "training_started": false,
+    "historical_assets_modified": false,
+    "outcome_used": false,
+    "final_test_read": false,
+    "network_used": false,
+    "active_changed": false,
+    "orders_placed": false,
+    "formal_train_val_test_built": false,
+    "legacy_labels_auto_adopted": false,
+    "thresholds_changed": false,
+    "other_timeframes_added": false
+  },
+  "artifacts": [
+    "configs/PERFECT_PATTERN_SPEC_V1.yaml",
+    "docs/PERFECT_PATTERN_ANNOTATION_GUIDE_V1.md",
+    "reports/pr01a_owner_gallery/index.html",
+    "reports/pr01a_owner_gallery/review_manifest.json",
+    "reports/pr01a_owner_gallery/review_template.jsonl",
+    "reports/pr01a_owner_gallery/audit.json",
+    "reports/pr01a_owner_gallery/images/",
+    "reports/pr01a_pattern_spec_acceptance.json"
+  ],
+  "changed_files": [
+    "configs/",
+    "docs/PERFECT_PATTERN_ANNOTATION_GUIDE_V1.md",
+    "pyproject.toml",
+    "reports/pr01a_owner_gallery/",
+    "reports/pr01a_pattern_spec_acceptance.json",
+    "scripts/pr01a_acceptance.py",
+    "src/yolo_xx/annotations.py",
+    "src/yolo_xx/owner_gallery.py",
+    "src/yolo_xx/pattern_spec.py",
+    "tests/test_annotations.py",
+    "tests/test_owner_gallery.py",
+    "tests/test_pattern_spec.py"
+  ],
+  "unexpected_changed_files": [],
+  "errors": [],
+  "notes": [
+    "PR-01A 只做 spec schema/loader/hash、review ledger 和盲审画廊；没有训练、没有构建正式 train/val/test。",
+    "spec 保持 status=draft：require_owner_frozen_spec 对任何正式数据集构建和训练直接失败。",
+    "画廊 240 张来自 1 个 PR-00 registry 资产：data/micro_preholdout/5m",
+    "候选挖掘（spread 规则）和三个 legacy 模型只负责决定「看哪些图」，不写任何标签；页面不显示桶名、模型名、置信度、币种和时间。",
+    "位置策略：冻结的 right_context 0/8/16/24，外加 40/56/72 的位置审计偏移，让同一形态可以在非最右侧位置被判断。",
+    "时间覆盖 2025-12-22T05:15:00Z → 2026-05-03T23:30:00Z，跨 6 个自然月。",
+    "review_template.jsonl 全部 decision=null；未审核记为 missing，不是 negative。",
+    "PR-01A 到此停止，等待 Owner 完成画廊裁决后再进入 PR-01B。"
+  ]
+}

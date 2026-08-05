@@ -1,0 +1,186 @@
+# 完美均线密集形态规格 V1（5m）
+#
+# 状态模型：draft -> owner_frozen -> retired
+# 当前为 draft：正式数据集构建与训练必须拒绝启动（见 dataset_build_gate）。
+# Owner 完成 reports/pr01a_owner_gallery/index.html 的首批裁决后，才在 PR-01B 冻结。
+#
+# canonical SHA-256 只覆盖任务合同本身，不包含 status 和 freeze 两段，
+# 这样冻结一份未改动的 spec 不会改变它的身份。用 `yolo-xx-pattern validate-spec` 打印。
+
+schema_version: 1
+task_id: perfect_5m_six_ma_dense_v1
+status: draft
+
+scope:
+  project: yolo-xx
+  responsibility: small_timeframe_single_class_yolo_detection
+  forbidden_until_model_acceptance:
+    - judgment
+    - lightgbm
+    - outcome_labels
+    - backtest
+    - tp_sl
+    - transaction_costs
+    - execution
+    - live_scan
+    - exchange_connection
+    - orders
+    - active_promotion
+    - deployment
+    - reinforcement_learning
+    - agent_orchestration
+
+primary_timeframe: 5m
+semantic_mode: bar_equivalent
+
+class_contract:
+  number_of_classes: 1
+  class_id: 0
+  class_name: perfect_ma_dense
+  description: >-
+    Owner-confirmed, visually standard, unambiguous six-moving-average
+    compression pattern on a frozen 5-minute chart rendering.
+
+ma_contract:
+  lines:
+    - sma20
+    - ema20
+    - sma60
+    - ema60
+    - sma120
+    - ema120
+  periods:
+    - 20
+    - 60
+    - 120
+  line_families:
+    - sma
+    - ema
+  interpretation: bar_equivalent
+  owner_assumption: >-
+    "均线密集" currently means the six SMA/EMA 20/60/120 lines.
+    Changing to a two-line task requires a new task_id and new dataset.
+
+window_contract:
+  window_bars: 96
+  image_width: 1280
+  image_height: 742
+  right_context_bars:
+    - 0
+    - 8
+    - 16
+    - 24
+  partial_box_policy: reject
+  same_annotation_contexts_must_share_split: true
+
+render_contract:
+  renderer: yolo_xx.render
+  show_axes: false
+  show_text: false
+  show_symbol: false
+  show_time: false
+  show_volume: false
+  show_annotations: false
+  deterministic: true
+  timeframe_scaled_vertical_span: true
+
+candidate_mining_contract:
+  role: recall_oriented_candidate_generation_only
+  is_ground_truth: false
+  legacy_broad_filter:
+    fast_spread_max: 0.0028
+    full_spread_max: 0.0055
+    min_dense_bars: 5
+    max_dense_bars: 12
+    merge_gap_bars: 2
+  allowed_sources:
+    - rule_candidates
+    - legacy_model_proposals
+    - random_continuous_background
+  warning: >-
+    Candidate filters and legacy model predictions must never be treated as
+    positive or negative ground truth without Owner review.
+
+positive_ground_truth_contract:
+  source: owner_review_only
+  required_review_status: positive
+  dimensions:
+    all_six_lines_dense: owner_review
+    duration_complete: owner_review
+    line_intertwining_or_compression: owner_review
+    slope_standard: owner_review
+    price_structure_compressed: owner_review
+    not_already_broken_out: owner_review
+    box_start_correct: owner_review
+    box_end_correct: owner_review
+    visually_unambiguous: owner_review
+  numeric_thresholds_frozen: false
+
+negative_ground_truth_contract:
+  source: owner_review_only
+  required_review_status: negative
+  near_miss_reason_codes:
+    - FAST_ONLY
+    - SLOW_LINES_SEPARATED
+    - SLOPE_TOO_LARGE
+    - DURATION_TOO_SHORT
+    - DURATION_TOO_LONG
+    - PRICE_NOT_COMPRESSED
+    - ALREADY_BROKEN_OUT
+    - INCOMPLETE_PATTERN
+    - SCALE_ILLUSION
+    - WRONG_MA_RELATION
+    - OTHER
+  forbidden_negative_inference:
+    - empty_label
+    - no_legacy_owner_box
+    - legacy_model_silence
+    - losing_trade
+    - outcome_label
+    - rule_filter_failure
+
+annotation_contract:
+  reviewer: owner
+  allowed_status:
+    - positive
+    - negative
+    - uncertain
+    - rejected
+  uncertain_in_training: false
+  unreviewed_in_training: false
+  empty_label_means_negative: false
+  model_prediction_is_ground_truth: false
+  rule_candidate_is_ground_truth: false
+
+owner_gallery_contract:
+  total_images: 240
+  buckets: 6
+  images_per_bucket: 40
+  bucket_names:
+    - strong_rule_candidates
+    - longer_complete_candidates
+    - near_threshold_candidates
+    - fast_only_partial_dense
+    - legacy_model_high_confidence_proposals
+    - random_continuous_background
+  blind_review:
+    hide_bucket: true
+    hide_model_name: true
+    hide_model_confidence: true
+    hide_outcome: true
+    hide_old_label: true
+    hide_symbol_and_time_in_ui: true
+  deduplicate_source_endpoints: true
+  deduplicate_image_sha256: true
+  deduplicate_perceptual_near_duplicates: true
+
+dataset_build_gate:
+  require_status: owner_frozen
+  require_spec_sha256: true
+  require_owner_reviews: true
+  allow_draft_training: false
+
+freeze:
+  frozen_by: null
+  frozen_at: null
+  spec_sha256: null

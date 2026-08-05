@@ -1,0 +1,348 @@
+{
+  "schema_version": 1,
+  "images": 240,
+  "buckets": 6,
+  "per_bucket": {
+    "legacy_model_high_confidence_proposals": 40,
+    "near_threshold_candidates": 40,
+    "longer_complete_candidates": 40,
+    "random_continuous_background": 40,
+    "fast_only_partial_dense": 40,
+    "strong_rule_candidates": 40
+  },
+  "symbols": 14,
+  "symbol_list": [
+    "ADA",
+    "ARB",
+    "AVAX",
+    "BNB",
+    "BTC",
+    "DOGE",
+    "DOT",
+    "ETH",
+    "LINK",
+    "LTC",
+    "OP",
+    "SOL",
+    "TRX",
+    "XRP"
+  ],
+  "images_per_symbol": {
+    "ADA": 18,
+    "ARB": 18,
+    "AVAX": 18,
+    "BNB": 18,
+    "BTC": 18,
+    "DOGE": 18,
+    "DOT": 18,
+    "ETH": 18,
+    "LINK": 12,
+    "LTC": 18,
+    "OP": 18,
+    "SOL": 13,
+    "TRX": 17,
+    "XRP": 18
+  },
+  "time_coverage": {
+    "first": "2025-12-22T05:15:00Z",
+    "last": "2026-05-03T23:30:00Z"
+  },
+  "months_covered": [
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05"
+  ],
+  "duplicates": 0,
+  "duplicate_events": [],
+  "source_errors": 0,
+  "leakage_errors": 0,
+  "unreviewed": 240,
+  "valid": true,
+  "errors": [],
+  "near_duplicate_candidates_rejected": 35,
+  "near_duplicate_rejections": [
+    {
+      "kind": "perceptual",
+      "symbol": "ETH",
+      "window_end_index": 6162,
+      "duplicate_of": "DOGE:6159",
+      "distance": 15,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "XRP",
+      "window_end_index": 30209,
+      "duplicate_of": "BNB:3580",
+      "distance": 17,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "TRX",
+      "window_end_index": 16248,
+      "duplicate_of": "BTC:2144",
+      "distance": 15,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "TRX",
+      "window_end_index": 12929,
+      "duplicate_of": "BTC:2144",
+      "distance": 12,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "BTC",
+      "window_end_index": 6361,
+      "duplicate_of": "XRP:36669",
+      "distance": 16,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "BTC",
+      "window_end_index": 8396,
+      "duplicate_of": "BTC:2144",
+      "distance": 14,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "BTC",
+      "window_end_index": 3465,
+      "duplicate_of": "BTC:2144",
+      "distance": 17,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "BTC",
+      "window_end_index": 10244,
+      "duplicate_of": "BTC:2144",
+      "distance": 14,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "BTC",
+      "window_end_index": 4479,
+      "duplicate_of": "BNB:3580",
+      "distance": 17,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "BTC",
+      "window_end_index": 7835,
+      "duplicate_of": "BNB:3580",
+      "distance": 17,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "ETH",
+      "window_end_index": 18459,
+      "duplicate_of": "BTC:2144",
+      "distance": 14,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "ETH",
+      "window_end_index": 18133,
+      "duplicate_of": "BNB:3580",
+      "distance": 17,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "XRP",
+      "window_end_index": 38333,
+      "duplicate_of": "BTC:2144",
+      "distance": 17,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "TRX",
+      "window_end_index": 20744,
+      "duplicate_of": "BTC:2144",
+      "distance": 13,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "TRX",
+      "window_end_index": 22526,
+      "duplicate_of": "BNB:18155",
+      "distance": 16,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "TRX",
+      "window_end_index": 22950,
+      "duplicate_of": "DOGE:6159",
+      "distance": 15,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "TRX",
+      "window_end_index": 23810,
+      "duplicate_of": "BNB:18155",
+      "distance": 14,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "LINK",
+      "window_end_index": 10073,
+      "duplicate_of": "DOGE:6159",
+      "distance": 16,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "LTC",
+      "window_end_index": 30257,
+      "duplicate_of": "BTC:2144",
+      "distance": 17,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "LTC",
+      "window_end_index": 37109,
+      "duplicate_of": "XRP:37910",
+      "distance": 17,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "BNB",
+      "window_end_index": 26372,
+      "duplicate_of": "BNB:3580",
+      "distance": 17,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "BNB",
+      "window_end_index": 22227,
+      "duplicate_of": "SOL:10290",
+      "distance": 17,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "BNB",
+      "window_end_index": 24341,
+      "duplicate_of": "DOGE:6159",
+      "distance": 13,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "XRP",
+      "window_end_index": 2112,
+      "duplicate_of": "DOGE:6159",
+      "distance": 16,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "TRX",
+      "window_end_index": 37266,
+      "duplicate_of": "BTC:2144",
+      "distance": 12,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "TRX",
+      "window_end_index": 29485,
+      "duplicate_of": "BNB:3580",
+      "distance": 17,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "TRX",
+      "window_end_index": 31559,
+      "duplicate_of": "XRP:37910",
+      "distance": 13,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "TRX",
+      "window_end_index": 30514,
+      "duplicate_of": "DOGE:6159",
+      "distance": 14,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "TRX",
+      "window_end_index": 33175,
+      "duplicate_of": "DOGE:6159",
+      "distance": 15,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "TRX",
+      "window_end_index": 24380,
+      "duplicate_of": "BTC:4104",
+      "distance": 15,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "TRX",
+      "window_end_index": 23742,
+      "duplicate_of": "DOGE:6159",
+      "distance": 17,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "BTC",
+      "window_end_index": 1412,
+      "duplicate_of": "BTC:2144",
+      "distance": 13,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "TRX",
+      "window_end_index": 774,
+      "duplicate_of": "BNB:3580",
+      "distance": 17,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "TRX",
+      "window_end_index": 1731,
+      "duplicate_of": "BTC:2144",
+      "distance": 15,
+      "threshold": 18
+    },
+    {
+      "kind": "perceptual",
+      "symbol": "TRX",
+      "window_end_index": 2369,
+      "duplicate_of": "BTC:18441",
+      "distance": 17,
+      "threshold": 18
+    }
+  ]
+}
