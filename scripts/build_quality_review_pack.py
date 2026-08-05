@@ -73,10 +73,16 @@ def main() -> int:
     ap.add_argument("--n-teacher", type=int, default=60)
     ap.add_argument("--out-dir", type=Path, default=YOLO_XX / "reports/quality_review_pack")
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--exclude-graded", action="store_true",
+                    help="skip patterns owner has already graded (for follow-up rounds)")
     args = ap.parse_args()
 
     lib = json.loads(LIB.read_text())
     pats = lib["patterns"]
+    if args.exclude_graded:
+        before = len(pats)
+        pats = [p for p in pats if not p.get("human_label")]
+        print(f"excluding {before - len(pats)} already-graded patterns", flush=True)
     owner = [p for p in pats if p["source"] == "golden_pool"]
     teacher = [p for p in pats if p["source"] != "golden_pool"]
     print(f"library: owner={len(owner)} teacher={len(teacher)}", flush=True)
