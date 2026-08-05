@@ -1,0 +1,538 @@
+{
+  "task_id": "PR-00",
+  "baseline_sha": "4e8b3e0fff0bca8b49986fe5e81aab75c3efef06",
+  "head_sha": "4e8b3e0fff0bca8b49986fe5e81aab75c3efef06",
+  "head_sha_note": "head_sha 是本轮生成时的 HEAD，即 PR-00 变更的父提交；PR-00 自身的提交紧随其后。",
+  "scope": "small_timeframe_perfect_pattern_detector",
+  "changed_files": [
+    "AGENTS.md",
+    "README.md",
+    "docs/ASSET_REUSE_DECISIONS.md",
+    "docs/asset_registry_v2.json",
+    "reports/pr00_asset_audit.json",
+    "scripts/pr00_asset_registry.py"
+  ],
+  "git_status_porcelain": [
+    " M AGENTS.md",
+    " M README.md",
+    "?? docs/ASSET_REUSE_DECISIONS.md",
+    "?? docs/asset_registry_v2.json",
+    "?? reports/pr00_asset_audit.json",
+    "?? scripts/pr00_asset_registry.py"
+  ],
+  "unexpected_worktree_changes": [],
+  "tests": {
+    "passed": 65,
+    "failed": 0,
+    "skipped": 0,
+    "command": "pytest -q"
+  },
+  "artifacts": [
+    "docs/asset_registry_v2.json",
+    "docs/ASSET_REUSE_DECISIONS.md",
+    "reports/pr00_asset_audit.json"
+  ],
+  "invariants": {
+    "training_started": false,
+    "outcome_used": false,
+    "holdout_used_as_final_test": false,
+    "active_changed": false,
+    "network_used": false,
+    "orders_placed": false,
+    "legacy_assets_modified": false
+  },
+  "registry": {
+    "assets": 157,
+    "by_reuse_status": {
+      "DIRECT_REUSE": 9,
+      "LEGACY_BASELINE_ONLY": 87,
+      "REJECT": 17,
+      "REVIEW_AND_REUSE": 44
+    },
+    "by_asset_type": {
+      "annotation_queue": 2,
+      "dataset": 15,
+      "prediction_set": 41,
+      "report": 17,
+      "review_gallery": 3,
+      "run": 9,
+      "scan_set": 27,
+      "snapshot": 17,
+      "weight": 26
+    },
+    "hashed_bytes": 20526722053
+  },
+  "sha_verification": {
+    "checks": 65,
+    "matched": 65,
+    "mismatched": 0,
+    "details": [
+      {
+        "check": "source_snapshot.json sha256",
+        "path": "data/manual_short_preholdout_15m/snapshot_summary.json",
+        "expected_sha256": "9b186abc2905f97237b07a065c8fa377516c9af5488d8cf3294194834c80e32c",
+        "computed_sha256": "9b186abc2905f97237b07a065c8fa377516c9af5488d8cf3294194834c80e32c",
+        "match": true
+      },
+      {
+        "check": "source_snapshot.json sha256",
+        "path": "data/preholdout_15m_scan/snapshot_summary.json",
+        "expected_sha256": "1d57a3c2e31e896ed4b4a2dd1bcb3a0acb0c5e1e3474bd7a8e5c53c25d5c1fce",
+        "computed_sha256": "1d57a3c2e31e896ed4b4a2dd1bcb3a0acb0c5e1e3474bd7a8e5c53c25d5c1fce",
+        "match": true
+      },
+      {
+        "check": "source_snapshot.json sha256",
+        "path": "data/preholdout_30m/snapshot_summary.json",
+        "expected_sha256": "f63bf25c83461f6fd05d72b4ff3b9f70149fc3167b39f3bd8a97ba5bd764cfb0",
+        "computed_sha256": "f63bf25c83461f6fd05d72b4ff3b9f70149fc3167b39f3bd8a97ba5bd764cfb0",
+        "match": true
+      },
+      {
+        "check": "source_snapshot.json sha256",
+        "path": "data/micro_preholdout/5m/snapshot_summary.json",
+        "expected_sha256": "639bddb86b85b1e0b0025f359552b1dd4d7d39d67b09a479933ccdd3094cd4cd",
+        "computed_sha256": "639bddb86b85b1e0b0025f359552b1dd4d7d39d67b09a479933ccdd3094cd4cd",
+        "match": true
+      },
+      {
+        "check": "source_snapshot.json sha256",
+        "path": "data/micro_preholdout/3m/snapshot_summary.json",
+        "expected_sha256": "7376089eaae074703ed193c41ab985fb689d9d6bdf70f8f534f580aec82d8abb",
+        "computed_sha256": "7376089eaae074703ed193c41ab985fb689d9d6bdf70f8f534f580aec82d8abb",
+        "match": true
+      },
+      {
+        "check": "source_snapshot.json sha256",
+        "path": "data/micro_preholdout/2m/snapshot_summary.json",
+        "expected_sha256": "f0e3098946305fec4cdcfb8af1787e90f1f531fa99d0fe5fdba63270a91b42f9",
+        "computed_sha256": "f0e3098946305fec4cdcfb8af1787e90f1f531fa99d0fe5fdba63270a91b42f9",
+        "match": true
+      },
+      {
+        "check": "source_snapshot.json sha256",
+        "path": "data/micro_preholdout/1m/snapshot_summary.json",
+        "expected_sha256": "15f58be38568fa38624a7b5d5c7568623deb48fd43a8882fbc878789e60fa7c4",
+        "computed_sha256": "15f58be38568fa38624a7b5d5c7568623deb48fd43a8882fbc878789e60fa7c4",
+        "match": true
+      },
+      {
+        "check": "source_snapshot.json sha256",
+        "path": "data/holdout_scan_20260804/1m/snapshot_summary.json",
+        "expected_sha256": "5181d1caf83b4f997d86e4aea09718c5f1874d24af5a2f7333385f48b5bb7eee",
+        "computed_sha256": "5181d1caf83b4f997d86e4aea09718c5f1874d24af5a2f7333385f48b5bb7eee",
+        "match": true
+      },
+      {
+        "check": "source_snapshot.json sha256",
+        "path": "data/holdout_scan_20260804/2m/snapshot_summary.json",
+        "expected_sha256": "955677fbf2a2b16d1934eecb93d33c31210e1fb926b063759873e6aebcbcc109",
+        "computed_sha256": "955677fbf2a2b16d1934eecb93d33c31210e1fb926b063759873e6aebcbcc109",
+        "match": true
+      },
+      {
+        "check": "source_snapshot.json sha256",
+        "path": "data/holdout_scan_20260804/3m/snapshot_summary.json",
+        "expected_sha256": "64a785d792a87890603de2cc404d62e744499fa995aa6604e20b9b7ccf3c694e",
+        "computed_sha256": "64a785d792a87890603de2cc404d62e744499fa995aa6604e20b9b7ccf3c694e",
+        "match": true
+      },
+      {
+        "check": "source_snapshot.json sha256",
+        "path": "data/holdout_scan_20260804/5m/snapshot_summary.json",
+        "expected_sha256": "b748cb662421ad8dc5b8b0447463510a6a0094eba31f4bba4073e17dd189aa54",
+        "computed_sha256": "b748cb662421ad8dc5b8b0447463510a6a0094eba31f4bba4073e17dd189aa54",
+        "match": true
+      },
+      {
+        "check": "source_snapshot.json sha256",
+        "path": "data/holdout_scan_20260804/15m/snapshot_summary.json",
+        "expected_sha256": "3171bf633795e32608f0ec67f84be481be90b3306b213e7eac05a4376b9bc10d",
+        "computed_sha256": "3171bf633795e32608f0ec67f84be481be90b3306b213e7eac05a4376b9bc10d",
+        "match": true
+      },
+      {
+        "check": "source_snapshot.json sha256",
+        "path": "data/holdout_scan_20260804/30m/snapshot_summary.json",
+        "expected_sha256": "d50444566880abd54bb15c69ec271bc344a8ef787e0845e9d5bbec1b672b005d",
+        "computed_sha256": "d50444566880abd54bb15c69ec271bc344a8ef787e0845e9d5bbec1b672b005d",
+        "match": true
+      },
+      {
+        "check": "source_snapshot.json sha256",
+        "path": "data/wide_holdout_5m/snapshot_summary.json",
+        "expected_sha256": "8dbda440de1f61849d493f32b584d6b2f2825d5152a1fa28dfdb8171ae151b50",
+        "computed_sha256": "8dbda440de1f61849d493f32b584d6b2f2825d5152a1fa28dfdb8171ae151b50",
+        "match": true
+      },
+      {
+        "check": "source_snapshot.json sha256",
+        "path": "data/review_1m/snapshot_summary.json",
+        "expected_sha256": "ec431f1a9a1ac784dbe1034f1e3fa6092044ae22ea4a09627e9c55908922ba37",
+        "computed_sha256": "ec431f1a9a1ac784dbe1034f1e3fa6092044ae22ea4a09627e9c55908922ba37",
+        "match": true
+      },
+      {
+        "check": "source_snapshot.json sha256",
+        "path": "data/review_3m/snapshot_summary.json",
+        "expected_sha256": "36998368666542b57572538ab68614231871fc2a22c48963578901e9dae897cd",
+        "computed_sha256": "36998368666542b57572538ab68614231871fc2a22c48963578901e9dae897cd",
+        "match": true
+      },
+      {
+        "check": "source_snapshot.json sha256",
+        "path": "data/review_5m/snapshot_summary.json",
+        "expected_sha256": "3a91c348955738478e6a967de42eb63da001db944dffd7441f4217007d83704a",
+        "computed_sha256": "3a91c348955738478e6a967de42eb63da001db944dffd7441f4217007d83704a",
+        "match": true
+      },
+      {
+        "check": "owner_short_annotations.csv sha256",
+        "path": "data/manual_short_preholdout_15m/owner_short_annotations.csv",
+        "expected_sha256": "23fd378ab384b9d2f73dc67aa409943373c347fbfe1f0f7647d8de54cdd5b705",
+        "computed_sha256": "23fd378ab384b9d2f73dc67aa409943373c347fbfe1f0f7647d8de54cdd5b705",
+        "match": true
+      },
+      {
+        "check": "migrated dataset content sha256 (2026-08-03 口径)",
+        "path": "datasets/dense_owner_short_star_tip_v10",
+        "expected_sha256": "624dd884fd76b7c5a2bab5a36e1e48f3d1ca5a4d9da2ae35a07f43fad2c292a8",
+        "computed_sha256": "624dd884fd76b7c5a2bab5a36e1e48f3d1ca5a4d9da2ae35a07f43fad2c292a8",
+        "match": true
+      },
+      {
+        "check": "migrated dataset content sha256 (2026-08-03 口径)",
+        "path": "datasets/dense_owner_side_short_tip_v3",
+        "expected_sha256": "1c0286cb2ff43d0991c0c57b1a27f352393537d2c4f5da8249712fed30f52d68",
+        "computed_sha256": "1c0286cb2ff43d0991c0c57b1a27f352393537d2c4f5da8249712fed30f52d68",
+        "match": true
+      },
+      {
+        "check": "migrated dataset content sha256 (2026-08-03 口径)",
+        "path": "datasets/eth_3m_short_pilot_v1",
+        "expected_sha256": "c97c88d474b9141a14b0d6aaa7fdf61f5f1f825ed98e0c6fb23c6cf7bff8e969",
+        "computed_sha256": "c97c88d474b9141a14b0d6aaa7fdf61f5f1f825ed98e0c6fb23c6cf7bff8e969",
+        "match": true
+      },
+      {
+        "check": "migrated dataset content sha256 (2026-08-03 口径)",
+        "path": "datasets/eth_short_tip_label2000",
+        "expected_sha256": "9473039b8fb964dde0f8a128b5770a1168b5bcb40b8ad57950e494d258edad4b",
+        "computed_sha256": "9473039b8fb964dde0f8a128b5770a1168b5bcb40b8ad57950e494d258edad4b",
+        "match": true
+      },
+      {
+        "check": "dataset_manifest.json sha256",
+        "path": "datasets/owner_short_original_w200/dataset_manifest.json",
+        "expected_sha256": "6bc7d2442e101d6085e285d332bdd485195ab00666cd665aac0eb6e5b1b2c96a",
+        "computed_sha256": "6bc7d2442e101d6085e285d332bdd485195ab00666cd665aac0eb6e5b1b2c96a",
+        "match": true
+      },
+      {
+        "check": "dataset_manifest.json sha256",
+        "path": "datasets/owner_short_staggered_w96/dataset_manifest.json",
+        "expected_sha256": "2315450180c4a7139855e582554bbf2ed9fc3927d20b14f53a8f0eb00966bfb9",
+        "computed_sha256": "2315450180c4a7139855e582554bbf2ed9fc3927d20b14f53a8f0eb00966bfb9",
+        "match": true
+      },
+      {
+        "check": "pair_manifest.json sha256",
+        "path": "datasets/owner_short_paired_ab_v1/pair_manifest.json",
+        "expected_sha256": "dce3dda0afaa645eab05886eefb3c1d414fa31f6b52bf5f8242e1785850b8053",
+        "computed_sha256": "dce3dda0afaa645eab05886eefb3c1d414fa31f6b52bf5f8242e1785850b8053",
+        "match": true
+      },
+      {
+        "check": "pair_manifest.json sha256",
+        "path": "datasets/owner_short_paired_ab_v2/pair_manifest.json",
+        "expected_sha256": "c13032ccc2fc7ac4ef75723dc2fd2f40b20507067cbe203b3ba3844de5e03e63",
+        "computed_sha256": "c13032ccc2fc7ac4ef75723dc2fd2f40b20507067cbe203b3ba3844de5e03e63",
+        "match": true
+      },
+      {
+        "check": "pair_manifest.json sha256",
+        "path": "datasets/owner_short_paired_ab_fixture8/pair_manifest.json",
+        "expected_sha256": "8e777e2e476b48410b1296e56ea0ff30e5f1ef38ad13aa775426e988ac8a9b1a",
+        "computed_sha256": "8e777e2e476b48410b1296e56ea0ff30e5f1ef38ad13aa775426e988ac8a9b1a",
+        "match": true
+      },
+      {
+        "check": "pair_manifest.json sha256",
+        "path": "datasets/owner_short_hardneg_v1/pair_manifest.json",
+        "expected_sha256": "2a67314d85c15c3086aba483c3fd4791600d1b7a42a0d086830d887752e18626",
+        "computed_sha256": "2a67314d85c15c3086aba483c3fd4791600d1b7a42a0d086830d887752e18626",
+        "match": true
+      },
+      {
+        "check": "pair_manifest.json sha256",
+        "path": "datasets/owner_short_hardneg_v2/pair_manifest.json",
+        "expected_sha256": "d300d038b09574dc6ed1351dca3ddcbe12e0384d5c2e6719cc28750b70a13317",
+        "computed_sha256": "d300d038b09574dc6ed1351dca3ddcbe12e0384d5c2e6719cc28750b70a13317",
+        "match": true
+      },
+      {
+        "check": "weight sha256 (docs/migrated_assets.json)",
+        "path": "weights/bases/yolo11n.pt",
+        "expected_sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
+        "computed_sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
+        "match": true
+      },
+      {
+        "check": "weight sha256 (docs/migrated_assets.json)",
+        "path": "weights/bases/yolo11s.pt",
+        "expected_sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+        "computed_sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+        "match": true
+      },
+      {
+        "check": "weight sha256 (docs/migrated_assets.json)",
+        "path": "weights/baselines/owner_short_star_v10.pt",
+        "expected_sha256": "86d969c830189b2d1048dca24e10bacc27341e75643cf4f7a912e5a8d5542ad9",
+        "computed_sha256": "86d969c830189b2d1048dca24e10bacc27341e75643cf4f7a912e5a8d5542ad9",
+        "match": true
+      },
+      {
+        "check": "weight sha256 (docs/migrated_assets.json)",
+        "path": "weights/baselines/owner_side_short_tip_v3.pt",
+        "expected_sha256": "f1c65e70c94930b9e7c052c43ca61353528747f740687a7f821a42b74e275f61",
+        "computed_sha256": "f1c65e70c94930b9e7c052c43ca61353528747f740687a7f821a42b74e275f61",
+        "match": true
+      },
+      {
+        "check": "weight sha256 (docs/migrated_assets.json)",
+        "path": "weights/baselines/eth3m_short_pilot_v1_mac_cold.pt",
+        "expected_sha256": "7f1f3b2d6300952ac5c4adb3937c0b3b2e9d7879b73ed2855bcf08b55cbe202e",
+        "computed_sha256": "7f1f3b2d6300952ac5c4adb3937c0b3b2e9d7879b73ed2855bcf08b55cbe202e",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/hardneg_train_scan/w96/predictions.json",
+        "path": "runs/detect/hardneg_w96_v1/weights/best.pt",
+        "expected_sha256": "e79c76add4310ec9e15c33a381e1116acb02e52ff9061df0634cec9a54cc23b1",
+        "computed_sha256": "e79c76add4310ec9e15c33a381e1116acb02e52ff9061df0634cec9a54cc23b1",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/hardneg_v2_scan/w96/predictions.json",
+        "path": "runs/detect/hardneg_w96_v2/weights/best.pt",
+        "expected_sha256": "d7452adbb4dd0a349cc41dbf0769c60b47bbf20fb8ff15619825cb03f509f4aa",
+        "computed_sha256": "d7452adbb4dd0a349cc41dbf0769c60b47bbf20fb8ff15619825cb03f509f4aa",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/hardneg_v2s_scan/w96/predictions.json",
+        "path": "runs/detect/hardneg_w96_v2_s/weights/best.pt",
+        "expected_sha256": "d3b2211e2b02c114d91e2cbd5f60fcc8db1f2ef6ee8e41a33f3e03a39b7784c2",
+        "computed_sha256": "d3b2211e2b02c114d91e2cbd5f60fcc8db1f2ef6ee8e41a33f3e03a39b7784c2",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/holdout_dense_20260804/w96/2m/predictions.json",
+        "path": "runs/detect/owner_short_ab_w96_v2/weights/best.pt",
+        "expected_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "computed_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/holdout_dense_20260804/w96/3m/predictions.json",
+        "path": "runs/detect/owner_short_ab_w96_v2/weights/best.pt",
+        "expected_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "computed_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/holdout_dense_20260804/w96/5m/predictions.json",
+        "path": "runs/detect/owner_short_ab_w96_v2/weights/best.pt",
+        "expected_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "computed_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/holdout_scan_20260804/w96/15m/predictions.json",
+        "path": "runs/detect/owner_short_ab_w96_v2/weights/best.pt",
+        "expected_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "computed_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/holdout_scan_20260804/w96/1m/predictions.json",
+        "path": "runs/detect/owner_short_ab_w96_v2/weights/best.pt",
+        "expected_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "computed_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/holdout_scan_20260804/w96/2m/predictions.json",
+        "path": "runs/detect/owner_short_ab_w96_v2/weights/best.pt",
+        "expected_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "computed_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/holdout_scan_20260804/w96/30m/predictions.json",
+        "path": "runs/detect/owner_short_ab_w96_v2/weights/best.pt",
+        "expected_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "computed_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/holdout_scan_20260804/w96/3m/predictions.json",
+        "path": "runs/detect/owner_short_ab_w96_v2/weights/best.pt",
+        "expected_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "computed_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/holdout_scan_20260804/w96/5m/predictions.json",
+        "path": "runs/detect/owner_short_ab_w96_v2/weights/best.pt",
+        "expected_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "computed_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/holdout_scan_20260804_v2/w96/15m/predictions.json",
+        "path": "runs/detect/owner_short_ab_w96_v2/weights/best.pt",
+        "expected_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "computed_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/holdout_scan_20260804_v2/w96/1m/predictions.json",
+        "path": "runs/detect/owner_short_ab_w96_v2/weights/best.pt",
+        "expected_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "computed_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/holdout_scan_20260804_v2/w96/2m/predictions.json",
+        "path": "runs/detect/owner_short_ab_w96_v2/weights/best.pt",
+        "expected_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "computed_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/holdout_scan_20260804_v2/w96/30m/predictions.json",
+        "path": "runs/detect/owner_short_ab_w96_v2/weights/best.pt",
+        "expected_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "computed_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/holdout_scan_20260804_v2/w96/3m/predictions.json",
+        "path": "runs/detect/owner_short_ab_w96_v2/weights/best.pt",
+        "expected_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "computed_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/holdout_scan_20260804_v2/w96/5m/predictions.json",
+        "path": "runs/detect/owner_short_ab_w96_v2/weights/best.pt",
+        "expected_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "computed_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/preholdout_15m_train_scan/w96/predictions.json",
+        "path": "runs/detect/owner_short_ab_w96_v2/weights/best.pt",
+        "expected_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "computed_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/preholdout_15m_val/w96/predictions.json",
+        "path": "runs/detect/owner_short_ab_w96_v2/weights/best.pt",
+        "expected_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "computed_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/preholdout_dense_v2/w96/2m/predictions.json",
+        "path": "runs/detect/owner_short_ab_w96_v2/weights/best.pt",
+        "expected_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "computed_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/preholdout_dense_v2/w96/5m/predictions.json",
+        "path": "runs/detect/owner_short_ab_w96_v2/weights/best.pt",
+        "expected_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "computed_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/review_1m/predictions.json",
+        "path": "runs/detect/hardneg_w96_v2_s2/weights/best.pt",
+        "expected_sha256": "e90f4d087ddb08b7e1b3a719f80d5deeb05835e50f051564ac80ad8751d625a6",
+        "computed_sha256": "e90f4d087ddb08b7e1b3a719f80d5deeb05835e50f051564ac80ad8751d625a6",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/review_3m/predictions.json",
+        "path": "runs/detect/hardneg_w96_v2_s2/weights/best.pt",
+        "expected_sha256": "e90f4d087ddb08b7e1b3a719f80d5deeb05835e50f051564ac80ad8751d625a6",
+        "computed_sha256": "e90f4d087ddb08b7e1b3a719f80d5deeb05835e50f051564ac80ad8751d625a6",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/review_5m/predictions.json",
+        "path": "runs/detect/hardneg_w96_v2_s2/weights/best.pt",
+        "expected_sha256": "e90f4d087ddb08b7e1b3a719f80d5deeb05835e50f051564ac80ad8751d625a6",
+        "computed_sha256": "e90f4d087ddb08b7e1b3a719f80d5deeb05835e50f051564ac80ad8751d625a6",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/v2s2_scan/w96/predictions.json",
+        "path": "runs/detect/hardneg_w96_v2_s2/weights/best.pt",
+        "expected_sha256": "e90f4d087ddb08b7e1b3a719f80d5deeb05835e50f051564ac80ad8751d625a6",
+        "computed_sha256": "e90f4d087ddb08b7e1b3a719f80d5deeb05835e50f051564ac80ad8751d625a6",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/v2s_signals/5m/predictions.json",
+        "path": "runs/detect/hardneg_w96_v2_s/weights/best.pt",
+        "expected_sha256": "d3b2211e2b02c114d91e2cbd5f60fcc8db1f2ef6ee8e41a33f3e03a39b7784c2",
+        "computed_sha256": "d3b2211e2b02c114d91e2cbd5f60fcc8db1f2ef6ee8e41a33f3e03a39b7784c2",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/v2s_wide/w96/predictions.json",
+        "path": "runs/detect/hardneg_w96_v2_s/weights/best.pt",
+        "expected_sha256": "d3b2211e2b02c114d91e2cbd5f60fcc8db1f2ef6ee8e41a33f3e03a39b7784c2",
+        "computed_sha256": "d3b2211e2b02c114d91e2cbd5f60fcc8db1f2ef6ee8e41a33f3e03a39b7784c2",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/val_split_pred/predictions.json",
+        "path": "runs/detect/owner_short_ab_w96_v2/weights/best.pt",
+        "expected_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "computed_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/wide_holdout_5m/signals/5m/predictions.json",
+        "path": "runs/detect/owner_short_ab_w96_v2/weights/best.pt",
+        "expected_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "computed_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "match": true
+      },
+      {
+        "check": "run weight sha256 recorded in reports/wide_holdout_5m/w96/predictions.json",
+        "path": "runs/detect/owner_short_ab_w96_v2/weights/best.pt",
+        "expected_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "computed_sha256": "5150f4d81754a0e33184bfdc696a4bd5e006b97dd3d0ce3e1843bf062846bcba",
+        "match": true
+      }
+    ]
+  },
+  "decision": "accepted",
+  "notes": [
+    "本轮只做范围重置与资产登记：未训练、未修改任何标签、未移动或覆盖任何历史资产、未联网。",
+    "实际读取并计算 SHA-256 的字节数：20526722053。",
+    "65 项 SHA 核对全部一致：4 个迁入数据集内容哈希、5 个迁入权重、17 个 source snapshot 清单、2 个 dataset manifest、5 个 pair manifest、1 个 owner 标注 CSV、31 处 predictions.json 记录的 run 权重。",
+    "dense_owner_short_star_tip_v10 与 dense_owner_side_short_tip_v3 的 timeframe 标记为 unknown：仓库内没有任何文件声明其周期，按规则不猜。",
+    "eth_3m_short_pilot_v1 与 eth3m_short_pilot_v1_mac_cold.pt 的 REVIEW_AND_REUSE 以「首轮周期冻结为 3m」为前提，否则降为 LEGACY_BASELINE_ONLY。",
+    "小周期 pre-holdout OHLCV 覆盖有限：5m 14 币种、3m 2 币种（BTC/ETH）、2m 18 币种、1m 1 币种；owner 的 1,361 个框全部是 15m 语境。",
+    "reports/v8_scan 引用的 owner_short_star_v8 权重不在本仓库，已登记为无法核对。",
+    "PR-00 到此停止：未开始 PR-01，未填写 configs/PERFECT_PATTERN_SPEC_V1.yaml。"
+  ]
+}

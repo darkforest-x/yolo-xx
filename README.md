@@ -3,6 +3,32 @@
 `yolo-xx` 是从 `fable-trading` 检测层抽出的独立离线项目，只做一件事：准备、训练和验证
 YOLO 图像检测模型。
 
+## 当前范围（2026-08-05 起，收敛）
+
+当前唯一目标：
+
+> 在一个冻结的小周期上，训练出能够高精度识别「非常标准、非常完美的均线密集形态」的
+> 单类别 YOLO 检测模型。
+
+链路只有这一条：小周期 OHLCV → 固定均线 → 固定渲染 → 完美形态人工标签 → 高质量正负
+数据集 → 可复现训练 → 标准/困难/连续背景验证 → 错误分析 → 数据集修正 → 重训 → 冻结。
+
+模型冻结之前（Model Card / Dataset Card / Final Acceptance 全部产出之前），不得实现、
+恢复或扩展：判断层与 LightGBM、收益标签、TP/SL、回测、交易成本、仓位、多周期交易共振、
+实盘扫描、交易所连接、下单、ACTIVE、模型晋升、通知、Agent/MCP 编排、强化学习和产品层。
+
+仓库里已有的 `src/yolo_xx/outcome.py`、收益报告和判断层尝试保留为历史资产：不删除、
+不扩展、不被新 core import、不作为默认 CLI，也不决定正负标签或验收结论。
+
+历史资产（数据集、权重、run、扫描集、预测产物）已全部登记并分四档（`DIRECT_REUSE` /
+`REVIEW_AND_REUSE` / `LEGACY_BASELINE_ONLY` / `REJECT`）：
+
+- [docs/ASSET_REUSE_DECISIONS.md](docs/ASSET_REUSE_DECISIONS.md)：裁决与理由；
+- [docs/asset_registry_v2.json](docs/asset_registry_v2.json)：157 条机器可读登记，含 SHA-256；
+- [reports/pr00_asset_audit.json](reports/pr00_asset_audit.json)：PR-00 机器验收。
+
+旧资产一律冻结：不删除、不移动、不覆盖、不原地改标签。新训练集另起 `dataset_id`。
+
 ## 边界
 
 包含：
