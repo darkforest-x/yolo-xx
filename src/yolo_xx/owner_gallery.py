@@ -37,6 +37,7 @@ import pandas as pd
 
 from . import annotations as review_ledger
 from .data import add_mas, load_ohlcv_csv
+from .labels import DenseSegment, find_dense_segments, segment_to_bbox
 from .pattern_spec import (
     GALLERY_BUCKETS,
     PatternSpecError,
@@ -72,6 +73,13 @@ WARMUP_BARS = 3 * max(MA_PERIODS)
 # auditing belongs to detection evaluation, not to pattern definition.
 FROZEN_RIGHT_CONTEXT = (0, 8, 16, 24)
 GALLERY_CONTEXT_OFFSETS = FROZEN_RIGHT_CONTEXT
+
+RULE_BUCKETS = (
+    "strong_rule_candidates",
+    "longer_complete_candidates",
+    "near_threshold_candidates",
+    "fast_only_partial_dense",
+)
 
 LEGACY_PROPOSAL_WEIGHTS = (
     "runs/detect/hardneg_w96_v2_s/weights/best.pt",
@@ -668,6 +676,36 @@ def build_owner_gallery(
     accepted_sha: dict[str, str] = {}
     rejected_duplicates: list[dict[str, Any]] = []
 
+    def candidate_box(candidate: Candidate, transform: Any) -> list[float] | None:
+        """Return the rule-mined box the Owner is asked to accept, adjust, or reject.
+
+        Rule buckets carry their own segment.  For a model proposal or a background
+        window the box, if any, comes from the same broad rule — never from the
+        legacy model, whose prediction must not be shown as a pre-label.
+        """
+        window_end = candidate.window_end
+        window_start = window_end - window_bars + 1
+        window = frames[candidate.symbol].iloc[window_start : window_end + 1].reset_index(drop=True)
+        if candidate.bucket in RULE_BUCKETS:
+            segment = DenseSegment(candidate.core_start - window_start, candidate.core_end - window_start)
+        else:
+            found = find_dense_segments(
+                window,
+                fast_max=float(mining["fast_spread_max"]) * 1.35,
+                full_max=float(mining["full_spread_max"]) * 1.35,
+                min_bars=int(mining["min_dense_bars"]),
+                merge_gap=int(mining["merge_gap_bars"]),
+                max_bars=int(mining["max_dense_bars"]),
+            )
+            if not found:
+                return None
+            full = pd.to_numeric(window["full_spread"], errors="coerce").to_numpy(dtype=float)
+            segment = min(
+                found, key=lambda item: float(np.nanmean(full[item.start : item.end + 1]))
+            )
+        box = segment_to_bbox(window, segment, transform, ma_periods=MA_PERIODS)
+        return [round(float(value), 6) for value in box] if box is not None else None
+
     def accept(candidate: Candidate) -> bool:
         """Render the candidate and refuse it if the Owner would see it twice."""
         key = (candidate.symbol, candidate.window_end)
@@ -710,6 +748,7 @@ def build_owner_gallery(
             "phash": phash,
             "price_min": float(transform.price_min),
             "price_max": float(transform.price_max),
+            "box": candidate_box(candidate, transform),
         }
         return True
 
@@ -872,6 +911,9 @@ def build_owner_gallery(
                 "source_sha256": item.sha256,
                 "source_first_open_time": utc_iso(item.record.first_open_time),
                 "source_last_open_time": utc_iso(item.record.last_open_time),
+                "candidate_box": cached["box"],
+                "candidate_box_origin": "rule_candidate" if cached["box"] else None,
+                "candidate_box_is_ground_truth": False,
                 "candidate_core_start_bar": int(core_left),
                 "candidate_core_end_bar": int(core_right),
                 "candidate_core_right_fraction": round((core_right + 1) / window_bars, 6),
@@ -1082,147 +1124,525 @@ LEAK_FIELDS = (
 def render_index_html(manifest: Mapping[str, Any]) -> str:
     """Render the blind review page.
 
-    Only ``review_id`` and the image file reach the page.  Bucket, model, model
-    confidence, symbol, time, and every screening statistic stay in the manifest,
-    because a reviewer who can see them is no longer blind.
+    Only ``review_id``, the image, and the rule-mined candidate box reach the
+    page.  Bucket, model, model confidence, symbol, time, and every screening
+    statistic stay in the manifest, because a reviewer who can see them is no
+    longer blind.
+
+    The page is a one-image-at-a-time keyboard reviewer with a draggable box, not
+    a 240-card scroll.  Two reasons: 240 judgements only get made if each costs a
+    single keystroke, and a detector needs a *box*, so a positive must ship one.
+    The candidate box is a rule proposal to accept, adjust, or ignore — never a
+    label, and never a legacy model's prediction.
     """
     samples = list(manifest.get("samples", []))
-    codes = list(review_ledger.REASON_CODES)
-    cards = []
-    for index, sample in enumerate(samples, start=1):
-        review_id = html.escape(str(sample["review_id"]))
-        image = html.escape(str(sample["image"]))
-        options = "".join(
-            f'<label class="pick"><input type="radio" name="d_{review_id}" value="{status}">'
-            f"<span>{status}</span></label>"
-            for status in review_ledger.REVIEW_STATUSES
-        )
-        reasons = "".join(
-            f'<label class="code"><input type="checkbox" name="c_{review_id}" value="{code}">'
-            f"<span>{code}</span></label>"
-            for code in codes
-        )
-        cards.append(
-            f"""
-<section class="card" id="{review_id}" data-review="{review_id}">
-  <header><span class="rid">{review_id}</span><span class="pos">{index} / {len(samples)}</span></header>
-  <img loading="lazy" src="{image}" alt="{review_id}">
-  <div class="decision">{options}</div>
-  <details><summary>reason codes</summary><div class="codes">{reasons}</div></details>
-  <div class="boxrow">
-    <label>box <select name="b_{review_id}">
-      <option value="none">none</option><option value="accept">accept</option>
-      <option value="adjust">adjust</option></select></label>
-    <input class="adj" name="a_{review_id}" placeholder="adjusted box: xc,yc,w,h (normalized)">
-  </div>
-  <textarea name="n_{review_id}" rows="2" placeholder="notes"></textarea>
-</section>"""
-        )
+    payload = [
+        {
+            "id": str(sample["review_id"]),
+            "src": str(sample["image"]),
+            "box": sample.get("candidate_box"),
+        }
+        for sample in samples
+    ]
+    codes = [
+        {"code": code, "key": REASON_CODE_KEYS.get(code)} for code in review_ledger.REASON_CODES
+    ]
+    return (
+        REVIEW_PAGE_TEMPLATE.replace("__SAMPLES__", json.dumps(payload, ensure_ascii=False))
+        .replace("__CODES__", json.dumps(codes, ensure_ascii=False))
+        .replace("__STATUSES__", json.dumps(list(review_ledger.REVIEW_STATUSES)))
+        .replace("__TOTAL__", str(len(samples)))
+    )
 
-    return f"""<!doctype html>
+
+REASON_CODE_KEYS = {
+    "PERFECT_SIX_LINE_DENSE": "p",
+    "FAST_ONLY": "f",
+    "SLOW_LINES_SEPARATED": "s",
+    "SLOPE_TOO_LARGE": "l",
+    "DURATION_TOO_SHORT": "d",
+    "PRICE_NOT_COMPRESSED": "c",
+    "ALREADY_BROKEN_OUT": "b",
+    "INCOMPLETE_PATTERN": "i",
+    "SCALE_ILLUSION": "z",
+    "AMBIGUOUS": "m",
+    "BAD_RENDER": "r",
+}
+
+REVIEW_PAGE_TEMPLATE = """<!doctype html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Owner blind review — perfect MA dense (5m)</title>
+<title>盲审 — perfect_ma_dense 5m</title>
 <style>
-:root {{ color-scheme: light dark; }}
-body {{ font: 15px/1.5 -apple-system, "PingFang SC", system-ui, sans-serif; margin: 0; padding: 16px 16px 96px; }}
-h1 {{ font-size: 18px; margin: 0 0 4px; }}
-p.hint {{ margin: 0 0 16px; opacity: .75; max-width: 70ch; }}
-.card {{ border: 1px solid rgba(128,128,128,.35); border-radius: 10px; padding: 12px; margin: 0 0 20px; }}
-.card header {{ display: flex; justify-content: space-between; font-weight: 600; margin-bottom: 8px; }}
-.pos {{ opacity: .6; font-weight: 400; }}
-.card img {{ width: 100%; height: auto; border-radius: 6px; background: #fff; }}
-.decision {{ display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 6px; }}
-.pick {{ border: 1px solid rgba(128,128,128,.4); border-radius: 999px; padding: 4px 12px; cursor: pointer; }}
-.pick input {{ margin-right: 6px; }}
-.codes {{ display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }}
-.code {{ font-size: 12px; border: 1px solid rgba(128,128,128,.3); border-radius: 6px; padding: 2px 8px; }}
-.boxrow {{ display: flex; gap: 8px; align-items: center; margin: 8px 0; flex-wrap: wrap; }}
-.adj {{ flex: 1 1 260px; padding: 4px 8px; }}
-textarea {{ width: 100%; box-sizing: border-box; }}
-#bar {{ position: fixed; left: 0; right: 0; bottom: 0; padding: 10px 16px; display: flex; gap: 12px;
-       align-items: center; backdrop-filter: blur(8px); background: rgba(127,127,127,.18);
-       border-top: 1px solid rgba(128,128,128,.35); }}
-button {{ padding: 6px 14px; border-radius: 8px; cursor: pointer; }}
+:root {
+  color-scheme: light dark;
+  --bg: #fbfbfa; --fg: #1b1b19; --dim: #6b6b66; --line: rgba(0,0,0,.12);
+  --card: #fff; --pos: #1f9d55; --neg: #d1495b; --unc: #c9922b; --rej: #6b6b66;
+  --accent: #2f6fd0; --box: #2f6fd0;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #16171a; --fg: #eceded; --dim: #9a9b9e; --line: rgba(255,255,255,.14);
+          --card: #1e2024; --pos: #46c07d; --neg: #ef6b7c; --unc: #e0ab48; --rej: #8b8d92; }
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg); overflow: hidden;
+  font: 14px/1.5 -apple-system, "PingFang SC", "Helvetica Neue", system-ui, sans-serif;
+  display: flex; flex-direction: column;
+}
+header {
+  display: flex; align-items: center; gap: 14px; padding: 9px 16px;
+  border-bottom: 1px solid var(--line); flex: 0 0 auto;
+}
+.title { font-weight: 650; white-space: nowrap; }
+.title small { font-weight: 400; color: var(--dim); margin-left: 6px; }
+.track { flex: 1; height: 6px; border-radius: 99px; background: var(--line); overflow: hidden; min-width: 60px; }
+.track > i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .18s; }
+.tally { display: flex; gap: 10px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tally b { font-weight: 600; }
+.tally .p { color: var(--pos); } .tally .n { color: var(--neg); }
+.tally .u { color: var(--unc); } .tally .r { color: var(--rej); }
+.ghost {
+  border: 1px solid var(--line); background: transparent; color: inherit;
+  border-radius: 8px; padding: 4px 10px; cursor: pointer; font: inherit; white-space: nowrap;
+}
+.ghost:hover { border-color: var(--accent); }
+
+main { flex: 1 1 auto; min-height: 0; display: flex; align-items: center;
+       justify-content: center; padding: 8px 16px; position: relative; }
+#frame { position: relative; line-height: 0; box-shadow: 0 1px 3px rgba(0,0,0,.18);
+         border-radius: 8px; background: #fff; }
+#shot { display: block; max-width: 100%; max-height: 100%; border-radius: 8px; }
+main.zoom { overflow: auto; align-items: flex-start; justify-content: flex-start; }
+main.zoom #shot { max-width: none; max-height: none; width: 1280px; }
+#box {
+  position: absolute; border: 2px solid var(--box); border-radius: 2px;
+  background: color-mix(in srgb, var(--box) 10%, transparent); cursor: move; display: none;
+}
+#box.dirty { border-color: var(--unc); background: color-mix(in srgb, var(--unc) 12%, transparent); }
+#box .h { position: absolute; width: 12px; height: 12px; background: var(--box);
+          border: 1.5px solid #fff; border-radius: 3px; }
+#box.dirty .h { background: var(--unc); }
+#box .nw { left: -7px; top: -7px; cursor: nwse-resize; }
+#box .ne { right: -7px; top: -7px; cursor: nesw-resize; }
+#box .sw { left: -7px; bottom: -7px; cursor: nesw-resize; }
+#box .se { right: -7px; bottom: -7px; cursor: nwse-resize; }
+#rid { position: absolute; top: 12px; left: 22px; font-variant-numeric: tabular-nums;
+       color: var(--dim); font-size: 12px; letter-spacing: .5px; }
+#flag { position: absolute; top: 10px; right: 22px; font-size: 12px; font-weight: 600; }
+
+footer { flex: 0 0 auto; border-top: 1px solid var(--line); padding: 9px 16px 11px; background: var(--card); }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+#verdicts { display: inline-flex; gap: 8px; flex-wrap: wrap; }
+.row + .row { margin-top: 7px; }
+.verdict {
+  display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; cursor: pointer;
+  border: 1.5px solid var(--line); border-radius: 10px; background: transparent;
+  color: inherit; font: inherit; font-weight: 550;
+}
+.verdict[data-v="positive"].on { border-color: var(--pos); background: color-mix(in srgb, var(--pos) 16%, transparent); }
+.verdict[data-v="negative"].on { border-color: var(--neg); background: color-mix(in srgb, var(--neg) 16%, transparent); }
+.verdict[data-v="uncertain"].on { border-color: var(--unc); background: color-mix(in srgb, var(--unc) 16%, transparent); }
+.verdict[data-v="rejected"].on { border-color: var(--rej); background: color-mix(in srgb, var(--rej) 16%, transparent); }
+kbd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px;
+  border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 5px;
+  padding: 0 5px; color: var(--dim); background: color-mix(in srgb, var(--fg) 5%, transparent);
+}
+.code {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 12px; cursor: pointer;
+  border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; user-select: none;
+}
+.code.on { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent); }
+#notes { flex: 1 1 240px; min-width: 180px; padding: 6px 10px; border-radius: 8px;
+         border: 1px solid var(--line); background: transparent; color: inherit; font: inherit; }
+.spacer { flex: 1; }
+.hint { color: var(--dim); font-size: 12px; }
+#boxstate { font-size: 12px; font-weight: 600; }
+
+dialog { border: 1px solid var(--line); border-radius: 14px; padding: 0; max-width: 580px;
+         background: var(--card); color: var(--fg); }
+dialog::backdrop { background: rgba(0,0,0,.45); }
+.sheet { padding: 18px 22px 20px; }
+.sheet h2 { margin: 0 0 4px; font-size: 16px; }
+.sheet h3 { margin: 16px 0 6px; font-size: 13px; color: var(--dim); font-weight: 600; }
+.keys { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; align-items: center; }
+.sheet ol { margin: 6px 0 0; padding-left: 20px; }
+.sheet li { margin: 2px 0; }
+#toast { position: fixed; left: 50%; bottom: 96px; transform: translateX(-50%) translateY(8px);
+         background: var(--fg); color: var(--bg); padding: 8px 16px; border-radius: 999px;
+         opacity: 0; pointer-events: none; transition: opacity .18s, transform .18s; font-size: 13px; z-index: 9; }
+#toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 </style>
 </head>
 <body>
-<h1>Owner blind review — perfect MA dense (5m)</h1>
-<p class="hint">每张图独立判断：是否是<strong>非常标准、非常完美</strong>的六线均线密集形态。
-不确定就选 uncertain，不要勉强归类；图片/渲染/数据有问题选 rejected。
-未标注不等于 negative，空标签不会被当成负样本。
-判断完点「导出 JSONL」，把文件交回给下一步。</p>
-{''.join(cards)}
-<div id="bar">
-  <button id="export">导出 JSONL</button>
-  <span id="count"></span>
-</div>
+<header>
+  <div class="title">盲审 <small>perfect_ma_dense · 5m · 96 根</small></div>
+  <div class="track"><i id="bar"></i></div>
+  <div class="tally">
+    <span class="p">正 <b id="t-positive">0</b></span>
+    <span class="n">负 <b id="t-negative">0</b></span>
+    <span class="u">疑 <b id="t-uncertain">0</b></span>
+    <span class="r">废 <b id="t-rejected">0</b></span>
+    <span class="hint"><b id="t-done">0</b>/__TOTAL__</span>
+  </div>
+  <label class="hint"><input type="checkbox" id="auto" checked> 自动下一张</label>
+  <button class="ghost" id="btn-export">导出 JSONL <kbd>E</kbd></button>
+  <button class="ghost" id="btn-help">?</button>
+</header>
+
+<main id="stage">
+  <span id="rid"></span>
+  <span id="flag"></span>
+  <div id="frame">
+    <img id="shot" alt="">
+    <div id="box"><i class="h nw"></i><i class="h ne"></i><i class="h sw"></i><i class="h se"></i></div>
+  </div>
+</main>
+
+<footer>
+  <div class="row">
+    <span id="verdicts"></span>
+    <span class="spacer"></span>
+    <span id="boxstate"></span>
+    <button class="ghost" id="btn-resetbox">复原框 <kbd>0</kbd></button>
+    <button class="ghost" id="btn-dropbox">删掉框 <kbd>\\</kbd></button>
+  </div>
+  <div class="row" id="codes"></div>
+  <div class="row">
+    <input id="notes" placeholder="备注（N 聚焦，Esc 退出）">
+    <span class="hint">框：拖动移动 · 拖角缩放 · 在空白处拖出新框 · ← → 翻页 · U 清除 · G 跳到未判 · X 放大</span>
+  </div>
+</footer>
+
+<dialog id="help"><div class="sheet">
+  <h2>这一轮在做什么</h2>
+  <p class="hint">图上的蓝框是<strong>规则挖出来的候选</strong>，不是标签，也不是模型预测。
+  你的判断就是：这个框圈的东西，是不是非常标准、非常完美的六线均线密集形态。
+  框不准就直接拖；框错地方就在空白处拖一个新的；判 positive 必须有框。</p>
+  <h3>快捷键</h3>
+  <div class="keys">
+    <kbd>1</kbd><span>positive — 非常标准（会连框一起记下来）</span>
+    <kbd>2</kbd><span>negative — 明确不是</span>
+    <kbd>3</kbd><span>uncertain — 说不清（不进训练也不进验证）</span>
+    <kbd>4</kbd><span>rejected — 图/数据/渲染有问题</span>
+    <kbd>← →</kbd><span>上一张 / 下一张（也可用 K / J，空格 = 下一张）</span>
+    <kbd>0</kbd><span>把框复原成候选框</span>
+    <kbd>\\</kbd><span>删掉框</span>
+    <kbd>U</kbd><span>清除这张的判定</span>
+    <kbd>G</kbd><span>跳到第一张未判</span>
+    <kbd>X</kbd><span>原尺寸放大 / 还原</span>
+    <kbd>N</kbd><span>写备注，<kbd>Esc</kbd> 退出输入</span>
+    <kbd>E</kbd><span>导出 JSONL</span>
+    <kbd>?</kbd><span>这份说明</span>
+  </div>
+  <h3>原因代码（可多选，未列出的用鼠标点）</h3>
+  <div class="keys" id="codekeys"></div>
+  <h3>八条判据 — 全过才是 positive</h3>
+  <ol>
+    <li>六条线是否全部进入密集，而不是只有快线</li>
+    <li>密集是否持续得足够完整，而不是瞬时交叉</li>
+    <li>线条是否明显互相靠拢、交织或压缩</li>
+    <li>整体斜率是否标准，而不是六线平行单边跑</li>
+    <li>价格结构是否同步收缩</li>
+    <li>是否尚未发生明显突破</li>
+    <li>框的起止是否覆盖真实密集段</li>
+    <li>是否足够标准，能无歧义确认</li>
+  </ol>
+  <p class="hint">犹豫超过几秒就选 uncertain。进度存在浏览器本地，可以分几次做完。</p>
+</div></dialog>
+
+<div id="toast"></div>
+
 <script>
-const REVIEWS = {json.dumps([sample["review_id"] for sample in samples])};
-const KEY = "yolo_xx_pr01a_reviews";
-function collect() {{
-  const out = [];
-  for (const rid of REVIEWS) {{
-    const picked = document.querySelector(`input[name="d_${{rid}}"]:checked`);
-    if (!picked) continue;
-    const codes = [...document.querySelectorAll(`input[name="c_${{rid}}"]:checked`)].map(n => n.value);
-    const action = document.querySelector(`select[name="b_${{rid}}"]`).value;
-    const raw = document.querySelector(`input[name="a_${{rid}}"]`).value.trim();
-    let box = null;
-    if (action === "adjust" && raw) {{
-      const parts = raw.split(",").map(v => parseFloat(v.trim()));
-      if (parts.length === 4 && parts.every(v => Number.isFinite(v))) box = parts;
-    }}
-    out.push({{
-      review_id: rid,
-      decision: picked.value,
-      reason_codes: codes,
-      box_action: action,
-      adjusted_box: box,
-      reviewer: "owner",
-      reviewed_at: new Date().toISOString().replace(/\\.\\d+Z$/, "Z"),
-      notes: document.querySelector(`textarea[name="n_${{rid}}"]`).value.trim()
-    }});
-  }}
-  return out;
-}}
-function refresh() {{
-  const done = collect();
-  document.getElementById("count").textContent = `${{done.length}} / ${{REVIEWS.length}} 已判定`;
-  localStorage.setItem(KEY, JSON.stringify(done));
-}}
-function restore() {{
-  let saved = [];
-  try {{ saved = JSON.parse(localStorage.getItem(KEY) || "[]"); }} catch (e) {{ saved = []; }}
-  for (const item of saved) {{
-    const pick = document.querySelector(`input[name="d_${{item.review_id}}"][value="${{item.decision}}"]`);
-    if (pick) pick.checked = true;
-    for (const code of item.reason_codes || []) {{
-      const box = document.querySelector(`input[name="c_${{item.review_id}}"][value="${{code}}"]`);
-      if (box) box.checked = true;
-    }}
-    const action = document.querySelector(`select[name="b_${{item.review_id}}"]`);
-    if (action && item.box_action) action.value = item.box_action;
-    const adj = document.querySelector(`input[name="a_${{item.review_id}}"]`);
-    if (adj && item.adjusted_box) adj.value = item.adjusted_box.join(",");
-    const note = document.querySelector(`textarea[name="n_${{item.review_id}}"]`);
-    if (note && item.notes) note.value = item.notes;
-  }}
+const SAMPLES = __SAMPLES__;
+const CODES = __CODES__;
+const STATUSES = __STATUSES__;
+const KEY = "yolo_xx_pr01a_reviews_v3";
+const VERDICT_KEYS = { "1": "positive", "2": "negative", "3": "uncertain", "4": "rejected" };
+const CODE_BY_KEY = {};
+for (const item of CODES) { if (item.key) CODE_BY_KEY[item.key] = item.code; }
+
+let state = {};
+try { state = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { state = {}; }
+let cursor = 0;
+
+const stage = document.getElementById("stage");
+const frame = document.getElementById("frame");
+const shot = document.getElementById("shot");
+const boxEl = document.getElementById("box");
+const ridEl = document.getElementById("rid");
+const flagEl = document.getElementById("flag");
+const notesEl = document.getElementById("notes");
+const autoEl = document.getElementById("auto");
+const helpEl = document.getElementById("help");
+const boxState = document.getElementById("boxstate");
+const verdictRow = document.getElementById("verdicts");
+
+for (const [key, name] of Object.entries(VERDICT_KEYS)) {
+  const button = document.createElement("button");
+  button.className = "verdict";
+  button.dataset.v = name;
+  button.innerHTML = `<kbd>${key}</kbd>${name}`;
+  button.addEventListener("click", () => setVerdict(name));
+  verdictRow.appendChild(button);
+}
+
+const codeRow = document.getElementById("codes");
+for (const item of CODES) {
+  const label = document.createElement("span");
+  label.className = "code";
+  label.dataset.code = item.code;
+  label.innerHTML = item.key ? `<kbd>${item.key.toUpperCase()}</kbd>${item.code}` : item.code;
+  label.addEventListener("click", () => toggleCode(item.code));
+  codeRow.appendChild(label);
+}
+const codeKeys = document.getElementById("codekeys");
+for (const item of CODES) {
+  if (!item.key) continue;
+  const k = document.createElement("kbd");
+  k.textContent = item.key.toUpperCase();
+  const s = document.createElement("span");
+  s.textContent = item.code;
+  codeKeys.append(k, s);
+}
+
+function current() { return SAMPLES[cursor]; }
+function entry(id) {
+  if (!state[id]) state[id] = { decision: null, reason_codes: [], box: null, box_touched: false, notes: "" };
+  return state[id];
+}
+function save() { localStorage.setItem(KEY, JSON.stringify(state)); }
+function boxOf(item, sample) {
+  if (item.box === false) return null;          // explicitly removed by the reviewer
+  if (Array.isArray(item.box)) return item.box; // moved, resized, or drawn
+  return sample.box || null;                    // untouched rule candidate
+}
+
+function paintBox(box) {
+  if (!box) { boxEl.style.display = "none"; return; }
+  const [xc, yc, w, h] = box;
+  boxEl.style.display = "block";
+  boxEl.style.left = ((xc - w / 2) * 100) + "%";
+  boxEl.style.top = ((yc - h / 2) * 100) + "%";
+  boxEl.style.width = (w * 100) + "%";
+  boxEl.style.height = (h * 100) + "%";
+}
+
+function show(index) {
+  cursor = Math.max(0, Math.min(SAMPLES.length - 1, index));
+  const sample = current();
+  const item = entry(sample.id);
+  shot.src = sample.src;
+  ridEl.textContent = `${sample.id}   ${cursor + 1} / ${SAMPLES.length}`;
+  notesEl.value = item.notes || "";
+  paintBox(boxOf(item, sample));
+  boxEl.classList.toggle("dirty", !!item.box_touched);
+  boxState.textContent = boxOf(item, sample)
+    ? (item.box_touched ? "框：已调整" : (sample.box ? "框：候选" : "框：新建"))
+    : "框：无";
+  boxState.style.color = item.box_touched ? "var(--unc)" : "var(--dim)";
+  for (const button of verdictRow.querySelectorAll(".verdict")) {
+    button.classList.toggle("on", button.dataset.v === item.decision);
+  }
+  for (const label of codeRow.children) {
+    label.classList.toggle("on", (item.reason_codes || []).includes(label.dataset.code));
+  }
+  flagEl.textContent = item.decision || "";
+  flagEl.style.color = item.decision ? `var(--${item.decision.slice(0, 3)})` : "";
+  stage.classList.remove("zoom");
+  for (let step = 1; step <= 3; step++) {
+    const next = SAMPLES[cursor + step];
+    if (next) { const pre = new Image(); pre.src = next.src; }
+  }
   refresh();
-}}
-document.addEventListener("input", refresh);
-document.getElementById("export").addEventListener("click", () => {{
-  const lines = collect().map(item => JSON.stringify(item)).join("\\n") + "\\n";
-  const url = URL.createObjectURL(new Blob([lines], {{ type: "application/x-ndjson" }}));
+}
+
+function refresh() {
+  const counts = { positive: 0, negative: 0, uncertain: 0, rejected: 0 };
+  let done = 0;
+  for (const sample of SAMPLES) {
+    const decision = state[sample.id] && state[sample.id].decision;
+    if (decision && counts[decision] !== undefined) { counts[decision]++; done++; }
+  }
+  for (const status of STATUSES) document.getElementById("t-" + status).textContent = counts[status];
+  document.getElementById("t-done").textContent = done;
+  document.getElementById("bar").style.width = (done / SAMPLES.length * 100) + "%";
+}
+
+function setVerdict(name) {
+  const sample = current();
+  const item = entry(sample.id);
+  item.decision = item.decision === name ? null : name;
+  if (item.decision === "positive" && !boxOf(item, sample)) {
+    item.box = [0.5, 0.5, 0.25, 0.2];
+    item.box_touched = true;
+    toast("positive 必须有框——已给一个默认框，拖到位置上");
+  }
+  save();
+  show(cursor);
+  if (item.decision && autoEl.checked && cursor < SAMPLES.length - 1) {
+    setTimeout(() => show(cursor + 1), 120);
+  }
+}
+function toggleCode(code) {
+  const item = entry(current().id);
+  const list = new Set(item.reason_codes || []);
+  list.has(code) ? list.delete(code) : list.add(code);
+  item.reason_codes = [...list];
+  save();
+  show(cursor);
+}
+function clearCurrent() { delete state[current().id]; save(); show(cursor); }
+function resetBox() {
+  const item = entry(current().id);
+  item.box = null; item.box_touched = false;
+  save(); show(cursor);
+}
+function dropBox() {
+  const item = entry(current().id);
+  item.box = false; item.box_touched = true;
+  save(); show(cursor);
+}
+function firstUnreviewed() {
+  const index = SAMPLES.findIndex(s => !(state[s.id] && state[s.id].decision));
+  show(index === -1 ? cursor : index);
+}
+function toast(text) {
+  const node = document.getElementById("toast");
+  node.textContent = text;
+  node.classList.add("show");
+  setTimeout(() => node.classList.remove("show"), 1800);
+}
+
+// ---- box editing -------------------------------------------------------- //
+let drag = null;
+function rect() { return shot.getBoundingClientRect(); }
+function norm(event) {
+  const r = rect();
+  return [
+    Math.min(1, Math.max(0, (event.clientX - r.left) / r.width)),
+    Math.min(1, Math.max(0, (event.clientY - r.top) / r.height)),
+  ];
+}
+function writeBox(x1, y1, x2, y2) {
+  const left = Math.min(x1, x2), right = Math.max(x1, x2);
+  const top = Math.min(y1, y2), bottom = Math.max(y1, y2);
+  const w = Math.max(right - left, 0.01), h = Math.max(bottom - top, 0.01);
+  const item = entry(current().id);
+  item.box = [
+    +(left + w / 2).toFixed(6), +(top + h / 2).toFixed(6),
+    +w.toFixed(6), +h.toFixed(6),
+  ];
+  item.box_touched = true;
+  paintBox(item.box);
+  boxEl.classList.add("dirty");
+  boxState.textContent = "框：已调整";
+  boxState.style.color = "var(--unc)";
+}
+function corners() {
+  const item = entry(current().id);
+  const box = boxOf(item, current());
+  if (!box) return null;
+  const [xc, yc, w, h] = box;
+  return [xc - w / 2, yc - h / 2, xc + w / 2, yc + h / 2];
+}
+frame.addEventListener("mousedown", (event) => {
+  const handle = event.target.classList && event.target.classList.contains("h") ? event.target : null;
+  const [x, y] = norm(event);
+  const box = corners();
+  if (handle && box) {
+    const anchor = handle.classList.contains("nw") ? [box[2], box[3]]
+                 : handle.classList.contains("ne") ? [box[0], box[3]]
+                 : handle.classList.contains("sw") ? [box[2], box[1]]
+                 : [box[0], box[1]];
+    drag = { mode: "resize", anchor };
+  } else if (event.target === boxEl && box) {
+    drag = { mode: "move", grab: [x, y], start: box.slice() };
+  } else {
+    drag = { mode: "draw", anchor: [x, y] };
+    writeBox(x, y, x, y);
+  }
+  event.preventDefault();
+});
+window.addEventListener("mousemove", (event) => {
+  if (!drag) return;
+  const [x, y] = norm(event);
+  if (drag.mode === "draw" || drag.mode === "resize") {
+    writeBox(drag.anchor[0], drag.anchor[1], x, y);
+  } else if (drag.mode === "move") {
+    const dx = x - drag.grab[0], dy = y - drag.grab[1];
+    const [x1, y1, x2, y2] = drag.start;
+    const w = x2 - x1, h = y2 - y1;
+    const nx = Math.min(Math.max(x1 + dx, 0), 1 - w);
+    const ny = Math.min(Math.max(y1 + dy, 0), 1 - h);
+    writeBox(nx, ny, nx + w, ny + h);
+  }
+});
+window.addEventListener("mouseup", () => { if (drag) { drag = null; save(); } });
+
+function exportJsonl() {
+  const stamp = new Date().toISOString().replace(/\\.\\d+Z$/, "Z");
+  const lines = [];
+  let missingBox = 0;
+  for (const sample of SAMPLES) {
+    const item = state[sample.id];
+    if (!item || !item.decision) continue;
+    const box = boxOf(item, sample);
+    let action = "none", adjusted = null;
+    if (item.box_touched && box) { action = "adjust"; adjusted = box; }
+    else if (!item.box_touched && box && item.decision === "positive") { action = "accept"; }
+    if (item.decision === "positive" && !box) missingBox++;
+    lines.push(JSON.stringify({
+      review_id: sample.id,
+      decision: item.decision,
+      reason_codes: item.reason_codes || [],
+      box_action: action,
+      adjusted_box: adjusted,
+      reviewer: "owner",
+      reviewed_at: stamp,
+      notes: item.notes || ""
+    }));
+  }
+  if (!lines.length) { toast("还没有任何判定"); return; }
+  const url = URL.createObjectURL(new Blob([lines.join("\\n") + "\\n"], { type: "application/x-ndjson" }));
   const link = document.createElement("a");
   link.href = url;
   link.download = "owner_reviews_pr01a.jsonl";
   link.click();
   URL.revokeObjectURL(url);
-}});
-restore();
+  toast(missingBox ? `已导出 ${lines.length} 条，其中 ${missingBox} 个 positive 没有框` : `已导出 ${lines.length} 条`);
+}
+
+notesEl.addEventListener("input", () => { entry(current().id).notes = notesEl.value; save(); });
+document.getElementById("btn-export").addEventListener("click", exportJsonl);
+document.getElementById("btn-help").addEventListener("click", () => helpEl.showModal());
+document.getElementById("btn-resetbox").addEventListener("click", resetBox);
+document.getElementById("btn-dropbox").addEventListener("click", dropBox);
+
+document.addEventListener("keydown", (event) => {
+  const typing = ["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement.tagName);
+  if (event.key === "Escape") { document.activeElement.blur(); return; }
+  if (typing || event.metaKey || event.ctrlKey || event.altKey) return;
+  const key = event.key.toLowerCase();
+  if (VERDICT_KEYS[event.key]) { event.preventDefault(); setVerdict(VERDICT_KEYS[event.key]); return; }
+  if (CODE_BY_KEY[key]) { event.preventDefault(); toggleCode(CODE_BY_KEY[key]); return; }
+  if (key === "arrowright" || key === "j" || key === " ") { event.preventDefault(); show(cursor + 1); return; }
+  if (key === "arrowleft" || key === "k") { event.preventDefault(); show(cursor - 1); return; }
+  if (key === "0") { event.preventDefault(); resetBox(); return; }
+  if (key === "\\\\") { event.preventDefault(); dropBox(); return; }
+  if (key === "u") { event.preventDefault(); clearCurrent(); return; }
+  if (key === "g") { event.preventDefault(); firstUnreviewed(); return; }
+  if (key === "x") { event.preventDefault(); stage.classList.toggle("zoom"); return; }
+  if (key === "n") { event.preventDefault(); notesEl.focus(); return; }
+  if (key === "e") { event.preventDefault(); exportJsonl(); return; }
+  if (event.key === "?" || key === "h") { event.preventDefault(); helpEl.showModal(); return; }
+});
+
+firstUnreviewed();
 </script>
 </body>
 </html>

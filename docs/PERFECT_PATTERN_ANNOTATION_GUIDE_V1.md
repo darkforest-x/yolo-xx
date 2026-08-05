@@ -77,12 +77,19 @@ H. 是否足够标准，能让你无歧义地确认。
 
 ## 4. 框
 
-首轮画廊不预先画框，避免锚定。
+图上的蓝框是**规则挖出来的候选框**，不是标签，也不是模型预测。240 张里有 200 张带候选框，
+另外 40 张（规则完全没命中的连续背景）没有框。
 
-- `box_action = none`：这张图不涉及框（negative / uncertain / rejected 常用）；
-- `box_action = accept`：形态位置就按你看到的密集段，不需要额外说明；
-- `box_action = adjust`：需要明确框的位置，在输入框里填归一化坐标
-  `xc,yc,w,h`（相对整张 1280×742 图，取值 0–1，框必须完全在图内）。
+你要做的就是判断：**这个框圈的东西，是不是完美形态**。
+
+- 框准 → 直接判 `positive`，导出时记为 `box_action=accept`，用候选框坐标；
+- 框不准 → 用鼠标拖动/拉角改，改过的框变橙色，导出时记为 `box_action=adjust`；
+- 框错地方 → 在图上空白处直接拖出一个新框；
+- 图上没框但你认为有形态 → 按 `1` 会自动给一个默认框，拖到位置上；
+- `0` 复原成候选框，`\` 删掉框。
+
+**判 `positive` 必须有框**——没有框的正样本训不了检测器，ledger 会直接报错。
+`negative` / `uncertain` / `rejected` 不需要框。
 
 框的原则：**覆盖真实密集段**，起点在六线开始收拢处，终点在密集结束或突破发生前。
 
@@ -107,20 +114,52 @@ outcome / 收益标签   ≠ 任何标签
 
 ## 6. 操作流程
 
+一张图一个键，240 张不用滚动。
+
+| 键 | 作用 |
+|---|---|
+| `1` `2` `3` `4` | positive / negative / uncertain / rejected（判完自动跳下一张） |
+| `←` `→` | 上一张 / 下一张（也可用 `K` / `J`，空格 = 下一张） |
+| `0` | 把框复原成候选框 |
+| `\` | 删掉框 |
+| `U` | 清除这张的判定 |
+| `G` | 跳到第一张未判 |
+| `X` | 原尺寸放大 / 还原 |
+| `N` | 写备注，`Esc` 退出输入 |
+| `E` | 导出 JSONL |
+| `?` | 快捷键与判据说明 |
+
+原因代码也有单键：`P` PERFECT_SIX_LINE_DENSE、`F` FAST_ONLY、`S` SLOW_LINES_SEPARATED、
+`L` SLOPE_TOO_LARGE、`D` DURATION_TOO_SHORT、`C` PRICE_NOT_COMPRESSED、
+`B` ALREADY_BROKEN_OUT、`I` INCOMPLETE_PATTERN、`Z` SCALE_ILLUSION、`M` AMBIGUOUS、
+`R` BAD_RENDER；其余用鼠标点。
+
 1. 打开 `reports/pr01a_owner_gallery/index.html`（本地文件，不联网）；
-2. 逐张选 `positive / negative / uncertain / rejected`，需要时勾原因代码、填框和备注；
-3. 进度会存在浏览器本地，可以分几次做完；
-4. 点「导出 JSONL」，得到 `owner_reviews_pr01a.jsonl`；
+2. 逐张判，框不准就拖；
+3. 进度存在浏览器本地，可以分几次做完；
+4. 按 `E` 导出，得到 `owner_reviews_pr01a.jsonl`；
 5. 审计这份结果：
 
 ```bash
 yolo-xx-pattern audit-reviews --manifest reports/pr01a_owner_gallery/review_manifest.json --reviews owner_reviews_pr01a.jsonl --out reports/pr01a_owner_gallery/review_audit.json
 ```
 
-审计会检查：ID 一一对应、无重复、无未知样本、状态合法、decision 非空、框在图内。
-未审核的图记为 `missing`，**不会**被算成 negative。
+审计会检查：ID 一一对应、无重复、无未知样本、状态合法、decision 非空、框在图内、
+positive 必须带框。未审核的图记为 `missing`，**不会**被算成 negative。
 
-## 7. 这一轮之后
+## 7. 这份 JSONL 之后会被拿去做什么
+
+```text
+positive + 框  →  gold positive 标签（框来自 accept 的候选框或你调整后的框）
+negative       →  背景图 / near-miss negative
+uncertain      →  一律不进 train / val / test
+rejected       →  连图带样本一起剔除
+```
+
+240 张大概只能给出几十个正框，不足以直接训练。它的作用是**把「完美」的定义钉死**：
+定义确定后，按同一标准扩量挖候选，才构成正式训练集。
+
+## 8. 这一轮之后
 
 首批裁决完成后，进入 PR-01B：
 

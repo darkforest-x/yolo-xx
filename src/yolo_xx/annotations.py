@@ -235,6 +235,20 @@ def audit_reviews(
             errors.append(f"{label}: reviewer must be a string")
             continue
 
+        # A detector is trained on boxes, so a positive that carries none is not a
+        # usable label.  `accept` means "the rule candidate box is right", which
+        # only exists if the gallery actually proposed one.
+        candidate = entry.get("candidate_box")
+        if box_action == "accept" and not candidate:
+            errors.append(f"{label}: box_action=accept but this sample has no candidate box")
+            continue
+        resolved_box = adjusted_box if box_action == "adjust" else (candidate if box_action == "accept" else None)
+        if decision == "positive" and not resolved_box:
+            errors.append(
+                f"{label}: a positive needs a box — accept the candidate box or adjust one"
+            )
+            continue
+
         counts[decision] += 1
         accepted[review_id] = {
             "review_id": review_id,
@@ -243,6 +257,7 @@ def audit_reviews(
             "reason_codes": list(reason_codes),
             "box_action": box_action,
             "adjusted_box": list(adjusted_box) if adjusted_box is not None else None,
+            "box": list(resolved_box) if resolved_box else None,
             "reviewer": reviewer if isinstance(reviewer, str) else "owner",
             "reviewed_at": record.get("reviewed_at"),
             "notes": record.get("notes", ""),
@@ -263,6 +278,11 @@ def audit_reviews(
         "errors": errors,
         "unreviewed_are_not_negatives": True,
         "uncertain_in_training": False,
+        "positives_with_box": sum(
+            1 for item in accepted.values() if item["decision"] == "positive" and item["box"]
+        ),
+        "boxes_adjusted": sum(1 for item in accepted.values() if item["box_action"] == "adjust"),
+        "boxes_accepted": sum(1 for item in accepted.values() if item["box_action"] == "accept"),
         "reviewed_ids": sorted(accepted),
     }
 

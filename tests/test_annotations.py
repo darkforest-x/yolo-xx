@@ -24,6 +24,7 @@ def make_manifest(count: int = 4) -> dict:
                 "sample_id": f"BTC_5m_w96_2026010{index}T000000Z",
                 "image": f"images/R{index:04d}.png",
                 "bucket": "strong_rule_candidates",
+                "candidate_box": [0.8, 0.4, 0.12, 0.2],
                 "label_status": "unreviewed",
                 "ground_truth": None,
             }
@@ -60,7 +61,7 @@ def test_empty_label_file_never_produces_negatives(tmp_path: Path) -> None:
 
 def test_counts_only_include_reviewed_samples() -> None:
     manifest = make_manifest()
-    reviews = [review("R0001", "positive"), review("R0002", "negative")]
+    reviews = [review("R0001", "positive", box_action="accept"), review("R0002", "negative")]
     audit = audit_reviews(manifest, reviews)
     assert (audit["positive"], audit["negative"], audit["missing"]) == (1, 1, 2)
     assert audit["valid"] is True
@@ -68,7 +69,7 @@ def test_counts_only_include_reviewed_samples() -> None:
 
 def test_duplicate_review_is_rejected() -> None:
     manifest = make_manifest()
-    reviews = [review("R0001", "positive"), review("R0001", "negative")]
+    reviews = [review("R0001", "positive", box_action="accept"), review("R0001", "negative")]
     audit = audit_reviews(manifest, reviews)
     assert audit["valid"] is False
     assert any("duplicate review" in error for error in audit["errors"])
@@ -101,7 +102,7 @@ def test_illegal_and_empty_decisions_are_rejected() -> None:
 
 def test_uncertain_stays_uncertain_and_is_not_trainable() -> None:
     manifest = make_manifest()
-    reviews = [review("R0001", "uncertain"), review("R0002", "positive")]
+    reviews = [review("R0001", "uncertain"), review("R0002", "positive", box_action="accept")]
     audit = audit_reviews(manifest, reviews)
     assert audit["uncertain"] == 1
     assert audit["positive"] == 1
@@ -111,6 +112,45 @@ def test_uncertain_stays_uncertain_and_is_not_trainable() -> None:
     assert [item["review_id"] for item in buckets["positive"]] == ["R0002"]
     assert [item["review_id"] for item in buckets["uncertain"]] == ["R0001"]
     assert buckets["negative"] == []
+
+
+def test_a_positive_must_carry_a_box() -> None:
+    manifest = make_manifest()
+    # accepting the rule candidate box is enough
+    accepted = review("R0001", "positive", box_action="accept")
+    assert audit_reviews(manifest, [accepted])["valid"] is True
+    # so is drawing one
+    adjusted = review("R0001", "positive", box_action="adjust", adjusted_box=[0.5, 0.5, 0.2, 0.2])
+    assert audit_reviews(manifest, [adjusted])["valid"] is True
+    # but a bare positive with no box cannot become a detector label
+    audit = audit_reviews(manifest, [review("R0001", "positive", box_action="none")])
+    assert audit["valid"] is False
+    assert any("needs a box" in error for error in audit["errors"])
+    # negatives and uncertain never need one
+    assert audit_reviews(manifest, [review("R0002", "negative")])["valid"] is True
+    assert audit_reviews(manifest, [review("R0003", "uncertain")])["valid"] is True
+
+
+def test_accept_requires_an_actual_candidate_box() -> None:
+    manifest = make_manifest()
+    manifest["samples"][0]["candidate_box"] = None
+    audit = audit_reviews(manifest, [review("R0001", "positive", box_action="accept")])
+    assert audit["valid"] is False
+    assert any("no candidate box" in error for error in audit["errors"])
+
+
+def test_box_counters_report_accepted_and_adjusted() -> None:
+    manifest = make_manifest()
+    reviews = [
+        review("R0001", "positive", box_action="accept"),
+        review("R0002", "positive", box_action="adjust", adjusted_box=[0.4, 0.4, 0.2, 0.2]),
+        review("R0003", "negative"),
+    ]
+    audit = audit_reviews(manifest, reviews)
+    assert audit["valid"] is True
+    assert audit["positives_with_box"] == 2
+    assert audit["boxes_accepted"] == 1
+    assert audit["boxes_adjusted"] == 1
 
 
 def test_unknown_reason_code_is_rejected() -> None:
@@ -154,7 +194,7 @@ def test_ledger_never_modifies_the_gallery_manifest(tmp_path: Path) -> None:
     before = path.read_bytes()
 
     loaded = load_review_manifest(path)
-    audit_reviews(loaded, [review("R0001", "positive")])
+    audit_reviews(loaded, [review("R0001", "positive", box_action="accept")])
     write_review_template(loaded, tmp_path / "review_template.jsonl")
 
     assert path.read_bytes() == before

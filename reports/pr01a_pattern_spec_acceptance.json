@@ -2,7 +2,7 @@
   "task_id": "PR-01A",
   "decision": "accepted",
   "baseline_sha": "4e8b3e0fff0bca8b49986fe5e81aab75c3efef06",
-  "head_sha": "df87e4244605b9ebca0734f629e9cf397b032fa6",
+  "head_sha": "f733f137be64b30a9ea38d9a13ef1dd9214b4414",
   "head_sha_note": "生成时的 HEAD，即 PR-01A 变更的父提交；PR-01A 自身的提交紧随其后。",
   "primary_timeframe": "5m",
   "semantic_mode": "bar_equivalent",
@@ -127,7 +127,7 @@
     "unreviewed_are_not_negatives": true
   },
   "tests": {
-    "passed": 116,
+    "passed": 119,
     "failed": 0,
     "skipped": 0,
     "command": "pytest -q"
@@ -156,18 +156,12 @@
     "reports/pr01a_pattern_spec_acceptance.json"
   ],
   "changed_files": [
-    "configs/",
     "docs/PERFECT_PATTERN_ANNOTATION_GUIDE_V1.md",
-    "pyproject.toml",
-    "reports/pr01a_owner_gallery/",
-    "reports/pr01a_pattern_spec_acceptance.json",
-    "scripts/pr01a_acceptance.py",
+    "reports/pr01a_owner_gallery/index.html",
+    "reports/pr01a_owner_gallery/review_manifest.json",
     "src/yolo_xx/annotations.py",
     "src/yolo_xx/owner_gallery.py",
-    "src/yolo_xx/pattern_spec.py",
-    "tests/test_annotations.py",
-    "tests/test_owner_gallery.py",
-    "tests/test_pattern_spec.py"
+    "tests/test_annotations.py"
   ],
   "unexpected_changed_files": [],
   "errors": [],
