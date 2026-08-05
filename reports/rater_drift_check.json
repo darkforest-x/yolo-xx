@@ -1,0 +1,63 @@
+{
+ "drift_check_id": "round1_vs_round2_rater_drift",
+ "checked_at": "2026-08-06",
+ "conclusion": "评分标准在两批之间发生漂移；样本特征分布无实质差异，故差异归因于评分而非抽样",
+ "by_source": {
+  "round1": {
+   "golden_pool": {
+    "n": 240,
+    "A": 119,
+    "B": 93,
+    "C": 8,
+    "not_a_pattern": 20,
+    "reject_rate": 0.0833,
+    "reject_rate_wilson95": [
+     0.0546,
+     0.1252
+    ],
+    "C_rate": 0.0333
+   },
+   "v10_scan_20260805": {
+    "n": 47,
+    "A": 2,
+    "B": 3,
+    "C": 0,
+    "not_a_pattern": 42,
+    "reject_rate": 0.8936,
+    "reject_rate_wilson95": [
+     0.7741,
+     0.9537
+    ],
+    "C_rate": 0.0
+   }
+  },
+  "round2": {
+   "golden_pool": {
+    "n": 300,
+    "A": 122,
+    "B": 119,
+    "C": 44,
+    "not_a_pattern": 15,
+    "reject_rate": 0.05,
+    "reject_rate_wilson95": [
+     0.0305,
+     0.0808
+    ],
+    "C_rate": 0.1467
+   },
+   "v10_scan_20260805": {
+    "n": 72,
+    "A": 14,
+    "B": 13,
+    "C": 27,
+    "not_a_pattern": 18,
+    "reject_rate": 0.25,
+    "reject_rate_wilson95": [
+     0.1644,
+     0.3609
+    ],
+    "C_rate": 0.375
+   }
+  }
+ }
+}
