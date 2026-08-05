@@ -1,0 +1,19 @@
+teacher=owner_v10_chain.pt sha256=b9a84b5f5ebf0032…
+[train 1200/6671] kept=119 boxes=122 18s
+[train 1400/6671] kept=182 boxes=189 22s
+[train 3600/6671] kept=400 boxes=413 54s
+[train 4000/6671] kept=555 boxes=572 60s
+[train 4400/6671] kept=725 boxes=749 65s
+[train 4600/6671] kept=801 boxes=829 67s
+[train 4800/6671] kept=881 boxes=911 70s
+[train 5000/6671] kept=968 boxes=1003 73s
+[train 5200/6671] kept=1048 boxes=1086 75s
+[train 6000/6671] kept=1380 boxes=1429 86s
+[train 6600/6671] kept=1612 boxes=1668 93s
+[val 1400/2493] kept=1733 boxes=1792 112s
+[val 2000/2493] kept=1948 boxes=2018 119s
+[val 2400/2493] kept=2087 boxes=2167 124s
+v10_scan source added: 159 cards
+
+stats: {'stems_seen': 4159, 'kept_stems': 2125, 'boxes': 2207, 'drop_no_symbol': 444, 'drop_range': 0, 'drop_mad': 1587, 'drop_shape': 0, 'convention': {'start': 1581, 'end': 544}, 'empty_label_stems': 5005}
+patterns=2366 -> /Users/zhangzc/yolo-xx/reports/pattern_library_candidate.json
