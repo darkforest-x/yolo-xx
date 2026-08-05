@@ -1,0 +1,10 @@
+{
+  "annotation_rows": 1361,
+  "annotation_sha256": "23fd378ab384b9d2f73dc67aa409943373c347fbfe1f0f7647d8de54cdd5b705",
+  "manifest": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/source_snapshot.json",
+  "manifest_sha256": "9b186abc2905f97237b07a065c8fa377516c9af5488d8cf3294194834c80e32c",
+  "post_cutoff_ohlcv_rows_materialized": 0,
+  "preholdout_rows": 5900085,
+  "snapshot_dir": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m",
+  "symbols": 215
+}

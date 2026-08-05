@@ -1,0 +1,11 @@
+{
+  "excluded_sources": 0,
+  "files": 1,
+  "holdout_read": false,
+  "post_cutoff_ohlcv_rows_materialized": 0,
+  "preholdout_rows": 23584,
+  "schema_version": 1,
+  "snapshot_dir": "/Users/zhangzc/yolo-xx/data/micro_preholdout/1m",
+  "source_snapshot_sha256": "15f58be38568fa38624a7b5d5c7568623deb48fd43a8882fbc878789e60fa7c4",
+  "timeframe": "1m"
+}

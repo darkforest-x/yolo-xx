@@ -1,0 +1,12 @@
+{
+  "cutoff_exclusive": "2026-08-04T09:15:00Z",
+  "excluded_sources": 0,
+  "files": 60,
+  "holdout_read": true,
+  "post_cutoff_ohlcv_rows_materialized": 0,
+  "preholdout_rows": 1919840,
+  "schema_version": 1,
+  "snapshot_dir": "/Users/zhangzc/yolo-xx/data/wide_holdout_5m",
+  "source_snapshot_sha256": "8dbda440de1f61849d493f32b584d6b2f2825d5152a1fa28dfdb8171ae151b50",
+  "timeframe": "5m"
+}
