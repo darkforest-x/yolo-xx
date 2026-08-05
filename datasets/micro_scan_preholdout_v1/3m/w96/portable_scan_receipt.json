@@ -1,0 +1,2066 @@
+{
+  "arm_root_name": "w96",
+  "end_before": "2026-05-04T00:00:00Z",
+  "files": [
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260313T221200Z.png",
+      "sha256": "232314b8e1af80e78d17c9baa205ff4d7aed5fb388ec5b2592a5ca3e714610f5"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260314T030000Z.png",
+      "sha256": "626b50803dcd7f8905261dbc76aa16b130464aaa06c149cb8769c762a3a1d383"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260314T074800Z.png",
+      "sha256": "29b533a78cf0137a098c63e0812157b85fce9408620d54b03640c5553b9ee6dc"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260314T123600Z.png",
+      "sha256": "fdb47e40154819fa0f1835bd54926be25592f1de3c667354d7b3dd0867448446"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260314T172700Z.png",
+      "sha256": "5b0f022e3506a71109f16acb4029393c23a1ae41997e889c8c55725ca926ab73"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260314T221500Z.png",
+      "sha256": "37b7d441fd38ee2ec7fece56b11ddcea1ef343cd75d2cd740b5040097a64cd1e"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260315T030300Z.png",
+      "sha256": "ff113f43253e1143e2f49d66494ed094108f2398624a6f40a98cffb0609ac005"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260315T075100Z.png",
+      "sha256": "1fd2061fb289bee14a236b9bd3c8611c4c46b963a6de540a56bae2356e424fbc"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260315T123900Z.png",
+      "sha256": "1bfe003f420596086851d6906209a7a8e0a8367c4e0da0222d380817db3a6398"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260315T172700Z.png",
+      "sha256": "1d88873435ff372f5b0cbf661089b38da61616a7256b6c2ad485d543c0a47a4a"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260315T221500Z.png",
+      "sha256": "853726ae02a159bc382607dccc1cf6dc6b04e5ed7accff4940160f7ce6dd5b33"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260316T030600Z.png",
+      "sha256": "c66cae80d5327994267694b9315955cb55e8830e5a0693783444e126c407cf5d"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260316T075400Z.png",
+      "sha256": "6760aeb7ccb9a789e092a9b13312308db41e7b9e35b54673e99414ad7b7cc4ad"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260316T124200Z.png",
+      "sha256": "b58e338c948b82fd7e0ba20288965e6cc974cc72d9422be0b1202f9fefe6d851"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260316T173000Z.png",
+      "sha256": "8a3b2568f7a13eb95b8c0d554e6c72f514bdc9764667a39c66fd9f7e38f6b8bd"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260316T221800Z.png",
+      "sha256": "78a08e863ee4489295dc40eba7a3bcd162ac877d518db832f04e90438dd4ee1e"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260317T030600Z.png",
+      "sha256": "b930e3055de41453e1a6e147e20ace16b240fe986b3bf9ba0442dfe598813105"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260317T075400Z.png",
+      "sha256": "dbec2b3e5bc00be268027df47108090da5a83fc71664cd64c9d931a2794f3fed"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260317T124200Z.png",
+      "sha256": "1129a1e143378402f255873fe16f122b8a9ccce4c66d40356fb2f48195eabc59"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260317T173300Z.png",
+      "sha256": "4e8fd1d7d51eb962f77bb2e5b2c4dcf9baf37223131f7a6e3916930a443e8ae1"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260317T222100Z.png",
+      "sha256": "198d4d382bce2c5c9900ac7a71e13512efcd19df645616a5ad528227ba133b1f"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260318T030900Z.png",
+      "sha256": "764b991e5704375c56c8f788997b98ce8a2b47a6672a7812e936a40564116b67"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260318T075700Z.png",
+      "sha256": "0bc55ca40fc62025cdfda840789a58f85a38ba3b05058a7fe5d639072b9e6d90"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260318T124500Z.png",
+      "sha256": "000f95e7c0a4643382d244241e8c1264a82efb197bd16aab0343dc5f3b113dfc"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260318T173300Z.png",
+      "sha256": "912afb6e56a2e2dc6a9d3760a4d3133fe50d6929d5c45ba08a951c2015449ebe"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260318T222100Z.png",
+      "sha256": "c7185dcfde71fce85fd7603d01c0f13733a4750572327a3709a0a0583c6707cd"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260319T031200Z.png",
+      "sha256": "5dd5e41fc3ea3d5d8a3763ad4fc2804084ddaf55a7c8764b65eaeb1f3a5116b5"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260319T080000Z.png",
+      "sha256": "030529e52d7d9d48c9af5a8f3102b44205b94cdcd986893efdad56965d7039cc"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260319T124800Z.png",
+      "sha256": "5fb8c6e75e7047cdfa03744f29ed024c02bb3ee5926540598b9bf83736cc4be3"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260319T173600Z.png",
+      "sha256": "b706e4f68d191f09e51cc952b490f758c53a268eb301ce5e2add85c0db9faf68"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260319T222400Z.png",
+      "sha256": "64b36d5f1704999179ae820271e87992c5233a90c303631ef9bf71258b718559"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260320T031200Z.png",
+      "sha256": "60326c4e7adeb198ae4913ac8a377ea8e68d79a9cf16db94d441f934e6361810"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260320T080000Z.png",
+      "sha256": "6a0ad2d1951bd9448b2bf26f13814797c9ae08557ab2416e06ea7a5dd8a9c482"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260320T125100Z.png",
+      "sha256": "97fdb7704e38ac21741d7be114efaa2e4db7d26ed523417794baeaae06d3c1f8"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260320T173900Z.png",
+      "sha256": "506c854bef75fb54e9ddacb0a9900d30769ed654c88d52d00e47e9155d90045c"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260320T222700Z.png",
+      "sha256": "e2e7ffa1cba41a3269201a048830de93d7b4f9d554a090b5c9ae3ee93d305730"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260321T031500Z.png",
+      "sha256": "1dfbc4bf6d116c9ce168fd394740a7e2840dd977aff5eca44f68d9b653c0921a"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260321T080300Z.png",
+      "sha256": "90f9f4d4c4f19f071b95de87a83aee2785d4467afd540f2247c4cbd763dc05fb"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260321T125100Z.png",
+      "sha256": "913bc2ee7f96425a3e2b4076a3e7ab5e26fabcfa33ae7cd682a3ed9bfac74291"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260321T173900Z.png",
+      "sha256": "87fafb7fe288c3b129b918e8914cfb96a114f1aed727e4f4226b7e66c64b7df9"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260321T222700Z.png",
+      "sha256": "371a5e0ce31ca39a0ea501369e013669ed6834a8b20849b676bd9e6d3750c5f3"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260322T031800Z.png",
+      "sha256": "ab47f930fa392cfa0ef4fddc17bf94cb2d64532da5902f712a919703c30fa32f"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260322T080600Z.png",
+      "sha256": "aed7d50e139ce3a1d3af9492cebbbe1a56f0d3d2a5673f80a24d9277e728e77b"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260322T125400Z.png",
+      "sha256": "ffa894d1c48d3d5f267be7a5925a143fb830a84f44d298597cef0e3e2e9f6f1d"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260322T174200Z.png",
+      "sha256": "e7b417c271adc2077ce96903edf875267ebbcf582d0c2698c8beec7ec1d8464b"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260322T223000Z.png",
+      "sha256": "2d1eff8669d598b4f1786a587920c8887aed1e6a81e20e58a71cdf1543b7c5af"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260323T031800Z.png",
+      "sha256": "93f8bf51ec0f4fee966bfed9d94e68ba2e92fb4a7097a2db5846b93b2f79de68"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260323T080600Z.png",
+      "sha256": "f72d0136cb245ffffbadb27a6bc599c519410f54badfe7a5244cb954bf81e1b0"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260323T125700Z.png",
+      "sha256": "7a0a0f9d750b48b2c0cb8bd9a29faf94f3f1014d5e6f14ddf2badd2ba9ece765"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260323T174500Z.png",
+      "sha256": "9d76c38bcbc2c9ff754ea7aafbb1bf58d6eb6dc76c61ad454cf0fdfb2fadaa3b"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260323T223300Z.png",
+      "sha256": "6b365e3e0087a38c25985cbae72bafb372faca368fe257821d554c174e8905c8"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260324T032100Z.png",
+      "sha256": "7373839255158305670c2adcfc5c8ecf760c02e048d933bd55283525bc14223a"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260324T080900Z.png",
+      "sha256": "32fc20cd7c5c8a9e4f66d4b7be1df58fec4d50fb7677f4c1785f01b78fbab59f"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260324T125700Z.png",
+      "sha256": "f8af8b1f3416fbdbfacbbb07739a0ed469d6b6d834288d11bb792107047c9b3e"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260324T174500Z.png",
+      "sha256": "72888a23bf089de2fd674f091a1012a9104407d0e32a7f4cc3cc7baafc67607e"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260324T223600Z.png",
+      "sha256": "a55a907e2277ec23c55dc6ab6f44cf8312256e19e80abd314747e13d1dadf7d2"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260325T032400Z.png",
+      "sha256": "300c0815345841c627f2b3c65a19c20e85ac32679d250b440388d9c82c807b42"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260325T081200Z.png",
+      "sha256": "3fffe7efffa0e7acb2f543c8b6a11af7aff6f52d105031921f47ca0b8fc44970"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260325T130000Z.png",
+      "sha256": "e656325d93f70d6d5af51e6bcc6d64790082f3b60b49aae8f781c7bed5879f48"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260325T174800Z.png",
+      "sha256": "95b656c34cde90719638949df71ab066d93a776c57d07aaa92226f4bee4df9ee"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260325T223600Z.png",
+      "sha256": "ce6b6f2c9db52b31bb7d06c0282e0e3ed592ce33c44e87414dfaec381c1cc4e2"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260326T032400Z.png",
+      "sha256": "f15ba428f26e013b123db13179c9b28d53ef9383f6ecca6e415b972033664874"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260326T081500Z.png",
+      "sha256": "f2c255f00fc9d37b06737483e367b08feadf979f8acffb36fbeec871cf08bd98"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260326T130300Z.png",
+      "sha256": "809a675ec195ceff150e236d841a7fc31bff8f4709fade77e66bdf8e7b56823e"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260326T175100Z.png",
+      "sha256": "c70641ce8c5a1700ade9b83eebda2e22b2610986f8dc2fb1a850b7bb4dfb65e3"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260326T223900Z.png",
+      "sha256": "a667e5671be1ee34e13e92891774b6ba84fbc26fd1b7a499ddc7d487fc4f738b"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260327T032700Z.png",
+      "sha256": "62745d148d7389e86b3c936cba048124144bcb3f99475589add2bbefa1cab875"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260327T081500Z.png",
+      "sha256": "9f37d9342c6057f445a0343e40452224e47c656f43f772fa8ccc454fae7a18c0"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260327T130300Z.png",
+      "sha256": "387f1d7a47a0d81a40dbab77fcdef3428c205c3ea96693e51a9cd4053aa4ccba"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260327T175100Z.png",
+      "sha256": "1d36c63ab29a7dbc632be73f4ab1c98850edaf380c776ac5c8535ef562ba7014"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260327T224200Z.png",
+      "sha256": "90a57f8763fc8a5c97a8d350a1dd0bde94429c1c296d08d08c13c248b502f9ea"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260328T033000Z.png",
+      "sha256": "40b6f31d6a32537deff490f2bfbc727e9a8d5f07b8fb3d45416da4c3dd2a88eb"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260328T081800Z.png",
+      "sha256": "709cb855b8e4791646fe6af99a416cc8363d9e670ffb68cdb343961bd3183fc4"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260328T130600Z.png",
+      "sha256": "53d4198978b554355836470dc48bb2c15e3359fd4e492dbc1aa824ac570d5980"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260328T175400Z.png",
+      "sha256": "f58b42cad666c3bbdf0f0833fee0633a054ac46faabff7c6c20366bb60d7ab01"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260328T224200Z.png",
+      "sha256": "b4c87851a53d2774343e1255ce2e0def5d9a5994b5b7b595caef6452a8aef40b"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260329T033000Z.png",
+      "sha256": "aaffa341d0f7d64b374014f07411d618ee9d2bdf957279208803c9505e5e98bc"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260329T082100Z.png",
+      "sha256": "531393f878ad2e08988e92f5c63421eb5d3f418631a3ed325a2ff9a306ffff75"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260329T130900Z.png",
+      "sha256": "c98af0f5171b39b972800be9f9177f3febddb6f1689fd377f6fbc08b508c7ceb"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260329T175700Z.png",
+      "sha256": "6dc90f36953f76ed71e10e9ea4297e85f9e47e1c6f53265236c7f95a0a56c677"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260329T224500Z.png",
+      "sha256": "056b749bbe3b77a881a57055cc181797fad9723b4899e224fcd8a4a4027e17a7"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260330T033300Z.png",
+      "sha256": "cde4b22daef38c333e90f9acb32bee8a5da728a73ad893c1c5f60da560d46db4"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260330T082100Z.png",
+      "sha256": "242c5cdb0b840b8406349c5631abb766296f2c22b58f6b5e97a976656d0fcf36"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260330T130900Z.png",
+      "sha256": "961ddcf5f64868672b0f5e3e0e461c2492f7b3e3fb2cde38d64ecd5c7a25a6bb"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260330T180000Z.png",
+      "sha256": "3181adcee4971e325351c86fa8bf56974a6b18b2c23bd25ba46eef1933df20ec"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260330T224800Z.png",
+      "sha256": "c95ae0f447a6afb9e6b21237cd4d67d7d5fced3716afff123cfe06a59287ad2c"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260331T033600Z.png",
+      "sha256": "27972c89f2e184b382f04144abb01da034ee58936973b89e2410e220d07e2b4d"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260331T082400Z.png",
+      "sha256": "b4f61cf6d2ed8c9263bdfcd691f31ef6b4561288d23537ae78e08c766be952ae"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260331T131200Z.png",
+      "sha256": "0fcd403b1e4f1d0e2949e5d9b07ede1bf00b167a0cfd0803dece901a7cebb7ec"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260331T180000Z.png",
+      "sha256": "b1b30d73cf0affa6f139582f16398c1a96f0a3949ed16f7dc70590505063bf06"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260331T224800Z.png",
+      "sha256": "1a8759df79f5e46cfc2b5cc73546bdf4bc0e175e0d85690dd0b194582b13bbfc"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260401T033600Z.png",
+      "sha256": "4d7629a7186bd767f8a562a5b58c5e44af38e35894118c4bf8d90a224a68c9bb"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260401T082700Z.png",
+      "sha256": "35e9c38b5c23ca90279b5554ac90744d3b8b9c35010e3be4c140d1d51b1d100f"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260401T131500Z.png",
+      "sha256": "f34aeb33e15f95f321bd94357f2832bf876662b31521e1cc73deac22b6f0ac7e"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260401T180300Z.png",
+      "sha256": "d47d33697db22ecb377784f8d37c6d73aa3346f3c2f8bfb81f491ca337a036c1"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260401T225100Z.png",
+      "sha256": "7049a36d08824cf1d0d1d057178c1865bfcf3be1ffb8ba484f1c7a5946f79e2e"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260402T033900Z.png",
+      "sha256": "44aeb8e06c1251d8323ab15e96aa0b82064b133aa9f4063f23de198ce870f7f2"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260402T082700Z.png",
+      "sha256": "d3c013d1ace05bb99a298bb63bfefcd89ee983d779798f03ee200db294bdc6ad"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260402T131500Z.png",
+      "sha256": "3f1a86365c48b61d42031cb2a8989d3b1e7e22e4dd77244d816c133d17ed38a4"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260402T180600Z.png",
+      "sha256": "66713b7b00a721ef586e2d0d4d8d87bd7fcf93f940fcd3cd7be7fdd41554692c"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260402T225400Z.png",
+      "sha256": "76f142fb08e86c0dfa1006f5e46537b9f960d57432901e116316a62f13f43366"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260403T034200Z.png",
+      "sha256": "a536e71bfd2c4d6afbebf17a32a06808f99417ecd4e0e1937725d7279e70d4c5"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260403T083000Z.png",
+      "sha256": "335b928e5434875a58311d2e9976a7eda9ffd933b31f2e0150949ce49c63cc5b"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260403T131800Z.png",
+      "sha256": "2836062db42119a0e67de2c0683f3012f998ae41344d0310dec7c35f6b40e0ae"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260403T180600Z.png",
+      "sha256": "b440806fb3b05d86de455f961a9d7222c769036d13b76c7c56800f5b1cc29eef"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260403T225400Z.png",
+      "sha256": "2e4229ef49d6512cf589f20ab99f47ca914cb81aeedaaaa49a9884f354ef7812"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260404T034500Z.png",
+      "sha256": "4e6c8ce5c0ad2128b74251c1ea20f1d4e67ecc94496fbf8fffcc5b37f5109523"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260404T083300Z.png",
+      "sha256": "be8bc1a068d9ffeac0b4a43595eadf2dd25ba429d35b23533b96ec4fc2c723e8"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260404T132100Z.png",
+      "sha256": "a41bee9a61f97fbf17a80e539bf0ddf5bfb06ee04df51e308b320a903fd445c8"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260404T180900Z.png",
+      "sha256": "e01b45db5ef9c69b177cc3d62f4f9e7d757579f3f28dfd43b5a4c6442d1f98b2"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260404T225700Z.png",
+      "sha256": "02ec9e0b912c659d06cb5730350cd04df6008952820a8ed2e4fea9d838bb6700"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260405T034500Z.png",
+      "sha256": "465ade23f1982e2e09500197d03d815991f7e0ba0613fb9e665841a43e68d90f"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260405T083300Z.png",
+      "sha256": "9772a54941e966c82c6310477657e74c3fd3293bbc7dcf3f7e0347a8cc4aae71"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260405T132400Z.png",
+      "sha256": "71562884bd605899313eba8b33b0066e89a18fce64637953bdd3d7579b262e93"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260405T181200Z.png",
+      "sha256": "e1afb4fc75a27b9b5cf7d41de40e6fb243fdc3a0214836429cbf014a79911354"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260405T230000Z.png",
+      "sha256": "9e8456c944f1a2d507a5876dd8e5b21af93ac6dc9e70089fef253d2c7c9db7d0"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260406T034800Z.png",
+      "sha256": "065782c9574718e81510bfd014cf6e78841c86f6432bdcbcd13154e3e2693ee1"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260406T083600Z.png",
+      "sha256": "205fb37fbe820d86545474aea4dc3d50a58fe28c8af004a0e86ed9849152c589"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260406T132400Z.png",
+      "sha256": "cd3142c2276b44010edb7b8ba8c914623ad84afde550a2a1e87eeaaa4b9932e6"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260406T181200Z.png",
+      "sha256": "97977ace9d036da13a76c7444eeae8ea64753e02c28f31e6004c7ac6fbadf9ad"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260406T230000Z.png",
+      "sha256": "ee0440462c9d4be48f8341530b3f2e349ef788bb73c44acc57371d6066b9f2a0"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260407T035100Z.png",
+      "sha256": "bc5a98f9c531d4d7a05ac99d516ec815188a3d4d5e8026a7622f70eca294aebd"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260407T083900Z.png",
+      "sha256": "a0c26e217d693a419c2a69e8487c0cdd8e1db486edac76f4f244f13d6aba0590"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260407T132700Z.png",
+      "sha256": "a487425a9b5dc303b882de0cff8636ed92d1e12dc72ed66a2d5a47cc2532c242"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260407T181500Z.png",
+      "sha256": "62d94978486a7f95fa046988cddd8b4cafcf2d7bec22a665198bb4892d589cf1"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260407T230300Z.png",
+      "sha256": "02d2d01a40997ce5e3678db280e5f3b2022f88805c162697dd96b9640ce994a5"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260408T035100Z.png",
+      "sha256": "50a2429347bb430d6723e9e9e82144b0f60c1d4f743eb0d42e014bea991c826d"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260408T083900Z.png",
+      "sha256": "18100ede2c089d15e707e41db7313839dac2b38e823c124324145c1c0f5dbedd"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260408T133000Z.png",
+      "sha256": "860395a0e6266f9b00da3db285badb0efc863be243a107c32b1dab33be687b43"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260408T181800Z.png",
+      "sha256": "fb253a74fa732564192bf474cf201a7ee085a3742da93b1c997a03e48d0a284c"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260408T230600Z.png",
+      "sha256": "a23f33078e010abfa2492888699b1179b765a70a8e29eb2784905cf29b79da28"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260409T035400Z.png",
+      "sha256": "a1748df9e0b20d92b61002b32e458ec4c063daa1cb5d964afe2e5f444e4537a3"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260409T084200Z.png",
+      "sha256": "26d31bb5e4351dc6eb613e90776887b64f49db6b43eac86130ca6d400e46674d"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260409T133000Z.png",
+      "sha256": "3fec79f5d30f1c115d316d53493752a3ca5e0f1f2bfe9e2afab2934086f95e02"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260409T181800Z.png",
+      "sha256": "5ef16e45c6cf5563cac0bf6630327240e0ecbab52b4098c40beffda534cdc4be"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260409T230900Z.png",
+      "sha256": "0655a69a459b67e93680d5289f87337d7c64f417c849bb4de6aeb842447192a0"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260410T035700Z.png",
+      "sha256": "b890574636f129bf79341a6d6e053f49a024590d0d4a87d67cc7a8795ec5488f"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260410T084500Z.png",
+      "sha256": "9afdafebbef91573469224f5c44020991881a45cf87dfba0877637510016f1ac"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260410T133300Z.png",
+      "sha256": "f5156b1f41c8a4c242391a20870a101038c6489f17daad88b00f4c60fa39527b"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260410T182100Z.png",
+      "sha256": "a3f9a989d66c575b69b9c146fb45799e6e94ffae7a99d79303ef711dd1aed69b"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260410T230900Z.png",
+      "sha256": "841479d890a9bd6eaa3dae3a69a7dded0babf73541759232e032148ee357b618"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260411T035700Z.png",
+      "sha256": "f0441794177273af49341f30e1a5f3d40a7f2a296ca8cf11532c84b4fb9125f0"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260411T084500Z.png",
+      "sha256": "447e3f1d958e3707a41b4dd14d700e8d892e472e9e97c0ed05f4d6f3e485539a"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260411T133600Z.png",
+      "sha256": "ae64429fcc2920feed5928fc78b2b884f045c43ee1c6fd6e2bc171dbfc35f793"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260411T182400Z.png",
+      "sha256": "02c0f77a7928051b368fc82e5cb70d4c6e373a11804947c2b4c8ee5ecafcbed3"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260411T231200Z.png",
+      "sha256": "efb880dea78d44a214080cb8697f3faa200a2b5e3f76a65c808513a6a76aa66c"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260412T040000Z.png",
+      "sha256": "c1103ed3e51cea8f83c859a739c40d8b7416ea0d6e8ffd401e9257aca6c35b85"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260412T084800Z.png",
+      "sha256": "e7364cc840903580037a5610f524e133e8ef1b1ee07603a9fc3e26fbe9b982fb"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260412T133600Z.png",
+      "sha256": "7a1c8fc42a84798b4440259610780985803b707bcfc4e12dae531b728271d6c5"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260412T182400Z.png",
+      "sha256": "4d5932cee63eff97cf6236a0e84815942422bde7c06d0b6582f7dea8fa328d71"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260412T231500Z.png",
+      "sha256": "211ddd082f4f7af8799a7dd849e2e4fddb6c8f9c12b8e41a46e1ce354ff81709"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260413T040300Z.png",
+      "sha256": "2ac478f202576661e3283712949c8e8dde276713874119055e1da34d13e65a4e"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260413T085100Z.png",
+      "sha256": "45a8b254ced398f9cf6c33363de12233d4acc2641e81e4b5fac505a0528350cb"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260413T133900Z.png",
+      "sha256": "4bbe513c98de35a7b54e08b62d18e20b58fd160ded393e2cb19ab37fbcab175c"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260413T182700Z.png",
+      "sha256": "8c856b89965550e7516d7f0950b2a2357c4b2e0cd24728e3c0505075e5658cf2"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260413T231500Z.png",
+      "sha256": "a7973057bddbc4b736dad89cd01d7b018db953c5e4f45f35aecb869484bfe20d"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260414T040300Z.png",
+      "sha256": "ef07c2c8c6e5835185f30d62518fad0dcb58c3d0c6d06aee153320812c875195"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260414T085400Z.png",
+      "sha256": "2c9b2dc4ab2fc99d0602355bf4692eddce703ee0ed5c6874e846d6f666830e8c"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260414T134200Z.png",
+      "sha256": "d32af1b5c0f65f2e424575db910f51f490e8e0b05432d4a6443c095c6997a947"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260414T183000Z.png",
+      "sha256": "b65502db93d53d20a043965980e10a139403a90970554e031e7ed8e34a1a5ada"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260414T231800Z.png",
+      "sha256": "9eb5cf01bb32bb086ef112a87c6cd82685aa3e4f12f5638b223238aa8a0b999a"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260415T040600Z.png",
+      "sha256": "f746d710963b082ebcb61563c83e420e0dc5693d7eb40e478fa2d511c443179a"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260415T085400Z.png",
+      "sha256": "634b2fe4f076bec9567914a85e763dcbe25035220076de68fd83e5b6cdc6577f"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260415T134200Z.png",
+      "sha256": "3039f5312fffc1a94fddeca933b7368dd30d2813e541fe7cc1ed4fe39902598c"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260415T183300Z.png",
+      "sha256": "22ffc1db722bdcc3dd8a344f2d8a441fa9d303e99bfcb9c70a890faeec8b5d4b"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260415T232100Z.png",
+      "sha256": "69c31e62210a19c36bb1b5bd02a97c09e28ebca28652ffcddd201667bf5d8459"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260416T040900Z.png",
+      "sha256": "fa20c041f8b4c8bd354d5be9c8ad75599dac3c24db9d94d1de5123fbc643ac30"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260416T085700Z.png",
+      "sha256": "581ce02e4e8cf13bec651d84a54d1e5c67ae8838631409671724653d58976687"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260416T134500Z.png",
+      "sha256": "42e61a7b90c61654e2c91f04aebdc878cddd3f3fda334ca31bd994e8c2c2d261"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260416T183300Z.png",
+      "sha256": "6e8e81b77991a80e8d1f966dbf40e7139e1d8b3433e2695e92c42bb5169a354a"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260416T232100Z.png",
+      "sha256": "323032a51c11bb68203ec3cd06e71fa0b876d2fcab9edb1366f2e8a908e8dabf"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260417T040900Z.png",
+      "sha256": "45eccc29c5614d9e918d8bf55d823b15119dfadd425c1f8dd56511e121f6357e"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260417T090000Z.png",
+      "sha256": "dc99ec2860a52cf71eaff3331315cf03bb75db5b34abcd68fe0f44777fb150e7"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260417T134800Z.png",
+      "sha256": "f2e5e85651b6d194458321b99929630bc00ed1023542527dda966ebed33caf12"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260417T183600Z.png",
+      "sha256": "ab830ffef1e3d075ae1068ddc1616c0c585a04ad357ac2486452dcce43dccaf7"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260417T232400Z.png",
+      "sha256": "157c91c96c08493fc2a9f80adaea20bc6d408b206991e089040a81d01acc3316"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260418T041200Z.png",
+      "sha256": "30e3ef71877d9d2dad0f1d7bed0fc62c677813c464883a6a7c22b88e3d875a0d"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260418T090000Z.png",
+      "sha256": "e4fcade5d842c2fef0ee3a406164be6a20132911a145e346993dfc75df5a6107"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260418T134800Z.png",
+      "sha256": "e3db711bb5d6d14a2541e4f358fef1cc64a3c924819a494518806b2a4863a9ab"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260418T183900Z.png",
+      "sha256": "ba1f26f2cd2a5dad9714a0f416edf49706fd6610e876e192185dff146a6f5063"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260418T232700Z.png",
+      "sha256": "9960a10fbd31bd56e6cc920dc705c12049971b89652c95fc269ef35c4f343edc"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260419T041500Z.png",
+      "sha256": "acb320838b80e9feb97d668a7800d1a404b93a3ab2f3b7a374de0ef733b5eadb"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260419T090300Z.png",
+      "sha256": "39fcb6b926fe66c5c6ae97332bfbfc3bebc726a118697dcb856a39fafa341e4a"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260419T135100Z.png",
+      "sha256": "c27e761e0e0ca73e3bb648a01f07aec9d3358e757f7403ef5ccc64b9728118f0"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260419T183900Z.png",
+      "sha256": "c20254b181ea74df5132779cbb9d8fe04eefb9c083ab87e5deae13d730586503"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260419T232700Z.png",
+      "sha256": "129faa573080a8047a6e3d9f8a0ef7b96469c33174f5248d2a07455649d0a4dd"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260420T041800Z.png",
+      "sha256": "ec277f118cd64254b35fa1abf613d3ffd44b3ad5d9f966308fb6e6f66965c3cf"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260420T090600Z.png",
+      "sha256": "07e9025c6657e1617c60115fe5a7e77c7b5ea9dbf6c794b8a67459f6e9747495"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260420T135400Z.png",
+      "sha256": "5d2326dc58762429116a9a5f4a5a1ecc1c90b75245cf9029c0ce71480eb35b18"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260420T184200Z.png",
+      "sha256": "aa54f0fde63c6103b580bb033dcd8a888d0b8fcc87d042a8989225e5c491a4fa"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260420T233000Z.png",
+      "sha256": "d6eab1eaf65d0918f6199b13e723f3d92a1865742bbec159ad6cbe31e1b6427d"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260421T041800Z.png",
+      "sha256": "b92e1b69f4234846fafd56ac2eebf69c79c7901db4ef026a091108ebea8967e6"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260421T090600Z.png",
+      "sha256": "ce76aea83f57bbce94c993a0d7a6638621fe2129b646fa94915ac01f4ce5d7c0"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260421T135400Z.png",
+      "sha256": "a403c41544f82566083455dff2d0abb423d2ff244bbb1abc7e286f78b3926dfe"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260421T184500Z.png",
+      "sha256": "e4a1c065a5f9857234647c8a94b9d2f1a3b5605d5cef2edea6bb790efffaa528"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260421T233300Z.png",
+      "sha256": "ba72966839ba1dd55996d41870a13d9304de00efdbf37f378ca5f86ba612e8b5"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260422T042100Z.png",
+      "sha256": "c590a3a5c6fc4343665fa639af531314a7b028a537b0018605f430417dbef528"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260422T090900Z.png",
+      "sha256": "f684f8cae41bffa0d311ee666e3a818b67d74f8dda79ab2a8482e1426acc7641"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260422T135700Z.png",
+      "sha256": "4211918207b0e789dd393a28181f48f045dfbbc0fcc336806b170e27b2996da5"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260422T184500Z.png",
+      "sha256": "fff3969e84bfb126b0d58f34d1c144f5c4c512d09ffc27412da78ba6e421c82c"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260422T233300Z.png",
+      "sha256": "11a8f0b59c8ee6417cff015b70d7e12a0418ffca6c859d62084f1adae122ed05"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260423T042400Z.png",
+      "sha256": "70904e22ce090858086e17931728e76bb582e6e465e614410efa0cbef280fc2c"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260423T091200Z.png",
+      "sha256": "42f2930087cf8c4cdf8d3ef74b4636bf276d6207cdc0322396cb89fd5d1d9ff3"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260423T140000Z.png",
+      "sha256": "6c5294db81a60c78b7912b787239070a038525df0d44e4c9fb44dbbbe80d87e5"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260423T184800Z.png",
+      "sha256": "83f0209c4f9df1611c673abd32f5fd3333ab2a24e98d887a546a80862b21ecd1"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260423T233600Z.png",
+      "sha256": "15ccd36de4fb4ef8254915e33a1624460ff6ed37b32ee0d93903cf5b8eeb5dc4"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260424T042400Z.png",
+      "sha256": "85b4a7bea8614d0af09b7f0a042f7ffca54619087c3af6b5948e008e2053d3c5"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260424T091200Z.png",
+      "sha256": "592f00a6a7a39093fa36a3ebace6e7d60894212e85a65d9e715031c30ea14e97"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260424T140300Z.png",
+      "sha256": "2b3104971075ac77c2833be694f7a78455d967ecbe21850070042e0ea4010346"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260424T185100Z.png",
+      "sha256": "364e782c7b3cd3a76251e52aedb40af4b227a93a75262f67d50a0d26eb224e01"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260424T233900Z.png",
+      "sha256": "d76dc432ed7cbd90ca75c1c625e6e0c064008aba0a329c5aec134a50c61b0a94"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260425T042700Z.png",
+      "sha256": "c7e6cfbe7c2571e11d3f298a3deecb10c583ed1ef2c00ac9eb1b705031b0d8e4"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260425T091500Z.png",
+      "sha256": "9c0ea5696e14b9a46a1abc104bc07d94b02602b2f0936623d62b9cf968c62f7f"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260425T140300Z.png",
+      "sha256": "a061fa798ce872a827cf6e744bf0c15039dd2b15a60a585f281cd1aa50ef7d0a"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260425T185100Z.png",
+      "sha256": "2d0b00e19d37418a6c845223d1f140d6ddcda8fd946137f5ea15024b883286bf"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260425T234200Z.png",
+      "sha256": "83252dd03a899529a4d17c76fc6e09196d3825ba449b1ac06e9b8fe00b4acb33"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260426T043000Z.png",
+      "sha256": "d4cc7a79bce930b951481ea5127992ac7216dd29201f936b63a509e0308ce060"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260426T091800Z.png",
+      "sha256": "3786b331786fe84969f61ca37bbdba5705364f9497a607cb38ff55c866f4bd7a"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260426T140600Z.png",
+      "sha256": "bd8d35b0c397d71fb8c2db110a70eacd9a4428bb87dc05763f6095eda092c178"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260426T185400Z.png",
+      "sha256": "aab1ceb9c65d29ab5df641afd3e9859041ef108bc681da77444eb30b9e2f18f0"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260426T234200Z.png",
+      "sha256": "e45e9ceb79f8aaea525700846fbd324674a565508e92e2d7dacfe6cc955c3de0"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260427T043000Z.png",
+      "sha256": "734885d109db9fd3863838ffb1612846ff5f8635e4c1d46c980d8392f17568e2"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260427T091800Z.png",
+      "sha256": "7ba2529c73aea22506bc6c16de37775234cf2a8133eae1f100b431ec2965d9ec"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260427T140900Z.png",
+      "sha256": "2fe2234932137abaa5a3163f64f7d764bceab4619f42094cc654ea01195b8f80"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260427T185700Z.png",
+      "sha256": "b44eb9c96bef715dcd568aa157765df7dabd7704b45c66389beafb1b1b6cec21"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260427T234500Z.png",
+      "sha256": "c73ee5558229bbd6c13bae9dac71f606adc1c68c7232e063e88270e477310514"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260428T043300Z.png",
+      "sha256": "2a73d3761eed41f9af4ee751582e00c886e0b09f04087c2f177cd7c942b389df"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260428T092100Z.png",
+      "sha256": "37465539a7fff413f9e346c63c597922b499ef2f9ecf812827333ae07ee5d2c2"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260428T140900Z.png",
+      "sha256": "9dd13dbb2378b1083aff286315e82da0a36c5282e508ccb39f76a59b3a8d2ae0"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260428T185700Z.png",
+      "sha256": "6595d4821ab4185bdb338a9c67e83bea93dac938888e106765b12259f4c5f46e"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260428T234800Z.png",
+      "sha256": "32bde7835fa04aeed6eee6344827a410f7d14339e043ea137d90d5ece54634d9"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260429T043600Z.png",
+      "sha256": "088a204fee6c74bf94d6d3646f5e41d0960bda8c8b7d899a8edd6745532c8d17"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260429T092400Z.png",
+      "sha256": "73f411bd356e50a07049e3b61bc03d24361cb2ab3bae2a7576f83dae49e177e0"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260429T141200Z.png",
+      "sha256": "23bc110dabb732a218ea5f71bb98a6aac1054261986e35e29543ac10805bbfc4"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260429T190000Z.png",
+      "sha256": "429756ac8b976901ff094efca680bcd5b55c637bc8e272f423c02d2ea98ada58"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260429T234800Z.png",
+      "sha256": "8493bb536e0c676748b72f383901297c52d60e6619587fc7402858abd56fe9a9"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260430T043600Z.png",
+      "sha256": "58213c9acde55c23bb2c409e0aa65d1c96d7ad43296c16d1b18427394e55ff34"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260430T092700Z.png",
+      "sha256": "8d312ed9b87642a0b42d9f55347f8d803f4627b44099bc8d0c6655bd04c6445b"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260430T141500Z.png",
+      "sha256": "45537b378e30e6565bf046b7afe3dbdd8fa836d259b47a94c63e4400a133ade3"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260430T190300Z.png",
+      "sha256": "69e6986099f87e8e6d1f87389d80b8bd23341790a92121930bc84d2cc9789502"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260430T235100Z.png",
+      "sha256": "6b287b099fe3dfffb44f88b5c88462656a4c25fe5dd5415693a0fc1e48852340"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260501T043900Z.png",
+      "sha256": "3d1a7462030a9bcb389b034db372b253446958fab3d1a93eee4f60a1e26e026c"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260501T092700Z.png",
+      "sha256": "9897fd6cca5d2944aa85682c93471b1f18509c0857bdd258f6cb88f269be4952"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260501T141500Z.png",
+      "sha256": "9fb02bbb6d5b123784ce2e914eff782c62af8e1b15694a2d936f9ad9a3f428d2"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260501T190300Z.png",
+      "sha256": "e8345cd4850310f64d396b9f83edcbb1e7f952a4f9a662a5870ad216c2e808c9"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260501T235400Z.png",
+      "sha256": "6b5d3398e97f35e3210a6e716c744dfe3ec4a18b5cd12af72b83e820e48e6e08"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260502T044200Z.png",
+      "sha256": "8282b94f4329d897dc30bc239b20dd7333f6f809874a72959527993e20e41ab0"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260502T093000Z.png",
+      "sha256": "1e58fe583fa1deb52dca4e199ccb6f0d6dec252f77b5799b25ccebdcfceac4d1"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260502T141800Z.png",
+      "sha256": "673de95cfab06719cb0e5489be23eda3c1f613e534bf61ffd3f93ec485fdff6f"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260502T190600Z.png",
+      "sha256": "d5818f453a06851bb9a78ea7475a7125d7074cd61e3433602a5bd81aef5e54e0"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260502T235400Z.png",
+      "sha256": "29751d71f35359ef8a2d6cd49fda46d034941808e35d5d17876e8515127b7296"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260503T044200Z.png",
+      "sha256": "4abb447c1fc35fb4bc413f1d8a10afadab06e74d6b9cfb129448eaaa9a260445"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260503T093300Z.png",
+      "sha256": "aa5e00d8e5d9ad5cd0003a98d95fa419f4ee7382497b15e1db96541144ede1d8"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260503T142100Z.png",
+      "sha256": "3c7ad2d5208727251f91e439c76ded895de390817b220a73afc27adf961d9b22"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260503T190900Z.png",
+      "sha256": "321a8a0f077c19fa655f49c3c70921fbd4a5ccfc361897303f014d52fdfdd1dd"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260503T235700Z.png",
+      "sha256": "f1829e027e3c3a5e32badee1d5ca70237643473c1e9f84b5ee552f1596578b20"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260313T221200Z.png",
+      "sha256": "6bc242eda357a7c07e164c5a9e22dd0fcd190a369b2e010a84f71fa3e832f1ae"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260314T030000Z.png",
+      "sha256": "c2b0b1509834104a50a6e2a2fd479fa07c623672a2f33b43c547493021b599cd"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260314T074800Z.png",
+      "sha256": "81b08cfae8eccfbd13e54ab9d3d8dff4ff6a8e7910d4d2a873b7ef403647cced"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260314T123600Z.png",
+      "sha256": "d87e2ace66897e520c7785abad2d94707a7e80f1fd27c0d738aad29c9149e19b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260314T172700Z.png",
+      "sha256": "5d96114aa958f6931d4c268fee823fbd3dac311eec7add1c1a1759327ebe0d26"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260314T221500Z.png",
+      "sha256": "8f1909d48f222bbac995cb17fbe8e0da1425a145592adf7e78e00960bf28b3c6"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260315T030300Z.png",
+      "sha256": "4649fc7021820f4a212105e7c978aef8360435aec7da9fcc84679be782db8014"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260315T075100Z.png",
+      "sha256": "02c859ed5e13eda2beff91f2d9f3f573444ad73279473c5c2df22c50e04b613d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260315T123900Z.png",
+      "sha256": "6f738e10b47cc204fa7a0ca4d033031faafd18a19574de4845375d2b0b6fbd6e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260315T172700Z.png",
+      "sha256": "cbd7897ecdf9b380f42902e8af988f3e52ea2aabd00343d0fbc2cd4472ad467d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260315T221500Z.png",
+      "sha256": "1f7aa8fc06e360ee27434dd87d1ed0629b44c1d33253ff66770d4e9d0af653b0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260316T030600Z.png",
+      "sha256": "83a003348e6029b8f84a77a85c977f95c18070170a8b4e2442e46cf0b7fbffe6"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260316T075400Z.png",
+      "sha256": "34f9c14182bab74e82e98c4b468637517434601c2437a9e435ca1017b8b5c680"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260316T124200Z.png",
+      "sha256": "09f545cffcf93b91f9072889696e62d82d34eab7960889b556e11b8cebc8e04e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260316T173000Z.png",
+      "sha256": "e9d5df511c43e4d770768a49eb713b4b7c8db0b38c5dfd8e9f0b07d06de5b858"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260316T221800Z.png",
+      "sha256": "36180f613b7dac03be9e625e13e47f8c21dd3ff4978bf59069651e1636abd04c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260317T030600Z.png",
+      "sha256": "9d28a10b69345b605407bfb26fec19d333b4649eddbd12289bb4a67649c41890"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260317T075400Z.png",
+      "sha256": "0c497d9f334ecdd781116986a6edb9ced93e876fa9d229cca4023ea3168de957"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260317T124200Z.png",
+      "sha256": "bc9642c458bf8adfa037c063555c16897b3edb4695dea64aa1791a915ef0703e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260317T173300Z.png",
+      "sha256": "2e90949580d3c9dccc16064efb6bd0d2ebf673aa9e68e3f21508fae279f68085"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260317T222100Z.png",
+      "sha256": "dc074d1d18817dd6e63a9a359672c373f6b55a229afc5a5099c4bd55266528bc"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260318T030900Z.png",
+      "sha256": "fe57bb9b9b9d3ae9e4cf9f484309cea887c4bac8ca1b6e219b5bb1cc78bd0a5d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260318T075700Z.png",
+      "sha256": "10a18d5a8371338601f8575ba8aa2f2d2c246a0ffaaea10620c9241ec47dea64"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260318T124500Z.png",
+      "sha256": "99a8dd2006d7834647f8083c164482e8853870b900717d796623e5f1d346424c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260318T173300Z.png",
+      "sha256": "d2b05595fc20ffe6702e680a6c824cb1900b0ee3a4d6e0e35df12841df715f2a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260318T222100Z.png",
+      "sha256": "cca28422995ffef6a89e9e3fd3fd4db373c065d211a7aa7bd060c47c2e2b8cd7"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260319T031200Z.png",
+      "sha256": "bcaffb31c1742c7ae51622cd383cb591d19fe85b10bd6ff33109cc7d2623d641"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260319T080000Z.png",
+      "sha256": "a46876af6666837bd587fdf61fe2b37047fa5359fa8de74f7f023383e7f5c562"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260319T124800Z.png",
+      "sha256": "986faa74e4dac505542accbc2a3eb586596a4fed8c78a2d2803f506e571df03f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260319T173600Z.png",
+      "sha256": "b1b87a424d3314eeb39fde3eee774d79f59d6ed169244ab44d294643aea5ca26"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260319T222400Z.png",
+      "sha256": "868ef25a7f552ad8047a4867a8fb1c8c103602c9014a2593b28f297dc2b86f5a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260320T031200Z.png",
+      "sha256": "aa0224e9508cb9a66b73290367eb3a1fbfe876abb198756309859a68e3261d97"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260320T080000Z.png",
+      "sha256": "fe6f2404ae3d19ab5cd20057762b13454ed4f757a90985cd4db2ed56c3d10657"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260320T125100Z.png",
+      "sha256": "81101fb4540be5cf671783315e42cc6e700f35d5cc0fed00d91bdb8264976bd4"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260320T173900Z.png",
+      "sha256": "815e7a7666f82a2317ba2788b909175496b511c1a3b940169ced828fa072fe01"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260320T222700Z.png",
+      "sha256": "b4dbe1c62b9dfbb214f4041971dd61db1ba56b155be7c7b39f59fbf6b7dafbe7"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260321T031500Z.png",
+      "sha256": "e3359d3ec1f621005f808050e8e4c05069c9263b88ee40cd2c3c34d15726e416"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260321T080300Z.png",
+      "sha256": "7c9cb591fbcabb6e30f13ea53b41259c18759a710ac4e64dd0b8368fb4ec67f0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260321T125100Z.png",
+      "sha256": "f916c558374ae4a1a62bf5e8ae2e6cb5276105b7ed4e915b7a042a552905a280"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260321T173900Z.png",
+      "sha256": "d20db39773c601dac58e0c50a0a9695fbb8892f0c5886bf98984ff20114bb9b1"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260321T222700Z.png",
+      "sha256": "399d2f01644510bde3d6a5539eaf17718edb9d0656d69e5a704b44ee654342fc"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260322T031800Z.png",
+      "sha256": "e599b2b9f91353319c3b38702c680759d9254e42e24e381f210f5e401a632cbb"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260322T080600Z.png",
+      "sha256": "6e6812b8f63bdaf64d3d04af3798b422f87fc557ac91d6bbe445ca73d0d46ebf"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260322T125400Z.png",
+      "sha256": "50fde16063c329ce4cca005ecb2f728e612e8fb7686de5d2301446dc001f08cc"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260322T174200Z.png",
+      "sha256": "bce83cd55bf814eaeac811fe9661293a32564db819caaca4a27de391246b1f20"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260322T223000Z.png",
+      "sha256": "bb1022c1ee336208e5969ace38357476029f3aa34182cd49420da30e71c4967c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260323T031800Z.png",
+      "sha256": "e457caae795042d3c0009108c508668f07271c2f9738d2fba26f63d302e655df"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260323T080600Z.png",
+      "sha256": "5a917480cbcf0231462e8329b76e2a7a0304d316efb6981807c9f7186692df61"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260323T125700Z.png",
+      "sha256": "cf86b0306e53ff6d0769483617a4a30679eb700f74dfd01fc214634db74f4432"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260323T174500Z.png",
+      "sha256": "9d6f90e4aa84a42418e9ee674acd3a37e10b2a83e21056270bc59093d6158692"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260323T223300Z.png",
+      "sha256": "ad331c3ff4667e64fe09ed292f12f450a9e03690e82edfcc09c3af74e452c28b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260324T032100Z.png",
+      "sha256": "1212fe44b8b9217e1f6933025d48220bb389eff83b00e90641104ee15a044d40"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260324T080900Z.png",
+      "sha256": "e502ad53d108932ce8d8282eda8713309e58a9aec3e4b860db3e431aa852c903"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260324T125700Z.png",
+      "sha256": "0159da58cffb2b1917f48a9efb242868cd286d6e572f802fa1da9192a5ebf2fc"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260324T174500Z.png",
+      "sha256": "50b31d8a87b1c737ea66956ce107a532b21b8a16844dc0068e024f334a0f37da"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260324T223600Z.png",
+      "sha256": "9d571bd3be05f0172913825e48cffad5652d59472ddab1dfaa47e25fbdfdd2c3"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260325T032400Z.png",
+      "sha256": "f658ea3dadd3e8cbc777c76841cbb38ac0ac392c4978c1d1c37b8fe507cacae8"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260325T081200Z.png",
+      "sha256": "0c509e0aee6bb15e420c20092b6a1b11e5488bf5ec5ba927b4da18ddd26ccec4"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260325T130000Z.png",
+      "sha256": "8736870bf4b77f66f303be6969526ef6397f65136ee99986943a4ef891285cf0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260325T174800Z.png",
+      "sha256": "5b3d8cdf53639b90bbd6ed87a78072e485059ef18d124550d9b4179ae89a4850"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260325T223600Z.png",
+      "sha256": "c2d511ee51c4ea5207593150fffa1298b46714605f4b78256e078f5e62670ea2"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260326T032400Z.png",
+      "sha256": "1c23d40f470feb73f764250758a0e8e06ed07f8aae791b5c2714b8982b26890c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260326T081500Z.png",
+      "sha256": "671b201f3f9e3cbcd4dbc42c29166f493737dfac3d151a4ef41b17c8dd2289c6"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260326T130300Z.png",
+      "sha256": "4729857ce941ace15e481f7d37834a1c01885ce9c9757edd7912fd41a82e7c97"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260326T175100Z.png",
+      "sha256": "8b02bc70b4e518df516ffeafb816e6e9f0bd4da823d4df1aeed799f78190d4fe"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260326T223900Z.png",
+      "sha256": "5a056b817fdec599ff336d3dcf3fb561f7a489b14acbb77211bc61e277b035ab"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260327T032700Z.png",
+      "sha256": "5073209a3bad00766f4e5f9144fb65d32ab6e000ade782b96ca0e4b66dfeb40b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260327T081500Z.png",
+      "sha256": "c7271f51369d8e90c60051fb0b4edb8f556b137c0cb78b9fa7b1bd7cdce1a2f4"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260327T130300Z.png",
+      "sha256": "2f289b0fdff0efd1ae543ae59dbb916fc22651e87f740abdd8e9b7d84ef900a5"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260327T175100Z.png",
+      "sha256": "4716d0f8762be9a13b766aca141dd8f58af3504f9587dd6afa9bc0efde8eb305"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260327T224200Z.png",
+      "sha256": "425d38fca689cbd45235609953d3d5c5754f3be9640787d8b6d1610ccf4147c7"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260328T033000Z.png",
+      "sha256": "b560629784b6d79afb08d19546c19e802638890cce87ff42240c8ad925104a22"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260328T081800Z.png",
+      "sha256": "9249c2b8444a7d04a23c3ccaef9bdcb07191f7318d6cae297df2c612fd3443fc"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260328T130600Z.png",
+      "sha256": "0257ba6778a6b4454dfe2a79dc0890c2cf8195efe62dae0ed1d8f6a782f8354c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260328T175400Z.png",
+      "sha256": "e7d6e14b4df211b787c80362996d06283444ddbfd522a58aa93cbe6578c36b35"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260328T224200Z.png",
+      "sha256": "7bb02164ee00994c66827a082c4aa690461ae295a6d9948fcba989c74e6f12ff"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260329T033000Z.png",
+      "sha256": "d5b4a849dcb9e2e5f3550ed016e43ce6d62d7c674daf2df5086690d7261a7729"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260329T082100Z.png",
+      "sha256": "1dbd132221cc20ba0d93e0b9de900d3984683a2b628fb2506ec63bc424ba481b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260329T130900Z.png",
+      "sha256": "835131e07d8183adf71646799fc275a71ba0b038938920b10a9ada2511f8323f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260329T175700Z.png",
+      "sha256": "2da84c1f1fdef6061d8fed36bac58925f92ee3b837c15a6ec20e30f95bad9b5e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260329T224500Z.png",
+      "sha256": "a751e195d87590b5a9d5fa273c276915511b64ef41723fb39de515a9353daf70"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260330T033300Z.png",
+      "sha256": "664943d37a79ee725a43ce998630d15dcf25c41fe65202542909b37a2303b7d8"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260330T082100Z.png",
+      "sha256": "e07dd4a3c13513c93679a6abf877cf22ee6979318bd8d283ed295cc9b663c648"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260330T130900Z.png",
+      "sha256": "9d695fbb43ea7cc5ccec9de4be79e1db84ad3ee1591c789fae26301fbcf330e5"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260330T180000Z.png",
+      "sha256": "a29441da55950b3cc6a13171400faaedc7147c8c4a497533dae06d588654b5f2"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260330T224800Z.png",
+      "sha256": "bc11ed127c8836bea31881215af9cda807457be943b4ff22aa5deaabbb81be35"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260331T033600Z.png",
+      "sha256": "a17b4254ef6b657e9e989f2f8db73a9fc5a4ecb40c8fbdc840a4f0bdc00ce4dc"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260331T082400Z.png",
+      "sha256": "a3a07c2129cec98cf5ac40d8016a5f42899e6b8ab7e89c331b317e57aa7c48d9"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260331T131200Z.png",
+      "sha256": "a468dc42686b937a8ae4809c5a3cdbf93ea326f2eef409afce0a94c0ccd0514b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260331T180000Z.png",
+      "sha256": "d1e7d9154c0a32e4eb1c235bbdaa5ee2d3084b22fb1290233f544e7ebf6308c1"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260331T224800Z.png",
+      "sha256": "9a004ef287720ec839fe56e770c1fef0e9a54513ba326b078d8c451a19394fdf"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260401T033600Z.png",
+      "sha256": "ea93037fcc86486bb8d3f7d85544fbad2df0a4a344c7e3f6df872a1a1263d847"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260401T082700Z.png",
+      "sha256": "69838885394220037065e0f65dc33a52252f318090e553ccc2ad996f930069a1"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260401T131500Z.png",
+      "sha256": "8ec3a2d63bbd668e9d3bb5e67957ec1f63b81e53a787f9b0bbff12bd59702f94"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260401T180300Z.png",
+      "sha256": "c18c0f6d2b80aed4af0b431b7dbd47ff24a073bcd04b6a5ecdae1204f18984b4"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260401T225100Z.png",
+      "sha256": "8a22f5d76296445ceca1178bd919c96d978c66c36010f07cd4302ea9e3ddbec4"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260402T033900Z.png",
+      "sha256": "45a27015179ce335a76a3a118d9e9d35e3c3096e29b566f25bbb28ab06143a00"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260402T082700Z.png",
+      "sha256": "3c85fc42069ac1d87d504f3385dbce7e36adec92d84ab05fdcbc0b1da0f84bcd"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260402T131500Z.png",
+      "sha256": "d30da2289d889ce84f23d657e4938b7bd5a9c1ccee9f1fd31c16b05a8fc21797"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260402T180600Z.png",
+      "sha256": "58b8641ea5784558071c52abd82fc3b1dfd535162ba952a0c5c665ffdb7781ee"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260402T225400Z.png",
+      "sha256": "7d00fc3f91a70a063da05ac6f418ca5d7824b37307e28676a3a51af4d81dd80a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260403T034200Z.png",
+      "sha256": "b366dc422bc87259ed37309d01285b3b988768e5fdbf545849940f45da68100f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260403T083000Z.png",
+      "sha256": "ed9fd974183daf9827f24a90ef96df6b9b72b4fa80f671e39ae38b912d147c44"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260403T131800Z.png",
+      "sha256": "36aad6e444044c46510b6a27d79654826eea2735d3e32264f1c3c3e6bd62be0d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260403T180600Z.png",
+      "sha256": "986cc084b9440e481bc37460a274a4197678535bae612076f6283ec911e1e949"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260403T225400Z.png",
+      "sha256": "84ff6837a23e27d9744586a46c50926dc28618c6869dd8a31818b4813a632bed"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260404T034500Z.png",
+      "sha256": "5b7237affe92c83d3287f2298f45160922ba856e6a2bde41d71f682962299a78"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260404T083300Z.png",
+      "sha256": "953e513f98cc6f3767663998510f61a64613349a0e489856ae5dfa64e7cfcfd2"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260404T132100Z.png",
+      "sha256": "4b16fe6a0f275d85089b8f049149ca5ab38e2406c01a7f4810210d50e28b3fad"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260404T180900Z.png",
+      "sha256": "36584c105351818c40bd84975b3fe5020629df8d77b667080583179b857024e2"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260404T225700Z.png",
+      "sha256": "ee1d212f86c8fe547734da145501c8bd2a2aa511a84671950d3d0d66855e9ec1"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260405T034500Z.png",
+      "sha256": "d9a8f2e4c1739e2684e51278404f498b34e46aeb56e0ca2975f64d7f82000eb6"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260405T083300Z.png",
+      "sha256": "54e7b7218e9f81fef94e0c4061ed9eb7ab8ccb0b422e2400636e138762192fe6"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260405T132400Z.png",
+      "sha256": "2cad64946ac1b32b057a20c4d22ae808e6f3837ee85e244f46ef7e8be23b1693"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260405T181200Z.png",
+      "sha256": "38f3c283f3c8c6fb36e88ca22e21519c6860504d0e6f046356fceee64019d89e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260405T230000Z.png",
+      "sha256": "d3cd61c88027f60f43f3fb901aef129ba7f45e6b16813d1be9751000f59d8d66"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260406T034800Z.png",
+      "sha256": "68272e84532e1d79e3c9b4cdfd0b6e342a44b83ea7c7123a165a3b2ff7dac7b7"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260406T083600Z.png",
+      "sha256": "9d5d5ac1e0fb6655e87da91ddfe4f835287528abf7ae56e945557655ab3aee32"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260406T132400Z.png",
+      "sha256": "81371319e9d75861ebc585efb5cbdee13a78196f92a5f792d26b8bc5fe18c1e6"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260406T181200Z.png",
+      "sha256": "705a861b3884196325c47c9ff356a06b8f2d384be6fca1c79e22b897c1dac34b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260406T230000Z.png",
+      "sha256": "0a3f3d3f9083dcbb4f2a2573bcf82069934700c7c71c35f5bfc4b377a43d1484"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260407T035100Z.png",
+      "sha256": "c130c8ba5b2b3b9752df53d6cb5769e0521fbed5e43fb77d26944a3e1e8ab762"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260407T083900Z.png",
+      "sha256": "8ef57a2f26a4abdc543d019d67d61dca2068b001475f9a78074c8f7de42597c8"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260407T132700Z.png",
+      "sha256": "1177fb73be2281ca80a0fb185474e28e43e81268da1c0a1992f7ab0c4fd297d4"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260407T181500Z.png",
+      "sha256": "6a9412929233073c08754a44c3b4b7961b7db3476652fb93165ab2ef68fe8454"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260407T230300Z.png",
+      "sha256": "30f65fff592e089b4745b02afa64bafa6aebe018ed4a500c5ac93933d535009b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260408T035100Z.png",
+      "sha256": "4e468497b8a5d18159186c13da237b41121b8c89a617c059af559ce6aa6f2f3d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260408T083900Z.png",
+      "sha256": "e5fcb2d3b306b97955209f275821cf5a359de564b625534561d84c0efb8b0463"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260408T133000Z.png",
+      "sha256": "ec435c2e615ee35d8ce68be3a248c5630ca2f0645552d9c69b2ea7bb38264f4a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260408T181800Z.png",
+      "sha256": "9e223fa638e35a217461e3a358ee625479b49f4f224b9ce76bdbb380c6278ba8"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260408T230600Z.png",
+      "sha256": "ca2bda8afd0f25aeb85d9b39ec87dad6efe7df5f72d1cfe1e1eedd24e6924e25"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260409T035400Z.png",
+      "sha256": "aba702582dccc7a3a26e48f9952cbbc68c46799622f2f409f08cba751c713f2e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260409T084200Z.png",
+      "sha256": "fbdbb7f015a64a84ccac6f105ebefdfede1218a58e5bc28c18d76dc5f7636f57"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260409T133000Z.png",
+      "sha256": "39c57eddca3a33a6da7b296f82887a8e58ce3fdb6dc4bd07d1e18dba36c09017"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260409T181800Z.png",
+      "sha256": "67115a4dd07ae40aeaf4e9e8bc20f7c687263976f1995dc9c2a72165530d782f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260409T230900Z.png",
+      "sha256": "5dcfd7d9419465776abb890760b4343a06d310e3e7fb0b1d31768bf23ddc2885"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260410T035700Z.png",
+      "sha256": "a4dc58dba974633240c8aed75b3057d20306bbc94b73cca2f43a50406ed90c75"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260410T084500Z.png",
+      "sha256": "5bfb4a1dfdcceb451f95cb2cfd286d2fb04f40e3e8fcfdd7b8f8ec00c6ea39b9"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260410T133300Z.png",
+      "sha256": "3178ac05567b81863c27f9fe9d6c84732610e75b504e49f89899382dddbd0bdb"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260410T182100Z.png",
+      "sha256": "1adb269f7db285009fa5312a7d13939ca3180298900ed72e6b9b34397fb8831d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260410T230900Z.png",
+      "sha256": "fbf302d8248a43c28f86c556694f33d50eb7bd1166a6daac4b07953a528d8ebd"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260411T035700Z.png",
+      "sha256": "936a1735e7620fc94196a819e2355f44bbc5c002de87d4b5d8458428be7877c9"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260411T084500Z.png",
+      "sha256": "cf64df41f6b61f069bea93b8fdc945aa41f87444aac6fdb1b47881370fdf681a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260411T133600Z.png",
+      "sha256": "3eaf53bbc59e10785505ea6b50853675c14a5c169ea251d1241bd8b9af4ba6b7"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260411T182400Z.png",
+      "sha256": "189ea8c51678dff343a9010a9605413616698499e525e175820fdb7b59cb53f2"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260411T231200Z.png",
+      "sha256": "6ae36b46d367d740d7c3c8e21023465546cdcefc96704d69632ccef93a59815c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260412T040000Z.png",
+      "sha256": "8ba0315f6855654368d830018384bb02171b274fc6040b55dfb47d0120b5ce0c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260412T084800Z.png",
+      "sha256": "8a3100af6375a08a3e75cd732671a86a750bebf962f447a653c70c1622b5639d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260412T133600Z.png",
+      "sha256": "c9c5c698a52166fee859d98f1e40c17f66fbf52e66dc4cdbe79d1384af1b3508"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260412T182400Z.png",
+      "sha256": "07a9f05d4674fa408fa1d2a2d15db1877dc99dae430a433d4abfcf4d9502d90f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260412T231500Z.png",
+      "sha256": "ea1235ac0c70fa2422d5e93ba66819b6fac46303d35065478407599a83e12a88"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260413T040300Z.png",
+      "sha256": "d3d03250595986623a4d016ad008b12a87db5dcfbeec7615b600d7bb25d05d72"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260413T085100Z.png",
+      "sha256": "85c7f359a15ec49afceea419ed6b9d306c30e8af1d41c4347f9453f23870e2b9"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260413T133900Z.png",
+      "sha256": "d656f6b7db35aaaa899ded9f12af2a43318d8ab8991aad7993fe5f0ee9c7b2f0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260413T182700Z.png",
+      "sha256": "1e99a0f4b651daef1f56cbe6ac1ab58da01b794b42f4ccfbf4b4eb21de899f33"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260413T231500Z.png",
+      "sha256": "3fea09ad694ec152234987b96a852805e54f635c91cfcfbd8dd74dd199b71462"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260414T040300Z.png",
+      "sha256": "3b85ce61b3a49970940dca66d7669d366545f019a4fb8f2e623c0222955e9f27"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260414T085400Z.png",
+      "sha256": "923608bea605e57cac3dac5c80d0cd7dd348af92e07a46626b76a8909508ab18"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260414T134200Z.png",
+      "sha256": "056f69fdaee3f4a0dc0581fa9c383a631c3b1e111ecfd329ac3ef7bf65bf31fe"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260414T183000Z.png",
+      "sha256": "c9a7ad7a80fe38db1c6e441703b4c06b3e12b2a70934d3bb347fa841b029b69a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260414T231800Z.png",
+      "sha256": "5a55a313643c9e76b508c692f6e3da5d16bac82e064716eb2a866282d74a5774"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260415T040600Z.png",
+      "sha256": "a4c3ddc6eaf61593333a154fd3357d6253cb680c049215f6018ffc23a325d385"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260415T085400Z.png",
+      "sha256": "478981aea6d8a62cf16c19ff41d73b3aabaae06fc36405dde4acf1050864d838"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260415T134200Z.png",
+      "sha256": "d07465a0f91c6959c6ef71db88464a8ae0353aa8584e3862dbd806fe41195689"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260415T183300Z.png",
+      "sha256": "bf76a74fa1ae1474e10575fa3c0e7765f3970e24ad6884b6e25ad41fe6665904"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260415T232100Z.png",
+      "sha256": "0ef3633e47af49709e4fccb3ca5e00ba0fa30c8143804a799c695eb58bedcf7c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260416T040900Z.png",
+      "sha256": "75af40f826a61fa7e84dc4c02037a8d6d7d1660148ee6cd9dd4181fb7f4813eb"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260416T085700Z.png",
+      "sha256": "074646edf5b895076e7165d738ff99efe7d813ccf3ebfaee699ffbf662aa556d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260416T134500Z.png",
+      "sha256": "4dcf2151f5d899a762a3e743c3ef3bb35ce93751b1a52c0cd6c3d7fce4f648e1"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260416T183300Z.png",
+      "sha256": "921fba55cb8bf5d00dbbd593a596f650207df8a2746cbce39fe9dda1bdce97e3"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260416T232100Z.png",
+      "sha256": "a04e784da640f4738863539302cf8aed00a5d7b6c706a94dd7aa02081b04e99f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260417T040900Z.png",
+      "sha256": "1212fa0d5fd859e9aca2643efe4051f63f3d7cf3dab80b7408fe386e68b6d5fc"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260417T090000Z.png",
+      "sha256": "455c44ce762ae5ce32271f08b61077ee687838466f3e6a45bb6b9caf21d403ad"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260417T134800Z.png",
+      "sha256": "f65f6ecfd01ba78f0ebb0caf9e86006c131e0955b814d1ae200fe04e564dbad5"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260417T183600Z.png",
+      "sha256": "b77ab9df4edf33d81f4b8cd0a09f878599cedf061755126022987d3d6ea04975"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260417T232400Z.png",
+      "sha256": "6da7d995afdc75edc11449c113e47d7095cb25846235b1ea8477cf1355c8fc2d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T041200Z.png",
+      "sha256": "95bed541a3f169c6ab7dce56133dd24db6cd5dca967ee85de390210e39a67882"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T090000Z.png",
+      "sha256": "8fca824b4adbbcd8bfe4c3ca77ae44304bbfc25e97ec893f782e4239383f407a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T134800Z.png",
+      "sha256": "1c419a334dceccd9f6917af9591238f9b001d4786e8a2fb8b9ed039c14c951b1"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T183900Z.png",
+      "sha256": "4a64a0300e8470cfc98ea98d6a330e27403df5ede8ab22bcfd00142f303d2cbf"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T232700Z.png",
+      "sha256": "bb0869d88e2ded30e1e95b59ffdfb5ee41921abaa0a566f968fc5f74e5d783cd"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T041500Z.png",
+      "sha256": "c8ee4061488dbc22e67a66f3dcce10e8d7c98dc664fb648a6fab35a2f0b92886"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T090300Z.png",
+      "sha256": "c49bb4db1595033dfe015f517aa3e09f368c46ff6caa54d42baea416f0a08b39"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T135100Z.png",
+      "sha256": "aa37f86571c4e18df3d4c7b141ea99bfb728f5b227df6cfb1c0ed23b8708a821"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T183900Z.png",
+      "sha256": "b790c3a329f67e56e670d5c95f9de2913721e251c063c387894d0451eb01a8be"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T232700Z.png",
+      "sha256": "60f4d663ab34f251d97c70802f732accac7fc2d117ab1a394ef0b7c477ef999f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T041800Z.png",
+      "sha256": "02a4bcf40b2f9bb77a85ad72e0af6d79daf702fde5083592a85599c1fdadf89f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T090600Z.png",
+      "sha256": "5914fa74cf187d80590ee949dc073626c2d138aa0d3dbe469d929dfb088d6f6e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T135400Z.png",
+      "sha256": "de1a4beff6cc05f77329404254631194bdda84d3f87177331ef973f3a97b7958"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T184200Z.png",
+      "sha256": "75fc06ab93fc2e203b7aec89711c3e86daaee41a07bf74975267bce37079b16f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T233000Z.png",
+      "sha256": "1d5f6f82e90de2cfb667a0c657bd1dcdeab1f77976605328197340a1c19af56a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T041800Z.png",
+      "sha256": "d2c4d7fb8120e1bd34f61d89c2a054190fa87264d6c733a1a805a8bc4a99f318"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T090600Z.png",
+      "sha256": "afb1ffed1c9c5290e2b09b3a22f33674386801c7f9640fd1fd35e46a0215ce2b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T135400Z.png",
+      "sha256": "875538ec32ab89a6cce976eccffd1d799b24b09e061b4a0b41ff3904f50b3898"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T184500Z.png",
+      "sha256": "a78927fbc4c14d1843ef2bddf36c48b6b30fc5d3def50f73172a22b9b86ab5b3"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T233300Z.png",
+      "sha256": "eb67ee7248aa77af5beb1724f036c3da5d3ae1ff7dfd22f7cb959931ec9c1db2"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T042100Z.png",
+      "sha256": "5f862a33d25e8f7490a63fcb2f721364324f4a028e0cff8203a27a5c03fc5c6e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T090900Z.png",
+      "sha256": "93b734dfdbcae461fac671fd35dca4145a23232d6ea71409b151dbeabc952032"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T135700Z.png",
+      "sha256": "f6c9264125b10d102ef35bd41a860540cc8625c18ea144f25d876b506fdfb752"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T184500Z.png",
+      "sha256": "e038556a34cda0f18aff9be2fa6680ad38c5b190537c8a3a217bc37c68afa178"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T233300Z.png",
+      "sha256": "540dacd9ddef0448ce6769ff6f3c417bd9d9c70a56abed3698c742506ebb6f6e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T042400Z.png",
+      "sha256": "7d602f9db0b62d37c90aa178d246c8eb413eaca7649a16dab1c200fea8fd0c7f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T091200Z.png",
+      "sha256": "241b1275257c10d63d09065b162c8ca825634c38f6f416a9d03b091b838b4908"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T140000Z.png",
+      "sha256": "317b69c7d9a41c958875332ae123b3599e1b368c0bbd867d88593d64b25b9b2a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T184800Z.png",
+      "sha256": "3245104ab6df9b3c1e618b778b584a7e7406f1d736265ab83ea5d6f333fb42e0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T233600Z.png",
+      "sha256": "4594ceb620b836077e4d9ae2f12d683ae26477bb4136229958c641c2c2f37cec"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T042400Z.png",
+      "sha256": "fc06015dbc869aa2c2e361749e8340a42fda94aea34a95f3be8b8a276a48396b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T091200Z.png",
+      "sha256": "238edcc3474d7184f5224405fa123fb945ccb45e1bcda1a94088230be043e026"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T140300Z.png",
+      "sha256": "03b5c964400b03fd0c0f119933383c474a45c25b2a0b72dc6dc54e74a4fbec2e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T185100Z.png",
+      "sha256": "1a412cc6cf7b8742ef55ba6b6b12e3e861674b07a35cd1fccfd778e26388cbc0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T233900Z.png",
+      "sha256": "3aad6365d637ab77f19b1edfce0c3abfb14a37189f29e0ba6adc727811fba702"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T042700Z.png",
+      "sha256": "0862fa4c600cccd70bbb652ce039ca9d3d5dad8d939742644eb1ec16dd7d3406"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T091500Z.png",
+      "sha256": "785830ce72d54d58c0bb8b328e2b1de5b81ad47e8c55bbaaf1d21d958626aefb"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T140300Z.png",
+      "sha256": "92982996f74ecd6a9d946f07e276f1f7e4321837e677d22bbf073c8055818904"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T185100Z.png",
+      "sha256": "1f20d1d0cb65c583e36d469d9984c128efebe3384e25728fabffe2df9cae97a7"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T234200Z.png",
+      "sha256": "0fa6074dd86cbadab841b4b90cb64e55caaa7fe638787768e41112f0dfe336f0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T043000Z.png",
+      "sha256": "f4b2d87cae651fdde905ac41ffc229094e15840166e37cc938b4a08eff91f4a0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T091800Z.png",
+      "sha256": "682c82597e7bedfe847e92fbde2aa60175e717b7098b80c506ab93ad776eeeb4"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T140600Z.png",
+      "sha256": "5478afc0cfc5d13fcef311efd61b1ddadceec146364d7dacd04bc6d572fa1942"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T185400Z.png",
+      "sha256": "d72ed6b6a4d188ac91c5033e75adbfb507e90b756529262e231877266810bf43"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T234200Z.png",
+      "sha256": "ad43c47857d5f7595c460279684b6aad31d27fdce086b432bc0724248f9809a5"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T043000Z.png",
+      "sha256": "58f3035df68d46d8b8d3c946f628d8716e8ab5ed18552ffd91e7e85abc1880e7"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T091800Z.png",
+      "sha256": "16877559a0d5ec577b7aa3f17fd7e18725b5ec2ae08a7e7002ff8b1d5989c840"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T140900Z.png",
+      "sha256": "8f6b999a6005c5bf863aab999fb7de4ba1352a9d615ccb98ca26bee20617fd5e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T185700Z.png",
+      "sha256": "42757d87acd7d8ed2cfd783c0e0a46fbe5ae88c4ebc645fb8b0f170b4fd1bed3"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T234500Z.png",
+      "sha256": "0a8a2c498a655700024d23c5ef2c88c2413e58f21ced1c9664da50ef48f7f223"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T043300Z.png",
+      "sha256": "551d1f197b74c83571fd2bf944e69e50042b3e08d15e8180eea279346bab906d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T092100Z.png",
+      "sha256": "bc10b366db1cac289505a956588928f88b3e1ebb14097057be4322c375145f7f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T140900Z.png",
+      "sha256": "18543ccb2c147e63d5f3ba6aa1d1ac05c06c88fb8dcaf1bc4a8daae8da5804cf"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T185700Z.png",
+      "sha256": "deda574ee043b2c5242a5f5ce6f6299acc8322542e087c47b5e77a00bc121240"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T234800Z.png",
+      "sha256": "2afc3fab7b311fcb3a563fe8578fdabfec38ac5c7c9ae79e6dff6d35794c2679"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T043600Z.png",
+      "sha256": "d6dd700e72ff2e37895d3a90d19d32924a405ba4bee5bd4fa11bf6b1abe5eb1a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T092400Z.png",
+      "sha256": "30340c86e9bcb6c7dec13d69ca4fb5ea889825de79edc77452bcf788ed63e405"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T141200Z.png",
+      "sha256": "58ab5a1ee5620262e2277dc893911922625483b01274c788442ab573354f4687"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T190000Z.png",
+      "sha256": "f9138463e10bc300466f42fd95493d97a9c4bc4012f18f734b5667ec6ff58997"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T234800Z.png",
+      "sha256": "8a3a3be298c32426940583eeafa3a97dee5ec9cb08998bb6b6a24ba917bcf33b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T043600Z.png",
+      "sha256": "bac539d23a32573ffca514498ca60da02ccd2e7500c71b196815ab2f4e6bab0f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T092700Z.png",
+      "sha256": "d84a4a3ec95aa0e9e573379b235358f4db95e15c7b53d4f90b866f8b9ba7c179"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T141500Z.png",
+      "sha256": "8f4777940e5bf9b108ad598ffe4297139092292085a48ea9fefd12806989a1ce"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T190300Z.png",
+      "sha256": "c5493d23dcd07a0ea8f3767e29c3eb588747172082d970dac56f92e2190c0806"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T235100Z.png",
+      "sha256": "fbd32ee6241a09bc8e4162df68aa6bf93552183f8e0dadd0b7567b650c02a504"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T043900Z.png",
+      "sha256": "771eced995ce2cd618c800cbe8d80a81298939c7e0846a45e257036ee9914ac1"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T092700Z.png",
+      "sha256": "539d7db09f20acb6f66543e9b16bc7785b9723d7c06960ed3eeb6c381d68a866"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T141500Z.png",
+      "sha256": "9fd36a1f0f669f0e39140afb40745c335a97e1b6b15c13537d6ec4ab49591bec"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T190300Z.png",
+      "sha256": "c37ec30c7dc64edaf8996494d134f44a54a938e6c6da6521e9c72da162d067e5"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T235400Z.png",
+      "sha256": "20c6edd181322ef459383c6ae86e5b94d858f701d664dc1a67262c1bf7f13f9e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T044200Z.png",
+      "sha256": "488dc8862737021892f4f560a872cb615ac00aef95be245ee035443e895c78a0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T093000Z.png",
+      "sha256": "ebc0ea7afd6b58c420f9413ed722a3ef6164d95f42fc966911908bc7faf45873"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T141800Z.png",
+      "sha256": "6cd1b02e0443beb1aa77cb54b4fd420812e3c5affe1a22fd309677c563ddea6e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T190600Z.png",
+      "sha256": "7f70fcbe00adb4357a42d568cd02ec7ee60b49bb36b89966efaabf861709d9a1"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T235400Z.png",
+      "sha256": "f8beae799cf581fe2bd3d629880a9f4b22a2103e9943989ee29357cadd357438"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T044200Z.png",
+      "sha256": "968c3f492ed7e63294e7815d886f5e192cee824148e72a0e63e6fb3678a4c67b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T093300Z.png",
+      "sha256": "757f6cb0764cdb9aeea7adde208f3343952077ab0269967d0b1875a89db3c10c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T142100Z.png",
+      "sha256": "1f23849e56efa066a7fac21e99f097f8f0db68789227c93c77451041fc47c92e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T190900Z.png",
+      "sha256": "300c10674e1ffec7c0e433c5ac74aba35c808cd120ce605d9582a2e5bd6afaef"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T235700Z.png",
+      "sha256": "1198e8d710624967565e5cbf540765b03aa02769cb6d077dc6fd400c8903231e"
+    }
+  ],
+  "full_source_audit_valid": true,
+  "holdout_read": false,
+  "manifest_type": "yolo_xx_portable_scan_receipt",
+  "sample_count": 512,
+  "scan_manifest": {
+    "path": "scan_manifest.json",
+    "sha256": "3b5fe09b769131c1cd4ca0ba90ba813e76e17b97582eca1ab0131b6190f2c357"
+  },
+  "schema_version": 1,
+  "source_snapshot_sha256": "7376089eaae074703ed193c41ab985fb689d9d6bdf70f8f534f580aec82d8abb",
+  "timeframe": "3m",
+  "window_bars": 96
+}

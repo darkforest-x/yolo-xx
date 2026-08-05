@@ -1,0 +1,8 @@
+# Short tip v3 = v2 positives + negatives (hard: owner drops; easy: random non-dense).
+# Expanded preset fast<=0.0045 full<=0.0088. Tip = right edge.
+path: /Users/zhangzc/yolo-xx/datasets/dense_owner_side_short_tip_v3
+train: images/train
+val: images/val
+names:
+  0: dense_cluster
+nc: 1

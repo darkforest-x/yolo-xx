@@ -1,0 +1,191 @@
+{
+  "annotation_sha256": "23fd378ab384b9d2f73dc67aa409943373c347fbfe1f0f7647d8de54cdd5b705",
+  "build_stats": {
+    "candidate_core_boxes": 1339,
+    "candidate_train_anchors": 1054,
+    "candidate_val_anchors": 277,
+    "collapsed_duplicate_endpoints": 8,
+    "dropped_cross_split": 6,
+    "dropped_partial_owner_box": 16
+  },
+  "candidate_positive_anchors": 8,
+  "created_before_training": true,
+  "datasets": {
+    "w200": {
+      "dataset_manifest_sha256": "4ebe8f26477800b98ffdb19d44a0326f845ec42f0a56c5bae22de760dd396e83",
+      "path": "w200",
+      "summary": {
+        "background_images": 8,
+        "dataset": "/Users/zhangzc/yolo-xx/datasets/owner_short_paired_ab_fixture8/w200",
+        "holdout_read": false,
+        "input_annotation_boxes": 1361,
+        "pair_contract_sha256": "ac02211f80fac467ac993642fcf23b4e231283b23f4bac19a798d1d4ef23816a",
+        "portable_data_yaml": true,
+        "positive_images": 8,
+        "schema_version": 2,
+        "source_snapshot_sha256": "9b186abc2905f97237b07a065c8fa377516c9af5488d8cf3294194834c80e32c",
+        "train_boxes": 4,
+        "train_images": 8,
+        "val_boxes": 5,
+        "val_images": 8,
+        "window_bars": 200,
+        "y_price_fallbacks": 0
+      }
+    },
+    "w96": {
+      "dataset_manifest_sha256": "adc511e0ec5fc9ce731ffe9a11516cb43a4ce30115ed24ee81820f04f59c73c6",
+      "path": "w96",
+      "summary": {
+        "background_images": 8,
+        "dataset": "/Users/zhangzc/yolo-xx/datasets/owner_short_paired_ab_fixture8/w96",
+        "holdout_read": false,
+        "input_annotation_boxes": 1361,
+        "pair_contract_sha256": "ac02211f80fac467ac993642fcf23b4e231283b23f4bac19a798d1d4ef23816a",
+        "portable_data_yaml": true,
+        "positive_images": 8,
+        "schema_version": 2,
+        "source_snapshot_sha256": "9b186abc2905f97237b07a065c8fa377516c9af5488d8cf3294194834c80e32c",
+        "train_boxes": 4,
+        "train_images": 8,
+        "val_boxes": 5,
+        "val_images": 8,
+        "window_bars": 96,
+        "y_price_fallbacks": 0
+      }
+    }
+  },
+  "holdout_read": false,
+  "ledger": [
+    {
+      "core_box_ids": [
+        "BONK_USDT_SWAP_031294__b0"
+      ],
+      "negative_available_at": "2026-04-21T15:30:00Z",
+      "negative_search_day_offset": -4,
+      "negative_window_end_open_time": "2026-04-21T15:15:00Z",
+      "pair_id": "BONK_USDT_SWAP_031294__b0",
+      "positive_available_at": "2026-04-25T15:30:00Z",
+      "positive_window_end_open_time": "2026-04-25T15:15:00Z",
+      "right_context_bars": 16,
+      "split": "val",
+      "symbol": "BONK_USDT_SWAP"
+    },
+    {
+      "core_box_ids": [
+        "NEO_USDT_SWAP_020286__b0"
+      ],
+      "negative_available_at": "2026-01-05T03:30:00Z",
+      "negative_search_day_offset": 5,
+      "negative_window_end_open_time": "2026-01-05T03:15:00Z",
+      "pair_id": "NEO_USDT_SWAP_020286__b0",
+      "positive_available_at": "2025-12-31T03:30:00Z",
+      "positive_window_end_open_time": "2025-12-31T03:15:00Z",
+      "right_context_bars": 8,
+      "split": "train",
+      "symbol": "NEO_USDT_SWAP"
+    },
+    {
+      "core_box_ids": [
+        "ONT_USDT_SWAP_002730__b0"
+      ],
+      "negative_available_at": "2025-07-03T07:45:00Z",
+      "negative_search_day_offset": 2,
+      "negative_window_end_open_time": "2025-07-03T07:30:00Z",
+      "pair_id": "ONT_USDT_SWAP_002730__b0",
+      "positive_available_at": "2025-07-01T07:45:00Z",
+      "positive_window_end_open_time": "2025-07-01T07:30:00Z",
+      "right_context_bars": 24,
+      "split": "train",
+      "symbol": "ONT_USDT_SWAP"
+    },
+    {
+      "core_box_ids": [
+        "TRUMP_USDT_SWAP_031785__b0"
+      ],
+      "negative_available_at": "2026-04-28T14:15:00Z",
+      "negative_search_day_offset": -1,
+      "negative_window_end_open_time": "2026-04-28T14:00:00Z",
+      "pair_id": "TRUMP_USDT_SWAP_031785__b0",
+      "positive_available_at": "2026-04-29T14:15:00Z",
+      "positive_window_end_open_time": "2026-04-29T14:00:00Z",
+      "right_context_bars": 8,
+      "split": "val",
+      "symbol": "TRUMP_USDT_SWAP"
+    },
+    {
+      "core_box_ids": [
+        "okx_AGLD_USDT_SWAP_028360__b0"
+      ],
+      "negative_available_at": "2026-03-16T08:15:00Z",
+      "negative_search_day_offset": -10,
+      "negative_window_end_open_time": "2026-03-16T08:00:00Z",
+      "pair_id": "okx_AGLD_USDT_SWAP_028360__b0",
+      "positive_available_at": "2026-03-26T08:15:00Z",
+      "positive_window_end_open_time": "2026-03-26T08:00:00Z",
+      "right_context_bars": 16,
+      "split": "val",
+      "symbol": "AGLD_USDT_SWAP"
+    },
+    {
+      "core_box_ids": [
+        "okx_CRV_USDT_SWAP_027560__b0"
+      ],
+      "negative_available_at": "2026-03-08T15:45:00Z",
+      "negative_search_day_offset": -10,
+      "negative_window_end_open_time": "2026-03-08T15:30:00Z",
+      "pair_id": "okx_CRV_USDT_SWAP_027560__b0",
+      "positive_available_at": "2026-03-18T15:45:00Z",
+      "positive_window_end_open_time": "2026-03-18T15:30:00Z",
+      "right_context_bars": 16,
+      "split": "val",
+      "symbol": "CRV_USDT_SWAP"
+    },
+    {
+      "core_box_ids": [
+        "okx_EGLD_USDT_SWAP_002760__b0"
+      ],
+      "negative_available_at": "2025-06-28T09:30:00Z",
+      "negative_search_day_offset": -6,
+      "negative_window_end_open_time": "2025-06-28T09:15:00Z",
+      "pair_id": "okx_EGLD_USDT_SWAP_002760__b0",
+      "positive_available_at": "2025-07-04T09:30:00Z",
+      "positive_window_end_open_time": "2025-07-04T09:15:00Z",
+      "right_context_bars": 16,
+      "split": "train",
+      "symbol": "EGLD_USDT_SWAP"
+    },
+    {
+      "core_box_ids": [
+        "okx_LIT_USDT_SWAP_001460__b0"
+      ],
+      "negative_available_at": "2026-01-06T00:15:00Z",
+      "negative_search_day_offset": -4,
+      "negative_window_end_open_time": "2026-01-06T00:00:00Z",
+      "pair_id": "okx_LIT_USDT_SWAP_001460__b0",
+      "positive_available_at": "2026-01-10T00:15:00Z",
+      "positive_window_end_open_time": "2026-01-10T00:00:00Z",
+      "right_context_bars": 8,
+      "split": "train",
+      "symbol": "LIT_USDT_SWAP"
+    }
+  ],
+  "manifest_type": "yolo_xx_paired_ab",
+  "matched_pairs": 8,
+  "pair_contract_sha256": "ac02211f80fac467ac993642fcf23b4e231283b23f4bac19a798d1d4ef23816a",
+  "positive_to_background_ratio": "1:1",
+  "right_context_choices_bars": [
+    0,
+    8,
+    16,
+    24
+  ],
+  "schema_version": 1,
+  "seed": 20260804,
+  "source_snapshot_sha256": "9b186abc2905f97237b07a065c8fa377516c9af5488d8cf3294194834c80e32c",
+  "split_at": "2026-02-15T00:00:00Z",
+  "unmatched_positive_anchors": 0,
+  "windows": [
+    200,
+    96
+  ]
+}

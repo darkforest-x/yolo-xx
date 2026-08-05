@@ -1,0 +1,771 @@
+{
+  "annotation_source": {
+    "filter": "owner_side == short",
+    "input_boxes": 1361,
+    "path": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/owner_short_annotations.csv",
+    "sha256": "23fd378ab384b9d2f73dc67aa409943373c347fbfe1f0f7647d8de54cdd5b705"
+  },
+  "availability_contract": "Every sample and box is available only at the rendered window_end_close_time.",
+  "created_from": "owner_short_paired_window_ab_with_rule_clear_matched_backgrounds",
+  "detection_spec": {
+    "bar_minutes": 15,
+    "dense_max_bars": 12,
+    "dense_max_minutes": 180,
+    "dense_max_resolved_minutes": 180,
+    "dense_min_bars": 5,
+    "dense_min_minutes": 75,
+    "dense_min_resolved_minutes": 75,
+    "ma_minutes": [
+      300,
+      900,
+      1800
+    ],
+    "ma_periods": [
+      20,
+      60,
+      120
+    ],
+    "merge_gap_bars": 2,
+    "merge_gap_minutes": 30,
+    "merge_gap_resolved_minutes": 30,
+    "timeframe": "15m",
+    "warmup_bars": 360,
+    "warmup_minutes": 5400
+  },
+  "dropped_cross_split": 6,
+  "end_before": "2026-05-04T00:00:00Z",
+  "global_split_invariant": {
+    "holds": true,
+    "max_train_available_at": "2026-01-10T00:15:00Z",
+    "min_val_window_start_time": "2026-03-06T13:45:00Z"
+  },
+  "layout": "paired_staggered_causal",
+  "manifest_type": "yolo_xx_dataset",
+  "negative_policy": "same_symbol_split_context_bucket_and_time_of_day; unique nearby-day endpoint; no owner-box overlap; no frozen dense-rule segment in either 200/96 view",
+  "pair_contract_sha256": "ac02211f80fac467ac993642fcf23b4e231283b23f4bac19a798d1d4ef23816a",
+  "physical_window_minutes": 3000,
+  "pixels_per_bar": 6.311558,
+  "position_policy": "shared_real_endpoint_deterministic_0_8_16_24_context",
+  "resolution_risks": [],
+  "samples": [
+    {
+      "available_at": "2026-01-05T03:30:00Z",
+      "boxes": [],
+      "core_box_ids": [],
+      "id": "neg__NEO_USDT_SWAP_020286__b0",
+      "image": "images/train/neg__NEO_USDT_SWAP_020286__b0.png",
+      "image_sha256": "b794ca3cfbb73998b6bfb888787f48af6fe7f32176988e668cc468b9caa9e12b",
+      "label": "labels/train/neg__NEO_USDT_SWAP_020286__b0.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match_id": "NEO_USDT_SWAP_020286__b0",
+      "n_boxes": 0,
+      "right_context_bars": 8,
+      "sample_kind": "negative",
+      "source_end_index": 20683,
+      "source_file": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_NEO_USDT_SWAP_15m_40875.csv",
+      "source_sha256": "bcc4f2100e9d69c971a2cbf09150c78e7f5c3b19a8028388081db9a5bf542cbe",
+      "source_start_index": 20484,
+      "split": "train",
+      "symbol": "NEO_USDT_SWAP",
+      "window_end_close_time": "2026-01-05T03:30:00Z",
+      "window_end_open_time": "2026-01-05T03:15:00Z",
+      "window_start_time": "2026-01-03T01:30:00Z"
+    },
+    {
+      "available_at": "2025-07-03T07:45:00Z",
+      "boxes": [],
+      "core_box_ids": [],
+      "id": "neg__ONT_USDT_SWAP_002730__b0",
+      "image": "images/train/neg__ONT_USDT_SWAP_002730__b0.png",
+      "image_sha256": "c36fd857be8e98ecbccdf5f2edec26db5e34ce9fc58381ed71824c5d3baff78b",
+      "label": "labels/train/neg__ONT_USDT_SWAP_002730__b0.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match_id": "ONT_USDT_SWAP_002730__b0",
+      "n_boxes": 0,
+      "right_context_bars": 24,
+      "sample_kind": "negative",
+      "source_end_index": 2843,
+      "source_file": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_ONT_USDT_SWAP_15m_40874.csv",
+      "source_sha256": "f886c460e6581e172cb7898c6fc34c4a972f1b88bd9baf1ee1c6d3154e332101",
+      "source_start_index": 2644,
+      "split": "train",
+      "symbol": "ONT_USDT_SWAP",
+      "window_end_close_time": "2025-07-03T07:45:00Z",
+      "window_end_open_time": "2025-07-03T07:30:00Z",
+      "window_start_time": "2025-07-01T05:45:00Z"
+    },
+    {
+      "available_at": "2025-06-28T09:30:00Z",
+      "boxes": [],
+      "core_box_ids": [],
+      "id": "neg__okx_EGLD_USDT_SWAP_002760__b0",
+      "image": "images/train/neg__okx_EGLD_USDT_SWAP_002760__b0.png",
+      "image_sha256": "87bac2678512596dccea9b9bf83b5acb8e9ea56b0abd9a7afafec649d0dcae5b",
+      "label": "labels/train/neg__okx_EGLD_USDT_SWAP_002760__b0.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match_id": "okx_EGLD_USDT_SWAP_002760__b0",
+      "n_boxes": 0,
+      "right_context_bars": 16,
+      "sample_kind": "negative",
+      "source_end_index": 2376,
+      "source_file": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_EGLD_USDT_SWAP_15m_40879.csv",
+      "source_sha256": "56bd060f4f16432d80da650d7d3e5402b13c65f7832b91361feec0e371e90431",
+      "source_start_index": 2177,
+      "split": "train",
+      "symbol": "EGLD_USDT_SWAP",
+      "window_end_close_time": "2025-06-28T09:30:00Z",
+      "window_end_open_time": "2025-06-28T09:15:00Z",
+      "window_start_time": "2025-06-26T07:30:00Z"
+    },
+    {
+      "available_at": "2026-01-06T00:15:00Z",
+      "boxes": [],
+      "core_box_ids": [],
+      "id": "neg__okx_LIT_USDT_SWAP_001460__b0",
+      "image": "images/train/neg__okx_LIT_USDT_SWAP_001460__b0.png",
+      "image_sha256": "646d05df459f1a0e56e31d2999ae0f682acdc1d85cda48bd77e8e3694634778a",
+      "label": "labels/train/neg__okx_LIT_USDT_SWAP_001460__b0.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match_id": "okx_LIT_USDT_SWAP_001460__b0",
+      "n_boxes": 0,
+      "right_context_bars": 8,
+      "sample_kind": "negative",
+      "source_end_index": 1234,
+      "source_file": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_LIT_USDT_SWAP_15m_21343.csv",
+      "source_sha256": "46a9b784365c55a4e8a843f3f413dcc7baf70e2586d5cc9503a74daabf003cf1",
+      "source_start_index": 1035,
+      "split": "train",
+      "symbol": "LIT_USDT_SWAP",
+      "window_end_close_time": "2026-01-06T00:15:00Z",
+      "window_end_open_time": "2026-01-06T00:00:00Z",
+      "window_start_time": "2026-01-03T22:15:00Z"
+    },
+    {
+      "available_at": "2025-12-31T03:30:00Z",
+      "boxes": [
+        {
+          "annotation_box_id": "NEO_USDT_SWAP_020286__b0",
+          "annotation_stem": "NEO_USDT_SWAP_020286",
+          "available_at": "2025-12-31T03:30:00Z",
+          "box_end_close_time": "2025-12-31T01:30:00Z",
+          "box_end_time": "2025-12-31T01:15:00Z",
+          "box_start_time": "2025-12-30T22:00:00Z",
+          "class_id": 0,
+          "class_name": "dense_cluster",
+          "is_core_anchor": true,
+          "right_context_bars": 8,
+          "segment": {
+            "end_index_in_source": 20195,
+            "end_index_in_window": 191,
+            "start_index_in_source": 20182,
+            "start_index_in_window": 178
+          },
+          "xywhn": [
+            0.91875,
+            0.549865,
+            0.067187,
+            0.150943
+          ],
+          "y_price_fallback": false
+        }
+      ],
+      "core_box_ids": [
+        "NEO_USDT_SWAP_020286__b0"
+      ],
+      "id": "pos__NEO_USDT_SWAP_020286__b0",
+      "image": "images/train/pos__NEO_USDT_SWAP_020286__b0.png",
+      "image_sha256": "2521e4e33afed0feb9726dc55a95d0075bc91e10296c72b897a77cd45dbafc9d",
+      "label": "labels/train/pos__NEO_USDT_SWAP_020286__b0.txt",
+      "label_sha256": "ebea03a01c5f5e9e640f65bdc0b176d5c62e730f486eaf1696650cb595470fee",
+      "match_id": "NEO_USDT_SWAP_020286__b0",
+      "n_boxes": 1,
+      "right_context_bars": 8,
+      "sample_kind": "positive",
+      "source_end_index": 20203,
+      "source_file": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_NEO_USDT_SWAP_15m_40875.csv",
+      "source_sha256": "bcc4f2100e9d69c971a2cbf09150c78e7f5c3b19a8028388081db9a5bf542cbe",
+      "source_start_index": 20004,
+      "split": "train",
+      "symbol": "NEO_USDT_SWAP",
+      "window_end_close_time": "2025-12-31T03:30:00Z",
+      "window_end_open_time": "2025-12-31T03:15:00Z",
+      "window_start_time": "2025-12-29T01:30:00Z"
+    },
+    {
+      "available_at": "2025-07-01T07:45:00Z",
+      "boxes": [
+        {
+          "annotation_box_id": "ONT_USDT_SWAP_002730__b0",
+          "annotation_stem": "ONT_USDT_SWAP_002730",
+          "available_at": "2025-07-01T07:45:00Z",
+          "box_end_close_time": "2025-07-01T01:45:00Z",
+          "box_end_time": "2025-07-01T01:30:00Z",
+          "box_start_time": "2025-06-30T22:00:00Z",
+          "class_id": 0,
+          "class_name": "dense_cluster",
+          "is_core_anchor": true,
+          "right_context_bars": 24,
+          "segment": {
+            "end_index_in_source": 2627,
+            "end_index_in_window": 175,
+            "start_index_in_source": 2613,
+            "start_index_in_window": 161
+          },
+          "xywhn": [
+            0.8375,
+            0.463612,
+            0.071875,
+            0.137466
+          ],
+          "y_price_fallback": false
+        }
+      ],
+      "core_box_ids": [
+        "ONT_USDT_SWAP_002730__b0"
+      ],
+      "id": "pos__ONT_USDT_SWAP_002730__b0",
+      "image": "images/train/pos__ONT_USDT_SWAP_002730__b0.png",
+      "image_sha256": "e371620a055da351b15d20df0ef1292abf831ceb16feed0070afa02854b3b0c4",
+      "label": "labels/train/pos__ONT_USDT_SWAP_002730__b0.txt",
+      "label_sha256": "d722f9ce69de3d48c210eb2638b988c339f4f724317b8b69bd8feffeb662d4ed",
+      "match_id": "ONT_USDT_SWAP_002730__b0",
+      "n_boxes": 1,
+      "right_context_bars": 24,
+      "sample_kind": "positive",
+      "source_end_index": 2651,
+      "source_file": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_ONT_USDT_SWAP_15m_40874.csv",
+      "source_sha256": "f886c460e6581e172cb7898c6fc34c4a972f1b88bd9baf1ee1c6d3154e332101",
+      "source_start_index": 2452,
+      "split": "train",
+      "symbol": "ONT_USDT_SWAP",
+      "window_end_close_time": "2025-07-01T07:45:00Z",
+      "window_end_open_time": "2025-07-01T07:30:00Z",
+      "window_start_time": "2025-06-29T05:45:00Z"
+    },
+    {
+      "available_at": "2025-07-04T09:30:00Z",
+      "boxes": [
+        {
+          "annotation_box_id": "okx_EGLD_USDT_SWAP_002760__b0",
+          "annotation_stem": "okx_EGLD_USDT_SWAP_002760",
+          "available_at": "2025-07-04T09:30:00Z",
+          "box_end_close_time": "2025-07-04T05:30:00Z",
+          "box_end_time": "2025-07-04T05:15:00Z",
+          "box_start_time": "2025-07-04T02:30:00Z",
+          "class_id": 0,
+          "class_name": "dense_cluster",
+          "is_core_anchor": true,
+          "right_context_bars": 16,
+          "segment": {
+            "end_index_in_source": 2936,
+            "end_index_in_window": 183,
+            "start_index_in_source": 2925,
+            "start_index_in_window": 172
+          },
+          "xywhn": [
+            0.884375,
+            0.295148,
+            0.057813,
+            0.102426
+          ],
+          "y_price_fallback": false
+        }
+      ],
+      "core_box_ids": [
+        "okx_EGLD_USDT_SWAP_002760__b0"
+      ],
+      "id": "pos__okx_EGLD_USDT_SWAP_002760__b0",
+      "image": "images/train/pos__okx_EGLD_USDT_SWAP_002760__b0.png",
+      "image_sha256": "dc681ed0ef49132c5835e5c8f31a9aee257b3d882e427a615147bd0da982a349",
+      "label": "labels/train/pos__okx_EGLD_USDT_SWAP_002760__b0.txt",
+      "label_sha256": "249fe708df717f7d14341f9feda30ea6c0bcd8f75fc0e1350e9bc996ddc8be75",
+      "match_id": "okx_EGLD_USDT_SWAP_002760__b0",
+      "n_boxes": 1,
+      "right_context_bars": 16,
+      "sample_kind": "positive",
+      "source_end_index": 2952,
+      "source_file": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_EGLD_USDT_SWAP_15m_40879.csv",
+      "source_sha256": "56bd060f4f16432d80da650d7d3e5402b13c65f7832b91361feec0e371e90431",
+      "source_start_index": 2753,
+      "split": "train",
+      "symbol": "EGLD_USDT_SWAP",
+      "window_end_close_time": "2025-07-04T09:30:00Z",
+      "window_end_open_time": "2025-07-04T09:15:00Z",
+      "window_start_time": "2025-07-02T07:30:00Z"
+    },
+    {
+      "available_at": "2026-01-10T00:15:00Z",
+      "boxes": [
+        {
+          "annotation_box_id": "okx_LIT_USDT_SWAP_001460__b0",
+          "annotation_stem": "okx_LIT_USDT_SWAP_001460",
+          "available_at": "2026-01-10T00:15:00Z",
+          "box_end_close_time": "2026-01-09T22:15:00Z",
+          "box_end_time": "2026-01-09T22:00:00Z",
+          "box_start_time": "2026-01-09T20:00:00Z",
+          "class_id": 0,
+          "class_name": "dense_cluster",
+          "is_core_anchor": true,
+          "right_context_bars": 8,
+          "segment": {
+            "end_index_in_source": 1610,
+            "end_index_in_window": 191,
+            "start_index_in_source": 1602,
+            "start_index_in_window": 183
+          },
+          "xywhn": [
+            0.93125,
+            0.488544,
+            0.042188,
+            0.157682
+          ],
+          "y_price_fallback": false
+        }
+      ],
+      "core_box_ids": [
+        "okx_LIT_USDT_SWAP_001460__b0"
+      ],
+      "id": "pos__okx_LIT_USDT_SWAP_001460__b0",
+      "image": "images/train/pos__okx_LIT_USDT_SWAP_001460__b0.png",
+      "image_sha256": "9aea9b2606f3c5a0bbf907ff97f337c7f8cdcb8b5e85abab59a42231b2a8b359",
+      "label": "labels/train/pos__okx_LIT_USDT_SWAP_001460__b0.txt",
+      "label_sha256": "df48585718634582f3803e3ccbf50ebc1d7a0dac8aab1a01b1f84fbb24402421",
+      "match_id": "okx_LIT_USDT_SWAP_001460__b0",
+      "n_boxes": 1,
+      "right_context_bars": 8,
+      "sample_kind": "positive",
+      "source_end_index": 1618,
+      "source_file": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_LIT_USDT_SWAP_15m_21343.csv",
+      "source_sha256": "46a9b784365c55a4e8a843f3f413dcc7baf70e2586d5cc9503a74daabf003cf1",
+      "source_start_index": 1419,
+      "split": "train",
+      "symbol": "LIT_USDT_SWAP",
+      "window_end_close_time": "2026-01-10T00:15:00Z",
+      "window_end_open_time": "2026-01-10T00:00:00Z",
+      "window_start_time": "2026-01-07T22:15:00Z"
+    },
+    {
+      "available_at": "2026-04-21T15:30:00Z",
+      "boxes": [],
+      "core_box_ids": [],
+      "id": "neg__BONK_USDT_SWAP_031294__b0",
+      "image": "images/val/neg__BONK_USDT_SWAP_031294__b0.png",
+      "image_sha256": "ce7ee65353835707bb6155afc08fe26193be1ccb46a3f8012109a846550e87ec",
+      "label": "labels/val/neg__BONK_USDT_SWAP_031294__b0.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match_id": "BONK_USDT_SWAP_031294__b0",
+      "n_boxes": 0,
+      "right_context_bars": 16,
+      "sample_kind": "negative",
+      "source_end_index": 30915,
+      "source_file": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_BONK_USDT_SWAP_15m_40882.csv",
+      "source_sha256": "58f086bdf5f033cedb29a08325e68b7db746c87bfd542ba8b3b3671cb652c97c",
+      "source_start_index": 30716,
+      "split": "val",
+      "symbol": "BONK_USDT_SWAP",
+      "window_end_close_time": "2026-04-21T15:30:00Z",
+      "window_end_open_time": "2026-04-21T15:15:00Z",
+      "window_start_time": "2026-04-19T13:30:00Z"
+    },
+    {
+      "available_at": "2026-04-28T14:15:00Z",
+      "boxes": [],
+      "core_box_ids": [],
+      "id": "neg__TRUMP_USDT_SWAP_031785__b0",
+      "image": "images/val/neg__TRUMP_USDT_SWAP_031785__b0.png",
+      "image_sha256": "498acbaf24ddf7646a49a3c8eaf127bb8016706d2baa485e56a56dfd675f51f3",
+      "label": "labels/val/neg__TRUMP_USDT_SWAP_031785__b0.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match_id": "TRUMP_USDT_SWAP_031785__b0",
+      "n_boxes": 0,
+      "right_context_bars": 8,
+      "sample_kind": "negative",
+      "source_end_index": 31673,
+      "source_file": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_TRUMP_USDT_SWAP_15m_40974.csv",
+      "source_sha256": "19e5099c79653fc77d762ff62b015ddaae39f9f2fe8a2cdc5e6d7a6e51ad5f73",
+      "source_start_index": 31474,
+      "split": "val",
+      "symbol": "TRUMP_USDT_SWAP",
+      "window_end_close_time": "2026-04-28T14:15:00Z",
+      "window_end_open_time": "2026-04-28T14:00:00Z",
+      "window_start_time": "2026-04-26T12:15:00Z"
+    },
+    {
+      "available_at": "2026-03-16T08:15:00Z",
+      "boxes": [],
+      "core_box_ids": [],
+      "id": "neg__okx_AGLD_USDT_SWAP_028360__b0",
+      "image": "images/val/neg__okx_AGLD_USDT_SWAP_028360__b0.png",
+      "image_sha256": "c45fcf3326dff0be45f4bccac7e650d49799f67504c2a6d2bf0738910712bf32",
+      "label": "labels/val/neg__okx_AGLD_USDT_SWAP_028360__b0.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match_id": "okx_AGLD_USDT_SWAP_028360__b0",
+      "n_boxes": 0,
+      "right_context_bars": 16,
+      "sample_kind": "negative",
+      "source_end_index": 27434,
+      "source_file": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_AGLD_USDT_SWAP_15m_40886.csv",
+      "source_sha256": "68b9debe065b7c8725c1a5d29edd3442aa77ada7a6c3a7275627bfd003940ab7",
+      "source_start_index": 27235,
+      "split": "val",
+      "symbol": "AGLD_USDT_SWAP",
+      "window_end_close_time": "2026-03-16T08:15:00Z",
+      "window_end_open_time": "2026-03-16T08:00:00Z",
+      "window_start_time": "2026-03-14T06:15:00Z"
+    },
+    {
+      "available_at": "2026-03-08T15:45:00Z",
+      "boxes": [],
+      "core_box_ids": [],
+      "id": "neg__okx_CRV_USDT_SWAP_027560__b0",
+      "image": "images/val/neg__okx_CRV_USDT_SWAP_027560__b0.png",
+      "image_sha256": "258de8d85d96035a0270321ee29b160e7551e5cbe6356c759bb7256c86968334",
+      "label": "labels/val/neg__okx_CRV_USDT_SWAP_027560__b0.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match_id": "okx_CRV_USDT_SWAP_027560__b0",
+      "n_boxes": 0,
+      "right_context_bars": 16,
+      "sample_kind": "negative",
+      "source_end_index": 26786,
+      "source_file": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_CRV_USDT_SWAP_15m_40976.csv",
+      "source_sha256": "2dd980233fc7e0d45abb590a75cf15a136f081e803efb7f298ccfa5e13cc59b9",
+      "source_start_index": 26587,
+      "split": "val",
+      "symbol": "CRV_USDT_SWAP",
+      "window_end_close_time": "2026-03-08T15:45:00Z",
+      "window_end_open_time": "2026-03-08T15:30:00Z",
+      "window_start_time": "2026-03-06T13:45:00Z"
+    },
+    {
+      "available_at": "2026-04-25T15:30:00Z",
+      "boxes": [
+        {
+          "annotation_box_id": "BONK_USDT_SWAP_031294__b0",
+          "annotation_stem": "BONK_USDT_SWAP_031294",
+          "available_at": "2026-04-25T15:30:00Z",
+          "box_end_close_time": "2026-04-25T11:30:00Z",
+          "box_end_time": "2026-04-25T11:15:00Z",
+          "box_start_time": "2026-04-25T07:45:00Z",
+          "class_id": 0,
+          "class_name": "dense_cluster",
+          "is_core_anchor": true,
+          "right_context_bars": 16,
+          "segment": {
+            "end_index_in_source": 31283,
+            "end_index_in_window": 183,
+            "start_index_in_source": 31269,
+            "start_index_in_window": 169
+          },
+          "xywhn": [
+            0.876953,
+            0.544474,
+            0.072656,
+            0.097035
+          ],
+          "y_price_fallback": false
+        }
+      ],
+      "core_box_ids": [
+        "BONK_USDT_SWAP_031294__b0"
+      ],
+      "id": "pos__BONK_USDT_SWAP_031294__b0",
+      "image": "images/val/pos__BONK_USDT_SWAP_031294__b0.png",
+      "image_sha256": "9596d95c4fa64b9718b8387d6fadf65615584643b203c8b12130aab91bb41e48",
+      "label": "labels/val/pos__BONK_USDT_SWAP_031294__b0.txt",
+      "label_sha256": "4470a061721f0267c79a5af8b981ac836d95e95faa8e5d9e3b525c913802ba5c",
+      "match_id": "BONK_USDT_SWAP_031294__b0",
+      "n_boxes": 1,
+      "right_context_bars": 16,
+      "sample_kind": "positive",
+      "source_end_index": 31299,
+      "source_file": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_BONK_USDT_SWAP_15m_40882.csv",
+      "source_sha256": "58f086bdf5f033cedb29a08325e68b7db746c87bfd542ba8b3b3671cb652c97c",
+      "source_start_index": 31100,
+      "split": "val",
+      "symbol": "BONK_USDT_SWAP",
+      "window_end_close_time": "2026-04-25T15:30:00Z",
+      "window_end_open_time": "2026-04-25T15:15:00Z",
+      "window_start_time": "2026-04-23T13:30:00Z"
+    },
+    {
+      "available_at": "2026-04-29T14:15:00Z",
+      "boxes": [
+        {
+          "annotation_box_id": "okx_TRUMP_USDT_SWAP_031660__b0",
+          "annotation_stem": "okx_TRUMP_USDT_SWAP_031660",
+          "available_at": "2026-04-29T14:15:00Z",
+          "box_end_close_time": "2026-04-29T12:30:00Z",
+          "box_end_time": "2026-04-29T12:15:00Z",
+          "box_start_time": "2026-04-29T10:00:00Z",
+          "class_id": 0,
+          "class_name": "dense_cluster",
+          "is_core_anchor": false,
+          "right_context_bars": 8,
+          "segment": {
+            "end_index_in_source": 31762,
+            "end_index_in_window": 192,
+            "start_index_in_source": 31753,
+            "start_index_in_window": 183
+          },
+          "xywhn": [
+            0.933594,
+            0.530997,
+            0.046875,
+            0.113208
+          ],
+          "y_price_fallback": false
+        },
+        {
+          "annotation_box_id": "TRUMP_USDT_SWAP_031785__b0",
+          "annotation_stem": "TRUMP_USDT_SWAP_031785",
+          "available_at": "2026-04-29T14:15:00Z",
+          "box_end_close_time": "2026-04-29T12:15:00Z",
+          "box_end_time": "2026-04-29T12:00:00Z",
+          "box_start_time": "2026-04-29T10:15:00Z",
+          "class_id": 0,
+          "class_name": "dense_cluster",
+          "is_core_anchor": true,
+          "right_context_bars": 8,
+          "segment": {
+            "end_index_in_source": 31761,
+            "end_index_in_window": 191,
+            "start_index_in_source": 31754,
+            "start_index_in_window": 184
+          },
+          "xywhn": [
+            0.933594,
+            0.545148,
+            0.0375,
+            0.1469
+          ],
+          "y_price_fallback": false
+        }
+      ],
+      "core_box_ids": [
+        "TRUMP_USDT_SWAP_031785__b0"
+      ],
+      "id": "pos__TRUMP_USDT_SWAP_031785__b0",
+      "image": "images/val/pos__TRUMP_USDT_SWAP_031785__b0.png",
+      "image_sha256": "75991b1d1b83856e11f92fc4eb9146ac1677665ad4c108b333aabb11aa00d02a",
+      "label": "labels/val/pos__TRUMP_USDT_SWAP_031785__b0.txt",
+      "label_sha256": "9eb063bb580f65c17a0a531f1b36f250de8f3b25e92b7d4f9ccc116f1bef6249",
+      "match_id": "TRUMP_USDT_SWAP_031785__b0",
+      "n_boxes": 2,
+      "right_context_bars": 8,
+      "sample_kind": "positive",
+      "source_end_index": 31769,
+      "source_file": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_TRUMP_USDT_SWAP_15m_40974.csv",
+      "source_sha256": "19e5099c79653fc77d762ff62b015ddaae39f9f2fe8a2cdc5e6d7a6e51ad5f73",
+      "source_start_index": 31570,
+      "split": "val",
+      "symbol": "TRUMP_USDT_SWAP",
+      "window_end_close_time": "2026-04-29T14:15:00Z",
+      "window_end_open_time": "2026-04-29T14:00:00Z",
+      "window_start_time": "2026-04-27T12:15:00Z"
+    },
+    {
+      "available_at": "2026-03-26T08:15:00Z",
+      "boxes": [
+        {
+          "annotation_box_id": "okx_AGLD_USDT_SWAP_028360__b0",
+          "annotation_stem": "okx_AGLD_USDT_SWAP_028360",
+          "available_at": "2026-03-26T08:15:00Z",
+          "box_end_close_time": "2026-03-26T04:15:00Z",
+          "box_end_time": "2026-03-26T04:00:00Z",
+          "box_start_time": "2026-03-26T00:30:00Z",
+          "class_id": 0,
+          "class_name": "dense_cluster",
+          "is_core_anchor": true,
+          "right_context_bars": 16,
+          "segment": {
+            "end_index_in_source": 28378,
+            "end_index_in_window": 183,
+            "start_index_in_source": 28364,
+            "start_index_in_window": 169
+          },
+          "xywhn": [
+            0.876953,
+            0.586253,
+            0.072656,
+            0.183288
+          ],
+          "y_price_fallback": false
+        }
+      ],
+      "core_box_ids": [
+        "okx_AGLD_USDT_SWAP_028360__b0"
+      ],
+      "id": "pos__okx_AGLD_USDT_SWAP_028360__b0",
+      "image": "images/val/pos__okx_AGLD_USDT_SWAP_028360__b0.png",
+      "image_sha256": "240608955a2a41724d8484a92dc1fc9973694f2aa45a5b441124ec386aa42102",
+      "label": "labels/val/pos__okx_AGLD_USDT_SWAP_028360__b0.txt",
+      "label_sha256": "fbedd81948f61c80db78c3efbb542120a6f7f3201986981f0eade38e5671157a",
+      "match_id": "okx_AGLD_USDT_SWAP_028360__b0",
+      "n_boxes": 1,
+      "right_context_bars": 16,
+      "sample_kind": "positive",
+      "source_end_index": 28394,
+      "source_file": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_AGLD_USDT_SWAP_15m_40886.csv",
+      "source_sha256": "68b9debe065b7c8725c1a5d29edd3442aa77ada7a6c3a7275627bfd003940ab7",
+      "source_start_index": 28195,
+      "split": "val",
+      "symbol": "AGLD_USDT_SWAP",
+      "window_end_close_time": "2026-03-26T08:15:00Z",
+      "window_end_open_time": "2026-03-26T08:00:00Z",
+      "window_start_time": "2026-03-24T06:15:00Z"
+    },
+    {
+      "available_at": "2026-03-18T15:45:00Z",
+      "boxes": [
+        {
+          "annotation_box_id": "okx_CRV_USDT_SWAP_027560__b0",
+          "annotation_stem": "okx_CRV_USDT_SWAP_027560",
+          "available_at": "2026-03-18T15:45:00Z",
+          "box_end_close_time": "2026-03-18T11:45:00Z",
+          "box_end_time": "2026-03-18T11:30:00Z",
+          "box_start_time": "2026-03-18T09:45:00Z",
+          "class_id": 0,
+          "class_name": "dense_cluster",
+          "is_core_anchor": true,
+          "right_context_bars": 16,
+          "segment": {
+            "end_index_in_source": 27730,
+            "end_index_in_window": 183,
+            "start_index_in_source": 27723,
+            "start_index_in_window": 176
+          },
+          "xywhn": [
+            0.894141,
+            0.406334,
+            0.038281,
+            0.122642
+          ],
+          "y_price_fallback": false
+        }
+      ],
+      "core_box_ids": [
+        "okx_CRV_USDT_SWAP_027560__b0"
+      ],
+      "id": "pos__okx_CRV_USDT_SWAP_027560__b0",
+      "image": "images/val/pos__okx_CRV_USDT_SWAP_027560__b0.png",
+      "image_sha256": "24667422de9d88682c269d25cec5b0278142c96c2eba63ca50331a40238c9a46",
+      "label": "labels/val/pos__okx_CRV_USDT_SWAP_027560__b0.txt",
+      "label_sha256": "7bd30b29923747e2f68f7a309b91e0b62fa433c8555a563ce674526c5fe87aa4",
+      "match_id": "okx_CRV_USDT_SWAP_027560__b0",
+      "n_boxes": 1,
+      "right_context_bars": 16,
+      "sample_kind": "positive",
+      "source_end_index": 27746,
+      "source_file": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_CRV_USDT_SWAP_15m_40976.csv",
+      "source_sha256": "2dd980233fc7e0d45abb590a75cf15a136f081e803efb7f298ccfa5e13cc59b9",
+      "source_start_index": 27547,
+      "split": "val",
+      "symbol": "CRV_USDT_SWAP",
+      "window_end_close_time": "2026-03-18T15:45:00Z",
+      "window_end_open_time": "2026-03-18T15:30:00Z",
+      "window_start_time": "2026-03-16T13:45:00Z"
+    }
+  ],
+  "schema_version": 2,
+  "source_dir": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m",
+  "source_files": [
+    {
+      "first_open_time": "2025-06-03T13:30:00Z",
+      "last_closed_at": "2026-05-04T00:00:00Z",
+      "last_open_time": "2026-05-03T23:45:00Z",
+      "mtime_ns": 1785778717255770807,
+      "path": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_AGLD_USDT_SWAP_15m_40886.csv",
+      "relative_path": "okx_AGLD_USDT_SWAP_15m_40886.csv",
+      "row_count": 32106,
+      "sha256": "68b9debe065b7c8725c1a5d29edd3442aa77ada7a6c3a7275627bfd003940ab7",
+      "size_bytes": 1555117
+    },
+    {
+      "first_open_time": "2025-06-03T14:30:00Z",
+      "last_closed_at": "2026-05-04T00:00:00Z",
+      "last_open_time": "2026-05-03T23:45:00Z",
+      "mtime_ns": 1785778720616579973,
+      "path": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_BONK_USDT_SWAP_15m_40882.csv",
+      "relative_path": "okx_BONK_USDT_SWAP_15m_40882.csv",
+      "row_count": 32102,
+      "sha256": "58f086bdf5f033cedb29a08325e68b7db746c87bfd542ba8b3b3671cb652c97c",
+      "size_bytes": 2219196
+    },
+    {
+      "first_open_time": "2025-06-02T15:00:00Z",
+      "last_closed_at": "2026-05-04T00:00:00Z",
+      "last_open_time": "2026-05-03T23:45:00Z",
+      "mtime_ns": 1785778721915076452,
+      "path": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_CRV_USDT_SWAP_15m_40976.csv",
+      "relative_path": "okx_CRV_USDT_SWAP_15m_40976.csv",
+      "row_count": 32196,
+      "sha256": "2dd980233fc7e0d45abb590a75cf15a136f081e803efb7f298ccfa5e13cc59b9",
+      "size_bytes": 1607154
+    },
+    {
+      "first_open_time": "2025-06-03T15:15:00Z",
+      "last_closed_at": "2026-05-04T00:00:00Z",
+      "last_open_time": "2026-05-03T23:45:00Z",
+      "mtime_ns": 1785778722746043847,
+      "path": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_EGLD_USDT_SWAP_15m_40879.csv",
+      "relative_path": "okx_EGLD_USDT_SWAP_15m_40879.csv",
+      "row_count": 32099,
+      "sha256": "56bd060f4f16432d80da650d7d3e5402b13c65f7832b91361feec0e371e90431",
+      "size_bytes": 1412996
+    },
+    {
+      "first_open_time": "2025-12-24T03:30:00Z",
+      "last_closed_at": "2026-05-04T00:00:00Z",
+      "last_open_time": "2026-05-03T23:45:00Z",
+      "mtime_ns": 1785778728238224351,
+      "path": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_LIT_USDT_SWAP_15m_21343.csv",
+      "relative_path": "okx_LIT_USDT_SWAP_15m_21343.csv",
+      "row_count": 12562,
+      "sha256": "46a9b784365c55a4e8a843f3f413dcc7baf70e2586d5cc9503a74daabf003cf1",
+      "size_bytes": 576571
+    },
+    {
+      "first_open_time": "2025-06-03T16:30:00Z",
+      "last_closed_at": "2026-05-04T00:00:00Z",
+      "last_open_time": "2026-05-03T23:45:00Z",
+      "mtime_ns": 1785778730814350252,
+      "path": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_NEO_USDT_SWAP_15m_40875.csv",
+      "relative_path": "okx_NEO_USDT_SWAP_15m_40875.csv",
+      "row_count": 32094,
+      "sha256": "bcc4f2100e9d69c971a2cbf09150c78e7f5c3b19a8028388081db9a5bf542cbe",
+      "size_bytes": 1398348
+    },
+    {
+      "first_open_time": "2025-06-03T16:45:00Z",
+      "last_closed_at": "2026-05-04T00:00:00Z",
+      "last_open_time": "2026-05-03T23:45:00Z",
+      "mtime_ns": 1785778731770408894,
+      "path": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_ONT_USDT_SWAP_15m_40874.csv",
+      "relative_path": "okx_ONT_USDT_SWAP_15m_40874.csv",
+      "row_count": 32093,
+      "sha256": "f886c460e6581e172cb7898c6fc34c4a972f1b88bd9baf1ee1c6d3154e332101",
+      "size_bytes": 1625743
+    },
+    {
+      "first_open_time": "2025-06-02T15:45:00Z",
+      "last_closed_at": "2026-05-04T00:00:00Z",
+      "last_open_time": "2026-05-03T23:45:00Z",
+      "mtime_ns": 1785778737233521973,
+      "path": "/Users/zhangzc/yolo-xx/data/manual_short_preholdout_15m/okx_TRUMP_USDT_SWAP_15m_40974.csv",
+      "relative_path": "okx_TRUMP_USDT_SWAP_15m_40974.csv",
+      "row_count": 32193,
+      "sha256": "19e5099c79653fc77d762ff62b015ddaae39f9f2fe8a2cdc5e6d7a6e51ad5f73",
+      "size_bytes": 1487432
+    }
+  ],
+  "source_snapshot": {
+    "cutoff_exclusive": "2026-05-04T00:00:00Z",
+    "manifest": "source_snapshot_manifest.json",
+    "sha256": "9b186abc2905f97237b07a065c8fa377516c9af5488d8cf3294194834c80e32c",
+    "timeframe": "15m"
+  },
+  "split_at": "2026-02-15T00:00:00Z",
+  "strict_cadence": true,
+  "stride_bars": 200,
+  "window_bars": 200
+}

@@ -1,0 +1,21 @@
+{
+  "audit_type": "yolo_xx_dataset_audit",
+  "dataset": "/Users/zhangzc/yolo-xx/datasets/owner_short_staggered_w96",
+  "errors": [],
+  "schema_version": 2,
+  "splits": {
+    "train": {
+      "background_images": 0,
+      "boxes": 1076,
+      "images": 1076,
+      "labels": 1076
+    },
+    "val": {
+      "background_images": 0,
+      "boxes": 280,
+      "images": 280,
+      "labels": 280
+    }
+  },
+  "valid": true
+}

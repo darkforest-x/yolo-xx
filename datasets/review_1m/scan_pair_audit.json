@@ -1,0 +1,28 @@
+{
+  "arms": {
+    "w200": {
+      "audit_type": "yolo_xx_scan_arm_audit",
+      "errors": [],
+      "sample_count": 300,
+      "scan_arm": "/Users/zhangzc/yolo-xx/datasets/review_1m/w200",
+      "scan_contract_sha256": "4dfacd60007cf4c68abc7fc2f2d41b50a223ecb28dc1cd5e7d7f236d239c47af",
+      "schema_version": 1,
+      "valid": true
+    },
+    "w96": {
+      "audit_type": "yolo_xx_scan_arm_audit",
+      "errors": [],
+      "sample_count": 300,
+      "scan_arm": "/Users/zhangzc/yolo-xx/datasets/review_1m/w96",
+      "scan_contract_sha256": "4dfacd60007cf4c68abc7fc2f2d41b50a223ecb28dc1cd5e7d7f236d239c47af",
+      "schema_version": 1,
+      "valid": true
+    }
+  },
+  "audit_type": "yolo_xx_scan_pair_audit",
+  "errors": [],
+  "scan_contract_sha256": "4dfacd60007cf4c68abc7fc2f2d41b50a223ecb28dc1cd5e7d7f236d239c47af",
+  "scan_pair": "/Users/zhangzc/yolo-xx/datasets/review_1m",
+  "schema_version": 1,
+  "valid": true
+}

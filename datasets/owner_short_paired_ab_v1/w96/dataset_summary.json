@@ -1,0 +1,17 @@
+{
+  "background_images": 1331,
+  "dataset": "/Users/zhangzc/yolo-xx/datasets/owner_short_paired_ab_v1/w96",
+  "holdout_read": false,
+  "input_annotation_boxes": 1361,
+  "pair_contract_sha256": "4d6f800e47a0e87f0ad3c229e7a56ef73adef0142b278321c201b4f5b89fc158",
+  "portable_data_yaml": true,
+  "positive_images": 1331,
+  "schema_version": 2,
+  "source_snapshot_sha256": "9b186abc2905f97237b07a065c8fa377516c9af5488d8cf3294194834c80e32c",
+  "train_boxes": 1172,
+  "train_images": 2108,
+  "val_boxes": 306,
+  "val_images": 554,
+  "window_bars": 96,
+  "y_price_fallbacks": 0
+}

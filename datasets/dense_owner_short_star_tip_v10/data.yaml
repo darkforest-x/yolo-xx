@@ -1,0 +1,8 @@
+# v4: owner-stated pattern (converged before + price falling at tip),
+# positives seeded from the owner's ⭐标杆 tags. Tip = right edge.
+path: /Users/zhangzc/yolo-xx/datasets/dense_owner_short_star_tip_v10
+train: images/train
+val: images/val
+names:
+  0: dense_cluster
+nc: 1

@@ -1,0 +1,13 @@
+{
+  "background_images_per_arm": 1331,
+  "candidate_positive_anchors": 1331,
+  "dataset_audits_valid": true,
+  "holdout_read": false,
+  "matched_pairs": 1331,
+  "pair_contract_sha256": "4d6f800e47a0e87f0ad3c229e7a56ef73adef0142b278321c201b4f5b89fc158",
+  "pair_manifest_sha256": "c13032ccc2fc7ac4ef75723dc2fd2f40b20507067cbe203b3ba3844de5e03e63",
+  "pair_root": "/Users/zhangzc/yolo-xx/datasets/owner_short_paired_ab_v2",
+  "positive_images_per_arm": 1331,
+  "schema_version": 1,
+  "unmatched_positive_anchors": 0
+}

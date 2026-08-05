@@ -1,0 +1,32 @@
+{
+  "cutoff_exclusive": "2026-05-04T00:00:00Z",
+  "excluded_sources": [],
+  "files": [
+    {
+      "boundary_timestamp_checked": true,
+      "first_open_time": "2026-04-17T14:56:00Z",
+      "last_closed_at": "2026-05-04T00:00:00Z",
+      "last_open_time": "2026-05-03T23:59:00Z",
+      "mtime_ns": 1785780871044331311,
+      "origin_mtime_ns": 1784120629837635783,
+      "origin_path": "/Users/zhangzc/fable-trading/data/kline_fetched/okx_ETH_USDT_SWAP_1m_127999.csv",
+      "origin_preholdout_prefix_sha256": "65ff1034c3ec4f3ecbca9d3e5d9468a8ff90da39690d89fb7c11129d0bd56617",
+      "origin_size_bytes": 10281784,
+      "path": "okx_ETH_USDT_SWAP_1m_127999.csv",
+      "post_cutoff_ohlcv_rows_materialized": 0,
+      "row_count": 23584,
+      "sha256": "7485f15affbeb3f615e83eb0911c76333d1a7b7ac1086d1f8e57c448e8566691",
+      "size_bytes": 1278209
+    }
+  ],
+  "immutable": true,
+  "manifest_type": "yolo_xx_source_snapshot",
+  "safety": {
+    "boundary_timestamp_only_checked": true,
+    "holdout_read": false,
+    "post_cutoff_ohlcv_rows_materialized": 0
+  },
+  "schema_version": 1,
+  "source_dir": "/Users/zhangzc/yolo-xx/data/micro_preholdout/1m",
+  "timeframe": "1m"
+}

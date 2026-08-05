@@ -1,0 +1,11 @@
+{
+  "audit_valid": true,
+  "holdout_read": true,
+  "sample_count_per_arm": 2000,
+  "scan_contract_sha256": "74833943c90083110a10f4daacc9cef3fdea7671c4cfba146c36bc87e0cbb466",
+  "scan_pair": "/Users/zhangzc/yolo-xx/datasets/holdout_dense_20260804/5m",
+  "schema_version": 1,
+  "source_snapshot_sha256": "b748cb662421ad8dc5b8b0447463510a6a0094eba31f4bba4073e17dd189aa54",
+  "symbols": 15,
+  "timeframe": "5m"
+}

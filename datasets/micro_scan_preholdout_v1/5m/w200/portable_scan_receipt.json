@@ -1,0 +1,2066 @@
+{
+  "arm_root_name": "w200",
+  "end_before": "2026-05-04T00:00:00Z",
+  "files": [
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20251221T023500Z.png",
+      "sha256": "5fe6a301a6831396a38537130150989af402e34d53c2a9074488ed1915fb4519"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20251224T195000Z.png",
+      "sha256": "fa10491ccf3e9d9edf264722d5e426404685f475208d26799a67dba213820a9d"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20251228T130500Z.png",
+      "sha256": "64e29effb8f9a9cf7f36015453e635bb61433441c4af0467591d1fb6f20950e1"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260101T062000Z.png",
+      "sha256": "4e2c27e1071788d4344fdeec2d1619604fa8ab9afae7de4db44868d400926fc8"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260104T233500Z.png",
+      "sha256": "e35d6ba550c7c4379d96e14e8f47043abada72ca6fbd50665d1a067510d44817"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260108T165500Z.png",
+      "sha256": "7054af223134dedba60d06c53150319078005fa01516e60779599e785b49ca87"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260112T101000Z.png",
+      "sha256": "2febf8477021b6d5f12e75f98c1587378f526659710c1877e673e2d0ec53c57c"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260116T032500Z.png",
+      "sha256": "f847b5b6b917eca5789faa41bc7654e5677bc741d70be6ecf99dc9f1e360ff58"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260119T204000Z.png",
+      "sha256": "c53c07655b8c74e4992f21236e66592579a0724e32e760fb5909288f78084e39"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260123T135500Z.png",
+      "sha256": "59755ed4ddf14f25ccee18b56039f4991a8718346a8da9a48b2e70e1bd432848"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260127T071000Z.png",
+      "sha256": "74a645f72689eae3dc3424b1776316d88dd76c4734e3e94077907e873566dea1"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260131T002500Z.png",
+      "sha256": "a6a59273847ed52dbcee6b363f4c522730cdfdc11c41c9fc96c622e2de935e2c"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260203T174000Z.png",
+      "sha256": "7a2fb6abfff8a09cee7bdf9d8ab0147f83fa4d888960f09671d37e260e51379f"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260207T105500Z.png",
+      "sha256": "6444cd0bd3c00b3fa8b8b539baa6afcb0ce98ca89ac467ffc8def5e252a9b3d8"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260211T041500Z.png",
+      "sha256": "8c8af49da1ecc7286e772f198339db1cb379593e4a222c54f70fd5ba03f66cc2"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260214T213000Z.png",
+      "sha256": "abf646240ca51ee162d9657d784967bd63de40063ab86d04732cea2afed8acd4"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260218T144500Z.png",
+      "sha256": "fb54f660139baa806036bf0c0906f45970ee8a6d71001ac8538cf7539cc55b2a"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260222T080000Z.png",
+      "sha256": "70fe0c47c879a5ff074feacd43e2dfb69b5d3bddc062885bf82c009c09144543"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260226T011500Z.png",
+      "sha256": "d690d2ff64b8a157f4644f6144ccf1e16697ffdd5b638e74a68973d1711085ab"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260301T183000Z.png",
+      "sha256": "ddcb4c0e3962124e00b4aa0dfbfbe94294b5202f7a8f68757644b7562fb88b2f"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260305T114500Z.png",
+      "sha256": "7924e84b858457aeb1a32d8cf7e82a77b87c026daab01c5b3f57c1904fd68b32"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260309T050000Z.png",
+      "sha256": "1089b0c5628e3be764c5d18cd49b02e9bbff293b45f8edada6855e71b3d87c98"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260312T221500Z.png",
+      "sha256": "563787cb8da41c33f5ef2ce1cebdfc2cf73e7a48a1659978238d7537b5688524"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260316T153500Z.png",
+      "sha256": "d3e5c9986291d525197089d06511069b33766b168b613b3a9845e804386b2ae7"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260320T085000Z.png",
+      "sha256": "40f182a0e3dfac3202b0243ff6b03d3d4a3b045972243eaa8866929031fbef85"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260324T020500Z.png",
+      "sha256": "9e4694ed065c65910917fcdc35d199096077cba961e31286739e69d52b4b2244"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260327T192000Z.png",
+      "sha256": "96667693b9d9979f19fc2605771f80bb5ba74d982cacd6da0d335b14b9f255fc"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260331T123500Z.png",
+      "sha256": "fa688e479470b256b79982c43fe4376c457a4780bf433a5116cde22b1ed3cca1"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260404T055000Z.png",
+      "sha256": "97c74a53172c95bb3a081a9bae21dd226a20345a9602e7004217eaf8bec0dd78"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260407T230500Z.png",
+      "sha256": "9258508f0cd16ae644836437f5ca58ee26ba029df1ec3deee855e0de34200b29"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260411T162000Z.png",
+      "sha256": "fe51a42d0d8f57171cbd204581a2b31e483f453a00cd0930ea381ffd2e2caed0"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260415T093500Z.png",
+      "sha256": "6ac7113e3feac680acefef74540cd92b42539801618a438676a086002fccd0fb"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260419T025500Z.png",
+      "sha256": "a4faf6d83c778424d53bf4f1dc189872015f5ac387b661c7a3b4761adfe1e531"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260422T201000Z.png",
+      "sha256": "a578143611e366a3e0bbfad4bb1da8142f4d8bb33180a503a1f6a6a16e7a17a6"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260426T132500Z.png",
+      "sha256": "d6d7268d84c58ba3aefb7d846a556e7def6ec6e39e0dc22511cb46f1655d7b40"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260430T064000Z.png",
+      "sha256": "1b28a3e85955738d5294f3f4ea817b5b815d1aaa13660b6b154ed66ea8b5957b"
+    },
+    {
+      "path": "images/okx_ADA_USDT_SWAP__20260503T235500Z.png",
+      "sha256": "7ddb6d2cd9b0d31bdbb19a35f422339670f6bb783988c9783726d945fa156e61"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20251221T024500Z.png",
+      "sha256": "69a3a0c65a319a31af4defc6bbc6a21692b3bcd5f8d6de286152823ba18c3029"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20251224T200000Z.png",
+      "sha256": "9ec7f3823b567d4a83bfe774470a1d6da8e359c983e30703d8ae56e5cb6b65e7"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20251228T131500Z.png",
+      "sha256": "2e9b67f4d29dd18960167b2eb724f346410d48e05f4ff3a901d1e719f7fc1de3"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260101T063000Z.png",
+      "sha256": "93e50599fb5b1a0e7e8aa3a80b811fe8b5d6dcf4e7d0123f3186a78fac7d631a"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260104T234500Z.png",
+      "sha256": "da653f801f49ba3837e19f862d4247df348554e0ffb26f28e25ea18a0a85caf9"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260108T170000Z.png",
+      "sha256": "027dc4524e2c5eef60ba962a32fcf07b3b77dd55a40f1713c5dfa4e5f5a32905"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260112T101500Z.png",
+      "sha256": "9ecec8fc75d70f94de8a042fcc73af8b60f09fd41c1b3d91378efae153d9dad5"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260116T033000Z.png",
+      "sha256": "4660ab78aab1060c40be3e9baf07d8791073627940f5b3af89b66fbc31d43e26"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260119T204500Z.png",
+      "sha256": "4652163e168fcb1f3fca4d63bc8a87c70ee84756e47c76993234570909333299"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260123T140000Z.png",
+      "sha256": "ca61a3f33bd3340991536d55bab7b1c466c81368fa86d31a84af84f828d7be3b"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260127T072000Z.png",
+      "sha256": "2c636cd4e443534b5f37edc046cf75d4187e87535fcadf3a6e0a8209e239b505"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260131T003500Z.png",
+      "sha256": "fb241e3b6c94ac2bd46de42f44a6dd5c23204bf6d4d19f5b3dfae1ada85df7a0"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260203T175000Z.png",
+      "sha256": "d90d4ff82f2f75d5a2c89829db37878a60216bb4d0d6a46a05f4a7174f0c474d"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260207T110500Z.png",
+      "sha256": "3ed6a86eb1a5ee3e811d9ae629dc90301c6a820043312c1f13c6d25f4e4631c9"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260211T042000Z.png",
+      "sha256": "5ae65104d673f2fda46466c3e6a95688ac495316be8f7b6e6da85f7d061f495a"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260214T213500Z.png",
+      "sha256": "b35679f7bed9eed9e2d5be1255a48e7aa4f4379db5ca570dac4779e02258521d"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260218T145000Z.png",
+      "sha256": "148b3137e373707361f34e3c3cc05e2e6ef2c73e0cc641e1ff3f678833c2d67d"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260222T080500Z.png",
+      "sha256": "bb52c8303310b2d91cf14df617882595e1c224d82b76f66d7a197f284a302e53"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260226T012000Z.png",
+      "sha256": "bed35e8edb648734eb983619be938d2435481e8cdcbf3f5ac61be1740b3814aa"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260301T183500Z.png",
+      "sha256": "a416bd4dc6cb127e1e671d857595cd4925b12a38d9806a3ab90a4b0a5827c0cf"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260305T115000Z.png",
+      "sha256": "4d9c773454c172ce78d4d7c199c9c471fbc0be14db775fa2c7f281f117f66817"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260309T050500Z.png",
+      "sha256": "ca92442e4640b266d5b27cd078ce56b5fa251840d9488ec8223b860ba6a86915"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260312T222000Z.png",
+      "sha256": "58aa028a9c6fb4fc6408d82bbe41d2234ad86b8a565a1ee2b0e01eee466c70bf"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260316T153500Z.png",
+      "sha256": "a4810ee31978afd4750fc30c5d70c1930e058efb882dd37acd6bfdb80b9a9f1a"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260320T085000Z.png",
+      "sha256": "7786c808da43b4139d96395435fd4b68a563d424fc051e48195f6028829dbf62"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260324T020500Z.png",
+      "sha256": "6739c02e18d05cfca333c1241e60bcced2eeb3b6e6a973bad7c7e45f40b5a355"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260327T192000Z.png",
+      "sha256": "0dd7de41e6c00435a61687bd333b9e3b5276292aaafba3c16e16106cc5c7f870"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260331T124000Z.png",
+      "sha256": "81f6a4cf2c5a8603e63f0b10c6825b53d7aa088cddcdb791f26ce39872222ee7"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260404T055500Z.png",
+      "sha256": "e8e37f57e1cb2d46da3cfda40ab082e57ba4b89caae2a11d0674d4f213aa38be"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260407T231000Z.png",
+      "sha256": "881a61dd515b86907a903c24fc77429e5d8cf510123431eb9119adf73fcd28ce"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260411T162500Z.png",
+      "sha256": "53b42ccdb4eebe50385a912830a3081647a8110d63a2193440b6aa2feeb96e23"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260415T094000Z.png",
+      "sha256": "b43304d1d7fdf54a627773174873f675dd5c553b44537342138accecd958fc95"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260419T025500Z.png",
+      "sha256": "f939361339f504b1430b668ef6fcbfd06c1f7f04a9ab23c21ed858f13ae52a26"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260422T201000Z.png",
+      "sha256": "58f4d86b2a4129ebf7e3824b358a8fd556ecd940cd5312f2365e28605893893c"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260426T132500Z.png",
+      "sha256": "af6b689390bf4ff2d21b095699002a7f28ef2ec8478328dce97219e2c287348d"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260430T064000Z.png",
+      "sha256": "5a537c23b123ea4d509b6e5c7a26a1af05ca283f2a974ae5173f6b9fcd6525a5"
+    },
+    {
+      "path": "images/okx_ARB_USDT_SWAP__20260503T235500Z.png",
+      "sha256": "6bdee1b7ed7a04573810f09ed03328d8d63ba7ddee700512e3b26c43f27b3480"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20251221T024500Z.png",
+      "sha256": "8d552956ee941335ce01c375bfd6480a99bd3bcb76d297a0336578620753cc62"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20251224T200000Z.png",
+      "sha256": "03f4061b178f6047bddee48f18cdcffdce40a3b5e6b248ad63303f5cb869d71a"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20251228T131500Z.png",
+      "sha256": "f2ad72ae10481dba8f1d1819be0005936c008b66eee754fa41bf6e212d774bc2"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260101T063000Z.png",
+      "sha256": "ff52f8037e6ee697e525c6e9d76fec01ede833e981b0b5ed49115dd0649714c9"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260104T234500Z.png",
+      "sha256": "63f0839207c558ec09070457efbc138df4f6ae666de0e5a5493975d25bf14bd3"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260108T170000Z.png",
+      "sha256": "e713e6ed43e59466517adffef435d0e11c04e1acedd3b6532088ad65a7842210"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260112T101500Z.png",
+      "sha256": "78fb5982d3507119a94c86e7712a0f58d45c689501f1ac05d4584b7bcc0288cc"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260116T033000Z.png",
+      "sha256": "a7794a35e3b47ebc8a6626c08dc472e8d5dc0246be7477606e9eee9edba59e53"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260119T204500Z.png",
+      "sha256": "b306534d6c8c9aadf11528167668a5eb645416beca7b95d0053037d4f14a9d76"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260123T140000Z.png",
+      "sha256": "20cade3d00faf3dadc13d638e34d5f5349e8cef66cbaf9932a166af24cce8960"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260127T072000Z.png",
+      "sha256": "06997e490ae8dd6dfa74d5bc923863a563dff01f2af8bbe940dc073d8c92b0de"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260131T003500Z.png",
+      "sha256": "cb0d790b5a559b054b826106b058c6d075533c17143320243de738bcbb8c9afa"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260203T175000Z.png",
+      "sha256": "47d920a75635a961917c0d1c76fcb9a2aff80b713721a5b151a3cb0a3e26a22c"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260207T110500Z.png",
+      "sha256": "4c435d7c52cc8dc0bb2c20d0259e13550f1683ce48293398b72b56b471d2aa39"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260211T042000Z.png",
+      "sha256": "af27e3fce3b135f4c6826a650ccb486226d2c32d3f5a476f083d0324a4df01ec"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260214T213500Z.png",
+      "sha256": "4002697fba757cc3b6ed69c67a122bfc751fd7e8357343c7564672d50874f374"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260218T145000Z.png",
+      "sha256": "32bda08bf163d42af551729fe77a9249958bb065afc6ab15fef7e363b16d222b"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260222T080500Z.png",
+      "sha256": "168ced6e74ed839a96c3c537793ba8a5635fcebab3509bd60756abab4e5deee4"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260226T012000Z.png",
+      "sha256": "6fc75c4c6571c829755bb6fd62eff60365597b10059b090dbfde33a3bc2ac463"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260301T183500Z.png",
+      "sha256": "9bed3dc7ec9396999495bf46dc3aa12c7eaaf502b9f1ffd2c76bfdf9c6496768"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260305T115000Z.png",
+      "sha256": "193ac793662778731a6ed872f9afb5c3b5cd38a23f731c074e78368d3e122419"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260309T050500Z.png",
+      "sha256": "573996fcff100ef7b031870f8bb893fe8a5c82827b4a7109c95639737ae5bf0f"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260312T222000Z.png",
+      "sha256": "66c88be45b16bf099a7acb1046b7717d914e68a8cacbca8f0a174387efed0e04"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260316T153500Z.png",
+      "sha256": "61be55380bdb271d64d71549c3be49658f0d85503afe4d5dc91eb485b72fab98"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260320T085000Z.png",
+      "sha256": "508e2c0351e8b3f7aa01b92e9b5c7cfd5049290d53cace80ddc9afb5f520bb2f"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260324T020500Z.png",
+      "sha256": "0f1af667691763189f1c6ab155462f6968140a869281105cd7334e57fab410d9"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260327T192000Z.png",
+      "sha256": "df61b84751a1504a68d68fc1dae5811bef3d342bd39594426d9242f72ae33812"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260331T124000Z.png",
+      "sha256": "5ba62b69d7ed1447b68001039ba1229c32096eb1029eabe61c6ff6295a8620c2"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260404T055500Z.png",
+      "sha256": "b7897f45bda9bd8bdd8ba1a0fa1c56f40c64016b72984a75504da064ce7098ed"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260407T231000Z.png",
+      "sha256": "41cf2c58aa3a9fad2ba6816d7f348adda93b52c0f70b2a601b84e623b6e46de1"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260411T162500Z.png",
+      "sha256": "7a5e390b6f59c195a960f499bac0b4e45426689506c973b4c6e1394950bb20b7"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260415T094000Z.png",
+      "sha256": "0c53e80aaaca2a291ec2d086c0c9dbce14f5ce205abccb806911528cf201cd68"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260419T025500Z.png",
+      "sha256": "44357b1fd436af4144cc92ad91de251a52738d135642d47b74dcdbc72e15c35e"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260422T201000Z.png",
+      "sha256": "a787014d71108bf5f7184f2ca2b4e57f9aa59b1f5d1bda7d5420adad4941b238"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260426T132500Z.png",
+      "sha256": "870db30a306ff68e4f60d7070b35bf22d1023e761cd5a3b81bac9685d6e88c68"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260430T064000Z.png",
+      "sha256": "989aeed03f258bff5b6fc4b1960f8ab4f3bf7d1d4ffdb35d7c514d8f19815f56"
+    },
+    {
+      "path": "images/okx_AVAX_USDT_SWAP__20260503T235500Z.png",
+      "sha256": "1bf73ba5fd5d45ec7fed07fd2b09b4d65a30543d4595dec396e76a817d3aae49"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20251221T023500Z.png",
+      "sha256": "70eaed2a07107904fd9aa5b69e4d51c3203637bcf051fa836ad9acec866d487f"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20251224T195000Z.png",
+      "sha256": "13d021cf47961b9b12e8400a41e56561daff0fe91e46b7547d68bb6edbed2ac4"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20251228T130500Z.png",
+      "sha256": "3fc6231d317241865e5f7e2e33a874a6130a17bbc59c36cc557c6877a39b6d6c"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260101T062000Z.png",
+      "sha256": "44a567109478ef52d84d397c239db256f412dd74a0eff51860095dc62302dcdf"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260104T233500Z.png",
+      "sha256": "e81fca3a89e6b065e61f662c106d1e2b9d8532ee1c4ade4cac304a1935e18cb7"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260108T165500Z.png",
+      "sha256": "d6705d804192f0de663971963dfed5c604580784ad409c63a51a31199e1e5540"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260112T101000Z.png",
+      "sha256": "6f7660b1fca19e927b44a8ee34c469b9f6840d335e0b69f758739ac1941c547b"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260116T032500Z.png",
+      "sha256": "6c8dea2d91804cea0c9b8e8f4616823597bcaea20b507082ae2b1868cdb14c84"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260119T204000Z.png",
+      "sha256": "47f2d250701ad6ad13ba0cfd5a4e5ffa9fe8abf358772f6f184c4255e666b906"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260123T135500Z.png",
+      "sha256": "acae6e1f44850351712bd157a745e59d8c8953387717124fafcfd0bd3344786a"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260127T071000Z.png",
+      "sha256": "c96f90da16f4469f993f35dcd32b454e481a8cdc34186da4daa09779d63f2782"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260131T002500Z.png",
+      "sha256": "80fd6a845cba01340bcca64f6f14dd267e0ebe56f396a303e5806274146262d4"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260203T174000Z.png",
+      "sha256": "43107156830ccc8dee0a362016da5178cfaaddb85cb19e1953fd407352c726ef"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260207T105500Z.png",
+      "sha256": "8f2ae4400bfda1936c8d7f930b0d59ee441b14b35ec52e86f7ee261818b556a3"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260211T041500Z.png",
+      "sha256": "0995b9166c45590af02a73606fbd3246f46e55697d59e30f09bbd0f0271115f5"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260214T213000Z.png",
+      "sha256": "185dcb969413e83f13e40164094e215106238022dd974f8c3343c8bad915a317"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260218T144500Z.png",
+      "sha256": "b098588a552ff6bc6760d475076166c8ae11d26c39e3f87e439f7cedf0533030"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260222T080000Z.png",
+      "sha256": "de80df75e54daa280af24eeab3477168ce56887a102d4bf0050cb610ad057b05"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260226T011500Z.png",
+      "sha256": "f0bc1420b01210bfa2ebb91f36997e108f37e504da42b756f71d4cbc6ec1997d"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260301T183000Z.png",
+      "sha256": "0f8f1e8fe4d426d11b95da21b91fd3ec1833ea4bebda2847699d94a1f0cd3250"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260305T114500Z.png",
+      "sha256": "e6a723757664de99d001f4699bc6be16b9dc814540031d6034d557c8d4ecac15"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260309T050000Z.png",
+      "sha256": "6c6178ed5a4007ef4958e569ae897a62d180dbec1483fef69b395767b692db99"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260312T221500Z.png",
+      "sha256": "143d098eb0c21d26e197d281e1c8d8f0c02d2d4dffd99b0a66d26703f2cbe991"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260316T153500Z.png",
+      "sha256": "b250622e560e6a0b4e5213da4bb03d89e6da2fd7b821b864ae521e972e3eef79"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260320T085000Z.png",
+      "sha256": "e8bd990769354f31cde9faca89473d298154a4962d4c55861545f54d1696d691"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260324T020500Z.png",
+      "sha256": "37c896f6df012ca1f68fcd550debb289253df59a73a3f6cde181b87436bc07df"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260327T192000Z.png",
+      "sha256": "e963e6760a6218cd278131caf5f204e0f0306892cc61c3f34c50ec06c978e5c1"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260331T123500Z.png",
+      "sha256": "eca3790981ee5c4cbbfa6bd543398777c40b9baa1731f92066450f68723920f5"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260404T055000Z.png",
+      "sha256": "94e7513a2a5562c235a271aeef28cca5837208c467dd50aa16428b943b5254e8"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260407T230500Z.png",
+      "sha256": "275b1c22109ab93f87d00c8d172bb4d74ece28932c630294f5ca3332657c9063"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260411T162000Z.png",
+      "sha256": "8ee763706761976bcaf57f8585c242b860360bc45e94d2f0084bf44a898b637f"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260415T093500Z.png",
+      "sha256": "7201d710f9a81b1e0ca158a52a01ff31116436601e75aa625e29fe358207eaa3"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260419T025500Z.png",
+      "sha256": "acbeda141e105705b99001c07876dd17382fff7fb034d6cd1a9890b61261d7ae"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260422T201000Z.png",
+      "sha256": "bf73646bc2b9c5de4ee8007ba40a8359d2dcd86deaae1a38a1858db31aa545d2"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260426T132500Z.png",
+      "sha256": "92d369388c2f88ea124e77a17d005f5654eb69cfd04721b5f0fd103c4340845a"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260430T064000Z.png",
+      "sha256": "23f1f4e99713807327a1560a20fbe0ae02cb5bde0c42c3d80ddac3dab9ae9f83"
+    },
+    {
+      "path": "images/okx_BNB_USDT_SWAP__20260503T235500Z.png",
+      "sha256": "787e4cd380a752ea58c211893451180815398e6a1ad5d0073eb8f6d582d57286"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20251221T023500Z.png",
+      "sha256": "fac56b6fa94bf065e9e5e66b8b0547ec9152069caef39c262874d131ba87f47e"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20251224T195000Z.png",
+      "sha256": "c35b0eb8a4954d0d884b43883bf113c1143b8f922671e8123b56af2d41c8ac07"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20251228T130500Z.png",
+      "sha256": "695cca66095bb226cd8a06f6eac29010911e0a990da58844327d13f158880930"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260101T062000Z.png",
+      "sha256": "6bc6035616bfe2379aa2025f1b6f4f35d5bc0b595d68fa87bb8037ebda14ae65"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260104T233500Z.png",
+      "sha256": "88c12bb07182b4608fa980dc3d6918172321636534658878eb2de2aca499f47d"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260108T165500Z.png",
+      "sha256": "35557e667ad468271a04da6b8939b07ce8edd7c86b636be9809e3cb70cc7097d"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260112T101000Z.png",
+      "sha256": "7eda3d6fdd65a7e4d765520ac27b33db5754ce1edb223360a75f5cfbdad01ef7"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260116T032500Z.png",
+      "sha256": "ad43a6d77bf9bacdee4a5bf753ddea74f0bb6f0fe19fa3f73c3e4fea3069b270"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260119T204000Z.png",
+      "sha256": "e24b1dc9093f880d4e3d0f160df8fbbd951fe39886621b6c5abdfa1704d06a0e"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260123T135500Z.png",
+      "sha256": "7520e82501c0ecfc51d589d25d86f5bbd8e63feed6d17a9273ec3d3885b7626e"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260127T071000Z.png",
+      "sha256": "0f017f5b1a391d6378b66bc3d2eedce1b1b6f2b3d119d231ed502a32e16838da"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260131T002500Z.png",
+      "sha256": "254c4bd0c42beebab3196b286e079c23f87e8cf421a801753eac7ba1ca1fbd63"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260203T174000Z.png",
+      "sha256": "feb71dcf3df54cb5be047ced277fbaeff6de587140870efa0f63ce67cfa93e64"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260207T105500Z.png",
+      "sha256": "6ec3b0911dc4496a9dae3a1c21bac72335c6dca3d237494a2807da7566dad132"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260211T041500Z.png",
+      "sha256": "685ab7cca53a212d35aa47899c118cc050ae9edd32256ee1d2ad9bd3279ae63b"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260214T213000Z.png",
+      "sha256": "9de38e07a1261468635adf65a83d461b9cf494998e0f8592936cb07a9575dc65"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260218T144500Z.png",
+      "sha256": "f9d18502185c11f9ca8b189575c82533a5fce55d5f4fe8a12221dafb5206f270"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260222T080000Z.png",
+      "sha256": "9213f919f118d977abe6be25f3993c3eff9ffca0c4610a985fd2ac54d7120d9c"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260226T011500Z.png",
+      "sha256": "d6a359f43097065056b7425f34ab3b97f6d2641ba4b269298c3890d25cc96f42"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260301T183000Z.png",
+      "sha256": "b437a1091d31bdbc3a8e671491ea9d529a364f37a0abf8f82c25ad6db10ed0d8"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260305T114500Z.png",
+      "sha256": "a567fb864b58600672d3acb0b0026199bf78e16a99d21616f075a27a9a8718b4"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260309T050000Z.png",
+      "sha256": "4fff04147e19c12a957f9fc808fd08fe2059f84692d44e489d03b071dcc3cc78"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260312T221500Z.png",
+      "sha256": "dcb21be31912b43c8f6070fe40df669269ecb66e98836b99d14b87ebe1a1d214"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260316T153500Z.png",
+      "sha256": "5570793cd08c972886f58302516b5e3dd759aedd0783cfe3fa836f091907207e"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260320T085000Z.png",
+      "sha256": "8b9b749a86d3fdc99d178031b2aac0d0ee0dad3f63a239c20c72b9487850c7b3"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260324T020500Z.png",
+      "sha256": "3e072d4401a212b7ff93d4b8634ee6998f97c6796b337c2df7ffbd88eb61c110"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260327T192000Z.png",
+      "sha256": "2ffdd42f6d0572fd486193a5b6f3c1792d1276afe9068d10585ac6bcb6011dfc"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260331T123500Z.png",
+      "sha256": "cc8f651018e4453b334f0a3f4f7734f01b1459103eac521688a3d28eddb19518"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260404T055000Z.png",
+      "sha256": "775ed389bf24a825a21035be39364d48aaa906a235aded3d8ed09ba6beb6f1b7"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260407T230500Z.png",
+      "sha256": "45162ffab8d6c8ecf32a0f0ae4b877855f3886c49356ef98bb094cd40c5266f2"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260411T162000Z.png",
+      "sha256": "147a809ddfd19558c89960c88817a6f7e62c7d90ba4e9d54d940ffa9a4604744"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260415T093500Z.png",
+      "sha256": "6f4a41f2e55d8ec39745b19fb4206406135b0a113c565db6dffea5d4c23876dc"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260419T025500Z.png",
+      "sha256": "c04ee9bab000b43eca50aca07a90924eb4de829c36fe5bdf757334eb02fb0663"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260422T201000Z.png",
+      "sha256": "343aca5b437b7c09660902787d97e0cb848fc5d0a7228c1e355d39a39038b49f"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260426T132500Z.png",
+      "sha256": "04acb68d232423c7432c60c6be5863a8ed3b7cb8472c63caf9a743398db0e481"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260430T064000Z.png",
+      "sha256": "b924e5546373054611c5f6fedd64c9723cc262a77ca76a7560932f20a1b9ec9f"
+    },
+    {
+      "path": "images/okx_BTC_USDT_SWAP__20260503T235500Z.png",
+      "sha256": "42561c71f2575c2208bd430b919983f394c824747baead6b2ddc4738fd7a783f"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20251221T023500Z.png",
+      "sha256": "f2d2f01ebb5b56833ab99c1ad94a20798b5d477fd6a5da253bd53f5c32d4d78f"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20251224T195000Z.png",
+      "sha256": "2933bf2ae1feccb63ea6c9dc434936ac424e7d13040f1023c2ffbfc350174466"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20251228T130500Z.png",
+      "sha256": "c65a8c2bcafb9b5166cf6d25c0cec6074e68a5bc4f383d7c91c02d3e9fce801a"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260101T062000Z.png",
+      "sha256": "8c6a0b950b2f2d6dd6c8edab61811c40e9a9281d03300b60d722d287ec42f0f2"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260104T233500Z.png",
+      "sha256": "6b3d74cbcf6bc378404a27224e48ccf23847919c6850ee6ffc017ad39004570f"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260108T165500Z.png",
+      "sha256": "b6ac99d6ab68b9dbd78bd0e92b7ba460a980d84224f61d1a25f7f7fac58e0d6b"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260112T101000Z.png",
+      "sha256": "3d9258dac9fc61f978bbb59dd49250ee5f627d731cb0e41e118dc00eec24d961"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260116T032500Z.png",
+      "sha256": "4c9e8ac5b95115accf6e77d5be72446160f0b580b5c635b852a67344605130b1"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260119T204000Z.png",
+      "sha256": "7980d4c3f7361de8582571389a06dc05fc5f7b7dcc8b78d601d408d521af7d7f"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260123T135500Z.png",
+      "sha256": "7b82d43e5d4d8b903dfb805c9f8015b82e5dbd9fc51fff5f278ec351eb704595"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260127T071000Z.png",
+      "sha256": "ca6a37b36394caf860cb2951f808abc2d2d04747ceb6c9b7ee8b6829e98473af"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260131T002500Z.png",
+      "sha256": "349de8523cc97a0f0cf44e244175eb9bb47690373d21647b6f9ca5d03408ea3d"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260203T174000Z.png",
+      "sha256": "bf1d7d1dd1c4ac1d6a8dd0adacbf38be3e66c10b7313870180c103f6dc1c9b67"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260207T105500Z.png",
+      "sha256": "d9e7a9e4380ac847c187e174412c46afe4f75dc1d4fcae751e09b1d4df6b5272"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260211T041500Z.png",
+      "sha256": "62a10b8601afd623e2fbfe009b6516b8812efc606a4e3498150686632ce5f83d"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260214T213000Z.png",
+      "sha256": "162ce171f1bc479e2dfc29828c6585d1ccbd58ff808e944ee4e3e517b33837c8"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260218T144500Z.png",
+      "sha256": "280f4ea46a5ec9cf5942647266b633df4ef24017ef8b0ad5cd34c2d6e77ef2a6"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260222T080000Z.png",
+      "sha256": "e457fdef790e51769fbca1cd2494e7babc2ed1fdf7ab410b82649d7945bebb3a"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260226T011500Z.png",
+      "sha256": "138ca6dbffaba677671bdd596ddc479518f1c57faf2e2a8f8bb51cc50dcb281f"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260301T183000Z.png",
+      "sha256": "3e589539fc5df7f6d44e789b2d6bc38ffef8272274a1e75ed3fe761e374d61b6"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260305T114500Z.png",
+      "sha256": "9b2c4d00d872f95c45512158f0075363b6c92277ed9576b8e9d5b79f4f32f708"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260309T050000Z.png",
+      "sha256": "8e79c5c2fddb8f2be88bac28db47dc486f9cec64661b555ffecb143ea72851d2"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260312T221500Z.png",
+      "sha256": "8b90038708bdda3c8a3b2e16ece10e7655fa19e69f5373f09a1c911be578bd8c"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260316T153500Z.png",
+      "sha256": "91bde79a155d7f2ad3e02ee12b76759fb777b7960a593568bba40c7c4935ab83"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260320T085000Z.png",
+      "sha256": "870fe7413ec8e6b5b9f66f662749083838d1b32bd169f9c355f91cb3cec41dcf"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260324T020500Z.png",
+      "sha256": "69cae53e68c244a0d004f8418a4fd1a2819229275266e12943fe2b514cf1750c"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260327T192000Z.png",
+      "sha256": "a2cae3f2afb074a969dcf9814512f0f5b04a74c5939f6c8725e48603bb5590e3"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260331T123500Z.png",
+      "sha256": "fbd9ce8e7a33afafd995d53d4ab946f333789e561348a90ce81fba14bf9419fe"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260404T055000Z.png",
+      "sha256": "747e3c2f0594073110b83d035c2a73352a8072ab664994bc05824007385059f4"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260407T230500Z.png",
+      "sha256": "41070ae793553f58f22c5c9ac4a4da92123009a2c999c42b8fcb98f9adff4e12"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260411T162000Z.png",
+      "sha256": "f2504863085869accb84da26c05fe9e7a80451d26b7a03de951539abb9242468"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260415T093500Z.png",
+      "sha256": "e0c6c4f596cfc4e6dae9ffe8779fd12d15adca0a630faf2654d6c8b1945a7fb4"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260419T025500Z.png",
+      "sha256": "322bbe5464eede96c4121b7c811a76e3c7efb3082a44dd6ba6df98c53e7c6659"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260422T201000Z.png",
+      "sha256": "eb03e309770f0da9070ecd57c41d12a062660105cf0adae315318c29b341c981"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260426T132500Z.png",
+      "sha256": "9a58e656269d3331b3d71dddb5fec2943743f3719fef8c42e3ef5b6085b35ff6"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260430T064000Z.png",
+      "sha256": "db730b03d76a4e5643acbe5c5e947080b85e34a7ad0e1e11822fa674ed047aec"
+    },
+    {
+      "path": "images/okx_DOGE_USDT_SWAP__20260503T235500Z.png",
+      "sha256": "4e2230cabb2c9e6e3c2ef34940cf5dc2ab2e33118de76895ccc655538d00403d"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20251221T024500Z.png",
+      "sha256": "4c7f8d5a29f11e8dbdea0f1dbaa99d03a26c0d5d9879ec8f880d5df04b138afb"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20251224T200000Z.png",
+      "sha256": "93589272418bcc2ca0f8d0b8815348d7f7879b8c695e26e12fc165d21276513c"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20251228T131500Z.png",
+      "sha256": "56ca58bb9be6d1cd2acfe19acb0122d7d68a94a1326f2678cb7728cf938ff2a5"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260101T063000Z.png",
+      "sha256": "7f3153456bfb35720942dcc32f047ebc2f4299510e8355c276e4fc3c9cbd4a34"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260104T234500Z.png",
+      "sha256": "0e1c498582682e9bdefe303a18a455c8a92e703e4012d87e24ade351a6195750"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260108T170000Z.png",
+      "sha256": "be2204aa06872b8068efe5f8fcd37c3335d350bad5fbe297321b322c75816d60"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260112T101500Z.png",
+      "sha256": "fdded6bcc3740ac49fc2bf9971e4a869b60870f7e51f1835de5db4126d829ae6"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260116T033000Z.png",
+      "sha256": "82e71c583a90742c582525eb904ebb21c6cccad3ee7b691183f7273e34522fc4"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260119T204500Z.png",
+      "sha256": "00f9a0eba77e6505102ec0b165515ea6d23e39711215f4a33cb30b103db9d3f7"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260123T140000Z.png",
+      "sha256": "067b6622f8da34d7ec7c77fd4eaf5cd4e218319f39ccdc867ac7cee515716f1f"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260127T072000Z.png",
+      "sha256": "4234f25d21303c39b86db77bb8cfbf12a5ba4985365bc98e8d3dfe346359291f"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260131T003500Z.png",
+      "sha256": "4f8839dbf8a039c08c4b04f2af3f63aeb3327f382b6800cab59d7781686d1623"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260203T175000Z.png",
+      "sha256": "a47cfe9a2cb2f80d8780e9d1fc2b9459a80a6005471b8dd890540492304ac6b4"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260207T110500Z.png",
+      "sha256": "397882df49848c4ab02cf99b25ca9601aa2e1ba660946d25b9144eca397f8ed9"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260211T042000Z.png",
+      "sha256": "03050994f3b8c3f36915baa07b764b613e749fd0f0eb735fa9617930eb164a24"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260214T213500Z.png",
+      "sha256": "f69d0efea7162b4c78fd681042773861c22c76374595803d2c3d02f7bea562b4"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260218T145000Z.png",
+      "sha256": "16a9999de77b36f46029cefaf759972ecfba535d22ac6cb5450c347e9ca0a4f1"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260222T080500Z.png",
+      "sha256": "bc832d1d42bac65ae264aeccf650f5c2b9a9c1c8c78e23c5a0f4e08778930922"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260226T012000Z.png",
+      "sha256": "225e9bf4bab21c3865aeb7318923803b1f26a0ad49efa8e65334fdf88c3c8a29"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260301T183500Z.png",
+      "sha256": "6718de3bcfd6d84d9bff32fc19908dcf38e679a31703feff66d33e19bd9df67f"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260305T115000Z.png",
+      "sha256": "0026024e110da57c24e5b2eeb21f9ce6dea3c9b63ac1bf76c7e3204e5430aa1c"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260309T050500Z.png",
+      "sha256": "17413f2d237edaf3cd749cbe44e0351a17984c21161433574293aaa7f81cf1cf"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260312T222000Z.png",
+      "sha256": "68892a47f98828e09f373b58cf93d207ee3c3f70dd4f7915b0031a4231a83bb1"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260316T153500Z.png",
+      "sha256": "8b00aceaa199f23904533aef8c41e111bde180ebd853cae8e53a8b4ac3ea0b09"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260320T085000Z.png",
+      "sha256": "c2630fe80bfdafbf13df028b253fa5973b4645de34c6bc36993f561c93ccd4f0"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260324T020500Z.png",
+      "sha256": "0d174b035ae2c1ac1d4389e863d9fe8101e17bbd80738b7d5aea5ed6dfec1772"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260327T192000Z.png",
+      "sha256": "93ded0ed5339d5a124b6dd8a7cad2cb22b8cac551c5e8b03c5e3f697eed86614"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260331T124000Z.png",
+      "sha256": "f5eeaf46b284c9a3fce10b995c8fed960ee498e9ca87b4c7cb8d7cebc096ebbd"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260404T055500Z.png",
+      "sha256": "4087da7f3df7f3737684e1b6f2fbbe79f6e80e3c189effcb653cc2aa0ad14715"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260407T231000Z.png",
+      "sha256": "126d1b3c3aa3163bda281d81667f8b918b8af96e7e19bc906c6ecf10c5a98d72"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260411T162500Z.png",
+      "sha256": "261ccce0dd8a08961297ff44f725505a82792aa227932ae504de51f1e5b5ec01"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260415T094000Z.png",
+      "sha256": "d9def3b5107ecf74d24f44742fcd90bc937c82a5e686af2fb86c4c38105f9a4d"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260419T025500Z.png",
+      "sha256": "036bd21ba244e875c8efa9e53d8c2d280c7b1cae1ef8427e395b6fc0fa00cd01"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260422T201000Z.png",
+      "sha256": "af73225d8c4d0f5d16021ab503785e2d37ee1fe6fcc1342e2978333f8ebae33c"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260426T132500Z.png",
+      "sha256": "b6f34197a588c1d34e3f7eaaa53aa18c2660c4d25b4c26c9c9ea372fba08064c"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260430T064000Z.png",
+      "sha256": "1f05907196fe654c78035a0d5a76918045a2706a8287e0222c5edcba19891f2f"
+    },
+    {
+      "path": "images/okx_DOT_USDT_SWAP__20260503T235500Z.png",
+      "sha256": "f12938ae5c9afc938477a3a9a68c8228543ddaea38f8c282ca8efb79508aa60c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20251221T023500Z.png",
+      "sha256": "b52d99722a841093a5024e38c186d2e85683e80adefd9a5b3e36969defdaa265"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20251224T195000Z.png",
+      "sha256": "9aa848694cd4515f49cfe00d390d5e90dc1d6f7a841bf367abc5e1152d43e88f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20251228T130500Z.png",
+      "sha256": "dfda11dd38a68ff1948fd61bfcce129dc0bbbef73625cbc8242d6b50519db0ba"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260101T062000Z.png",
+      "sha256": "51fca40238dd556c13e39fb66d884abd0cc43bfb9db27e8772b4446c243db4aa"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260104T233500Z.png",
+      "sha256": "a04975c402102780f6e180e10c95b4ac504ffd5cb84d75b92d0bc5c91adcc6aa"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260108T165500Z.png",
+      "sha256": "78c648a4e22daeb6494aa27a0131f77d82f5796bee1296d8b069b03c19737545"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260112T101000Z.png",
+      "sha256": "005ec8128f3abbf75762f3652285567611c6e3ca5242afe16457aabb6e313811"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260116T032500Z.png",
+      "sha256": "01e1d04b895d13903a64f00752d35931eb6676abe8b01abcecdb4569296a6f0d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260119T204000Z.png",
+      "sha256": "c676f5d41cfe35becb6212359ef1b0e8ddf3e1ab6bcf82383714568e0f567027"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260123T135500Z.png",
+      "sha256": "29da0c5b41cfda2d735c824170af8ea1e0344fba92d7cde1ba41b74f275e1952"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260127T071000Z.png",
+      "sha256": "ac8d4084ca6e195240a59667b77e09b3e7be6b5ba830f724540dc5bdf1967ae4"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260131T002500Z.png",
+      "sha256": "a2d8a79d3d4bc6e21a78f2f195b7f7768204608c6bdda69aa39a7650128d7fff"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260203T174000Z.png",
+      "sha256": "5ff1b0bb5260d2204810c39932178f249f3b6b7da3da8c192a07167274a6e5c0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260207T105500Z.png",
+      "sha256": "1edf39cee5c5dfd0b2b73b767b40db8ecd435df2b3cfdcbea7d1870bc58b65b8"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260211T041500Z.png",
+      "sha256": "c1f2dd2d609d40466f3b706c3da9fe7a0b109c3f06b47e7203d5454cea68c5ec"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260214T213000Z.png",
+      "sha256": "3ca4b1e8ae3f19d154759eb4410b29f0cb47b82eb21f4c11023e3ce259dd0313"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260218T144500Z.png",
+      "sha256": "4a238a337a318819fac3078cd4156d9eec59dd770a3e41967ca312cfbf947112"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260222T080000Z.png",
+      "sha256": "2202d9c3550d271cb9165e3ad3f3ac642909b30fd9350fb31424f0a46a4141ec"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260226T011500Z.png",
+      "sha256": "cf455d345a76d3f03d6c47cef2e21ca76e0093aa8e0e2edddee00e93fbfe0dc6"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260301T183000Z.png",
+      "sha256": "72cbd7dc6f4a6b0bdaf3ad1c3c70e460fc4da218b3eb097495087943300cede2"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260305T114500Z.png",
+      "sha256": "d0dd05ad049106fb55322199308d20cb399c305496c5ac6a2cb129a65bb59613"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260309T050000Z.png",
+      "sha256": "85c58f6f297dedcde98f0d2f730dbfdf04031e936526452762800d3171044eef"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260312T221500Z.png",
+      "sha256": "ad82887e2479a99fb5c832cd3bce3d8de7228c0b9a41781347112a77ff45e47a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260316T153500Z.png",
+      "sha256": "bc6fc80f5d4423f8aeccd5491282c8aff8127e5df396b6a08f27983e1bf54690"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260320T085000Z.png",
+      "sha256": "d1f5af81aaf3177129c79f97c2152dbf8f9199f7946ae625e28a6d7dd6df4b8d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260324T020500Z.png",
+      "sha256": "ab2d37d3ce62c6dd5de0505367320e7f48f2e27d7928abc41a8ee1be7bb801d3"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260327T192000Z.png",
+      "sha256": "9cae23eccd2be94e82643571356415b3a73fec70ccca51812a16ac780222de75"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260331T123500Z.png",
+      "sha256": "88fe851108178d2be4071c2c3e7502dcce295eb4aebf58265b93be0a707b58e8"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260404T055000Z.png",
+      "sha256": "4aff189c46d9e81b2700608c149f4e7285ce28f1260d22dbbc456e18e1c93472"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260407T230500Z.png",
+      "sha256": "b36d97e6c37827df0e67282d3cac11a615fae7c707da4c29f5b0437a64550579"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260411T162000Z.png",
+      "sha256": "831837253ca76b96b50611e705ac296c975957e881f9721274808848be145dec"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260415T093500Z.png",
+      "sha256": "604fb861c0c9b542515191afd27c598a556fd6b99d8b5ea36e3e155d64350f39"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T025500Z.png",
+      "sha256": "3dfc3b13d3db53214c22ad17db0fe76da179dac7e2c41abee597799a56236a27"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T201000Z.png",
+      "sha256": "a9b0c979eae791327d22b0f3d4bc3320b9d6a26ac8047a084052ddbacf0802fb"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T132500Z.png",
+      "sha256": "11065b4b07541500ce819c9cc189e86aa562ff186bc3192085ab600ca78535d0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T064000Z.png",
+      "sha256": "cc453705e6ca003efc5b8146f477dd5d5c589ba11468cd6cad2e1804f4a1e70a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T235500Z.png",
+      "sha256": "b785482f8cb5eaab968f281fa9ae0d70fd6058f363702bfa72ed9150ea4daa22"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20251221T023500Z.png",
+      "sha256": "bc7a5729875621c044c65d5dddb5d42fb61ace6ac5cb1c5a1b19b9e46e7f17cb"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20251224T195000Z.png",
+      "sha256": "73616e21c923705e47ec917c952f372e1e031f13319d43ef4b573b171d870c34"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20251228T130500Z.png",
+      "sha256": "96397e1e08e3a6c8afdd66a6a7308237596ea76d58f890f8bb9521b3a03ca3df"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260101T062000Z.png",
+      "sha256": "9e248dd6319392c3949d9d23306be46f78b9ad5dadbadcfd10f9c6d6ffb7850b"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260104T233500Z.png",
+      "sha256": "fda453c31279b45cdc7d643a5f5afe7c38efba04239e684b1eda3ce201ce0aa0"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260108T165500Z.png",
+      "sha256": "fefc01a294176cc4517d4b27d78847f51abd486590cbb79741a3265396a7f5e6"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260112T101000Z.png",
+      "sha256": "441412f906493b8a9c427829075ed700dc0dcf6899e4d6addf0773ff706a244c"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260116T032500Z.png",
+      "sha256": "c9ea8938a0675239e88b030b7b693ca1cc33a9535d56203481bd3a436a11839d"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260119T204000Z.png",
+      "sha256": "cd60e31dc48c96d7bb223fe1bf15ff54b7e0669ab9160e16296985c3693be92d"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260123T135500Z.png",
+      "sha256": "9ddaa1b5123326dbaaff7faee614d13cf913ba620abe1c2b8546be85a4bbfa2f"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260127T071000Z.png",
+      "sha256": "5a91887f9ca6e41606d7e0994aacf83fd8d245ff44ee8dd196c602dad77f7460"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260131T002500Z.png",
+      "sha256": "509192e8b6d8ac47c43aa26f17355308b6b09925421f38c426c2caf222622c92"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260203T174000Z.png",
+      "sha256": "f0e1875b353b70c4924fec1c19795e2dbb4cbc1be4753413b483fc310fb4935c"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260207T105500Z.png",
+      "sha256": "e7550b630b1e3996309931e36251d6c4e5cdf36f529cbf5b255cf871dfc9a00e"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260211T041500Z.png",
+      "sha256": "da6029ef36f6c93b0dbdf61178cb866de660ff551cc02c975521e742b636d4d4"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260214T213000Z.png",
+      "sha256": "9832de8555693960c4fb1f569662635dde116847e3037a345ee0489f83bed5ec"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260218T144500Z.png",
+      "sha256": "e0becb8789f28ec87179b1dd1142455a1d173c79286dc9bcf413f69c2015e643"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260222T080000Z.png",
+      "sha256": "94345d386cc4b8da0843c24291a2c0aecc716d663e5f03ec7b477eac373a7781"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260226T011500Z.png",
+      "sha256": "8a49fec1e1a0a86b73767b85a0a712bbb3bf3da869a05e6fa6d46e8a5170b5d8"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260301T183000Z.png",
+      "sha256": "8ac9544cb66f124c797ef8d17a8f83ff7189495a506a2df1ce17914843a37396"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260305T114500Z.png",
+      "sha256": "e88a55eef65606f4751093ba36788f428fc598d51decd9a1d64c78680996fbf4"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260309T050000Z.png",
+      "sha256": "2041e1ec73a23d9b6aca41a32ccb5000bb8ea902d4b1382076544ccbedd8cd01"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260312T221500Z.png",
+      "sha256": "a0998593fe4bd8d0d84c64d89efda1b01b7accf6a3d5bc22f39ade580b1c1e0e"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260316T153500Z.png",
+      "sha256": "955b360237eb282374a709a75799fde3f72bac00aaa66f173c723162c3f82fff"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260320T085000Z.png",
+      "sha256": "609300c80bd54c1087c045aebbcfa35ac65ffdc7b0d45f7db4dd9eaf9292e77d"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260324T020500Z.png",
+      "sha256": "1507a703c05a0c8667ab8c0070ec73599fed93e2d7b1490bf15fbff8a52f644c"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260327T192000Z.png",
+      "sha256": "9e2aaf74d6d3b0f361d6bc50464cccbe578f4fb36b59e0284961f047e632d332"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260331T123500Z.png",
+      "sha256": "abbabf4a625947a851bf3cda10b15296e58da2daa6618dc195215ca15c73c186"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260404T055000Z.png",
+      "sha256": "1c9e66c1672a6cfb4c26c1df917415aa78c0e760d73edcbccdbdcb6ba5bc9659"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260407T230500Z.png",
+      "sha256": "d0e87c02ae0000f029002eda774ee6507c61d3c847d089bc35870631f30ad8b9"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260411T162000Z.png",
+      "sha256": "27f5e4e25d506836d1059b750487d336f1182d999876c935c60d0a959f2b8b7c"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260415T093500Z.png",
+      "sha256": "9b51134bbb93388fc1781926af3e4628e48f97ea6cdab5f43bd3d2c8f0a65c11"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260419T025500Z.png",
+      "sha256": "69bf4c8536c5d4d0eb2430aeddfcc8944f04ce612ac9cb6dfac58515a4a73a3d"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260422T201000Z.png",
+      "sha256": "81d7bea847b7470e2bf186b361ba0e7b66daa13c257dd2434168082f36efb14a"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260426T132500Z.png",
+      "sha256": "81bf778534df585c2427ab7f68b624ca92f97dba49b31996b3a274206af59c3a"
+    },
+    {
+      "path": "images/okx_LINK_USDT_SWAP__20260430T064000Z.png",
+      "sha256": "397ae111c563cc7897a459a4a290aaea318ae970458c4c646cd17edace7235b4"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20251221T024500Z.png",
+      "sha256": "8add61aa98e5266205df246efd9ecbe7e818b8c451c19acce1e24400e631384e"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20251224T200000Z.png",
+      "sha256": "578e20cc476dc8edbbbcfcd4f99c6529a0d167cadd74ce404a075b539815ef46"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20251228T131500Z.png",
+      "sha256": "9fa02f53d83adb5289059ba0db9007b1be9ac3b6274b64b338a2f34460c49b98"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260101T063000Z.png",
+      "sha256": "8c376171f50b317da70ad835868ec0095945cc470f8c5063c1241263734a2ec7"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260104T234500Z.png",
+      "sha256": "c2c614282c113e04289a7cef0f021154b92f85e1851425ea70e8e813bd190b76"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260108T170000Z.png",
+      "sha256": "40e829811319646d7917aa48c9ed4f5cc3def23e427f2e3917b2b0d31cc2d4bc"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260112T101500Z.png",
+      "sha256": "4a494010621260b0919d558d4e3b314a0b4bb53271a8452d74ec4576775057ca"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260116T033000Z.png",
+      "sha256": "5e1021b6c8cd92bf82b88675fac9b88aa9ce71b8ba3b3d94e565819602b63172"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260119T204500Z.png",
+      "sha256": "fd99d89b4bdfcf53083f046b0cef8b8fdd5adbb0a12afdce1dbb4640f74882cb"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260123T140000Z.png",
+      "sha256": "60dac6e52690c512a2b85ff15c4b63c8031d4ce6ee0f1ed01588446e8f6b81a3"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260127T072000Z.png",
+      "sha256": "3ebf67848c99b1cbb4794aeedea75e5aff166c7b8ab5f64207f8d1401b9f17f9"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260131T003500Z.png",
+      "sha256": "511d92901cc67fd7f34066566bca313cad9127f89cce8d633cf01cdc29939cbd"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260203T175000Z.png",
+      "sha256": "46d3620692ca27c0876e0aa4f7f86929e5ffed8dd74eae4329dd88adf1f6582f"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260207T110500Z.png",
+      "sha256": "73438c0aacd1b26cb5c14da28bc6369a9913cfab3ef4f5401f822a6d4ef32ce6"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260211T042000Z.png",
+      "sha256": "f721890aa6b90f2f020ef8a1d9df89161c5a2202687d697e942999b406040ac2"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260214T213500Z.png",
+      "sha256": "c3779943247e40a6f67dc48422bac7fba031b95163c4558685047d847c4116c5"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260218T145000Z.png",
+      "sha256": "e3836f21c71e4d20d46770ea900cd78c722e7fd3c0c68ac44ddc2176219990c8"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260222T080500Z.png",
+      "sha256": "914df49c4c8ec8423bdac371881ada9e18ab8e9784ebc84f0880a0209588df35"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260226T012000Z.png",
+      "sha256": "1b31e6627664320a8bc4df9f3f916afb348e9e2fd98d58177f5154d784eab36b"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260301T183500Z.png",
+      "sha256": "b0fcc2bf96b1435348b124ad9d9fc5d039f6a15901fefa4de727059efe921518"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260305T115000Z.png",
+      "sha256": "8913ee7fb31441c77445bd233f9bfcb9701e261308e866c89215ccabe25ad7d6"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260309T050500Z.png",
+      "sha256": "b5ead412f688ba2a33837cac1882ed8716f6b9c3fe6460e1bf80208fc122cf4d"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260312T222000Z.png",
+      "sha256": "2da9e8952ebd71447c85d4e8a4dde39841e8e915d06991d0ed522492aeea0516"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260316T153500Z.png",
+      "sha256": "0ab25fafecdd5af9e8607479f5660e5aaf8322e4d7d89daba6dbbdc268c21722"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260320T085000Z.png",
+      "sha256": "4a48482d7f9671b31d20244bacbd58395f4f1e59fc095724825f84ab076c5c11"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260324T020500Z.png",
+      "sha256": "70e4da695e59f7a1fe37ba0e80535601e821f9eb1cc061ec7ceb861d86e5ae11"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260327T192000Z.png",
+      "sha256": "46d7f4d7d940d4199839e1fa512fb896b6c6803c249032871d2080856e2ce677"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260331T124000Z.png",
+      "sha256": "c9daf4d8316cc20bccbf5eea87c9cd6ac8789665d26e71e67fd28c4d20a0ccfe"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260404T055500Z.png",
+      "sha256": "35cf541667d48d487aebbb983edac72a26c1be8d77cfe77514f4d7b7266f3838"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260407T231000Z.png",
+      "sha256": "764b547efaaf5a7a61a1e2653a1a66fa90c89cb9e17adfc1e6cf6df256676d80"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260411T162500Z.png",
+      "sha256": "43a4e5c5d659fc6cb5a8761da4ec49459920709fd5a1aff8ba8f9b63de53a438"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260415T094000Z.png",
+      "sha256": "45f2a9d4eba6f9a70e3b04a69b5908cd5b5e68ec1b8613fa600f20960131851e"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260419T025500Z.png",
+      "sha256": "0cff799b8f4094cf5f95b03dcff35802f0f759fd6767923b2553278df171bec7"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260422T201000Z.png",
+      "sha256": "17ab506a75027cfd08813aec5144ae3d614ed0093f90bb9dd5a6f1399de428e8"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260426T132500Z.png",
+      "sha256": "50760f1d9f63860240b6b19aa55739f9b52b2e344a9bcd78e92fba136912d278"
+    },
+    {
+      "path": "images/okx_LTC_USDT_SWAP__20260430T064000Z.png",
+      "sha256": "89943112968eb90a68923e9ee7d59fdc0c0389d9cc63750d687a2d69237baa3c"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20251221T024500Z.png",
+      "sha256": "474777ad6217791a081bcfac4324cb67ee54fe27816413e6f8e601c06277eaab"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20251224T200000Z.png",
+      "sha256": "e3899b185ce758de91344f568b80c534f1910893d6ff9acb88e9a688b25202df"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20251228T131500Z.png",
+      "sha256": "22d2f38128fb93196ac7dcd168c1a3ee529d52dc79049d6cd122451f14fcf771"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260101T063000Z.png",
+      "sha256": "58733770ae077727334536f28cdd094f68a3e151fe0eb06a5345b9b16f2bb1ea"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260104T234500Z.png",
+      "sha256": "a60548e22a7cee9e2f2bbb0a1080e2cb878554c4cc67618000914dcc9ce84d00"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260108T170000Z.png",
+      "sha256": "c2253402b01ed00f24c33a98917c87588d790a26e6a7ec5f8864a20591e4d70a"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260112T101500Z.png",
+      "sha256": "58ceb5617f89f57a94206716d43343326dd66b07e7ccb65bff01b3dd65f02982"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260116T033000Z.png",
+      "sha256": "3ac43baa3fc6e31df10f7116f2fd40b88fd4d9f00a37d9a2ec858670dcec94f3"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260119T204500Z.png",
+      "sha256": "6fb99220f43119fa81167b65c954a9611986481108ae4c848d7af7aa7113d757"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260123T140000Z.png",
+      "sha256": "bd9649a66dd38aa623b7a71704e71906dec52a6fd8be957d5753a53cb22aec58"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260127T072000Z.png",
+      "sha256": "0686e51b6055e6bb05e078d3a66c86c3486d8f9e29de2933bcebe942468dcd7d"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260131T003500Z.png",
+      "sha256": "655927055f982e32d7569bee18a39fb2db7907fa4f7f683a438c0a9e5d839cb2"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260203T175000Z.png",
+      "sha256": "30d6cb66aef6a86c8ade7d2a37958106bb70d6c5319e22d983546f12f02c0fa5"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260207T110500Z.png",
+      "sha256": "155adbee2e6bd51b84c155ab1676b8bac249dfce2b8b20e1e7e719fab2c1a5a9"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260211T042000Z.png",
+      "sha256": "91e4c49a8b7563075c11648624dbd473428bae565331df07fdd2e388026bf4e2"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260214T213500Z.png",
+      "sha256": "dae23f12803ee25a09e4c9ba3fe058d6c5fb2ab72d6434e1e94fd16159838335"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260218T145000Z.png",
+      "sha256": "f6c9e39535f650567482e291e16b5113cef3a80d41a0bc05a26826fc50a7f53b"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260222T080500Z.png",
+      "sha256": "74b8959d103a64bd35fdb9a4bc44a3eef561fed6f7f96e9c305af979a357632a"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260226T012000Z.png",
+      "sha256": "b565e49e4779cf641957197be9385fa7337d2faa50d289a3b010562c89aeec2e"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260301T183500Z.png",
+      "sha256": "8273f8aa5b6265ca2aa2e6b8eb9e9eb3c184924eac5d488e0348bb4e1099eb20"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260305T115000Z.png",
+      "sha256": "e73749561c7a83dd09e2bd11c5c7703bf7e8b0750c07cd6964f979b64b3c7d9a"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260309T050500Z.png",
+      "sha256": "af01010baea1bed811235f56760ef1d956520bc5c346aa0dd764da0f19cfc8be"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260312T222000Z.png",
+      "sha256": "0c3712fc2b70a3a4bf0b566652465795bdd6865f7c7662f2ef497f054eda4ab6"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260316T153500Z.png",
+      "sha256": "07c492fb96e8ce40052c1ce6843e2196cc6194820b5ec42f9af12fd4668f231f"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260320T085000Z.png",
+      "sha256": "f75809017df028ead2d59e2f24534ae292fe8cd991623a1467937e418a317123"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260324T020500Z.png",
+      "sha256": "d4b7f492d322eb86ade0b8dceded0d0b54161949388a0ac5a4ef2f9e2c10bb15"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260327T192000Z.png",
+      "sha256": "c0e4db6e5fd030528be5584d3297dd96314814699d0d36f3fa43cf5a10d78115"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260331T124000Z.png",
+      "sha256": "f1bf248c19fd698e48ba8bae437701a120b8cc41b2fb543f6af07ff0f4aca2e2"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260404T055500Z.png",
+      "sha256": "60d17554837a3f5fdeef9c084def38e496953e39a7fe0a5b398dc981a95e8935"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260407T231000Z.png",
+      "sha256": "17b588c06d6500b27297b9c42b6139ad97ad03890ca920b3e59616aeefeaf19d"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260411T162500Z.png",
+      "sha256": "79b261d3b8447f67ac694366c33c03986f700da582fc645516f510877886f38f"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260415T094000Z.png",
+      "sha256": "2472b3a693c42406f965e43aca2f00943656831f17974aa1aed8eb4c26f83a3a"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260419T025500Z.png",
+      "sha256": "e46a5821650397f6eb095c197b056341c91dd01e38b5cd7ab4b9f4d98e68cb3f"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260422T201000Z.png",
+      "sha256": "f8577ce3a06566779636ccbbf40e583833e772431fad37eb83c538b628c70a2f"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260426T132500Z.png",
+      "sha256": "23e14f47c862ccedb13ae7c70e1fec0e0ab9a02812ca13b5047df3dce447af10"
+    },
+    {
+      "path": "images/okx_OP_USDT_SWAP__20260430T064000Z.png",
+      "sha256": "cc94a18648f6a647c42296bb670a7b9871bbfe8108ddeade5e7367d7edf77572"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20251221T023500Z.png",
+      "sha256": "3b0164d50e1cb93ffe6ada750b37326b6d50f2779b190c9ce1c221e8afe9fbbf"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20251224T195000Z.png",
+      "sha256": "36415b864e4f16d2194bcd33bad2334973d0cc2557bc6295ad0d19525c3fefb7"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20251228T130500Z.png",
+      "sha256": "93441132733a26774bc0ea15b76ec42f6d2a5c7c1a73ecb323464440aa05227b"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260101T062000Z.png",
+      "sha256": "fb0da241be63a1c4494c61a28e4cd2bbb36da3fc38c3d44436973df7935b155a"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260104T233500Z.png",
+      "sha256": "246c9d8e3461a214387e5c0e5f07c4376b8560b69927e424082dd511db8b0088"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260108T165500Z.png",
+      "sha256": "85f67991bbd831380403a5721d7a733d1b8330ec1ed1ceae35b8ebb6bebf8395"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260112T101000Z.png",
+      "sha256": "a7d74fb9423b9a0f8a7087687b0fe4a24dd0e4b90c55568b3e6cf420604f6470"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260116T032500Z.png",
+      "sha256": "269d4793382f5859b61b055e493b466c2325effa5bd8ce929a7e737140eba43d"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260119T204000Z.png",
+      "sha256": "bfede40cff751b85a58d236d06bb12fce745c87353baf6cbeea8be89ba2de51c"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260123T135500Z.png",
+      "sha256": "db1e59361fc2b1932caa3bacfed04920cf84bdb567f25a1e2adb20cc58adfd48"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260127T071000Z.png",
+      "sha256": "7049d86eb7b01203ffab0aa1224fc85878456905b3bf433cf29764b45e070d2c"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260131T002500Z.png",
+      "sha256": "dea59712cf3f667e7bfa9083a28523c8b547d015a586a25ccb80878bfc73611a"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260203T174000Z.png",
+      "sha256": "95c75d95d3e1c85fbd49580907e39897726537161c34b9709361d3dc187ef742"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260207T105500Z.png",
+      "sha256": "cbc31abae54a4b7aa1ab737ca2296449bb10e8caede067cd386ea17799b848c3"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260211T041500Z.png",
+      "sha256": "7affad43e7a2be8c84fa2374f3b7323ac6372c66c4ceca06db3fd78389522083"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260214T213000Z.png",
+      "sha256": "934d4310f62bc4fdb780a9e1377032bdf480765ba75c09471ae98d9250785a9e"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260218T144500Z.png",
+      "sha256": "53980df78caee1e014a109254000a54ad7428782148a1a7eb468c4b53d856234"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260222T080000Z.png",
+      "sha256": "1ac21e50bfc4e1595cc17fea07e6bf908639a24ab5ca3c16248e3778079c0893"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260226T011500Z.png",
+      "sha256": "6d2c8484f615d0c07bd79aa61284c54c56e3bcbe450cc67e47d4f7fc72a9611b"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260301T183000Z.png",
+      "sha256": "974a4faec0da7f3f4a74a2e7239788487dae79ac944fab47075728a26dee7bba"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260305T114500Z.png",
+      "sha256": "1b36664a06b1824ed4e06f175bba2b9126430804e613345176dd7970d0b0b5d3"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260309T050000Z.png",
+      "sha256": "64a6d1b7faba5953cdcdc5420ff61702e523f68651978bf996c2440b27f8742f"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260312T221500Z.png",
+      "sha256": "314198304e94d96822eef878fc847e44834eac9408f98b8c1137a62ced0fd38a"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260316T153500Z.png",
+      "sha256": "3b49876c84f616c23469cb9ec4cfea27bb9bb1d8bcc1036cf142c5d8ac728e6c"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260320T085000Z.png",
+      "sha256": "2377fa4a5dc260c59c2776d0bd415dd3e277c9e87258175860e430ef6fcb96e1"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260324T020500Z.png",
+      "sha256": "dfdde4088963e0d65c22b3aae308c3bed108d649bef633561c6088984d96c498"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260327T192000Z.png",
+      "sha256": "31dc32c4499a49de91e54d5beeae822fb2d4ebac87aa3d5207553caf2bd36b93"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260331T123500Z.png",
+      "sha256": "72ac50d831d98d1396502c4b89039b5e059cc266fbd43bf51f5d64ccc0a35f54"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260404T055000Z.png",
+      "sha256": "82406d5121838af3f0587b1f32d4c2b94b046eae83f3135ad53f299ba13d4748"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260407T230500Z.png",
+      "sha256": "76ba765475f19450fad0457e5cebd15762e4dcc50232d41a50c118508c354ab3"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260411T162000Z.png",
+      "sha256": "934e79c60dbed5e3e21f1c7892a8850f986ebcb5303483d0a775ca499d784e9f"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260415T093500Z.png",
+      "sha256": "8f8d994c2651edbe2b835319c3bbc2a19fd8e1df45194f2faee7ac0706d03705"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260419T025500Z.png",
+      "sha256": "1f6e2ca24a36a64395b129ac71a794aeaf3e07b6f34e6903c53cb63c30e038da"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260422T201000Z.png",
+      "sha256": "21e2722dd1b13cf2cb67be6bd31f7923092b47efcc030439f36be5616970dd94"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260426T132500Z.png",
+      "sha256": "9dc19b79bc25af99d5f8816a46c2f57cfc56ea5ea3a470da679c87fb6596d2d3"
+    },
+    {
+      "path": "images/okx_SOL_USDT_SWAP__20260430T064000Z.png",
+      "sha256": "e6152b819bb79402dcddf2c6efbe24deefd785248aca46f02ba5cabe82607014"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20251221T024500Z.png",
+      "sha256": "e6b65c8f732e485fe7f60009c7dead7f7793429e62a0f4b1228d76f51bdfb8d1"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20251224T200000Z.png",
+      "sha256": "dbd4ea4c02cfd51f01dd9a5fe64b255090b2239cbe9e3b6827497ab90af7bc52"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20251228T131500Z.png",
+      "sha256": "1632b6604c1a560a74fb7fcf4d6c043fa4e29e2ff6296a0f4d677038be60778f"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260101T063000Z.png",
+      "sha256": "c8c05b87b5649d5ae5dfecf6ea960e7f3ad92f991a668e03af3a64e0a7e9d17d"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260104T234500Z.png",
+      "sha256": "dce2a373b5b88b30a466cf334cdde9995c07d8ecf4d2ea97ff91058245e640ca"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260108T170000Z.png",
+      "sha256": "a97e2f1295854f938a944af748f7cf597c571c7f031317b2b6857fcb3212e3d0"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260112T101500Z.png",
+      "sha256": "fee9d5bc17e0612c39cb605c6678ddc893bb22fe2803e89e08a830b7db51a679"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260116T033000Z.png",
+      "sha256": "9d81f9f52eabe9f26d5629202eb0b2ac5fa02d36b7505bedb2be189f8090ce52"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260119T204500Z.png",
+      "sha256": "6f5acdc2a4f81bc82d20f884f2308cd5289dbd5811aeea0559f862129eca12a0"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260123T140000Z.png",
+      "sha256": "f3debaa88b35865f6f16db4f8b37f1bedd2c87fec76702395cb29c1b323db6ed"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260127T072000Z.png",
+      "sha256": "7ef624fc7b76b5e1dc43eaa94a34c388d6eb394598163c2eece60022262d8df3"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260131T003500Z.png",
+      "sha256": "d85d32a82fe45342ab76b1a997f5078e6f24e0ad65ca39f3b9e2ff946e101c44"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260203T175000Z.png",
+      "sha256": "0d272bb556932d43b30b73a6e6a58c0c7db6cf5433187d5aee5ddfcdd07da84e"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260207T110500Z.png",
+      "sha256": "dffa4b90712f0193c4ab67f91ea2d07ca282e1ac30c5b5fdd39f80ac89c8b3f0"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260211T042000Z.png",
+      "sha256": "0ca13ccb6ac4d44ca742683525098271053e76f22786b730ed253e764b100f5c"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260214T213500Z.png",
+      "sha256": "2b728d22a1910ee4267a1c8c59a6210922f0f02cd6261fda0fb33558357ae1c3"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260218T145000Z.png",
+      "sha256": "66ae57ebae2724a268e5aba24787f4af0fd608200b74cf302dab0526b8d24c34"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260222T080500Z.png",
+      "sha256": "538756f4071b00ba8fc6031d3fd67a2438fbc5aaba7711a533413a146ec9157f"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260226T012000Z.png",
+      "sha256": "68cd1091c3a44959e6a55718ab0bce60e06e1c088447123cebaf633db09f8eab"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260301T183500Z.png",
+      "sha256": "33cc07de0a7f40ea3826a40abb7067fa9cf5fee02f9ceba988941f06c3c0e185"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260305T115000Z.png",
+      "sha256": "dedd0fb42e2654569f24de21126402b28708331bc7029ad3d54fc7b0e0bdff51"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260309T050500Z.png",
+      "sha256": "2c40a6fa95e94c3f667adbda85f66b7110223b7f82a9fc4506890ee6880b7edb"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260312T222000Z.png",
+      "sha256": "8a46472ad9945b175504564bdcd6e22624692f583a6ae8e07545f4397e9fd2ae"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260316T153500Z.png",
+      "sha256": "fae220ff7e7d8649111d12366ae703f666b4df92cfbff824f08c753b8c6c32c8"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260320T085000Z.png",
+      "sha256": "b132d312186847985713547f283aa4de00af6de9011a73ffac70f2c1575b57d5"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260324T020500Z.png",
+      "sha256": "7674f3d65d58a37e8c83e38f1a0ca846062b1f12ed394ad36c96adb2e0732da1"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260327T192000Z.png",
+      "sha256": "6bbc4f5acf1903fb98e4d8418173f7a210c636f89f37ca994ffe8452f964a984"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260331T124000Z.png",
+      "sha256": "4cea2550716e9873dee178428bb9451bd1e5983e89e590c90fa772a946897fd2"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260404T055500Z.png",
+      "sha256": "c0498a382a5817a6066fbc4575a86a06049b25564c96b0210eed07127e44603c"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260407T231000Z.png",
+      "sha256": "937dbfc98a2d5e2dce9e72ae3f67bcfc71796bb4b239ba0bcd8dd21d9cc5c49c"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260411T162500Z.png",
+      "sha256": "19f2d21b697f4fbe08ea88d65dd84f72380fe9b5a72758729b4d0bbcd1012473"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260415T094000Z.png",
+      "sha256": "ac8516973dcf42dc76615ab6a1f4f56f11d96288ca2ab49c978577fc3682b4bd"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260419T025500Z.png",
+      "sha256": "a077c9a41a36c88600d3222be7040ea712ccef4c86c1a8f01466bee811ff7a34"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260422T201000Z.png",
+      "sha256": "9b3d78c64235a47cfc24bcb483c6865f0ad888cfd5f5b1a4245b579014f1ac73"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260426T132500Z.png",
+      "sha256": "e7c64f6cbd64975b4c2f28802c1b08466fabd560ca10f473c4fffd0c98e5cd0b"
+    },
+    {
+      "path": "images/okx_TRX_USDT_SWAP__20260430T064000Z.png",
+      "sha256": "fd13643ce02b1107f3741fee6cb2af7fd62989d0e3852a63e226479e6ec14a3d"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20251221T023500Z.png",
+      "sha256": "f24d45bd544b1dd6bfe3454555b783591715fdb4020be5b9e6aad3040936101c"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20251224T195000Z.png",
+      "sha256": "4564c75ae1a69f636098eb31d859e5dc3d22d3423d87d255f97f957b3159b043"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20251228T130500Z.png",
+      "sha256": "b366a5c77f6728ebb0a230d9529e314263ec5ef41a5b26bf7ac1d022d496f59a"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260101T062000Z.png",
+      "sha256": "e98b880f9bd66a7b110f8cd12346b3ed67e4bce9e478b9360bd265bbb3c827af"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260104T233500Z.png",
+      "sha256": "c3272e4ecc0d90716b2cf1dcb3a966e28bacf51198bbaf86dfa425b33a1bfaef"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260108T165500Z.png",
+      "sha256": "b49caa433bd4b042868d77ffa7d04ed1b625fc9cde3aa3f8fcbabcaac088d78b"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260112T101000Z.png",
+      "sha256": "a62534b66aba12ea3a567eb9cd4b8cefb732eac86f3323e95ae7adf6e4f8cd64"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260116T032500Z.png",
+      "sha256": "f573c03a713a2933cb5abe90d79bf956a9fafc7b9e5a93579e66c28e24cd511b"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260119T204000Z.png",
+      "sha256": "fed30b7886892f392df7733f4911180ca03e465236eb3f460baacf577f4d3c15"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260123T135500Z.png",
+      "sha256": "4345cde4ee2f7393dfe072f995ab1c13ebf7b915c3933db383447ba28dada838"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260127T071000Z.png",
+      "sha256": "0f74a5cb248cc45268722475ecd0fadad63cfa22ab60a52106a2dc2a39378484"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260131T002500Z.png",
+      "sha256": "5b3a39842604dccc00109feb1d7d3aa85f9d728a22051f067f69df68f934a94a"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260203T174000Z.png",
+      "sha256": "31c69cca50a2e5fd4d3d0791fdbfa0357d8e08ebf7acc582a19297fd709e8a69"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260207T105500Z.png",
+      "sha256": "41d5903e1d99804b9c2eba3ce2118aa1ae01fd84749d6c3b224d15a75e6faef5"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260211T041500Z.png",
+      "sha256": "d8795b410051be0a8220d6bb813b9dbdfe322d8ecc616e40c83fa0240c176b6b"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260214T213000Z.png",
+      "sha256": "bdbb19ce97d995a2aa5bc08b4e7be5a4782072dc6d2e80b646b09dc43a0c683b"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260218T144500Z.png",
+      "sha256": "db6773e020b70dc4970b5fb134c3621569722ee4e97a2b67c7be24cfc49034a8"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260222T080000Z.png",
+      "sha256": "a12c1aecaba5e34d7fff07c336d5917e4e0a2f38190108cf5be438b66c1fc1cd"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260226T011500Z.png",
+      "sha256": "c707636c12364d01b861bf67b84ed448cc7326df292dd8f8008e3c726b51b341"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260301T183000Z.png",
+      "sha256": "2586010be9fe39e13e411868215ea29d24610403f788193afaa5a5029453ddaf"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260305T114500Z.png",
+      "sha256": "7a34531383fb1a3d67ef701faedb67c3dbd548b50b26701ea4a101dc14b18704"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260309T050000Z.png",
+      "sha256": "82009bd9ab27aea9633307c8a8e8712f449e7d24be767441fcbd45e7306141f2"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260312T221500Z.png",
+      "sha256": "1a48d866f1e1eee8a27d643a95b904c9898bc1e292a0a2bc0cc8b3ef4b4b42a8"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260316T153500Z.png",
+      "sha256": "33ef39d77622a94a77f5c0cdf40328e18a9faee223dfc72a0f225950da5692ae"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260320T085000Z.png",
+      "sha256": "346472179e87fe43e57c287d1b938e941114bec44b61c8f871f9d970b32d09b8"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260324T020500Z.png",
+      "sha256": "7fbb275a0b98521cbd4d4d873f4beed561893dbbbf5b961d8c7bd2d3456a6e48"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260327T192000Z.png",
+      "sha256": "6a9a87ba2f63685e458c00831513cad1fa5c6a46f3632558dc30298ab91b4d4f"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260331T123500Z.png",
+      "sha256": "8f1695995352b8b3239b25d07b00d9871e225bc82247a7dede4abc8749cc3c22"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260404T055000Z.png",
+      "sha256": "7af50c9a945a2757961652b7f29ab811cd054c2ddd06ddf948476d3d7e75a69d"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260407T230500Z.png",
+      "sha256": "c2b46a418d248f2cc049a8254faafa2c43944293ef3990d43c5d5454b8e1c3a8"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260411T162000Z.png",
+      "sha256": "4b5dde824f3e433fbb3f58332f92831aa8ad9037c7acc48bbfb58996560056dd"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260415T093500Z.png",
+      "sha256": "ea50a8302adfc4893b9ee152f3d02c0c42fda256c3a32d6aef94d5359e4fd503"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260419T025500Z.png",
+      "sha256": "84c208277e336f94ecaaf8e5f31f772d3a43bd9b67892280e65d1cde7ebf6aa7"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260422T201000Z.png",
+      "sha256": "3e62e3f73aac6548e105ae717263d3c06cf9585a7bdc7099d85f02cc60c757e7"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260426T132500Z.png",
+      "sha256": "5c17a288a1681e120cfc97db3315fc294d4a8363b95e4a30a29b5e86a36f79d5"
+    },
+    {
+      "path": "images/okx_XRP_USDT_SWAP__20260430T064000Z.png",
+      "sha256": "1fa2ec33d6d81cbfbbd353e788c4f19cac909aee91fd21dd690044dac002442e"
+    }
+  ],
+  "full_source_audit_valid": true,
+  "holdout_read": false,
+  "manifest_type": "yolo_xx_portable_scan_receipt",
+  "sample_count": 512,
+  "scan_manifest": {
+    "path": "scan_manifest.json",
+    "sha256": "c9d4b2fcf4bde0e6ae39a9870f92e5b3771a2ea39f5cebe8953d6abcaf66ade7"
+  },
+  "schema_version": 1,
+  "source_snapshot_sha256": "639bddb86b85b1e0b0025f359552b1dd4d7d39d67b09a479933ccdd3094cd4cd",
+  "timeframe": "5m",
+  "window_bars": 200
+}

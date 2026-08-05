@@ -1,0 +1,33 @@
+{
+  "annotation_sha256": "23fd378ab384b9d2f73dc67aa409943373c347fbfe1f0f7647d8de54cdd5b705",
+  "background_images": 0,
+  "box_right_fraction": {
+    "at_or_above_0_95": 23,
+    "max": 0.987535,
+    "median": 0.515857,
+    "min": 0.029352,
+    "p25": 0.294725,
+    "p75": 0.710408
+  },
+  "dataset": "/Users/zhangzc/yolo-xx/datasets/owner_short_original_w200",
+  "dataset_audit_valid": true,
+  "dataset_manifest_sha256": "6bc7d2442e101d6085e285d332bdd485195ab00666cd665aac0eb6e5b1b2c96a",
+  "dropped_cross_split": 5,
+  "gallery": "/Users/zhangzc/yolo-xx/datasets/owner_short_original_w200/preview/index.html",
+  "input_annotation_boxes": 1361,
+  "layout": "original",
+  "physical_window_minutes": 3000,
+  "pixels_per_bar": 6.311558,
+  "right_context_counts": {},
+  "schema_version": 2,
+  "source_snapshot_sha256": "9b186abc2905f97237b07a065c8fa377516c9af5488d8cf3294194834c80e32c",
+  "split_at": "2026-02-15T00:00:00Z",
+  "symbols": 215,
+  "train_boxes": 1076,
+  "train_images": 1035,
+  "training_readiness_warning": "Positive-only recovery artifact; add an audited position-matched negative pool before claiming detector precision.",
+  "val_boxes": 280,
+  "val_images": 277,
+  "window_bars": 200,
+  "y_price_fallbacks": 0
+}

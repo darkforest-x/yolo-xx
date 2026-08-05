@@ -1,0 +1,5 @@
+path: /Users/zhangzc/yolo-xx/datasets/owner_short_original_w200
+train: images/train
+val: images/val
+names:
+  0: dense_cluster

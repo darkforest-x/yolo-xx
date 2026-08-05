@@ -1,0 +1,7 @@
+# ETH 3m short detector pilot: owner yes/no, causal tip anchors.
+path: /Users/zhangzc/yolo-xx/datasets/eth_3m_short_pilot_v1
+train: images/train
+val: images/val
+names:
+  0: short_start
+nc: 1

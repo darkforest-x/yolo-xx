@@ -1,0 +1,35 @@
+{
+  "generated_at": "2026-07-26T17:33:51.804162+00:00",
+  "git": "5e1a9c3",
+  "script": "scripts/build_owner_side_short_yolo_tip_v3.py",
+  "why": "v1/v2 had 0 negatives -> detector learned 'always box the right edge'",
+  "positives": {
+    "train": 571,
+    "val": 194
+  },
+  "negatives": {
+    "train": 749,
+    "val": 398
+  },
+  "n_pos": 765,
+  "n_neg": 1147,
+  "n_total": 1912,
+  "neg_share": 0.6,
+  "hard_negatives_owner_drop": 319,
+  "easy_negatives_random": 828,
+  "skips": {
+    "no_series": 0,
+    "oob": 0,
+    "holdout": 0,
+    "not_dense": 544,
+    "window": 0,
+    "box": 0,
+    "error": 0,
+    "dup": 52
+  },
+  "seed": 20260727,
+  "thresholds": {
+    "FAST_MAX": 0.0045,
+    "FULL_MAX": 0.0088
+  }
+}

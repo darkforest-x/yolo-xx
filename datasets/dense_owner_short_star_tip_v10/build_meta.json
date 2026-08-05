@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-07-28T16:31:10.282684+00:00",
+  "git": "be7adef",
+  "script": "scripts/build_star_tip_dataset_v4.py",
+  "owner_pattern": "v9: 框宽=owner 原框宽度(v8 定死 10 根毁了召回); 其余同 v8",
+  "positives": {
+    "train": 1006,
+    "val": 316
+  },
+  "by_source": {
+    "star": 243,
+    "side": 1104
+  },
+  "negatives": {
+    "train": 1201,
+    "val": 782
+  },
+  "n_pos": 1322,
+  "n_neg": 1983,
+  "n_total": 3305,
+  "neg_share": 0.6,
+  "hard_negatives": 319,
+  "easy_negatives": 1052,
+  "skips": {
+    "no_symbol": 22,
+    "no_series": 0,
+    "no_window": 1,
+    "oob": 0,
+    "holdout": 17,
+    "not_pattern": 0,
+    "box": 0,
+    "error": 0,
+    "dup": 473,
+    "star_long": 290,
+    "mad": 116
+  },
+  "seed": 20260727,
+  "thresholds": {
+    "FAST_MAX": 0.0045,
+    "FULL_MAX": 0.0088,
+    "RET_BARS": 8,
+    "PRIOR_LOOKBACK": 48,
+    "DROP_ATR_MIN": 1.0
+  }
+}

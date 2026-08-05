@@ -1,0 +1,11 @@
+{
+  "audit_valid": true,
+  "holdout_read": true,
+  "sample_count_per_arm": 300,
+  "scan_contract_sha256": "4dfacd60007cf4c68abc7fc2f2d41b50a223ecb28dc1cd5e7d7f236d239c47af",
+  "scan_pair": "/Users/zhangzc/yolo-xx/datasets/review_1m",
+  "schema_version": 1,
+  "source_snapshot_sha256": "ec431f1a9a1ac784dbe1034f1e3fa6092044ae22ea4a09627e9c55908922ba37",
+  "symbols": 12,
+  "timeframe": "1m"
+}

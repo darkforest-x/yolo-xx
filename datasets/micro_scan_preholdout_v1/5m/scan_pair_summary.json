@@ -1,0 +1,11 @@
+{
+  "audit_valid": true,
+  "holdout_read": false,
+  "sample_count_per_arm": 512,
+  "scan_contract_sha256": "5c86a732ea7d22bd08b0a5fe118caef192a702329ddb845629bd54fadaad2084",
+  "scan_pair": "/Users/zhangzc/yolo-xx/datasets/micro_scan_preholdout_v1/5m",
+  "schema_version": 1,
+  "source_snapshot_sha256": "639bddb86b85b1e0b0025f359552b1dd4d7d39d67b09a479933ccdd3094cd4cd",
+  "symbols": 14,
+  "timeframe": "5m"
+}

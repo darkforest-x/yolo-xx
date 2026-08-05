@@ -1,0 +1,2066 @@
+{
+  "arm_root_name": "w200",
+  "end_before": "2026-05-04T00:00:00Z",
+  "files": [
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260417T181500Z.png",
+      "sha256": "e4193fb0dd9e3867ed4c0927de898fcb64e3d91f1f356c707542e6914e5b76ae"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260417T190100Z.png",
+      "sha256": "a6cb7043816437f528dc23f12e467f0a371ff331644c742f88e2b33d3e9765bc"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260417T194700Z.png",
+      "sha256": "b881c54d9c7a68ee95f881ba60267b8a559a5a804e335abebce370c616521f48"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260417T203200Z.png",
+      "sha256": "7831873534d99b7686db0fd22bb7db8cb7dd853acc89e61de3fb6b1963124864"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260417T211800Z.png",
+      "sha256": "9d211e16ef40c11718dfc95d44a498369cdf9275cf2b79fa05773edeef1b3992"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260417T220400Z.png",
+      "sha256": "799fdade766d668800ee1603dcca1b25b2218cb76fd69a6104ecc5d389f3288b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260417T225000Z.png",
+      "sha256": "9de293776cef09be93cb89b562ee980fcc082e2a70bfb9937ac2537ee443e5f8"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260417T233500Z.png",
+      "sha256": "4ea3566502de27ee6f55f56291cea9bec3fb50cb7088dbe667a8029f7e9914e8"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T002100Z.png",
+      "sha256": "e9b272cb4fe4d90b07788764d4eb35037e3f6e6a0cf6d55478e6e58eaeb9dfae"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T010700Z.png",
+      "sha256": "1183a6001aa11cd3c1fa0f5152de9cf7354f3c503cdc79e6d6d814c8f48e9387"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T015300Z.png",
+      "sha256": "560c930e888f13f4a2ef22c9b5133ea693ab557cafe8bafc286ea90ffcf95e0a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T023800Z.png",
+      "sha256": "9c914fd63496308ac50e37c2cc28d5375e690b550044205a4435d6798e3c95ac"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T032400Z.png",
+      "sha256": "08984fc9a366d8504b1645f66ce600a7fb1ab7e4fe93c24b15dc9d8767c2752c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T041000Z.png",
+      "sha256": "95a64e1a77dcc62e0b827cde83c636baf82e4e24a9fd2c4607118b0809f78ef8"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T045600Z.png",
+      "sha256": "8721a791735fa15882e4cb255fdf3abadb5a559ab326cceb29d9efcf44be327b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T054100Z.png",
+      "sha256": "577bc04ceb1db80c8b264654765d8411d44645ea728e86be9c8f5132948f33aa"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T062700Z.png",
+      "sha256": "d4727f38c82748eaa5719473c40ec2170c291e8e5928a3a8160f7c1d1e6e281a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T071300Z.png",
+      "sha256": "779d1911ac27288b228f86ce7ef91a34693fecadb9c1be6521c25d95787d8e57"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T075900Z.png",
+      "sha256": "be8020ef1d158f4f0798d70273135f4d16dc6f77b2a6faa80ab25e71e350fc8b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T084400Z.png",
+      "sha256": "3adf1c4cc0c4f0a1b14bb5d9508a4abb72fe848a0d0126713693b8ed9dc7182a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T093000Z.png",
+      "sha256": "0a39019689f499577430b7cf566b530fd5d469554c218fc66f0cfb8a32669442"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T101600Z.png",
+      "sha256": "8200d1732bb023df5bcc75ad4729aee8dca13880b883ade6c17202adb1f4c876"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T110200Z.png",
+      "sha256": "157102bc0c2b6b0445b8ecef03e3a8e56938c490476eb30351eddbc80ddb2757"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T114800Z.png",
+      "sha256": "f58aecb3d6728f87da768bfc0d6563f2a9f1bae4b2ce395c79e8b38a3f94480f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T123300Z.png",
+      "sha256": "0d897e1f4136de8979b8e03c7493c045edd8048d2cd2eeba5b81e326bb5814b1"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T131900Z.png",
+      "sha256": "522c436cb600b7aeead2be382e8c88d883f3a497c2202d28ec7b07bfcf80792b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T140500Z.png",
+      "sha256": "9c06d82b8452efb0c0e11b22234bd1d22a410b653ae310938816cec2ecdf40de"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T145100Z.png",
+      "sha256": "aaac1a35bee2512ee394598287de9e25e0ff190d91e16e60c5489ba200a78705"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T153600Z.png",
+      "sha256": "7fda00d3d1e81b40ab5f7dbddca32e78ce2a7fd36395a2432ae8b51afdb14234"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T162200Z.png",
+      "sha256": "fb4e77fd79ea81411652f7826a314482d862d953ec2f7c9b0b44129e000eefc6"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T170800Z.png",
+      "sha256": "7b952d68d266eb5b853f50ca72d0e308c2d11e91568a3d5734c8d84014464062"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T175400Z.png",
+      "sha256": "181aac4adc8c1fbc8b2f1b3b3749fd52be0aaa572e5beca595df4f9a23fd9b6b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T183900Z.png",
+      "sha256": "d42a75226fa386fa2f54c3522bd633066567f214c2af877d9a0410cc434b28c8"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T192500Z.png",
+      "sha256": "badc2937ad9de029b7494bc3060f4df50ca3b450cb557d98d6ce4a003de81534"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T201100Z.png",
+      "sha256": "7eeea1424e39de9fdfbc7670ba6c5b5eebd452938bc91c52f4bbbe0b3fbc0afd"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T205700Z.png",
+      "sha256": "6044fe72172339af07b52bb52220ebea6bbec25a54962bf02f5dc71c84681f2e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T214200Z.png",
+      "sha256": "e9e0057c238e7f525dbd1cc014d9b2eac2691e0876d72651143adb56d67cb6c8"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T222800Z.png",
+      "sha256": "af4d8f54c4e1235e81a2d386ff1a720406e97b8c3b80d88672c9ff1bfe1294a8"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260418T231400Z.png",
+      "sha256": "7e78a6cea81431c2f024794a53c6d047c2c5d825af8afc593e459e04a14f9495"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T000000Z.png",
+      "sha256": "875e2a7945f15f6fcebd584873d643f771f215ff0ecbad8eb7ac1e48ce3e6041"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T004500Z.png",
+      "sha256": "ce9d87025f4b26f04be505761eaa28d599bbc399952a81495717ec17d97fd59d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T013100Z.png",
+      "sha256": "739954c85256b60a375e7e390c056ed089880c605b06ee1d164931aae1a53d94"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T021700Z.png",
+      "sha256": "c1137cbf96a2334150fc7ebca9037f9c033856d335c5b0f39336541c2a3f88aa"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T030300Z.png",
+      "sha256": "d1de9d938c9f6a562c534a24424998bbefefb7cad2fcffab5fdf9affdd3ddfca"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T034800Z.png",
+      "sha256": "54afe7d4af93ae977e02320a060a2a4c5efd824b15357efec912eefc1a13b469"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T043400Z.png",
+      "sha256": "fd3cf00ae3d1979490dff2454c78cc2d5662d8b11903f2563e98cf33d9661adb"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T052000Z.png",
+      "sha256": "0fbdd7729a2b50672281988028fdb86dc115dc2aef6a2967e4b37d8a513045af"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T060600Z.png",
+      "sha256": "1a3f874baa8f0bd7e97b665cd4c4b5b1bca4d3bf9b6c48a2afa422b3dd00a6e5"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T065200Z.png",
+      "sha256": "ce90ac81dd9809bb0f8f450f14c20cdb039324aa3b51f69fd35008f9a8fc6745"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T073700Z.png",
+      "sha256": "378d9649fb1c8a7b7ab136af7bedfd3c68b3e07724e0d1ee73697a382cd8a623"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T082300Z.png",
+      "sha256": "756e80dbe27437d8303b93e5e8f23d8460a618080ac433a2ff6837e3e3815804"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T090900Z.png",
+      "sha256": "ed80cb9f1e065d004a1676963a7b5bc6128bd63a4b1ab134c747c91a83603057"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T095500Z.png",
+      "sha256": "41ffdfd038a6bbbef9bc7c732767a1a5639e8f12eb30c6cd18331bd5adc5354f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T104000Z.png",
+      "sha256": "ad35ad4b46d194148b00b6688fb5d34565bc434de97b7da3d08df2e7951635e2"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T112600Z.png",
+      "sha256": "71673d499d495c4551a5b2226b65342eca242940910a1d0918f2c228da2f6a20"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T121200Z.png",
+      "sha256": "b4c0c36c4445c3eaabb51501b8242d9d8c5c6d319e985f270ed5b3b769a16a5f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T125800Z.png",
+      "sha256": "c2a917c590abaa8f72e2552cea9582b2def1df9ffcfb5880558c9ad40269f5c1"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T134300Z.png",
+      "sha256": "b6b33c5b42cffc6c3f544e3b5464b76d90373be5f0b59312eb15e7f058e2005a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T142900Z.png",
+      "sha256": "1e89b7673ef1d46858c388232a67c6e9238dab01f9247318fdb969cc609c023b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T151500Z.png",
+      "sha256": "624f6f5ab1024a5d0f084d093e663acead05968fb3f7038e5be571d10a82bca6"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T160100Z.png",
+      "sha256": "ee59ae8b46c1fdf0f7dca0028dba13068bae67047a77c1814b212569dc57c1af"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T164600Z.png",
+      "sha256": "5a527fb2af9785726e11408282068da888f0e2c3cde4a68fa1cbb966ae335789"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T173200Z.png",
+      "sha256": "f2f302a8406dd83b27456d86336442af8a49f0a4cfb45beda1ef547b136163a5"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T181800Z.png",
+      "sha256": "331377a1ab06682ca81cc90c3ea689f88c4ef70ebc4a7cd8f8a3f37446868fef"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T190400Z.png",
+      "sha256": "3f0f531ffd910475c7ccf3c845d5ad081380216f47e63611464ae0cf1273ba51"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T194900Z.png",
+      "sha256": "ff742a660d29bd200808c2393af16bc2b6bc001c5cebd0e88c2f5f7272cb8253"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T203500Z.png",
+      "sha256": "239f021873934ddf08d94e2d4a6114dae3db9f2012f51ed64182e1df5a6689ea"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T212100Z.png",
+      "sha256": "02893525f96e1b7b3b014b133c1735b906c9d944d8072a9d2cfb075ced6107ec"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T220700Z.png",
+      "sha256": "6926a7f17a3c998a9718862fed467fab758e9a400573ae3fcdca87c6ffd46722"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T225300Z.png",
+      "sha256": "0c4c52f548814f9067b466982a6275437fbb34b07ec70ff063ee729521657f12"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260419T233800Z.png",
+      "sha256": "aa1b74c0e8078474aa1510744d89f81ae40fc5e3bec5ec9d45cfa5f69debe55b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T002400Z.png",
+      "sha256": "d7a266cebe11cd04cb381084dc88709e36e9f627862323c94f7aa6c3f3273f57"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T011000Z.png",
+      "sha256": "acc0bd2129a45f56b9fccb8ee9bf632a2b5529c98b1e4f238b18d9e581d13551"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T015600Z.png",
+      "sha256": "304e007e8c38222e9546db75daf4afc76260805dcf1bb7b227cb7e94b1132ef2"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T024100Z.png",
+      "sha256": "b4bd5bbebf27c536eff7e753611cd685ad864c3defa20e0163efb7c0f153c4fa"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T032700Z.png",
+      "sha256": "2f170704209c6801038b47a08e27ef3e119bec85451e16812564e056fa772d3f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T041300Z.png",
+      "sha256": "c6b66f10789990f4f6925efb34accecc15a95c739ddfd76406e1af9c3a9622b6"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T045900Z.png",
+      "sha256": "a6697454234c05d372b510494ffe69259fb82d51a998f71703dbf8e2ee8a7562"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T054400Z.png",
+      "sha256": "0212646257c3cdde559b0fac56b1e8e0e43b030a990045e201e626a62762892b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T063000Z.png",
+      "sha256": "b41150ea98f1610264e57dc5f86e9ee2480d7df34bc7e1c55c5168f4a16f19bd"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T071600Z.png",
+      "sha256": "5b0f7bb3dc5b374112710c302482276aa10c3b4f3400598d63c087cfbb014e20"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T080200Z.png",
+      "sha256": "8c09cfab842996fc0d67cd4738cab9cd4133a1b0c035bc01e1a340ae83e859e8"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T084700Z.png",
+      "sha256": "6706c54244918cec245465c5b2cf3d8a759f2e57843f2da1c45d505617feb038"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T093300Z.png",
+      "sha256": "5da7ca96e4e2446edfaf80c40ec08b19c30549afcdf373aa7758e1e2e889ef64"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T101900Z.png",
+      "sha256": "853b17ba2daab7f3e0d69f5197410b7151aacbf9ae7a2a92896abf59dfa0a68b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T110500Z.png",
+      "sha256": "4a761e939c55d5a6d23db0ae738a74221df91f400b47d132bf7acd6cd5d24d89"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T115000Z.png",
+      "sha256": "551451b0965df0f6974a6f89e6236d1eff6ee52445f7462d1928188511ff5de7"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T123600Z.png",
+      "sha256": "878cdc51a307629947f53012d2a4dd109a8f194d8dacebd60440f1ef1ba5856e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T132200Z.png",
+      "sha256": "7602f4cdfa611ce20c964978738e9210d344de30d16a2200c2baebd6fc22a0d9"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T140800Z.png",
+      "sha256": "2eb0c00474546120772a3b2b0b222eea949af39fba1fc00d03e3afef2eaa48e4"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T145400Z.png",
+      "sha256": "bb42d401236ac30fb610dea0f5738aaa56e3bac19b97fe803c2992f5cfbb4fff"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T153900Z.png",
+      "sha256": "27ac02df81ce9af1fce659375565bbd61ffcb4645d8028f6b846998d46278552"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T162500Z.png",
+      "sha256": "ad068520d78c0b95dde4e07c4f93c0ac3589ff3cdf1d049593238dded19f95ce"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T171100Z.png",
+      "sha256": "763769e5576d46e9de4faeb9d1298c3e7c27407ff8e674cc44071c8baabbe371"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T175700Z.png",
+      "sha256": "c1a7b6af6cf86fe3aed4ebe66333f68d8087d0fc8f6905623e47d720b0c15213"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T184200Z.png",
+      "sha256": "1a22f47390bf3843f1499cf68296f055051e562294ed943428325579ad90f52d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T192800Z.png",
+      "sha256": "20fe36e7a2206c50e361310da9fc875d2886924a4cb2c114f29e22f5d389cd5f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T201400Z.png",
+      "sha256": "b20f946f79af0ed8b6b464a9559ceb51afa83ba30416c875ad3672b038172a6c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T210000Z.png",
+      "sha256": "061860a2692c3f99ae3220fdb19eb005ec00be2aeeb7b82b14731e749572cb83"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T214500Z.png",
+      "sha256": "cd11e33b7b9db6babd5f816dd852486cf7ee43bfd08a56db3968030ee1ce98ce"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T223100Z.png",
+      "sha256": "3b54981666ffd2f3e11ef72935b7b1e95bff1e855f0ad138ad2367f0bcd006ac"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260420T231700Z.png",
+      "sha256": "be62667481f74164713b89c7b640a61f37d8561cc5f3b1c017906fedb7e8241b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T000300Z.png",
+      "sha256": "e2cf85811645dfbf98a1734e68571c48d7c96959bf431cb6bcb9205c6922ac02"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T004800Z.png",
+      "sha256": "57399a5a520eb90f8d29e21ec994cce9c4a202788150a85726a20341d650b2c5"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T013400Z.png",
+      "sha256": "d9508cb2977890a221d1211c5a5b7f18b704dcce83f8c796717224f2b9d2b87a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T022000Z.png",
+      "sha256": "87f2719f3c038b266e84d2e6fcdd55ce8fa1a328b7dc32cadaa07d7a5e984f09"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T030600Z.png",
+      "sha256": "e0beb3cc4fd9df0aac5d5e984e19b0a51aefcb3401a130ad25a7cd0f5aeb93e4"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T035100Z.png",
+      "sha256": "d64a820368ee12c7dbe9db20ff70567c2f3f68c70d0f9a1788e6327d82fdf87b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T043700Z.png",
+      "sha256": "bc0b2ee8c88ef1a9fa068b3c82a4e58f80931ab1081d54b51f20218956c5b50f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T052300Z.png",
+      "sha256": "4bb43c16d2a11ec316376fec5fa3b15a38c34a3bbe0b40430152ad15d32f570a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T060900Z.png",
+      "sha256": "8157d53f3eedac3953e75cceba12be675e3f8cdc3720c91eaaf28312067331cd"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T065400Z.png",
+      "sha256": "d3c1527387872c3bdd6e3639602f31978d74f85ecca5ec5baeab1b5781cbbe3e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T074000Z.png",
+      "sha256": "b938687053d109d83c1a9b357deeb72e19e6c9d5a1b40b844a18285283200a83"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T082600Z.png",
+      "sha256": "e584e2ee3ebb95ac5db2149c715940cf9f41e1166bf0561ef267558263c04c75"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T091200Z.png",
+      "sha256": "f5635165759c9dc0c01fe051198969b48df5d5b4292f6ed9ec6a88f7187ccc83"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T095800Z.png",
+      "sha256": "3b43e75ae4c77646fb990d4a6bd95b2691714782837122c3c020386f2eee6415"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T104300Z.png",
+      "sha256": "280f492f169a6c3bf7a88ac65dcdea1317ea703bcc5974522f0138669bfa4908"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T112900Z.png",
+      "sha256": "62dd53894a7b6a62cb5fef5bae9dd479f75e71b834773e81c270b1019eb1c63f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T121500Z.png",
+      "sha256": "31a1e49652a816100beb37558d4200df2c6b592da507bdef8cbc939afffe8e42"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T130100Z.png",
+      "sha256": "8656f3e6b8601304b5d677386e53da9bd1fdc5e8919798030b560dba9f3297c4"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T134600Z.png",
+      "sha256": "d78b6ae97f69544b51ce11d6b0e243b730556daa7c442f1ec359671901d2341b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T143200Z.png",
+      "sha256": "54198e9346fee180942b2b8d83a29f8a6dd45a663a6a12428a3858ea978f25d0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T151800Z.png",
+      "sha256": "19e727352d80046844d2d07d821dd245bf11d4bf4ec21f4ba8105da6870084de"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T160400Z.png",
+      "sha256": "c9f07b1525f69ad87f6cf99c17bb41fab044f9cb64254323e9a0f22d2e23630b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T164900Z.png",
+      "sha256": "24e1723c5967615370db39e4a372898ce889134f84505e30ba76649f9bc5edcc"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T173500Z.png",
+      "sha256": "6e5e7bf10171d7bef5dab6431e4048244fb3016785c316a7deae9baf85bf78af"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T182100Z.png",
+      "sha256": "fac78e3364ebf9759b9c057e4aeb2460ef9c01cc6704238084affd1fa08eff7b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T190700Z.png",
+      "sha256": "fbd550be002402c0ca991f620ea359fe7093e45494c5b49a48f57e3a3b48bfb0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T195200Z.png",
+      "sha256": "5d34d526160599c11f6aa327b4af48528435935b22691b613d1b4289357a9b24"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T203800Z.png",
+      "sha256": "e86bfb9d4e2609ad2eef5f8f99f827e4a0e509467fef9c45f540baed77b2f01b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T212400Z.png",
+      "sha256": "9cf9bd4d8e3a3e018a6e186ad109e1b97498f0436b2ef29475c96c57310f0ff6"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T221000Z.png",
+      "sha256": "68b25f6f5da9b33b503f56905d7795c0154b0993afff6c3de018c2e0f63843f0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T225500Z.png",
+      "sha256": "e97a790e4db698f124f8afff0e436f254b66153f50adddb9d92178ec712a58c5"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260421T234100Z.png",
+      "sha256": "29616c5e2128ddc922e89af9a36257764ab0b9371ca35b197df4e1852a096bc9"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T002700Z.png",
+      "sha256": "07195962addf45b638d23084c177b726c7e767a8e021b1c2fc9925cbf23537f4"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T011300Z.png",
+      "sha256": "47962821a5d470b8698a927ed353c364712c9562114b69f14eeb61f7beb3fbfa"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T015900Z.png",
+      "sha256": "f4957e6c49c3e931257bb13d62ba96ce02dc86399440e2d3dad8c833f71dd8a4"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T024400Z.png",
+      "sha256": "1498dc38d410a14287dce2f65001aa7db2a905371696da40574ac637a42f316f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T033000Z.png",
+      "sha256": "8434f3c9d9e42c3e126cffd4db6721e3bc76ef0fe24c1e6ac5b45ba84dcdd639"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T041600Z.png",
+      "sha256": "b6b4778e0750ea2a04bbf869e69a2dd5777d008f059efb692ee82bb592d5ba8c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T050200Z.png",
+      "sha256": "8bde5b5884d8f3a45bb4e4773883456ac0049bcdecf7ee3d3142aa58895c194d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T054700Z.png",
+      "sha256": "1031f000a9066ec9005428158450c7116c25a5a23608058acd279648276e618a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T063300Z.png",
+      "sha256": "11498480c7655c8b6f4ae76c9955de482327cc321578885b6f6958def3cf085c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T071900Z.png",
+      "sha256": "b5421dfb1e04269a9c97a38c49b894885a765d8dd19dc69db42bd4e5264a96df"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T080500Z.png",
+      "sha256": "29815df8261ab86929a029b755f32026bcfa018bd61f96f00e6735231f3e03bf"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T085000Z.png",
+      "sha256": "ca7e95718aa904ea65e30b1da8c03673081fdcf56200f39a6d6763c9384a6b70"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T093600Z.png",
+      "sha256": "12919526023888943151ad4ca524b39b228867a35a7a103437eab9a9b42cb4b6"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T102200Z.png",
+      "sha256": "70c9dc79a827c7d4e068b1195be4eb90459fe509303321a926dacefbd89ce49a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T110800Z.png",
+      "sha256": "ff9cb7f3fce59f6312be21912a2bad7ebad45ff3b24855a36cf96d4b5b733ebe"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T115300Z.png",
+      "sha256": "1f0d9235a349251053d43f4cfc13ce02218fc8f8d51d46eef7ab1052726c4ad7"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T123900Z.png",
+      "sha256": "9920040e971075294d5ee55972d1c8cd646f513c2c3b10554576969bfbcd0116"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T132500Z.png",
+      "sha256": "4059a91bb7ba7f35ab275e01b62f4465a4b16e4e60ae4e5929fe8df01bc8f002"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T141100Z.png",
+      "sha256": "cfdf4199f64b8b4ddb03cc465b318b8ab6445944a2719e1ad6a9d6f6bb77753c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T145600Z.png",
+      "sha256": "58c1d0df7709f9203badf79f7c01583c0171d5e70bf67b64f04a6d38307b7c8e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T154200Z.png",
+      "sha256": "afdafc9104295838abd421a2b8d2e8a858879b8e4c92eef75ca3e8b15e7cb269"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T162800Z.png",
+      "sha256": "1a52f10e7721e004f261f5d24242b924a1587bc14fe5bcb593e170bd6adf1536"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T171400Z.png",
+      "sha256": "8fcd83f931cf257191fa555ddf9b0916883d17a6d1be0605e4419ec2f1f0c604"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T180000Z.png",
+      "sha256": "963e142c1944edc2cc2690c12181dbb0d9ea6facead042c45b2dedb246f6630c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T184500Z.png",
+      "sha256": "766f79e79f1bdbcac272bda6a06d5634800946d412f5087792143f273cacc162"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T193100Z.png",
+      "sha256": "8887f0a6a7290abf3163b675122a89af9ddce372e90358c5dff348d766b7efc9"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T201700Z.png",
+      "sha256": "4b522c62d45aa931bec1b0c9cbd5bf41ae17e8c0963341ff2f5495d1688c9a1f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T210300Z.png",
+      "sha256": "8dfff7283b70304a851c59300fd646704db646a81356b8eccde50e304098526a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T214800Z.png",
+      "sha256": "742d69494605c119e784dabe89d3a2d593b0cf8a3026b3c1ca46f53252880a1f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T223400Z.png",
+      "sha256": "ad9a228f85d72425ecac9170347bbfd46f299fcb3238dfe4fe2d5ecf21e8c8e8"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260422T232000Z.png",
+      "sha256": "f933644b7a84e3c85e94953da6a8e3dc3e477a7c9b63a91773121b25bb8fac8d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T000600Z.png",
+      "sha256": "eef5ac385fef75dc3c3fc4fe6449f23075faba034d8f53222d71f8dbd8b8ce87"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T005100Z.png",
+      "sha256": "0706302ffbc457d289342d0fbc9427fcbc372409c915791114203700aa28a79f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T013700Z.png",
+      "sha256": "8e34ff0e9c34d3a8a577a21947c3111f5239a50f3ab1417fd73bb18d1bdecfb0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T022300Z.png",
+      "sha256": "54c4f9903adfea5568f395610654864603257fa1be103bb827ff6290c437f43b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T030900Z.png",
+      "sha256": "d5d844e70ce4c098f88c0103f94aecbac2c6736664ebeb74969132cd2d07b620"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T035400Z.png",
+      "sha256": "40ff6962e5cb222808d93ad4722d64dee276009a492ec01be68311da7c96064a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T044000Z.png",
+      "sha256": "305ccba8fac90f8c786c27b562a79c0eda22158ed1f08ce516deae7e5b801a54"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T052600Z.png",
+      "sha256": "03fafd671f284dd2ed5dc0d49edcb671fe881519119fad203da57cfafd276f77"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T061200Z.png",
+      "sha256": "fd808594e843e2a32452c0b5e4167ab0e9f1f1f6b309ae007dd73aa4b949fced"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T065700Z.png",
+      "sha256": "e47115a5d06a0e6e29388376086dfd4a5e2ccf0f0bc5b0203d78c0d39f441861"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T074300Z.png",
+      "sha256": "35e83eae491f80db5439bd8e2f34c6f220e62a79329e7d252228c25f31a1fa54"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T082900Z.png",
+      "sha256": "b51b08a9e85d71c8688c369af4e00a8c59e3edec2f7633f08bbe31588e60a418"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T091500Z.png",
+      "sha256": "81a54723e4f0651ae302bd3e07e4e2ed3abaa9c2ed295ae6eb1b645568fc1167"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T100100Z.png",
+      "sha256": "58701be0bf8b3dd7f909e488f39de083a5190ad9d932b7e7c0d780d86041da30"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T104600Z.png",
+      "sha256": "509c173ff517f8c3c1e93f26c26b1efd79b3ca6b318c010df42cb933fb349704"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T113200Z.png",
+      "sha256": "dd82ffc419997681218c20d912064b0df0906d2586f58754cc24b3ba0a9308f6"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T121800Z.png",
+      "sha256": "52f979763750deb2915baf26fc3688d432e0de7921e866fa4f10006fcca1e3a2"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T130400Z.png",
+      "sha256": "7216c398cab27f23d8ec9a0797d7e61ce5401afac2699eb6cdbd47dd372d5de4"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T134900Z.png",
+      "sha256": "a4af234a4c65bac17e3c5842ee0301a0bdd1ed9c413965d7d878db22cdfac1c5"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T143500Z.png",
+      "sha256": "8042660ea58fe189368a7b279f3aa73827790b5a8a02730b6090a54c96e5dae7"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T152100Z.png",
+      "sha256": "cdca874aa5f38a04d9fdc1bc99eb25fa63816adf76a840446f9d08ff99b505d5"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T160700Z.png",
+      "sha256": "b9d1dc84fbc7fdf2031d38b595984f80df0ae71b8742bfae515f04e63c672b5a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T165200Z.png",
+      "sha256": "27aa319647d43ec9dd8eb95243545cff0e36919ac34f0c2707cd50462698c666"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T173800Z.png",
+      "sha256": "418939d33e89678b9bf0b7e6646178a9c89644bd36224132124b5a4c467b9855"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T182400Z.png",
+      "sha256": "c22068310dbeb7e86b20b55002b0213163833d887e2b9384641fff695172c00d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T191000Z.png",
+      "sha256": "07bd4eb1d0f844dc46ca11867391e1949cc274b8023b60eefdf089446554c452"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T195500Z.png",
+      "sha256": "a76dd9462c81ab6b2998afa02c21096a9e4d56169f8bbb68e7a18adaa4275663"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T204100Z.png",
+      "sha256": "018cdd27e12a73e79076cc16564a08b433f162b916460765233a334779967244"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T212700Z.png",
+      "sha256": "8a1ccb554562ba2e26231c5b95cc2c43e2220b62369a7ff2058a2db31ef1aa2d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T221300Z.png",
+      "sha256": "1a1333e19ceec960e929cb1c8dd5ae2a1f18a76549fbb190c892b125aebcc61f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T225800Z.png",
+      "sha256": "1164a3d234f59ef8f20794ee6cefa7f260aac7d5fd1b5664b7faa6e4754c3d0b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260423T234400Z.png",
+      "sha256": "0d9b9c3d5d565242b427762d3d1f4ae3e4729b31935403cb509daf79c1d3ac0f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T003000Z.png",
+      "sha256": "e3710c61e753b9a608f1d2f383bfafd4376d1134b839c1ae6c715ef0de6c5403"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T011600Z.png",
+      "sha256": "e2f37f41589ea8314da9752c1b294dd4e2fcbcf70f720a19a4d14577f9d8846b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T020100Z.png",
+      "sha256": "dfd75e74c23fba2c183f2e1f9fe740383675e7f7e19d331636a59275c69ea8db"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T024700Z.png",
+      "sha256": "82c05f2460474a39747e79d7213de40a10df9096a08197e5f06ea89dbd7e014c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T033300Z.png",
+      "sha256": "ca5f86628bd14b5cdb7118b23060148518919e7feeae4524e8843072bca233bd"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T041900Z.png",
+      "sha256": "e3ae5525f50b1e9948afd9a4a5cbc62ab08066fc389e01d9cba886e4e4123229"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T050500Z.png",
+      "sha256": "a50671a767140b09f7ccf61faa41c2cf107d8317982e244a7509126d25603d94"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T055000Z.png",
+      "sha256": "6d4d372c0003fa839f9f63154415680cc8fd718d824b85a56dd4d7ffe09c8860"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T063600Z.png",
+      "sha256": "f29078f0da747f91369bab4b0b0402b06c6f47688daddfe7be6a5e6fd0acb65b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T072200Z.png",
+      "sha256": "3c36d358f32684620fc71cf919abeae6d3bd96cde84de4434060b86c2b918e8d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T080800Z.png",
+      "sha256": "37c0fdc216c04f5dfebe0737a960ea927510f41130765bb46231674c9b951b32"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T085300Z.png",
+      "sha256": "f614da3fadc4eeb095c9e0b2ff04c763933de7571699d4f55def983d81159209"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T093900Z.png",
+      "sha256": "fc8a9877fb5524001aa251e11d9afd35e245b5714379838b0f5453f447dcd518"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T102500Z.png",
+      "sha256": "a56980f8d0f8f1ac1e06fe98e22edb464c4be3c07317ad93eee1896a9e59c1a0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T111100Z.png",
+      "sha256": "104f71ea25dff1993e6fec62db75d2cbae3ec0cb18cb3c58263a4d1e91009782"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T115600Z.png",
+      "sha256": "2bd2f41c2ee4b9aaa95598637cac7f2758978ea102acbc8ab085e3e38a077736"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T124200Z.png",
+      "sha256": "2bd297cf3608963d4b2f1e2b895ac64ea6ea8e938f223f54fe7311c258ab83b7"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T132800Z.png",
+      "sha256": "0950e4f5427d90886627d34ca7050357f7d127beed2e2533beca8f3a443dd97b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T141400Z.png",
+      "sha256": "ce1b17fe30f259fb406441e1a3028be8c2733249f3cc4827b91359b1bb976081"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T145900Z.png",
+      "sha256": "f50fc2f3b464f3561ae4992e7101bfd745f89c2714d1544ebd8c4b812170db3d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T154500Z.png",
+      "sha256": "da58d5a4f8c4cf2238e400b9814ca17c435ccd1a8efd493bcc736a3503d28ebd"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T163100Z.png",
+      "sha256": "f59d571b443fa5f578f9b8e3e8792f3277ed0b44088e9621b423a6f64e00323c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T171700Z.png",
+      "sha256": "b940e5683b9b75a9ce83e413accebe5d3b261f10b32d6fb4f1c29683a0092b3b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T180200Z.png",
+      "sha256": "adb29c08cb2a5059da7c19eb2bb3a1d8819f928d6715488c23e07db6ffc22571"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T184800Z.png",
+      "sha256": "d6b8b521572bb47b25cd2d70cee374b67ab434703d14efc36f6e2a583280f468"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T193400Z.png",
+      "sha256": "6e31b0e934fd4117a8f3afb5b47527f0dd8f5a3419198864d2881a7eece06ae7"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T202000Z.png",
+      "sha256": "af8d9e692c70a7ab98eb5ad8ec0f6c2c7fac20183f4f67c56c4fd03c228ffca5"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T210600Z.png",
+      "sha256": "53fad984d511d268caf3c168a52f910a881b0897c84e48a3f0166489c0518ed4"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T215100Z.png",
+      "sha256": "6f815a711e159167114934b6d7c41def14c51f7f11c1cf1685b241d355a686aa"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T223700Z.png",
+      "sha256": "5b35186bd0dcaae87f2a3de0a4cd7f78af5ee7fa8e8126e1cbd3741a75035943"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260424T232300Z.png",
+      "sha256": "5d7523e7c3387e7bd24e24b68ed308b82405a6ad6b88ee0398b4adaab2a492f5"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T000900Z.png",
+      "sha256": "485c56772cede7b715e872cb8f2440590eb05323148f0519110a8a14c6a6ff27"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T005400Z.png",
+      "sha256": "7b3e3843396aebfd90694d9264053b19e9cd09011efb5bb95b51dda5f6825338"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T014000Z.png",
+      "sha256": "ed0f47d0078a3b44358173782947992e7ccd0d9363c08241b2f0b88a82afd07d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T022600Z.png",
+      "sha256": "f4d874af85d90c4bf06dcb9fc86f83b7129ff88840f4ab7c1beedf7a4d8619ce"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T031200Z.png",
+      "sha256": "6b7674ccf7ff14296a17887a676294bddd3aa6f556cd3636330e183c0ad05289"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T035700Z.png",
+      "sha256": "afabd9b8b629310ec0da40c98b05d76c0bb84403db985fa4b0541372913a4963"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T044300Z.png",
+      "sha256": "e0c8a1fc746519ca567e0f4a9f382a01db3496a16d5ab6b09df12f7933a9bb6e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T052900Z.png",
+      "sha256": "58dc45df9528dea8669c5635e04fe98af2cb2884a2965dddc5eebca180cfe1dd"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T061500Z.png",
+      "sha256": "6cd7935871344a973e34240567fc78408e771f0294e061dd1b1cbbb248e7c5fd"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T070000Z.png",
+      "sha256": "bfadf96beeecf15594e4a5bea7f923ef5426c8eb8d52774117aafe5550c10a40"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T074600Z.png",
+      "sha256": "e12f4d28270f4935a9be3852c93c396b5e0fe3dc25b2190f8f9a954df7e2ffa4"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T083200Z.png",
+      "sha256": "8eebd508a945a90c09af8f162f141c8760c6a51a8bb9879eec270b1529891afa"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T091800Z.png",
+      "sha256": "cac79f6c6db4ce87e203b94df8b87cda76f26a65e686e0aa396bbdb82a1afa00"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T100300Z.png",
+      "sha256": "2fb3d9286a70d5e6b8413aa65f5fa6535cacfec975cb8b910d81b63694180ce7"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T104900Z.png",
+      "sha256": "2511b81853e890f7ef8f8a9a359e30461ffd2891cd9cbf16bd8ca9ebd3dde146"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T113500Z.png",
+      "sha256": "a6c5a5b7ce38b167141e4e87ddbfb52c497ec8311a2285f36ab0cffaf81cd7f1"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T122100Z.png",
+      "sha256": "89793f1dcb65daf10355792bc90e3b8a45cd8fbeeca96c3f571d3e2b34ffb65e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T130700Z.png",
+      "sha256": "f0d40cf4bc6d42e690b00ca304149fd10dad1326206d644d28d57b285eb4a8e1"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T135200Z.png",
+      "sha256": "1f24b0fcdf909d7c7fb536e7ee5fddc6f6cb4572ad08596913552b7e4448300d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T143800Z.png",
+      "sha256": "76b07fe7ae39c268b6b70642e3f4a9d598d6bf610c99f8abf0c716a5a375619e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T152400Z.png",
+      "sha256": "dfb468e87028d49693e613785db00ffb0a4e00ddfeb1f5de27856df0f0770dfb"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T161000Z.png",
+      "sha256": "e8df0ac20b543a8e8164986455c89927a471dd2ad4fc54f20d092337b68c0fa9"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T165500Z.png",
+      "sha256": "be02945dbd1b0074af82394c5ba2af951269176fa6b7095241cc5f0e16781ce2"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T174100Z.png",
+      "sha256": "5b2dd0acefccdf4a9b813fc4959abac5490ec0868a76235d72865351654f6518"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T182700Z.png",
+      "sha256": "d47ee4e14029988f51ff9d563d57eccbd2e483f8d58fd7def274f4a45d43fc7c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T191300Z.png",
+      "sha256": "524049304b268440d29b22ac21f053c78721c7be7aca2e8481ee11fc19534959"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T195800Z.png",
+      "sha256": "db7c155f8236d1eaa897646211d2645f58e9879013eb2fba291e2185c64854df"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T204400Z.png",
+      "sha256": "e7cdf718da228e11b0719d75f60236c6de9d82fe1991f0d31da49016ac517a3e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T213000Z.png",
+      "sha256": "354ad434a8e8bdd0497b47ebfe2062dea4a5e7888e966f4816642b5ae2d31fa5"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T221600Z.png",
+      "sha256": "21de8e3bfbda995647fe7208444b58df4bad7408299d7fe6827aa7f28f4033e0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T230100Z.png",
+      "sha256": "b92d885009073a8d124518f22744331e37d3df3a614716924a98df77303188f7"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260425T234700Z.png",
+      "sha256": "127b618b5914e78acac3bdf39d6b6aff05ab14c5df23aca188686955bfa41506"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T003300Z.png",
+      "sha256": "97e5acedbe0c0caecb9d93681b4a748163ef4f3c809ea17193c37fb0c8c44034"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T011900Z.png",
+      "sha256": "3cfecb010780ea709705f771fcf861ecd49b1944ee187006156bf6b2b1b83ed0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T020400Z.png",
+      "sha256": "2365922dda69d2ecfa613119766931d728cd6a16f5be5a0fb686932ca81c31a4"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T025000Z.png",
+      "sha256": "2500ac10a0fff1b7822b62f8175795e50d1b7a1831ae27fcd5c14f096bbd1e8f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T033600Z.png",
+      "sha256": "1a1684de1b667d1b5ba4753ef0edba9992633e68d2eead89feb7543f6a7d3eda"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T042200Z.png",
+      "sha256": "7e60e61767dadd8b105b02966fbef8154a01ce71672708fd9bbebd44fd6d1355"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T050700Z.png",
+      "sha256": "db94037d745bac82e6a31c5f876e1a309a782501696049a65ac15948a2c056a0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T055300Z.png",
+      "sha256": "acea4cab12734c9d74b3bb00ac59318ef509460b8dc365564d683f0c11f16905"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T063900Z.png",
+      "sha256": "d663311867458f57cc8dbab095d9992f043f4933d67c3696fee58cac32f73748"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T072500Z.png",
+      "sha256": "e0774452a02858bc07de09cb1c40d170be06c982a89c108d820de9edc3593392"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T081100Z.png",
+      "sha256": "32ddb94870b50acb2dd67723208198e2a67ff9a2ea303616c23aef50e57baa51"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T085600Z.png",
+      "sha256": "2b82993b161e582a53f38231a1f4cb63682ed3b5fac80cc65f5d80967ace517f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T094200Z.png",
+      "sha256": "c52d8da0cb543f97efb656f7ae53783c3780b7e0ff26bcfa1cc32b59c48dee5f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T102800Z.png",
+      "sha256": "f0bae90583f2a6fd7743fc83526e6a121cd4daefc2859b1b692d20455b2c1dca"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T111400Z.png",
+      "sha256": "2cc749e0643afd087b8dfabb0fc2e6f7fe5722fa33f085ea8c14c4e6f3cc63a1"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T115900Z.png",
+      "sha256": "ade398f4e070374fa3575281ce6c8ea38ee41e84254d02a6e2e27a85ff54b77c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T124500Z.png",
+      "sha256": "16742cc3ecd073a002253e1ad27b6301e7bcd7220861dd78e0f5bfe950e0acb4"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T133100Z.png",
+      "sha256": "8a1080dfca9ff27a0c9bce01154fc875c097136c4c6445a52075ae18e13785b2"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T141700Z.png",
+      "sha256": "6e561d5469a60a500a8e3975ef47d5d0567325d6c4324642a2737de2519b49c4"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T150200Z.png",
+      "sha256": "ea5478080a461a9ed4ba6a2c240bac97c84fcc8d79c96737aa7bf8f284b15a41"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T154800Z.png",
+      "sha256": "404b0303735f428504ee7eea03514f2704186db4a9478ccfc6ca752d0ee0a8a5"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T163400Z.png",
+      "sha256": "ed237a7545105be2a114a2c91edb0097418703b17c7f3491e2db31a9111fa4b7"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T172000Z.png",
+      "sha256": "2dd3c6a350aa4c35425754a4ff86afdbb4a1ed400c58376fa5f6ac5f614f2cfe"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T180500Z.png",
+      "sha256": "ad1b4743f88ee329de09606a0fde34dced3b238c530bfdab9a72c4ede4dceb53"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T185100Z.png",
+      "sha256": "cf514b2be479b26f16e0b77734bf5515768f266111975e62f9e87e8e8f41a0b8"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T193700Z.png",
+      "sha256": "03ec1f01cd8c4dc3642e4b1cad42c9adf4bce904c7f142d973b194722faf4083"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T202300Z.png",
+      "sha256": "b274bb7b1b12cb5a7f5b088fcb8d9bc266931d36323d6a532e64048e75807716"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T210800Z.png",
+      "sha256": "ece36006bce6e2e9d839e7275a378f04ef1e0673b2fc6e2465506831fdb25500"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T215400Z.png",
+      "sha256": "7a9a3dcfdf213c667bb4bfd5b23e3700d9a3c1d7247030fca1a49560261ed58f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T224000Z.png",
+      "sha256": "16ab9fd1a35d558a43fb0a5f86b4aa17266c653d8ea105cf198f1aa726cbd83d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260426T232600Z.png",
+      "sha256": "8e07d417040babb0780e2b1efb32c7b250107cd5adbfc7ba8e0233f33a9882b3"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T001200Z.png",
+      "sha256": "dd3601bd329faa18b7e5e75910a35a60c424acc215ca709edbeec6ade0d2e24f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T005700Z.png",
+      "sha256": "2e3cecbd3c42351d3ca3157e46397856ea84c9139d565e3e8f4f40488917737a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T014300Z.png",
+      "sha256": "7594c5a929b908e03a8c6b01795257d599fab8b7e5f95240ba1506ec1b012b12"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T022900Z.png",
+      "sha256": "7b06992c21c2d3e72656cbbfb5789407a24edbecbe3512780b30f96e43d2ff50"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T031500Z.png",
+      "sha256": "8ee5affd5a1ec9d9965d0ed5ea61779b215ab21b4e6312a3fcdac0630a9090ed"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T040000Z.png",
+      "sha256": "a69c0e4020667ba060281e64a31a36972638a4a152e75f2486b27a683a7ef2ef"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T044600Z.png",
+      "sha256": "aa2c046455675cf401f8c4c8afa56630fa85f6cc00d7d3682d7a8daa24ca4727"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T053200Z.png",
+      "sha256": "0517f587aae453401151cbdfd6e73cb062d5db04930aee65737739d1ba9c156e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T061800Z.png",
+      "sha256": "e198050fa93470740d7bbc66b59ba9e420e052ffe58408eafe004438232c304e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T070300Z.png",
+      "sha256": "e776ea713199c4707e97dd3ca28e8951bf5ab06a7b7d389f2925d6892bd0ecf5"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T074900Z.png",
+      "sha256": "9908e0c12f356151806be3d2c97159ed19a73eccf27d963187e450d6492b9ccc"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T083500Z.png",
+      "sha256": "fb7bbd7dab2850caaa1a1913ec6aa2fe25e13139e69354bfad160d73faf03524"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T092100Z.png",
+      "sha256": "6cf6103197912df3f3fd1d1c20bfe0a7dc5d534a8b75a5b2bae371e39506880f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T100600Z.png",
+      "sha256": "e34c0bcb41bd27ea009b5337b4d7f1ee9cbfeab6574c14a9436586747aaebf6f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T105200Z.png",
+      "sha256": "652e6f1fd8085b6b13110da5716f8a42ab3e528664b8decb160bec6e8ac98eba"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T113800Z.png",
+      "sha256": "3c0db405a4e1f12c87a4ff57d6707a1bf50f66e405ef00db08b839f29ec3d572"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T122400Z.png",
+      "sha256": "0ec288ed416aeab723ae310df98563a66e71bef6536a769121e00a33156b3f27"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T130900Z.png",
+      "sha256": "238f61239c886e60fae8dd626db980de035c003916fc8195749570c1b08e67c7"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T135500Z.png",
+      "sha256": "ce816a5011b388af49164b054cc07069b576be74fb2e5fc7721d1d511074cd75"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T144100Z.png",
+      "sha256": "39d3768cb1c768e4084839819e3838b0041cdd53e64196b0cf831f0b2d0738b0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T152700Z.png",
+      "sha256": "3dc042bc784f0d987614f547cfefdd5be7604974ab5cc15e8c3f294a84e2e7d3"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T161300Z.png",
+      "sha256": "4fb29404adf7ab5faf76d5dbf37767c37c798967bdc61087edcb938a5621448c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T165800Z.png",
+      "sha256": "2a84140cd043aa294f9a3f03941c8a6ab4b299519322badca11867abd84052f6"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T174400Z.png",
+      "sha256": "1b42098b099bc3c5fd466d9f18dceb8d5880cfdb29f217a3dea196566d081265"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T183000Z.png",
+      "sha256": "00d5d42c3f3f9b805312c6d2ae533971ccb1753b16c39207707d5da87a528bf1"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T191600Z.png",
+      "sha256": "299f2646b1807cb2df0a983050ecd6085b552d9cb502f186cb4c76f8d783fa4d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T200100Z.png",
+      "sha256": "7ced2f85c902d7423ef6ed9633e181fcca1f67ecc9d7bf3855b9111c2f60299f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T204700Z.png",
+      "sha256": "e2413ca09bab8dd003d5452725fbfd89dc62c8921e1a3aad1266d88b8e55596d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T213300Z.png",
+      "sha256": "0906d613b622295de0296f228f8ae5ef06c9b3f8f1e89de1a28b62f349149f60"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T221900Z.png",
+      "sha256": "05c1dd52a512f59e5f274755c85f2c6c839be506db1fb41ac5c35583edc4c0ab"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T230400Z.png",
+      "sha256": "257d0b191f4fd5d907957be6cb2cf4d6c9f32d3a7a8a62183725a2968fdc0c46"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260427T235000Z.png",
+      "sha256": "cce37d88b7702721b88555e73eda59c2cc97cd1c0e79716ff3a6f2e0c8a0582b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T003600Z.png",
+      "sha256": "8d3ba2be958b9bd2b0f0da1c15984a0401a4ea3f85c78de86e682234f6daa1f2"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T012200Z.png",
+      "sha256": "cd5ef1dbdfc90a8a4ead86524912aa0528e22943628b81e2bfce3de84414c43e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T020700Z.png",
+      "sha256": "95f16f29c5ae979f8c378e2800647e84488b91f53ff4d02cbdeba13b0ac5b90a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T025300Z.png",
+      "sha256": "28f3ed489c31efe74ec652d20c7f37f18aa50e3d84375b4b569d2e29f56749f4"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T033900Z.png",
+      "sha256": "728c4d278ca2b7741f32b2fa38fde2c1536791e0f3b06325f6c9a53dfe5a0305"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T042500Z.png",
+      "sha256": "9648632a3cd13677c16de6454b0e8e942079b9b592cb8057fa43ac6b7aa2a6b8"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T051000Z.png",
+      "sha256": "83257695443fb2daec591906c64c000a71058bfb8f02541aff666625b7ce7a95"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T055600Z.png",
+      "sha256": "1dcf7f1a7f0c0a8208e191b950477da6d32a799a4f85461561e23bb028425e6d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T064200Z.png",
+      "sha256": "d5b75ceb1416bd32c9ba7ee6f0d2c98445c2e49dc99c44b10d229baf224dcb2e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T072800Z.png",
+      "sha256": "fe94ee05cea42305bea290240ad089ae786585d7a669b54ed381d604e9286f06"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T081300Z.png",
+      "sha256": "47d49c4170cb79e1d2286f4019b3442c8b7c64f1fdd6440d2ad8caeacfd6d371"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T085900Z.png",
+      "sha256": "d313d44058cdf4cedba6b1d0e3725417e255f7f1bbf6d2e649a9225d98e35c09"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T094500Z.png",
+      "sha256": "39db09f0ce3cde9b196dbeab502c0ad5ef62655b9111100995440b5d2a5dcdd4"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T103100Z.png",
+      "sha256": "543ff3e89d4464c39b183b8d4450b17d305b029bf0c0611ab1437a8a55feef41"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T111700Z.png",
+      "sha256": "8b4ed02284abd6518beffb2536fd3f4015bd4772f2d65bf3169f9f6dd4757805"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T120200Z.png",
+      "sha256": "fde976793baeaea626413fe205843223603e8e0522c0777ce90eccfdfe7e913b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T124800Z.png",
+      "sha256": "90581f8085894fc0173319e8b56bd7f06b7eff4cc5e58f53746d0906708a4d32"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T133400Z.png",
+      "sha256": "c1457f30d8eb53002fb41f5564d7262fa3b00718a1bb149a837b7a17b413aa88"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T142000Z.png",
+      "sha256": "03a43f23922ea370f61fb15a1516201d970d094bb95a998bf5ed83d5ade00ee9"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T150500Z.png",
+      "sha256": "3143d9b78d57248f1d0e2a0308333d3734df690233ad1e98a562e80652b23bf9"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T155100Z.png",
+      "sha256": "44890f22ea504ec9abc92ac3e8f2b9ce71013c563a1325f58de1f4d892f1e447"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T163700Z.png",
+      "sha256": "0bf8da9f93a67eeb8f74b6e5c744a74e749d091137f7ff590e94abb8443418c9"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T172300Z.png",
+      "sha256": "917c074da202a4ddf96b31c3e7f938fe19f14630a4b740339d173330573cac03"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T180800Z.png",
+      "sha256": "3e1cddeb44e4ef47b7b24aac3763aea01dfdb74f4fc308e5826064cf180dd9ff"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T185400Z.png",
+      "sha256": "d9ff0dd70239cccffbed60af178be20406c4a79c5bdfac7fcffd04c0e8ea949e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T194000Z.png",
+      "sha256": "b62e2c9e592bd67379ce5782f63d9378effba62527eceffef4a858be4f677d81"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T202600Z.png",
+      "sha256": "998cf01c4c3f68cfd9f3ef068b7f3d2d063ce732ff4c79aa53259b6f5e3b06fa"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T211100Z.png",
+      "sha256": "186db8e304ef8025c5685c9c35e392d22a33526c13ea349ad6cd9a97ced3ec55"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T215700Z.png",
+      "sha256": "1c1d75742ad95f9c2d2af9aa85c3cc36838a6fa80cba8b6d03e8ed117c2f45de"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T224300Z.png",
+      "sha256": "de903d5acbb3dcc7cd8b18f72f5b1cb91d66ff561c7a1616bd85f9ca1cc43aa6"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260428T232900Z.png",
+      "sha256": "19ad9f5fcebab5d0b530511db41caf216d0f6557f92373e86a9dadd4623a05d5"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T001400Z.png",
+      "sha256": "ee324409e05a4cd9a39de87bcf979e88b7db43a1c5272c72767883144d4a1fdd"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T010000Z.png",
+      "sha256": "3059142adc2ba17132788393a0a943a7845eaf74fd903bc62f254771235b87b1"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T014600Z.png",
+      "sha256": "3792c48608490fdd77f205d04d4a071dc3a55636b63a2bd06b84d720163e7ec2"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T023200Z.png",
+      "sha256": "fb241809e49ac46077763ac5796a58d016484b8c39487ad6a71de156c210a4eb"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T031800Z.png",
+      "sha256": "276faa8c7693bdac9bf6806aeb6eb673831713cee50d434ab888f4fc90916955"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T040300Z.png",
+      "sha256": "b592aa011a20c18c739e96b3f61c12cd905778bd43448de0afed96236ff67326"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T044900Z.png",
+      "sha256": "33875bcf8b2d1a99d94dea6bda10bb32fac87c9b69b7b264e74c5debc6676a3f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T053500Z.png",
+      "sha256": "76f48eee11701526b3ac9604b51a3862962a6c5a499fbca375c0599bbd408e2c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T062100Z.png",
+      "sha256": "e99775b2fae84f1969c7dff5b83ce0a226c8be7877f560b84c39c19d92589bd7"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T070600Z.png",
+      "sha256": "aca185e8331466f175bf46bdb0dbb07dc1947fc24519997cd0bf95311430b97a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T075200Z.png",
+      "sha256": "659caf0d3a72fd7e37fa0e440264a9002542c2c1cf0847f6b2bb726e1bafb2e2"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T083800Z.png",
+      "sha256": "6077f3b2713e6f0c6f91043289f68789270af47c9317694d41f15414941d5ee3"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T092400Z.png",
+      "sha256": "ea1fcc1a3b968958b428a494dc74d186287d69dbc55eedd71ef8f1ad494a9f49"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T100900Z.png",
+      "sha256": "d1cf631202aba7daa35809d45dd19d41aa08998a829e16b7599aadf6493b1dcc"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T105500Z.png",
+      "sha256": "5bc9b40c2a97a76c8ebfb9852d88da68d1e13739e8829c4648983c6f208de686"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T114100Z.png",
+      "sha256": "a61e4c1980ab876373c431d8ddb95c7d36023f5ef083df6273d44345521971b0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T122700Z.png",
+      "sha256": "b42f32ff117a2344f550e1ab90d94130f33bd9f6d03b876b7612ff3685b81e86"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T131200Z.png",
+      "sha256": "704169341b1f9becd3923a4d2057ec335faba4e01d3cd3479f47235f92c4d722"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T135800Z.png",
+      "sha256": "275a7fb96ac4ac566a9283cfc3728704b94b99da245d2115f122bf1bab5173fc"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T144400Z.png",
+      "sha256": "9c9ff1e49597bb6ba67f8ec708dd8ef739b8d71d108efd3a1f975c2b2040ae3e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T153000Z.png",
+      "sha256": "ccfacaa6ba9e5fcbcb8e9e72375f6272f5cd75fe5811bf0724672e213df2406f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T161500Z.png",
+      "sha256": "f0df59213007ec827d1c27a866ed2875c6c4a54c5f1788ba3d5114b0a900f791"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T170100Z.png",
+      "sha256": "2f0bba8ad0720f53b2b5d59e3cb14a0857f1b48c6d7e6395421356c995ea0085"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T174700Z.png",
+      "sha256": "17cd7fc4603ff089b685042c53f0a62b5192250a76e425968ada161053e7ad61"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T183300Z.png",
+      "sha256": "56344747248d4698fe6094e398240453b3d6cc2fee70142821f386952ffdf70e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T191900Z.png",
+      "sha256": "1478fc0ab889fc6460cd680e01284993095277ffedfa4a8db061ee2a80de35e0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T200400Z.png",
+      "sha256": "4d4bceffa87b213669946689e1e13946838ea2753e01545cb518259b68e2bd90"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T205000Z.png",
+      "sha256": "5d42015797337a65f85c5942287ec271d5a3b8722a3e3391e4e3eda0330fb252"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T213600Z.png",
+      "sha256": "9c3f513e80cf48f7390eb7a2bc3be26ec3a1d0ac954847b14a99e01d7a5b2503"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T222200Z.png",
+      "sha256": "39fef5d2d672e320009f02c25a9519d57ab9149884a6675e3ca0cf4177410879"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T230700Z.png",
+      "sha256": "fe62c5c7559a10be1ca0808e773a5b7965a8e4843c54693f8e1e69a1747c4b0d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260429T235300Z.png",
+      "sha256": "299747b4c9ac07dae348f43c9b3bc33845a68de94af76b65bc92701a98a75964"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T003900Z.png",
+      "sha256": "8f2e9e61a5b6fdd088cda9f0377ace65a0a66179e1903dae815c3db8e4d3a52b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T012500Z.png",
+      "sha256": "eef9633093d873ed671bf7d3f909edf8da40c4abe9e68ce313017c3e956fdbfd"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T021000Z.png",
+      "sha256": "41c3632df2f71c5ba348f1f97a30b345d4e4570d419147051e88b0a59bf24bc9"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T025600Z.png",
+      "sha256": "4965541f649c8858c89904e54996181842de4088340a33fcf36644f05bba41f4"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T034200Z.png",
+      "sha256": "8e9615e7e6fc6b501105da47eb194e004106d2741a8ff1a3ad69f9d79d92765d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T042800Z.png",
+      "sha256": "541bf903cae9fa55214873d57e211ee6034ce3ffd4c51f3de110295a9b917af9"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T051300Z.png",
+      "sha256": "c779a43f0430bfc064a0fd2c7c60f2a528e819a3c767cb79b635ca3f0a634985"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T055900Z.png",
+      "sha256": "fc238019778fbb1a8a8efc9a6147896c3250605052c656b4dc7d7677faf494e2"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T064500Z.png",
+      "sha256": "d0f34cac3b8bd2eb628dc28460d3edad9ecb16221dfa27c921d56b60ea0f72fa"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T073100Z.png",
+      "sha256": "8bbb67af4e61938f0c17747c8dcdce961a7693deb53abf5212da1969570a5698"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T081600Z.png",
+      "sha256": "8fe52e6805f7381854b5d321938bd59a660ec2776c6d219673466d8a47c822ba"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T090200Z.png",
+      "sha256": "a784cfaacee0820f592b3d4f5e8a3bdb1880a048bc660c2f6c36c9c86bf334ad"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T094800Z.png",
+      "sha256": "a3b5b4f097fe4828b6baa325c59b7b8a7bf2551992f38959d53b6a4b67ca3f8c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T103400Z.png",
+      "sha256": "c9decadca66ca79451a5f50c3d4904bd077c230a6a807cb93899faedb2c23c76"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T112000Z.png",
+      "sha256": "3c9bbc84ac9fb48356c3ee3f5e4f54133864b2cd2642da94ef8b4711d02ec2ff"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T120500Z.png",
+      "sha256": "49be0eceab638503b2481d32ebc9638b110aa6bd8afb3c32aabe7af8367cb0cb"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T125100Z.png",
+      "sha256": "3a92015f796c892f9eb6abc3530ec5db413424e2d0998f6f63c3f559bb0792df"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T133700Z.png",
+      "sha256": "9b8158033e0800b42c9385f5a53c96b611efed925462653899bb76ca4b6104bd"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T142300Z.png",
+      "sha256": "0533b6d5ac7c420bd5ab6c47d220b5afa1a7d4bc48dcaeeddb06dcc8b1710cef"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T150800Z.png",
+      "sha256": "4ccb2510df0649c6ffe6f364c662944b9b0ea2c451b4cf7947e65eb13a79618e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T155400Z.png",
+      "sha256": "f1e1dc3e909bdfb81e40504e8f23eb7893161e23a5943915a9dbf6a16bb923c4"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T164000Z.png",
+      "sha256": "8d76c5302b79c71edf8f29770eed9b4681a13beb48b2dae84fc41ac31f15572c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T172600Z.png",
+      "sha256": "cdc0b968bd5b06fbfb0ac8404edaefdfea7d4fc3d921dc3cef3ab41dde33a383"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T181100Z.png",
+      "sha256": "fb843ea7c48b80f04e7667af30e08a3d3f6709002a2b94c11e773ad7afcbab84"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T185700Z.png",
+      "sha256": "6690e1c44f7c6886ecd93d5c369e22eaf37b98b3e658549d2c3f30e0329b6316"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T194300Z.png",
+      "sha256": "b4870e8de29d23f5d493e630e08677e0e7df3f5cace366dea9df969f75c33e99"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T202900Z.png",
+      "sha256": "1e28e580472e9bc7e50f027e0e58a086c51ba803b3dc3d7c6d16693a29b45d10"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T211400Z.png",
+      "sha256": "13be30c2b8b8f70d1a9b2772fdd675f4aca92538fd4f21254602176cb46d511a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T220000Z.png",
+      "sha256": "c8fb11f9acd1596420197158ec6b029371603f0aa3bc73ef7d742bdd168ac5fe"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T224600Z.png",
+      "sha256": "1115b87799a5efdd39ed76365b29b3275825afb2a1598720fa0856b123f04599"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260430T233200Z.png",
+      "sha256": "ae0f047693d1ea85711bdc9010ea7d45436a451dbd965ae04043144e5dbfe332"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T001700Z.png",
+      "sha256": "a155bee3a915247d7502c00375fda7d6eaf8149f57179a151349076ecb201db8"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T010300Z.png",
+      "sha256": "0bac0f0739dc3082eb8447725b8323286b6e8c44e3ed93fa1902bf5541a9bf15"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T014900Z.png",
+      "sha256": "e0142a7ec31e4a120d267ea713a02b157e8aeed4d7bf748949dad49c0204a0db"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T023500Z.png",
+      "sha256": "bdaa52f62091cda023a50a5a8546bb3cea11b80b5c0731e5845cdc260ea1d4bc"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T032000Z.png",
+      "sha256": "f769ae459ae45b9d6adf3785467f931c700c6432f605ce0fa24421a86ea83fb6"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T040600Z.png",
+      "sha256": "22f8f46dd06958567ad4ae80a7a975f479070d438b0fba242acca7f46d46ed1e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T045200Z.png",
+      "sha256": "14bbef7cbc8261b78274ba728b5b8d538b02e279578700c869d14d0104184014"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T053800Z.png",
+      "sha256": "4f772454353b47eaca595300391ffa8e7fb25f6fda0fa3cebf82b71b45685156"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T062400Z.png",
+      "sha256": "d8b48e3193a9a8f4ebb4d52282180b4857defe88c15104f189a65d53ad6400d9"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T070900Z.png",
+      "sha256": "e31cbfdedeadf29a9c54f7fc1608cae5200bd46fa0b3229a1de70dba73b41480"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T075500Z.png",
+      "sha256": "586dd70dfeaddd7d850466fcec3b6d1dfe06f07c7b3d3bcca33f1c6eadd490cf"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T084100Z.png",
+      "sha256": "34a47ceb4304b3a012467584e2ef602b61912f54bc78dac55077a90841c83e8e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T092700Z.png",
+      "sha256": "ab9476491cad66bfdf42ea959595cd1d7567d64f8c2bb3529b174dd09e7429f1"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T101200Z.png",
+      "sha256": "871c070ce96bc80acc39ac424e281e8bde0b7ddc5c74d1903888c4cfcf988443"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T105800Z.png",
+      "sha256": "75f8f6335e761496574a2ff97c99d77e4babebf5ebccf2e373e0c53200643970"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T114400Z.png",
+      "sha256": "3e594276d5d2f2fd62aa850665308ade2d9ca6036e43967527b9b0e7d8c37740"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T123000Z.png",
+      "sha256": "a2f2d4604ac1554f762c43c03a40c7a335d0f5171227ad7a6d620006b2cb85f0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T131500Z.png",
+      "sha256": "7c3dcf9b463cd0552e6705253eb4337ed44a889950255a6dbfcbc845e3e997c6"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T140100Z.png",
+      "sha256": "b0ce39c2ae20c72fdf767509230991804e7cf1100a92f3d965d1ee7b61b5204d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T144700Z.png",
+      "sha256": "c2a4d5e055613e5a54a65cb3ab36f52746964a9cec1dc0b44496dfca6b0f1ab8"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T153300Z.png",
+      "sha256": "6ba6f4642facef317a125313884b666bfefff0432482a46c1c86635f4e760a61"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T161800Z.png",
+      "sha256": "5969c9c6c077b3ebeaf73117bb673d2e35a168c0968fe07c0b29ba7730655588"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T170400Z.png",
+      "sha256": "f51f73facfc318ed5e962d3311713601ad8b30d34efc57d6611d7315095985ac"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T175000Z.png",
+      "sha256": "9fbcf99ddd3a028e74a88629836cd1737985f8cc8bf26f5572a7481525c3d90c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T183600Z.png",
+      "sha256": "3d67ad3463193066c44b0a01f34636e8e76049e473b023712fdfae04506a12f7"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T192100Z.png",
+      "sha256": "b29dc6baee67e2656f0450521868ba86ee1a74262ad471216f62cf69227ae5f2"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T200700Z.png",
+      "sha256": "0acbf544db82afb0743027c25711e47098bd93884963c3b5767232b0a851d419"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T205300Z.png",
+      "sha256": "25e08ab4c53b5fe56c0bc4640f568545cad64a610267b20c9e527be1f5919a2e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T213900Z.png",
+      "sha256": "d697dc7c876fd28a7b58fec047e2229c8513e82084631b3805b3c00e7b13036f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T222500Z.png",
+      "sha256": "2b56c826f39cd314b033cc5b79aafeeb5624096c1dbf1533998d74c589ab672f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T231000Z.png",
+      "sha256": "8e29c7442612fab6d9716672a91600f42e621d84a7059c2558e1ed696eb812c5"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260501T235600Z.png",
+      "sha256": "c0ee0c64a755f395b5006edcd3103bf4352651efe4bf99c009aaf07ffdcdac52"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T004200Z.png",
+      "sha256": "664fcb84c59b651d8e8b6905325fbccbbbaebff5282104a2888be6353f0b4092"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T012800Z.png",
+      "sha256": "7542ace1b21034289bad82cb891ae477747b830004d4b5eeb06c599e1fbcd3b7"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T021300Z.png",
+      "sha256": "d4ece8a4f3cad97544a4bbad45a98037e52aead00eccfc82834457b3579de5c5"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T025900Z.png",
+      "sha256": "a992806e3f6ebea29717d43dee86f4db6a38591dee6e9e237ed2349a8a8a7069"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T034500Z.png",
+      "sha256": "ce60023b93be119cb8e1bcaec283e597944a4bf4b633fa8384777145bbd51714"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T043100Z.png",
+      "sha256": "d37ff0da5ccf60a8b98e0dd768b622b6682cc1cb0b7c0f2e77d0ba485ca4d891"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T051600Z.png",
+      "sha256": "8a74d63cf3edca16ad15b06725a06b453b45d483824c4cfd324782255d9503fd"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T060200Z.png",
+      "sha256": "69afd05640ce829167840bebf73ca5318807274132e96b1e246b3a086aacc27c"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T064800Z.png",
+      "sha256": "629595ced681253c3e3bb1526fbb3e10f326717c7ce63d8d47ff7683c3685d0f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T073400Z.png",
+      "sha256": "d10d45253b22f3827bc122c317e43c06b8b16200fb7af7b8fdc44fee947b91fd"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T081900Z.png",
+      "sha256": "22c1019cbdb3ae0d097a9e30b8d86c1fc9fe8aa8740e9ae6afefb7e91907c48d"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T090500Z.png",
+      "sha256": "f2921f789087e4e2d740aa1cd8087d2a32c135b88b7f1732b15eab74fdf5de4f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T095100Z.png",
+      "sha256": "a9dc96f76791fa610d4fec21f58d6ffe058145564141524bb81d24d2ed19d064"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T103700Z.png",
+      "sha256": "1cea8612928e60f903ed86dc164076f973a7d8abe7435a7cc14a4bbd7dec3ec5"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T112200Z.png",
+      "sha256": "f0ebc3dc5b99929db9c6c83cc027e3871dc8393b40a512a7caec8b95aedec890"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T120800Z.png",
+      "sha256": "2631a7ffa12b722342ae8e7be8d4081d61b09139029dd4bd1bda9e167ff0d069"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T125400Z.png",
+      "sha256": "a5a9e1ac3441410919cdce9ec44c204b2e47fe5a7e9fc61156b4addc99e22384"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T134000Z.png",
+      "sha256": "770272e1ae1b8fee9dc164635c3ccc89c0e4fefc222b2dfba5ebed1793aae84f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T142600Z.png",
+      "sha256": "e1b088a11a52b3ddb10a6a98427a2c2ba6686272ecc0f7119f8984e0e49ed35b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T151100Z.png",
+      "sha256": "e8c8ffbb3758f2c98b243de7c5c67d8b0c4a15c6424d7310c624be2e032609ae"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T155700Z.png",
+      "sha256": "6dfcdbc19fdb9d2d2b229584e2a53d9189aea5c5804d89c4760e35028a89a07a"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T164300Z.png",
+      "sha256": "7098c0b38178bf522677c0e0e51d6a65fef0086616a4ba49070b86bf465dcdd3"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T172900Z.png",
+      "sha256": "59ecb69da48daca9f81da21095f069ef6ffa1708a85a4d93c9df851c8b6801f5"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T181400Z.png",
+      "sha256": "7ae66f0350afa9b0df30af00be63a24b55bd3c742d34241bbff0997b40c50055"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T190000Z.png",
+      "sha256": "c391776ff40c8367d39da8c101ba8c67200c05e7efaaec730a776c678e7519cd"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T194600Z.png",
+      "sha256": "6729d954a0d014894ad2d53b5be79b9eb13ab709a9268023578481c1cebbd6e8"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T203200Z.png",
+      "sha256": "3075fe8f85a97a393e934a4558b9482beef8500b84bbd6609aa1858add3a0786"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T211700Z.png",
+      "sha256": "d34801fe3832b36fd8351603b773fb7c771792dc62572cf5ba50c04ce8efe34b"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T220300Z.png",
+      "sha256": "85e9151bec03fc5ca6eb32932c7f6b1419584b54151cc09824e4cfe157ec8b22"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T224900Z.png",
+      "sha256": "2c8827a59f8c4aa6aed40b99fab5d388a62fdcfe5a63a9944cca757688ebdc89"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260502T233500Z.png",
+      "sha256": "15e8095d4d335a5800c9297d8119863a43214005f85af46688d40d342b89ecd1"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T002000Z.png",
+      "sha256": "c6f89c6c668799de70735975441da89dfbd72d0a653811c7a137e88b505c49c8"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T010600Z.png",
+      "sha256": "9645d8ed28e61e560c466b6da40fce084a84310ad972d40f1d75cb22a3a6ba5e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T015200Z.png",
+      "sha256": "4934e4a37e9f622e718cf2d38224f9a6d97f2bc144282ef22d87e6834e70f839"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T023800Z.png",
+      "sha256": "62e80d92e7c036079bd10122b9543cdc772b51bb2eacc21bdbb0ba23f9841d04"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T032300Z.png",
+      "sha256": "4af9a0f75a46d94fb867b3f2380921d4d7ab530268a43d70a4ce40366ef80c4e"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T040900Z.png",
+      "sha256": "d87563b1499c11a073adca116bea226ca92bdbcd0cfe6c404c44f55e3d7494bb"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T045500Z.png",
+      "sha256": "1092e2a11745f4f4b3f504c4f6ec89711143ed5765f1534c4711757244833c32"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T054100Z.png",
+      "sha256": "b0b28b8e62efdfab028109c3716d4bdaeb251b2f43af3a1552ddda780e1c91f5"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T062600Z.png",
+      "sha256": "f007da78c47cc51beb8104d96862dd971210012c10fa78b9e30e8a1560ac0662"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T071200Z.png",
+      "sha256": "b4865eb96d9cee85b5923fe8c00abf3c1a5e9c618deecd96b727c8a0d12039ca"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T075800Z.png",
+      "sha256": "5b1275a3f3fc5aedaf173c879f2d2cfd1c0cd2355bc8ce5001394fad61409ab3"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T084400Z.png",
+      "sha256": "f1f353ea6980b89a8cc33d3499e96b90885aec46607e157e240eed187d8bad69"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T093000Z.png",
+      "sha256": "79c0fed61ea11ec0319cfa05c6670a53d9f3a6c3b22e81c6b1f94ef3675a89a0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T101500Z.png",
+      "sha256": "24401c8a5187f5d5e076efd4e79bad02c76f13b5cdc10b85161220e65ccdb101"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T110100Z.png",
+      "sha256": "27d46cd30ed478b98c2ceb62ce9f37b82a92754c43c17c2ec88363d1be46320f"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T114700Z.png",
+      "sha256": "e089bab369c03be9f9c7bfb606d3eeef63712ae81f11680263919de9d5343fa9"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T123300Z.png",
+      "sha256": "411e19108c4e3772d4fcff6c33b5dee7ad6175724ffb7445825650567d734720"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T131800Z.png",
+      "sha256": "9d1b94ed7fc8b4c6b873c083d01d7f204c25c8f02e474493c100aab4ecc521af"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T140400Z.png",
+      "sha256": "32ca460e895dd5656ef3010b110bfa601d90ed02e37cfc021a515f89658d17ae"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T145000Z.png",
+      "sha256": "a7d2c4aca897f12dea529cb8be7f4076949c034cb8d0bd84f288fc7a7bc984e1"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T153600Z.png",
+      "sha256": "e5fa8e30131f08e7d7c5c7d28b89f048d644a5861ba9e7af3ebe818965c59033"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T162100Z.png",
+      "sha256": "2a9454bda3b37e67a31ba218658f1807e6dc592c8c5638ba8c24e6f2a2269084"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T170700Z.png",
+      "sha256": "fb11cf044ef246a794051876480afa53c5ea81d27d992aebd880a1f302b2f7be"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T175300Z.png",
+      "sha256": "10172edc86b9458c48bb34bd386ab700572396bf6ade0d8f309ef6a5c37a2285"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T183900Z.png",
+      "sha256": "42990ef505c7f2feaf6b21637d9fd58d5c4c02775b4b44ed9ae97bbcc3883c08"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T192400Z.png",
+      "sha256": "d60f20d581668d9c1e3c4a4548032b7d82dbdd90bc09b439fc8da4b0fcbe3662"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T201000Z.png",
+      "sha256": "9c6f76ef2da3f1431aae54d7e89125763bb5a6356e6fddb192acd2d05d24a894"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T205600Z.png",
+      "sha256": "79bf448ba67e21614b78fe2988c7523696ef014ecbb37ce48179951db4aeb544"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T214200Z.png",
+      "sha256": "1ff684ac21b5999fddeb2314161792514c8f252e99896ad69d50d5992ac8eff3"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T222700Z.png",
+      "sha256": "57e30e1dc14a3e5b7d830e54ba4d75dcc2a6abda3ffd703890f7fb32ccc80171"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T231300Z.png",
+      "sha256": "72ab98909aaecac20917e8527df99be28ae1e1a4b9462b50b0f4ad63a05393f0"
+    },
+    {
+      "path": "images/okx_ETH_USDT_SWAP__20260503T235900Z.png",
+      "sha256": "9211652795ed58e878ca96cbc1ecd2ac054024ef293a37c846a4cfb0ab9c69c8"
+    }
+  ],
+  "full_source_audit_valid": true,
+  "holdout_read": false,
+  "manifest_type": "yolo_xx_portable_scan_receipt",
+  "sample_count": 512,
+  "scan_manifest": {
+    "path": "scan_manifest.json",
+    "sha256": "54c0036641aa1d851b8c783ce993b064c9ed80bd417a857f540136cd99f0166f"
+  },
+  "schema_version": 1,
+  "source_snapshot_sha256": "15f58be38568fa38624a7b5d5c7568623deb48fd43a8882fbc878789e60fa7c4",
+  "timeframe": "1m",
+  "window_bars": 200
+}

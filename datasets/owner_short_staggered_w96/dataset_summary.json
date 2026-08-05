@@ -1,0 +1,38 @@
+{
+  "annotation_sha256": "23fd378ab384b9d2f73dc67aa409943373c347fbfe1f0f7647d8de54cdd5b705",
+  "background_images": 0,
+  "box_right_fraction": {
+    "at_or_above_0_95": 324,
+    "max": 0.99375,
+    "median": 0.828126,
+    "min": 0.745312,
+    "p25": 0.745313,
+    "p75": 0.910938
+  },
+  "dataset": "/Users/zhangzc/yolo-xx/datasets/owner_short_staggered_w96",
+  "dataset_audit_valid": true,
+  "dataset_manifest_sha256": "2315450180c4a7139855e582554bbf2ed9fc3927d20b14f53a8f0eb00966bfb9",
+  "dropped_cross_split": 5,
+  "gallery": "/Users/zhangzc/yolo-xx/datasets/owner_short_staggered_w96/preview/index.html",
+  "input_annotation_boxes": 1361,
+  "layout": "staggered_causal",
+  "physical_window_minutes": 1440,
+  "pixels_per_bar": 13.221053,
+  "right_context_counts": {
+    "0": 324,
+    "16": 342,
+    "24": 343,
+    "8": 347
+  },
+  "schema_version": 2,
+  "source_snapshot_sha256": "9b186abc2905f97237b07a065c8fa377516c9af5488d8cf3294194834c80e32c",
+  "split_at": "2026-02-15T00:00:00Z",
+  "symbols": 215,
+  "train_boxes": 1076,
+  "train_images": 1076,
+  "training_readiness_warning": "Positive-only recovery artifact; add an audited position-matched negative pool before claiming detector precision.",
+  "val_boxes": 280,
+  "val_images": 280,
+  "window_bars": 96,
+  "y_price_fallbacks": 0
+}

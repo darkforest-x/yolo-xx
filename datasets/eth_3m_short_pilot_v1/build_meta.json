@@ -1,0 +1,62 @@
+{
+  "dataset": "eth_3m_short_pilot_v1",
+  "source_detail": "/Users/zhangzc/fable-trading/analysis/output/eth3m_v10_label_timing/task_timing_metrics.csv",
+  "source_ohlc": "/Users/zhangzc/fable-trading/data/kline_fetched/okx_ETH_USDT_SWAP_3m_57705.csv",
+  "holdout_start": "2026-05-04T00:00:00+00:00",
+  "holdout_consumed": false,
+  "causal_window_bars": 200,
+  "bar_minutes": 3,
+  "positive_rule": "owner yes; first completed close below all six MAs inside the original owner-confirmed v10 box; at least two bars earlier; exact anchors deduplicated",
+  "negative_rule": "owner no at original v10 candidate; empty YOLO label",
+  "box_rule": "right edge equals causal tip; preserve causal original-box prefix; clamp to 5..12 bars; MA-only vertical geometry",
+  "future_columns_used": [],
+  "unreviewed_easy_negatives_added": 0,
+  "event_gap_minutes": 60,
+  "train_event_fraction": 0.75,
+  "event_count": 103,
+  "train_event_count": 77,
+  "split_cutoff_utc": "2026-04-19T11:45:00+00:00",
+  "time_start": "2026-03-14T06:39:00+00:00",
+  "time_end": "2026-05-01T20:18:00+00:00",
+  "counts": {
+    "train": {
+      "total": 135,
+      "positive": 60,
+      "negative": 75,
+      "events": 77
+    },
+    "val": {
+      "total": 48,
+      "positive": 16,
+      "negative": 32,
+      "events": 26
+    }
+  },
+  "totals": {
+    "total": 183,
+    "positive": 76,
+    "negative": 107
+  },
+  "source_audit": {
+    "source_owner_yes": 93,
+    "source_owner_no": 107,
+    "timing_ineligible_owner_yes": 3,
+    "positive_rows_before_anchor_dedup": 90,
+    "positive_exact_anchor_duplicates_removed": 14,
+    "positive_after_dedup": 76,
+    "negative_owner_hard": 107,
+    "exact_anchor_conflicts": 0
+  },
+  "owner_timing_calibration": {
+    "reviewed_independent_events": 30,
+    "timely": 30,
+    "scope": "stratified timing-rule calibration sample, not 93-row exhaustive gold"
+  },
+  "risks": [
+    "Only 76 unique positive anchors: pilot-scale and variance is high.",
+    "All examples originate from the v10 candidate pool, so selection bias remains.",
+    "Compact box geometry is causal reconstruction; the owner approved timing on 30 events, not every final box pixel.",
+    "Development validation is not holdout and cannot authorize promotion or live use."
+  ],
+  "status": "pilot_dataset_only_not_promoted"
+}

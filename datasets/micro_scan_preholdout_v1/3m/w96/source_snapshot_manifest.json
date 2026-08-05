@@ -1,0 +1,48 @@
+{
+  "cutoff_exclusive": "2026-05-04T00:00:00Z",
+  "excluded_sources": [],
+  "files": [
+    {
+      "boundary_timestamp_checked": true,
+      "first_open_time": "2026-03-13T12:15:00Z",
+      "last_closed_at": "2026-05-04T00:00:00Z",
+      "last_open_time": "2026-05-03T23:57:00Z",
+      "mtime_ns": 1785780874416324319,
+      "origin_mtime_ns": 1783791109818497153,
+      "origin_path": "/Users/zhangzc/fable-trading/data/kline_fetched/okx_BTC_USDT_SWAP_3m_57705.csv",
+      "origin_preholdout_prefix_sha256": "d435275d61224ece058ed0967e11eacffc813447884715270f5821e137733f02",
+      "origin_size_bytes": 4598704,
+      "path": "okx_BTC_USDT_SWAP_3m_57705.csv",
+      "post_cutoff_ohlcv_rows_materialized": 0,
+      "row_count": 24715,
+      "sha256": "729d1aa1a828fce8202ee6439f6f589c06c805a5978ee24b2e2b511d7026d93d",
+      "size_bytes": 1324988
+    },
+    {
+      "boundary_timestamp_checked": true,
+      "first_open_time": "2026-03-13T12:15:00Z",
+      "last_closed_at": "2026-05-04T00:00:00Z",
+      "last_open_time": "2026-05-03T23:57:00Z",
+      "mtime_ns": 1785780874520789957,
+      "origin_mtime_ns": 1783791112211374298,
+      "origin_path": "/Users/zhangzc/fable-trading/data/kline_fetched/okx_ETH_USDT_SWAP_3m_57705.csv",
+      "origin_preholdout_prefix_sha256": "93ae3ab01daf779357c674a09fe71360aa372c5db8769db2a614cbc46f324571",
+      "origin_size_bytes": 4661455,
+      "path": "okx_ETH_USDT_SWAP_3m_57705.csv",
+      "post_cutoff_ohlcv_rows_materialized": 0,
+      "row_count": 24715,
+      "sha256": "36f3f03812bc2fde43b5082fa22beff012e3e10efd68209f77b5a1a114234b67",
+      "size_bytes": 1352333
+    }
+  ],
+  "immutable": true,
+  "manifest_type": "yolo_xx_source_snapshot",
+  "safety": {
+    "boundary_timestamp_only_checked": true,
+    "holdout_read": false,
+    "post_cutoff_ohlcv_rows_materialized": 0
+  },
+  "schema_version": 1,
+  "source_dir": "/Users/zhangzc/yolo-xx/data/micro_preholdout/3m",
+  "timeframe": "3m"
+}

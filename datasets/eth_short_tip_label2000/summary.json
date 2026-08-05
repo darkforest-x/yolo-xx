@@ -1,0 +1,102 @@
+{
+  "symbol": "ETH_USDT_SWAP",
+  "total": 2000,
+  "timeframes": {
+    "3m": 667,
+    "5m": 667,
+    "10m": 666
+  },
+  "sources": {
+    "3m": {
+      "v10": 75,
+      "random_fill": 125,
+      "downside": 133,
+      "random": 167,
+      "numeric": 167
+    },
+    "5m": {
+      "random_fill": 68,
+      "downside": 133,
+      "v10": 132,
+      "numeric": 167,
+      "random": 167
+    },
+    "10m": {
+      "downside": 133,
+      "random_fill": 81,
+      "random": 167,
+      "v10": 133,
+      "numeric": 152
+    }
+  },
+  "coverage": {
+    "3m": {
+      "bars": 24715,
+      "range": [
+        "2026-03-13 12:15:00+00:00",
+        "2026-05-03 23:57:00+00:00"
+      ],
+      "target": 667,
+      "source_quota": {
+        "v10": 200,
+        "numeric": 167,
+        "downside": 133,
+        "random": 167
+      },
+      "candidate_inventory": {
+        "v10_exact_tip": 105,
+        "numeric": 364,
+        "downside": 966,
+        "random": 24516
+      }
+    },
+    "5m": {
+      "bars": 38760,
+      "range": [
+        "2025-12-20 10:00:00+00:00",
+        "2026-05-03 23:55:00+00:00"
+      ],
+      "target": 667,
+      "source_quota": {
+        "v10": 200,
+        "numeric": 167,
+        "downside": 133,
+        "random": 167
+      },
+      "candidate_inventory": {
+        "v10_exact_tip": 169,
+        "numeric": 496,
+        "downside": 1064,
+        "random": 38561
+      }
+    },
+    "10m": {
+      "bars": 19380,
+      "range": [
+        "2025-12-20 10:00:00+00:00",
+        "2026-05-03 23:50:00+00:00"
+      ],
+      "target": 666,
+      "source_quota": {
+        "v10": 200,
+        "numeric": 166,
+        "downside": 133,
+        "random": 167
+      },
+      "candidate_inventory": {
+        "v10_exact_tip": 167,
+        "numeric": 175,
+        "downside": 1064,
+        "random": 19181
+      }
+    }
+  },
+  "v10_weights": "/Users/zhangzc/fable-trading/runs/detect/runs/detect/owner_short_star_v10/weights/best.pt",
+  "v10_conf_floor": 0.05,
+  "v10_visible_preboxes": 255,
+  "v10_hidden_preboxes": 85,
+  "holdout_start_exclusive": "2026-05-04T00:00:00+00:00",
+  "max_candidate_time": "2026-05-03T23:54:00+00:00",
+  "causal_contract": "each image has 200 bars and window_end == candidate_time",
+  "task_json": "/Users/zhangzc/fable-trading/datasets/eth_short_tip_label2000/label_studio/tasks_eth_short_tip_2000.json"
+}

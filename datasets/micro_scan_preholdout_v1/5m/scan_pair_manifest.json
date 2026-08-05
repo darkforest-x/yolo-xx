@@ -1,0 +1,30 @@
+{
+  "arms": {
+    "w200": {
+      "manifest": "w200/scan_manifest.json",
+      "manifest_sha256": "c9d4b2fcf4bde0e6ae39a9870f92e5b3771a2ea39f5cebe8953d6abcaf66ade7"
+    },
+    "w96": {
+      "manifest": "w96/scan_manifest.json",
+      "manifest_sha256": "0f25eae0812416899068dd01cc958009ab089e7b589aec0c253f03ff149e9309"
+    }
+  },
+  "holdout_read": false,
+  "ma_periods_bars": [
+    20,
+    60,
+    120
+  ],
+  "manifest_type": "yolo_xx_scan_pair",
+  "sample_count_per_arm": 512,
+  "scan_contract_sha256": "5c86a732ea7d22bd08b0a5fe118caef192a702329ddb845629bd54fadaad2084",
+  "schema_version": 1,
+  "source_snapshot_sha256": "639bddb86b85b1e0b0025f359552b1dd4d7d39d67b09a479933ccdd3094cd4cd",
+  "symbols": 14,
+  "timeframe": "5m",
+  "unlabeled": true,
+  "windows": [
+    200,
+    96
+  ]
+}

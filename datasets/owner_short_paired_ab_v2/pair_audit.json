@@ -1,0 +1,46 @@
+{
+  "audit_type": "yolo_xx_paired_ab_audit",
+  "contract_sha256": "4d6f800e47a0e87f0ad3c229e7a56ef73adef0142b278321c201b4f5b89fc158",
+  "datasets": {
+    "w200": {
+      "error_count": 0,
+      "splits": {
+        "train": {
+          "background_images": 1054,
+          "boxes": 1194,
+          "images": 2108,
+          "labels": 2108
+        },
+        "val": {
+          "background_images": 277,
+          "boxes": 307,
+          "images": 554,
+          "labels": 554
+        }
+      },
+      "valid": true
+    },
+    "w96": {
+      "error_count": 0,
+      "splits": {
+        "train": {
+          "background_images": 1054,
+          "boxes": 1172,
+          "images": 2108,
+          "labels": 2108
+        },
+        "val": {
+          "background_images": 277,
+          "boxes": 305,
+          "images": 554,
+          "labels": 554
+        }
+      },
+      "valid": true
+    }
+  },
+  "errors": [],
+  "pair_root": "/Users/zhangzc/yolo-xx/datasets/owner_short_paired_ab_v2",
+  "schema_version": 1,
+  "valid": true
+}

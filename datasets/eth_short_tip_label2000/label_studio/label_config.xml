@@ -1,0 +1,15 @@
+<View>
+  <Header value="ETH 做空 causal-tip：只按当前图判断；不要猜后续走势。"/>
+  <Image name="image" value="$image" zoom="true" zoomControl="true"/>
+  <Choices name="decision" toName="image" choice="single" required="true">
+    <Choice value="short_start" hotkey="1"/>
+    <Choice value="neutral" hotkey="2"/>
+    <Choice value="uncertain" hotkey="3"/>
+    <Choice value="bad_data" hotkey="4"/>
+  </Choices>
+  <RectangleLabels name="label" toName="image" strokeWidth="2">
+    <Label value="short_start" background="#d32f2f" hotkey="s"/>
+  </RectangleLabels>
+  <TextArea name="note" toName="image" placeholder="可选备注" rows="2"/>
+  <Header value="short_start 才保留/新增红框；框右缘必须到最后一根已收盘 K。neutral 删除预框。"/>
+</View>
