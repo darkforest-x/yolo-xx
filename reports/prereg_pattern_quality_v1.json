@@ -1,0 +1,96 @@
+{
+  "prereg_id": "phase2_pattern_quality_v1_geometry_first",
+  "created_at": "2026-08-06T01:20:00+08:00",
+  "status": "LOCKED_BEFORE_ANY_FIT",
+  "owner_decision": "几何特征优先，embedding 作为增量验证（2026-08-06）",
+
+  "why_geometry_first": {
+    "finding": "owner 分级显示 teacher 5 天扫描的 47 个检出中 42 个（89.4%）被判 not_a_pattern；其被认与被否两组的 fast_spread 中位数几乎相同（0.00276 vs 0.00244）。",
+    "implication": "V5 蓝图把 YOLO embedding 列为 Layer 2 第一输入，但该表征是否携带 owner 判别信息是一个待验证前提。故先用可解释的几何特征建立基线，再单独检验 embedding 的增量。",
+    "not_a_verdict": "这不是对 embedding 的否定，是把它从假设降级为待测项。"
+  },
+
+  "data": {
+    "source": "reports/pattern_library_candidate.json 中 human_label 非空者",
+    "n": 287,
+    "labels": {"A": 121, "B": 96, "C": 8, "not_a_pattern": 62},
+    "n_symbols": 176,
+    "label_provenance": "owner 单人评分，2026-08-05/06，reviews.jsonl",
+    "forbidden_labels": "禁止使用任何盈亏/PF/收益派生标签（V5 §9）"
+  },
+
+  "tasks": [
+    {
+      "id": "T1_is_pattern",
+      "question": "这里是不是一个形态？",
+      "positive": "A / B / C（225）",
+      "negative": "not_a_pattern（62）",
+      "note": "类别不均衡 3.6:1，主指标用 ROC AUC 而非准确率"
+    },
+    {
+      "id": "T2_is_grade_A",
+      "question": "在确属形态的样本中，是不是经典（A）级？",
+      "positive": "A（121）",
+      "negative": "B + C（104）",
+      "subset": "仅 human_label != not_a_pattern 的 225 条",
+      "note": "C 仅 8 条，三分类在本样本量下不做"
+    }
+  ],
+
+  "features_stage1_geometry_only": [
+    "fast_spread", "full_spread", "ma_spread_pct", "cluster_width_atr",
+    "atr_pct", "slow_slope_12", "order_score", "down_order_score",
+    "trend_order_score", "dense_run_bars"
+  ],
+  "features_excluded_stage1": [
+    "YOLO embedding（stage 2 才引入）",
+    "teacher confidence（仅 47 条有值，且与 source 强共线，会变成 source 指示变量）",
+    "任何收益/PF 派生量"
+  ],
+
+  "protocol": {
+    "split": "GroupKFold(n_splits=5) by symbol —— 同一币种不得同时出现在训练与验证",
+    "rationale": "V5 Phase 2 验收要求『在从未参与训练的币种上评估』；176 币种、97 个单样本币，分组切分可行",
+    "models": [
+      "LogisticRegression（标准化 + L2），作为可解释基线",
+      "LightGBM（num_leaves<=7, min_child_samples>=15, n_estimators<=200, lr 0.05），容量受限以防 287 样本过拟合"
+    ],
+    "repeats": "固定 seed=0，不做超参搜索；任何调参都会消耗本轮的独立性",
+    "no_threshold_tuning": "报 AUC 与 0.5 阈值下的 κ / 准确率，不搜阈值"
+  },
+
+  "baselines_mandatory": [
+    "多数类（majority class）",
+    "每个单特征各自的 ROC AUC（单变量基线，CLAUDE.md 质量标准要求）",
+    "标签打乱（permutation）后的 AUC 分布，200 次，给出经验 p 值"
+  ],
+
+  "metrics": [
+    "ROC AUC（主指标，分组 CV 外样本）",
+    "Cohen's kappa @0.5",
+    "准确率与混淆矩阵",
+    "特征重要度 / 系数方向"
+  ],
+
+  "stage2_embedding_increment": {
+    "when": "stage1 完成并报告后",
+    "method": "用 owner_v10_chain 对同一 287 张图提取 embedding，降维后与几何特征拼接，重跑同一协议",
+    "decision_rule": "只报增量 AUC 与其置信区间，不预设通过门；结论由 owner 下",
+    "not_run_in_this_prereg": true
+  },
+
+  "failure_exit": "若 stage1 两个任务的 CV AUC 均不显著优于置换基线，则按 V5 Phase 2 失败退出条件：『经典程度』不可从当前几何特征学习，停止并回 Phase 1 审视标注协议，不得自行加特征重试。",
+
+  "forbidden": [
+    "使用盈亏标签", "做收益回测", "调整 conf/iou", "训练或修改 YOLO 权重",
+    "消耗 holdout", "看到结果后更改任务定义、特征集或切分方式",
+    "修改 fable-trading 或 darkforest-one 的产物"
+  ],
+
+  "declared_limitations": [
+    "n=287，单人评分，无评分者间一致性",
+    "样本来自按 fast_spread 五分位的分层抽样，故类别比例不代表 Library 总体",
+    "not_a_pattern 中 42/62 来自 teacher 检出，20/62 来自 owner 旧框，两者成因不同但本轮合并为一类",
+    "owner 标注与本轮渲染均含信号右侧未来"
+  ]
+}
