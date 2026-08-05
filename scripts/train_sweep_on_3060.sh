@@ -20,6 +20,10 @@ PAIR_BASENAME="${PAIR_BASENAME:-owner_short_paired_ab_v2}"
 ARM="${ARM:-w96}"
 SPEC="${SPEC:-scripts/sweep_owner_short.txt}"
 LOG_NAME="${LOG_NAME:-owner_short_sweep}"
+# Each DataLoader worker is a separate Windows process that loads the CUDA DLLs
+# again. Four of them with yolo11s exhausted the page file and killed a run at
+# epoch 18 with WinError 1455, so this is tunable per model size.
+WORKERS="${WORKERS:-4}"
 MODE="run"
 
 SSH=(ssh -o BatchMode=yes -o ConnectTimeout=15)
@@ -48,7 +52,7 @@ Spec file (SPEC=, default scripts/sweep_owner_short.txt), one run per line:
   name|base_weights|epochs|patience|batch|extra ultralytics flags
 Blank lines and lines starting with # are ignored.
 
-Environment overrides: PAIR_BASENAME, ARM, SPEC, LOG_NAME.
+Environment overrides: PAIR_BASENAME, ARM, SPEC, LOG_NAME, WORKERS.
 EOF
 }
 
@@ -172,13 +176,30 @@ printf '  receipt %s\n' "$RECEIPT_SHA"
   echo "$SPEC_LINES" | while IFS='|' read -r name base epochs patience batch extra; do
     [ -n "$name" ] || continue
     printf '>> C:\\yolo-xx\\logs\\%s.log echo [sweep] === %s ===\r\n' "$LOG_NAME" "$name"
-    printf '%s -u -m yolo_xx.train --data %s --model %s --epochs %s --patience %s --imgsz 960 --batch %s --device 0 --workers 4 --cache false --no-finetune --seed 42 --deterministic --amp --project C:/yolo-xx/runs --name %s --portable-receipt %s --portable-receipt-sha256 %s --contract-out C:/yolo-xx/logs/%s.contract.json %s >> C:\\yolo-xx\\logs\\%s.log 2>&1\r\n' \
-      "$REMOTE_PY" "$DATA_PATH" "$base" "$epochs" "$patience" "$batch" "$name" "$RECEIPT_REMOTE" "$RECEIPT_SHA" "$name" "$extra" "$LOG_NAME"
+    printf '%s -u -m yolo_xx.train --data %s --model %s --epochs %s --patience %s --imgsz 960 --batch %s --device 0 --workers %s --cache false --no-finetune --seed 42 --deterministic --amp --project C:/yolo-xx/runs --name %s --portable-receipt %s --portable-receipt-sha256 %s --contract-out C:/yolo-xx/logs/%s.contract.json %s >> C:\\yolo-xx\\logs\\%s.log 2>&1\r\n' \
+      "$REMOTE_PY" "$DATA_PATH" "$base" "$epochs" "$patience" "$batch" "$WORKERS" "$name" "$RECEIPT_REMOTE" "$RECEIPT_SHA" "$name" "$extra" "$LOG_NAME"
     printf '>> C:\\yolo-xx\\logs\\%s.log echo [sweep] %s exit=%%ERRORLEVEL%% %%DATE%% %%TIME%%\r\n' "$LOG_NAME" "$name"
   done
   printf '>> C:\\yolo-xx\\logs\\%s.log echo [sweep] all complete %%DATE%% %%TIME%%\r\n' "$LOG_NAME"
   printf 'exit /b 0\r\n'
 } >"$TMP_CMD"
+
+say "reap orphaned workers from earlier runs"
+# A killed or crashed Ultralytics run leaves its DataLoader spawn workers behind;
+# each holds ~1GB and they accumulate across attempts. Twelve of them once left
+# 0.9GB of 16GB RAM free and the next run died with WinError 1455 (page file too
+# small), which looks nothing like an out-of-memory error at first glance.
+reap="
+\$procs = @(Get-CimInstance Win32_Process | Where-Object {
+  \$_.Name -like 'python*' -and \$_.CommandLine -and (
+    \$_.CommandLine -like '*yolo_xx.train*' -or \$_.CommandLine -like '*multiprocessing.spawn*')
+})
+foreach (\$p in \$procs) { Stop-Process -Id \$p.ProcessId -Force -ErrorAction SilentlyContinue }
+Start-Sleep -Seconds 3
+\$os = Get-CimInstance Win32_OperatingSystem
+Write-Output ('reaped ' + \$procs.Count + ' | free RAM GB ' + [math]::Round(\$os.FreePhysicalMemory/1MB,1) + ' | free virtual GB ' + [math]::Round(\$os.FreeVirtualMemory/1MB,1))
+"
+remote_ps <<<"$reap" | tr -d '\r'
 
 say "sync code and launcher"
 "${SCP[@]}" "$TMP_CODE" "$HOST:$REMOTE/yolo_xx_sweep_code.tar" || die "code upload failed"
