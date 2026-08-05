@@ -1,0 +1,35 @@
+device=mps weights=/Users/zhangzc/fable-trading/models/owner_v10_chain.pt conf=0.3 iou=0.7
+val non-empty SWAP stems: 496
+[gate 100/496] kept=98 dropped={'no_symbol': 2, 'range': 0, 'mad': 0, 'parse': 0, 'shape': 0} 21s
+[gate 200/496] kept=194 dropped={'no_symbol': 5, 'range': 1, 'mad': 0, 'parse': 0, 'shape': 0} 34s
+[gate 300/496] kept=292 dropped={'no_symbol': 7, 'range': 1, 'mad': 0, 'parse': 0, 'shape': 0} 43s
+[gate 400/496] kept=392 dropped={'no_symbol': 7, 'range': 1, 'mad': 0, 'parse': 0, 'shape': 0} 53s
+
+gate done: kept=488 dropped={'no_symbol': 7, 'range': 1, 'mad': 0, 'parse': 0, 'shape': 0}
+class balance: Counter({'B_prime': 457, 'A_prime': 31})
+[detect 50/488] 26s
+[detect 100/488] 47s
+[detect 150/488] 67s
+[detect 200/488] 88s
+[detect 250/488] 110s
+[detect 300/488] 132s
+[detect 350/488] 153s
+[detect 400/488] 174s
+[detect 450/488] 195s
+
+=== full ===
+  A_prime: 14/31 = 0.4516  95%CI[0.292,0.622]  boxes/img=0.645
+  B_prime: 283/457 = 0.6193  95%CI[0.574,0.663]  boxes/img=0.856
+  A' vs B': diff=-0.1677 ratio=0.7292 p=0.06421
+
+=== tip ===
+  A_prime: 3/31 = 0.0968  95%CI[0.034,0.249]  boxes/img=0.29
+  B_prime: 51/457 = 0.1116  95%CI[0.086,0.144]  boxes/img=0.359
+  A' vs B': diff=-0.0148 ratio=0.8674 p=0.799037
+
+=== as_labelled ===
+  A_prime: 18/31 = 0.5806  95%CI[0.408,0.736]  boxes/img=0.871
+  B_prime: 292/457 = 0.6389  95%CI[0.594,0.682]  boxes/img=0.893
+  A' vs B': diff=-0.0583 ratio=0.9087 p=0.514001
+
+DONE -> /Users/zhangzc/yolo-xx/reports/pattern_teacher_dissection_3b.json

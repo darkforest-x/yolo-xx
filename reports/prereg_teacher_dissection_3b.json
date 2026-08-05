@@ -1,0 +1,80 @@
+{
+  "prereg_id": "phase1_task3b_teacher_dissection_owner_boxes",
+  "created_at": "2026-08-06T00:15:00+08:00",
+  "status": "LOCKED_BEFORE_DATA",
+  "supersedes_nothing": "Task 3（机械规则版）已完成并独立成文，本轮不替换它，是并列的第二个样本源。",
+
+  "question": "在 owner 亲手标注的形态上，owner_v10_chain 的开火是否集中在『后续已启动』的那些？",
+
+  "why_this_sample_source": {
+    "task3_limitation": "Task 3 用机械密集规则构造样本，FULL 视角三类命中率仅 0.0% / 6.0% / 1.3%，而同一权重在自身检出样本上为 62%。teacher 与机械规则重合度低，A/B 对比虽 p=0.0023 但仅由 9 个命中支撑。",
+    "fix": "改用 owner 手标框作为『形态完整』的定义——那是人工语义，不是机械近似。",
+    "no_circularity": "样本来自 owner 标注，不是 v10 的输出。",
+    "no_leakage": "dense_owner_v9 按币种 sha1 哈希切分 train/val，val 侧币种从未进入训练梯度。"
+  },
+
+  "sample_construction": {
+    "source": "yolo-xx/datasets/dense_owner_v9/{images,labels}/val（2026-08-06 自 3060 取回）",
+    "pool": "val 侧非空 label 共 1128 个，其中 symbol 以 _USDT_SWAP 结尾的 496 个",
+    "swap_only": {
+      "rule": "只取 _USDT_SWAP 样本，排除现货",
+      "reason": "主线宇宙自 2026-07-09 起为 SWAP；且现货 stem 与当前 K 线已不对齐（见 mad_gate）"
+    },
+    "mad_gate": {
+      "rule": "对每个 stem，用其索引作为窗口结束位置（learning: stem-index-is-window-end-not-start）以 render_chart 重渲 200 bar，与数据集原图逐像素比较，仅保留 MAD < 1.0 的样本",
+      "threshold_rationale": "实测 MAD 分布呈两簇：SWAP 样本 0.0000，现货样本 8–11。阈值取两簇之间任意值等价，取 1.0。",
+      "purpose": "K 线自标注时起持续更新；不校验则 signal 位置可能整体错位。"
+    },
+    "signal_position": {
+      "rule": "owner 框右缘经 right_edge_to_bar 映射回 bar 下标，即 signal_i",
+      "note": "沿用 L1 现有口径。learning box-right-edge-maps-launch-bar-not-tip 指出框右缘对应 launch bar 而非 tip——这正是本实验要量化的对象，不在此处改口径。",
+      "multi_box": "一张图有多框时取右缘最靠右的一个，每 stem 只产出一个样本"
+    },
+    "classes": {
+      "A_prime": "owner 框成立 且 后 20 bar 内启动规则不成立",
+      "B_prime": "owner 框成立 且 后 20 bar 内启动规则成立"
+    },
+    "launch_rule": {
+      "identical_to_task3": true,
+      "SPREAD_CHG8_THR": 0.00383,
+      "LOOKAHEAD_BARS": 20,
+      "definition": "∃ j ∈ (signal_i, signal_i+20]，fast_spread[j] − fast_spread[j−8] >= 0.00383"
+    },
+    "no_cap": "不设每币上限、不做 MIN_GAP 去重——样本本身是 owner 逐张标注的独立图，且总量有限（≤496）。此处与 Task 3 的差异是有意的，理由记录在案。"
+  },
+
+  "detection_protocol": {
+    "weights": "fable-trading/models/owner_v10_chain.pt",
+    "sha256": "b9a84b5f5ebf0032dfa8ddf1ed1f12c19b7cc2d410a57480bd196d76cbc7d953",
+    "conf": 0.30,
+    "iou": 0.70,
+    "window_bars": 200,
+    "render": "src/detection/render.py::render_chart",
+    "primary_view": "FULL — 信号居中（右侧 99 根）",
+    "secondary_view": "TIP — 窗口止于 signal_i",
+    "third_view": "AS_LABELLED — 直接对数据集原图推理（窗口结束于 stem 索引，即 owner 当时看到的那张图）。此视角可与 owner 标注直接对照。",
+    "match_rule": "框右缘映射回 bar 下标，落在 signal_i ± 2 内计命中"
+  },
+
+  "statistics": {
+    "reported": [
+      "A′/B′ 命中率与 Wilson 95% CI（三个视角各一次）",
+      "A′ vs B′ 双比例 z 检验 p 值、风险差、风险比",
+      "每类平均 n_boxes/图",
+      "MAD gate 通过率与被剔除样本数"
+    ],
+    "no_verdict_rule": "不输出 structure/launch 主导的判定。与 Task 3 并列呈现数字，结论由 owner 下。"
+  },
+
+  "declared_limitations": [
+    "owner 标注时可见未来：499 个 ⭐ 标杆中仅 2 个画在盘口，中位可见 97 根。故 A′/B′ 的划分建立在『owner 看得到后续』的前提上。",
+    "val 集虽未参与梯度更新，但参与了 early stopping 与 best-epoch 选择，构成轻微选择性偏差，非训练泄漏。",
+    "命中 ≠ 检测正确：无第三方金标，命中仅指 teacher 在 ±2 bar 内开火。",
+    "样本上限 496，A′/B′ 实际分布未知，可能高度不均衡。"
+  ],
+
+  "forbidden": [
+    "训练或微调", "调整 conf/iou/任何规则阈值", "看到结果后修改样本构造或分类规则",
+    "使用盈亏标签", "消耗 holdout", "修改 fable-trading 或 darkforest-one 的产物"
+  ]
+}
