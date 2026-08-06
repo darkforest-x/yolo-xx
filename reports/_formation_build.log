@@ -1,0 +1,31 @@
+A-grade positives: 324  symbols with labels: 263
+  K=30 50/324 pos=50 neg=100
+  K=30 100/324 pos=100 neg=200
+  K=30 150/324 pos=150 neg=300
+  K=30 200/324 pos=200 neg=400
+  K=30 250/324 pos=250 neg=500
+  K=30 300/324 pos=300 neg=600
+K=30: positives=324 negatives=648
+  K=50 50/324 pos=50 neg=100
+  K=50 100/324 pos=100 neg=200
+  K=50 150/324 pos=150 neg=300
+  K=50 200/324 pos=200 neg=400
+  K=50 250/324 pos=250 neg=500
+  K=50 300/324 pos=300 neg=600
+K=50: positives=324 negatives=648
+  K=70 50/324 pos=50 neg=100
+  K=70 100/324 pos=100 neg=200
+  K=70 150/324 pos=150 neg=300
+  K=70 200/324 pos=200 neg=400
+  K=70 250/324 pos=250 neg=500
+  K=70 300/324 pos=300 neg=600
+K=70: positives=324 negatives=648
+
+cached (2916, 512) rows -> /Users/zhangzc/yolo-xx/reports/_formation_cache.npz
+K   y
+30  0    648
+    1    324
+50  0    648
+    1    324
+70  0    648
+    1    324

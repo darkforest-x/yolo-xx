@@ -1,0 +1,78 @@
+{
+  "prereg_id": "phase3_formation_model_v1",
+  "created_at": "2026-08-06T03:10:00+08:00",
+  "status": "LOCKED_BEFORE_ANY_FIT",
+  "owner_decision": "接受 Layer 2 当前强度（AUC 0.6323, κ 0.159），进 Phase 3（2026-08-06）",
+
+  "question": "站在形态出现之前 K 根 bar 的位置，能否预测『未来 K 根内会形成 owner 认可的 A 级形态』？",
+
+  "why_this_is_the_real_test": {
+    "note": "整个项目的死穴是盘口什么都认不出来——2026-08-05 ablation 实测 tip 复现率 9–10%。Layer 2 无论多准，判的都是已经形成的形态，属事后。Formation 是唯一直接冲这个死穴的设计。",
+    "baseline_context": "future=0 的 9–10% 是『不做任何改造直接上盘口』的天花板，但那是检测器的框复现率，与本任务的分类 AUC 不同量纲，仅作背景，不作对照基线。"
+  },
+
+  "forbidden_by_c4": "禁止把完整形态图裁到右侧（v13/v14/v15/v16 已证伪）。本实验用的是形态出现之前的独立窗口，不是对形态图的裁剪。",
+
+  "sample_construction": {
+    "positive": {
+      "source": "owner 分级为 A 的样本（Library 中 human_label='A'）",
+      "window": "end_i = signal_i - K，窗口长度 200 bar",
+      "semantics": "窗口结束于形态出现前 K 根；模型看不到形态本身",
+      "n_available": 324
+    },
+    "negative": {
+      "source": "同币种时间序列上的随机位置 j",
+      "constraint": "|j - 任一已标位置| > 100 bar，且 j 之后 K+20 根内不含任何已标 A 级位置",
+      "window": "end_i = j，同样 200 bar",
+      "ratio": "每个正样本配 2 个负样本",
+      "sampling_seed": 31
+    },
+    "K_values": [30, 50, 70],
+    "K_handling": "三个 K 各自独立成一个实验，不合并——同一形态的三个前置窗口高度相关，混在一起会把相关样本当独立样本",
+    "render": "fable-trading/src/detection/render.py::render_chart，与全部既往实验同一管线（铁律 3）"
+  },
+
+  "known_flaw_declared_upfront": {
+    "problem": "这是 PU（positive-unlabeled）问题。owner 只标注了 829 个位置，其余位置的真值未知，所以『负样本』实际是『未标注样本』，其中必然混有未被标注的真实形态。",
+    "consequence": "负类被污染会系统性压低 AUC，即模型的真实能力被低估。",
+    "why_accept": "在没有全时间轴穷尽标注的前提下，无法构造纯净负类。选择明确声明而非回避。",
+    "mitigation": "负样本要求距任一已标位置 >100 bar，降低（但不能消除）污染率。"
+  },
+
+  "features": {
+    "primary": "owner_v10_chain embedding（512d → PCA 16，折内拟合）——v5 证明这是唯一在干净样本上有信号的特征族",
+    "secondary": "geom+temporal 24 项，作对照。v5 实测其在干净样本上 CI 跨 0.5，此处预期同样无信号，报出来以确认。"
+  },
+
+  "protocol": {
+    "split": "GroupKFold(5) by symbol —— 同币不跨折",
+    "time_discipline": "所有窗口只用 end_i 及之前的 bar；负样本位置同样受此约束。本实验不做时间切分（样本来自不同币种的不同时间，且非时序预测任务），但**任何窗口都不含其 end_i 之后的数据**。",
+    "models": ["LogisticRegression(StandardScaler+PCA16+L2)"],
+    "seed": 0,
+    "no_hyperparameter_search": true,
+    "metrics": ["ROC AUC + bootstrap 95% CI", "Cohen κ@0.5", "置换检验 200 次"]
+  },
+
+  "evaluation_scope": {
+    "primary": "仅 val 侧样本（v10 币种级从未参训）——v5 已证明含 train/scan 的合池会产生来源混杂",
+    "note": "val 侧 A 级仅 124 条，样本量是本实验最大约束；train 侧结果作附录报出但不作结论依据"
+  },
+
+  "no_verdict_rule": "只报数字与不确定度。是否继续 Formation 方向由 owner 决定。",
+
+  "failure_exit": "若三个 K 值下 embedding 的 AUC 置信区间均跨过 0.5，则在当前标签量与表征下，『形态形成前的预警』不可学。停止，不得通过加特征或换 K 值继续搜索。",
+
+  "forbidden": [
+    "使用盈亏标签", "做收益回测", "调整 conf/iou", "训练或修改 YOLO 权重",
+    "消耗 holdout", "看到结果后更改 K 值、样本构造或评估口径",
+    "把完整形态图裁到右侧（C4）", "修改 fable-trading 或 darkforest-one 的产物"
+  ],
+
+  "declared_limitations": [
+    "PU 问题：负类含未标注的真实形态（见 known_flaw）",
+    "val 侧 A 级仅 124 条，每折约 25 个正样本",
+    "owner 标注时可见未来，故『A 级』这个目标本身建立在事后视角上",
+    "单人评分，重测 κ 0.700 为标签噪声上限",
+    "三个 K 值独立实验，未做多重比较校正——三个 p 值中出现一个 <0.05 的概率高于 5%"
+  ]
+}
