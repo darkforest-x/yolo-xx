@@ -21,7 +21,8 @@ FABLE = Path.home() / "fable-trading"
 WEIGHTS = FABLE / "models/owner_v10_chain.pt"
 PACKS = [YOLO_XX / "reports/quality_review_pack",
          YOLO_XX / "reports/quality_review_pack_r2",
-         YOLO_XX / "reports/quality_regrade_pack"]
+         YOLO_XX / "reports/quality_regrade_pack",
+         YOLO_XX / "reports/quality_review_pack_val"]
 
 
 def find_image(pid: str):

@@ -38,7 +38,8 @@ import train_pattern_quality_v2 as T  # noqa: E402
 WEIGHTS = FABLE / "models/owner_v10_chain.pt"
 PACKS = [YOLO_XX / "reports/quality_review_pack",
          YOLO_XX / "reports/quality_review_pack_r2",
-         YOLO_XX / "reports/quality_regrade_pack"]
+         YOLO_XX / "reports/quality_regrade_pack",
+         YOLO_XX / "reports/quality_review_pack_val"]
 CACHE = YOLO_XX / "reports/_embed_cache_v10chain.npz"
 N_PCA = 16
 SEED = 0
