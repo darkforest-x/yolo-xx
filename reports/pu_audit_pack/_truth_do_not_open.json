@@ -1,0 +1,302 @@
+{
+ "pu_011": {
+  "kind": "formation_negative",
+  "symbol": "BRETT_USDT_SWAP",
+  "pos_i": 36339
+ },
+ "pu_025": {
+  "kind": "formation_negative",
+  "symbol": "STX_USDT_SWAP",
+  "pos_i": 23512
+ },
+ "pu_059": {
+  "kind": "anchor_known_A",
+  "symbol": "JTO_USDT_SWAP",
+  "pos_i": 14733
+ },
+ "pu_035": {
+  "kind": "formation_negative",
+  "symbol": "XLM_USDT_SWAP",
+  "pos_i": 6873
+ },
+ "pu_020": {
+  "kind": "formation_negative",
+  "symbol": "BRETT_USDT_SWAP",
+  "pos_i": 6533
+ },
+ "pu_033": {
+  "kind": "formation_negative",
+  "symbol": "ALLO_USDT_SWAP",
+  "pos_i": 7996
+ },
+ "pu_056": {
+  "kind": "anchor_known_A",
+  "symbol": "ZK_USDT_SWAP",
+  "pos_i": 25039
+ },
+ "pu_044": {
+  "kind": "formation_negative",
+  "symbol": "CFX_USDT_SWAP",
+  "pos_i": 33616
+ },
+ "pu_008": {
+  "kind": "formation_negative",
+  "symbol": "SUI_USDT_SWAP",
+  "pos_i": 19047
+ },
+ "pu_019": {
+  "kind": "formation_negative",
+  "symbol": "DYDX_USDT_SWAP",
+  "pos_i": 21527
+ },
+ "pu_007": {
+  "kind": "formation_negative",
+  "symbol": "LRC_USDT_SWAP",
+  "pos_i": 27846
+ },
+ "pu_051": {
+  "kind": "anchor_known_A",
+  "symbol": "APE_USDT_SWAP",
+  "pos_i": 25055
+ },
+ "pu_040": {
+  "kind": "formation_negative",
+  "symbol": "DOOD_USDT_SWAP",
+  "pos_i": 17487
+ },
+ "pu_010": {
+  "kind": "formation_negative",
+  "symbol": "APE_USDT_SWAP",
+  "pos_i": 20756
+ },
+ "pu_027": {
+  "kind": "formation_negative",
+  "symbol": "STX_USDT_SWAP",
+  "pos_i": 33429
+ },
+ "pu_005": {
+  "kind": "formation_negative",
+  "symbol": "MAGIC_USDT_SWAP",
+  "pos_i": 32389
+ },
+ "pu_013": {
+  "kind": "formation_negative",
+  "symbol": "STX_USDT_SWAP",
+  "pos_i": 38506
+ },
+ "pu_022": {
+  "kind": "formation_negative",
+  "symbol": "API3_USDT_SWAP",
+  "pos_i": 34002
+ },
+ "pu_041": {
+  "kind": "formation_negative",
+  "symbol": "WLFI_USDT_SWAP",
+  "pos_i": 24569
+ },
+ "pu_016": {
+  "kind": "formation_negative",
+  "symbol": "STX_USDT_SWAP",
+  "pos_i": 7810
+ },
+ "pu_057": {
+  "kind": "anchor_known_A",
+  "symbol": "ZAMA_USDT_SWAP",
+  "pos_i": 4868
+ },
+ "pu_021": {
+  "kind": "formation_negative",
+  "symbol": "2Z_USDT_SWAP",
+  "pos_i": 15312
+ },
+ "pu_028": {
+  "kind": "formation_negative",
+  "symbol": "PUMP_USDT_SWAP",
+  "pos_i": 3000
+ },
+ "pu_054": {
+  "kind": "anchor_known_A",
+  "symbol": "PENGU_USDT_SWAP",
+  "pos_i": 9731
+ },
+ "pu_004": {
+  "kind": "formation_negative",
+  "symbol": "ARB_USDT_SWAP",
+  "pos_i": 40208
+ },
+ "pu_023": {
+  "kind": "formation_negative",
+  "symbol": "NG_USDT_SWAP",
+  "pos_i": 5807
+ },
+ "pu_000": {
+  "kind": "formation_negative",
+  "symbol": "ZKP_USDT_SWAP",
+  "pos_i": 18493
+ },
+ "pu_052": {
+  "kind": "anchor_known_A",
+  "symbol": "SUI_USDT_SWAP",
+  "pos_i": 25373
+ },
+ "pu_002": {
+  "kind": "formation_negative",
+  "symbol": "ZKP_USDT_SWAP",
+  "pos_i": 2838
+ },
+ "pu_015": {
+  "kind": "formation_negative",
+  "symbol": "SUI_USDT_SWAP",
+  "pos_i": 25709
+ },
+ "pu_050": {
+  "kind": "anchor_known_A",
+  "symbol": "JTO_USDT_SWAP",
+  "pos_i": 31437
+ },
+ "pu_058": {
+  "kind": "anchor_known_A",
+  "symbol": "DYDX_USDT_SWAP",
+  "pos_i": 33441
+ },
+ "pu_012": {
+  "kind": "formation_negative",
+  "symbol": "TRUST_USDT_SWAP",
+  "pos_i": 15995
+ },
+ "pu_029": {
+  "kind": "formation_negative",
+  "symbol": "MEW_USDT_SWAP",
+  "pos_i": 16267
+ },
+ "pu_037": {
+  "kind": "formation_negative",
+  "symbol": "ZAMA_USDT_SWAP",
+  "pos_i": 6355
+ },
+ "pu_043": {
+  "kind": "formation_negative",
+  "symbol": "RAVE_USDT_SWAP",
+  "pos_i": 6112
+ },
+ "pu_034": {
+  "kind": "formation_negative",
+  "symbol": "SUI_USDT_SWAP",
+  "pos_i": 4913
+ },
+ "pu_018": {
+  "kind": "formation_negative",
+  "symbol": "IOST_USDT_SWAP",
+  "pos_i": 24167
+ },
+ "pu_048": {
+  "kind": "formation_negative",
+  "symbol": "ARB_USDT_SWAP",
+  "pos_i": 8076
+ },
+ "pu_039": {
+  "kind": "formation_negative",
+  "symbol": "ACH_USDT_SWAP",
+  "pos_i": 8993
+ },
+ "pu_030": {
+  "kind": "formation_negative",
+  "symbol": "ZK_USDT_SWAP",
+  "pos_i": 5900
+ },
+ "pu_006": {
+  "kind": "formation_negative",
+  "symbol": "WIF_USDT_SWAP",
+  "pos_i": 36078
+ },
+ "pu_047": {
+  "kind": "formation_negative",
+  "symbol": "ENJ_USDT_SWAP",
+  "pos_i": 28210
+ },
+ "pu_017": {
+  "kind": "formation_negative",
+  "symbol": "MAGIC_USDT_SWAP",
+  "pos_i": 258
+ },
+ "pu_053": {
+  "kind": "anchor_known_A",
+  "symbol": "MOODENG_USDT_SWAP",
+  "pos_i": 30135
+ },
+ "pu_031": {
+  "kind": "formation_negative",
+  "symbol": "MEW_USDT_SWAP",
+  "pos_i": 10607
+ },
+ "pu_026": {
+  "kind": "formation_negative",
+  "symbol": "UNI_USDT_SWAP",
+  "pos_i": 3203
+ },
+ "pu_038": {
+  "kind": "formation_negative",
+  "symbol": "YGG_USDT_SWAP",
+  "pos_i": 37272
+ },
+ "pu_046": {
+  "kind": "formation_negative",
+  "symbol": "SUI_USDT_SWAP",
+  "pos_i": 11364
+ },
+ "pu_045": {
+  "kind": "formation_negative",
+  "symbol": "CFX_USDT_SWAP",
+  "pos_i": 39003
+ },
+ "pu_036": {
+  "kind": "formation_negative",
+  "symbol": "HYPE_USDT_SWAP",
+  "pos_i": 10717
+ },
+ "pu_024": {
+  "kind": "formation_negative",
+  "symbol": "WLFI_USDT_SWAP",
+  "pos_i": 16799
+ },
+ "pu_049": {
+  "kind": "formation_negative",
+  "symbol": "BRETT_USDT_SWAP",
+  "pos_i": 15156
+ },
+ "pu_032": {
+  "kind": "formation_negative",
+  "symbol": "PUMP_USDT_SWAP",
+  "pos_i": 28110
+ },
+ "pu_042": {
+  "kind": "formation_negative",
+  "symbol": "ONT_USDT_SWAP",
+  "pos_i": 6911
+ },
+ "pu_014": {
+  "kind": "formation_negative",
+  "symbol": "AVNT_USDT_SWAP",
+  "pos_i": 27108
+ },
+ "pu_055": {
+  "kind": "anchor_known_A",
+  "symbol": "JTO_USDT_SWAP",
+  "pos_i": 14379
+ },
+ "pu_003": {
+  "kind": "formation_negative",
+  "symbol": "ADA_USDT_SWAP",
+  "pos_i": 3576
+ },
+ "pu_001": {
+  "kind": "formation_negative",
+  "symbol": "ALLO_USDT_SWAP",
+  "pos_i": 19892
+ },
+ "pu_009": {
+  "kind": "formation_negative",
+  "symbol": "AVNT_USDT_SWAP",
+  "pos_i": 13309
+ }
+}
