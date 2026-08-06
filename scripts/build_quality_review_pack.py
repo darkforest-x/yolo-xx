@@ -75,6 +75,10 @@ def main() -> int:
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--exclude-graded", action="store_true",
                     help="skip patterns owner has already graded (for follow-up rounds)")
+    ap.add_argument("--only-split", default=None,
+                    help="restrict to one dataset split (e.g. val). Keeping a round "
+                         "to a single source is what makes it evaluable without "
+                         "source stratification -- see CLAUDE.md on pooled AUC.")
     args = ap.parse_args()
 
     lib = json.loads(LIB.read_text())
@@ -83,6 +87,10 @@ def main() -> int:
         before = len(pats)
         pats = [p for p in pats if not p.get("human_label")]
         print(f"excluding {before - len(pats)} already-graded patterns", flush=True)
+    if args.only_split:
+        before = len(pats)
+        pats = [p for p in pats if p.get("split") == args.only_split]
+        print(f"split={args.only_split}: {len(pats)} of {before}", flush=True)
     owner = [p for p in pats if p["source"] == "golden_pool"]
     teacher = [p for p in pats if p["source"] != "golden_pool"]
     print(f"library: owner={len(owner)} teacher={len(teacher)}", flush=True)
