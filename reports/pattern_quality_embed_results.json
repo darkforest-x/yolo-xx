@@ -1,0 +1,58 @@
+{
+ "weights": "/Users/zhangzc/fable-trading/models/owner_v10_chain.pt",
+ "n_pca": 16,
+ "embed_dim": 512,
+ "pca_fitted_inside_fold": true,
+ "tasks": {
+  "T1p_worth_looking": {
+   "n": 659,
+   "n_pos": 493,
+   "geom_only_lr": {
+    "cv_auc": 0.5964,
+    "kappa@0.5": 0.0141
+   },
+   "geom_only_gbm": {
+    "cv_auc": 0.6102,
+    "kappa@0.5": 0.1332
+   },
+   "embed_only_lr": {
+    "cv_auc": 0.8006,
+    "kappa@0.5": 0.3889
+   },
+   "geom_plus_embed_lr": {
+    "cv_auc": 0.8067,
+    "kappa@0.5": 0.4255
+   },
+   "geom_plus_embed_gbm": {
+    "cv_auc": 0.774,
+    "kappa@0.5": 0.3441
+   },
+   "embed_increment": 0.1965
+  },
+  "T2p_is_grade_A": {
+   "n": 582,
+   "n_pos": 258,
+   "geom_only_lr": {
+    "cv_auc": 0.5752,
+    "kappa@0.5": 0.1418
+   },
+   "geom_only_gbm": {
+    "cv_auc": 0.5946,
+    "kappa@0.5": 0.1411
+   },
+   "embed_only_lr": {
+    "cv_auc": 0.7356,
+    "kappa@0.5": 0.3079
+   },
+   "geom_plus_embed_lr": {
+    "cv_auc": 0.7498,
+    "kappa@0.5": 0.3537
+   },
+   "geom_plus_embed_gbm": {
+    "cv_auc": 0.7187,
+    "kappa@0.5": 0.3021
+   },
+   "embed_increment": 0.1552
+  }
+ }
+}
